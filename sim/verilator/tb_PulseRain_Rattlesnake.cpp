@@ -100,7 +100,6 @@ class testbench
             uut->clk = 0;
             uut->reset_n = 0;
             uut->start = 0;
-            uut->dram_ack = 0;
             cycles = 0;
         }
     
@@ -634,8 +633,7 @@ int main(int argc, char** argv) {
     uut->ocd_write_word = 0;
     uut->start = 0;
     uut->start_address = start_address;
-    uut->dram_ack = 0;
-    
+      
     t.reset();
     std::cout << "=============> init stack ..." << "\n";
     uut->ocd_reg_we = 1;
