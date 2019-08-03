@@ -32,16 +32,16 @@
 #include <array>
 #include <regex>
 #include <list>
-#include "VPulseRain_Reindeer_MCU.h"
+#include "VPulseRain_Rattlesnake_MCU.h"
 
 constexpr vluint64_t TOTAL_RUN_CYCLES = 2000;
 constexpr vluint32_t DEFAULT_STACK_INIT_VALUE  = 0x8000F000;
 
 std::list <vluint32_t> sig_list;
 
-VPulseRain_Reindeer_MCU *uut;
+VPulseRain_Rattlesnake_MCU *uut;
 
-typedef VPulseRain_Reindeer_MCU UUT;
+typedef VPulseRain_Rattlesnake_MCU UUT;
 
 
 //===========================================================================

@@ -35,25 +35,25 @@ src_sub = \
 ../memory/Intel/cyclone10_LP/single_port_ram_8bit \
 ../memory/Intel/cyclone10_LP/single_port_ram \
 ../memory/mem_controller \
-../submodules/PulseRain_processor_core/source/Reindeer_reg_file \
-../submodules/PulseRain_processor_core/source/Reindeer_memory \
-../submodules/PulseRain_processor_core/source/Reindeer_CSR \
-../submodules/PulseRain_processor_core/source/Reindeer_fetch_instruction \
-../submodules/PulseRain_processor_core/source/Reindeer_instruction_decode \
-../submodules/PulseRain_processor_core/source/Reindeer_execution_unit \
-../submodules/PulseRain_processor_core/source/Reindeer_data_access \
-../submodules/PulseRain_processor_core/source/Reindeer_controller \
+../submodules/PulseRain_processor_core/source/Rattlesnake_reg_file \
+../submodules/PulseRain_processor_core/source/Rattlesnake_memory \
+../submodules/PulseRain_processor_core/source/Rattlesnake_CSR \
+../submodules/PulseRain_processor_core/source/Rattlesnake_fetch_instruction \
+../submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decode \
+../submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit \
+../submodules/PulseRain_processor_core/source/Rattlesnake_data_access \
+../submodules/PulseRain_processor_core/source/Rattlesnake_controller \
 ../peripherals/UART/UART_TX
 
-src_top = PulseRain_Reindeer_MCU
-testbench = tb_PulseRain_Reindeer
+src_top = PulseRain_Rattlesnake_MCU
+testbench = tb_PulseRain_Rattlesnake
 
 src_sub_v = $(patsubst %, $(src_base)/%.v,$(src_sub))
 src_top_v = $(src_top).v
 testbench_cpp = $(testbench).cpp
 
  
-target = ./obj_dir/VPulseRain_Reindeer_MCU
+target = ./obj_dir/VPulseRain_Rattlesnake_MCU
 
 ###############################################################################
 # All test cases
