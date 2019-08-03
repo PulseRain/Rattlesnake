@@ -1,0 +1,193 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 21:20:13  February 25, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		step_cyc10_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone 10 LP"
+set_global_assignment -name DEVICE 10CL016YU256C8G
+set_global_assignment -name TOP_LEVEL_ENTITY step_cyc10
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:20:13  FEBRUARY 25, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+
+#set_location_assignment PIN_D15 -to reset_n
+set_location_assignment PIN_M15 -to osc_in
+
+
+set_location_assignment PIN_R1 -to RXD
+set_location_assignment PIN_T2 -to TXD
+
+set_location_assignment PIN_P8 -to ADXL345_SCL
+set_location_assignment PIN_M8 -to ADXL345_SDA
+set_location_assignment PIN_P9 -to ADXL345_CS
+
+set_location_assignment PIN_M10 -to ADXL345_INT1
+set_location_assignment PIN_N8  -to ADXL345_INT2
+
+
+#set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to ADXL345_SCL
+#set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to ADXL345_SDA
+
+set_location_assignment PIN_B1 -to LED[7]
+set_location_assignment PIN_C2 -to LED[6]
+set_location_assignment PIN_D1 -to LED[5]
+set_location_assignment PIN_G2 -to LED[4]
+set_location_assignment PIN_G1 -to LED[3]
+set_location_assignment PIN_J2 -to LED[2]
+set_location_assignment PIN_J1 -to LED[1]
+set_location_assignment PIN_M6 -to LED[0]
+
+set_location_assignment PIN_D8 -to SDRAM_ADDR[0]
+set_location_assignment PIN_E6 -to SDRAM_ADDR[1]
+set_location_assignment PIN_D6 -to SDRAM_ADDR[2]
+set_location_assignment PIN_D9 -to SDRAM_ADDR[3]
+set_location_assignment PIN_E9 -to SDRAM_ADDR[4]
+set_location_assignment PIN_D11 -to SDRAM_ADDR[5]
+set_location_assignment PIN_F9 -to SDRAM_ADDR[6]
+set_location_assignment PIN_E11 -to SDRAM_ADDR[7]
+set_location_assignment PIN_C14 -to SDRAM_ADDR[8]
+set_location_assignment PIN_E10 -to SDRAM_ADDR[9]
+set_location_assignment PIN_C6 -to SDRAM_ADDR[10]
+set_location_assignment PIN_C11 -to SDRAM_ADDR[11]
+set_location_assignment PIN_E8 -to SDRAM_BA[0]
+set_location_assignment PIN_E7 -to SDRAM_BA[1]
+set_location_assignment PIN_C9 -to SDRAM_CAS_N
+set_location_assignment PIN_A10 -to SDRAM_CKE
+set_location_assignment PIN_A2 -to SDRAM_CS_N
+set_location_assignment PIN_A6 -to SDRAM_DQ[0]
+set_location_assignment PIN_A5 -to SDRAM_DQ[1]
+set_location_assignment PIN_B7 -to SDRAM_DQ[2]
+set_location_assignment PIN_B5 -to SDRAM_DQ[3]
+set_location_assignment PIN_B6 -to SDRAM_DQ[4]
+set_location_assignment PIN_A4 -to SDRAM_DQ[5]
+set_location_assignment PIN_A7 -to SDRAM_DQ[6]
+set_location_assignment PIN_B4 -to SDRAM_DQ[7]
+set_location_assignment PIN_A15 -to SDRAM_DQ[8]
+set_location_assignment PIN_B11 -to SDRAM_DQ[9]
+set_location_assignment PIN_B14 -to SDRAM_DQ[10]
+set_location_assignment PIN_A13 -to SDRAM_DQ[11]
+set_location_assignment PIN_A14 -to SDRAM_DQ[12]
+set_location_assignment PIN_A12 -to SDRAM_DQ[13]
+set_location_assignment PIN_B13 -to SDRAM_DQ[14]
+set_location_assignment PIN_B12 -to SDRAM_DQ[15]
+set_location_assignment PIN_B10 -to SDRAM_CLK
+set_location_assignment PIN_A3 -to SDRAM_RAS_N
+set_location_assignment PIN_B3 -to SDRAM_WE_N
+set_location_assignment PIN_C8 -to SDRAM_DQM[0]
+set_location_assignment PIN_A11 -to SDRAM_DQM[1]
+
+
+set_location_assignment PIN_L8 -to SEG_DIG4
+set_location_assignment PIN_P6 -to SEG_DIG3
+set_location_assignment PIN_M7 -to SEG_DIG2
+set_location_assignment PIN_L7 -to SEG_DIG1
+set_location_assignment PIN_L14 -to SEG_A
+set_location_assignment PIN_N14 -to SEG_B
+set_location_assignment PIN_N12 -to SEG_C
+set_location_assignment PIN_N11 -to SEG_D
+set_location_assignment PIN_P11 -to SEG_E
+set_location_assignment PIN_P14 -to SEG_F
+set_location_assignment PIN_L13 -to SEG_G
+set_location_assignment PIN_R14 -to SEG_DP
+
+
+set_location_assignment PIN_F3 -to REG_LED1_R
+set_location_assignment PIN_D3 -to REG_LED1_G
+set_location_assignment PIN_C3 -to REG_LED1_B
+
+set_location_assignment PIN_L3 -to REG_LED2_R
+set_location_assignment PIN_K5 -to REG_LED2_G
+set_location_assignment PIN_L4 -to REG_LED2_B
+
+
+set_location_assignment PIN_D16 -to KEY1
+set_location_assignment PIN_D15 -to KEY2
+set_location_assignment PIN_C16 -to KEY3
+set_location_assignment PIN_B16 -to KEY4
+set_location_assignment PIN_C15 -to KEY5
+
+set_location_assignment PIN_K15 -to SW1
+set_location_assignment PIN_J13 -to SW2
+set_location_assignment PIN_J14 -to SW3
+set_location_assignment PIN_F13 -to SW4
+set_location_assignment PIN_G16 -to SW5
+set_location_assignment PIN_F15 -to SW6
+set_location_assignment PIN_F16 -to SW7
+set_location_assignment PIN_F14 -to SW8
+
+
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE PERFORMANCE"
+set_global_assignment -name PLACEMENT_EFFORT_MULTIPLIER 13
+set_global_assignment -name ROUTER_EFFORT_MULTIPLIER 10
+set_global_assignment -name SEED 26
+#set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to reset_n
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name SEARCH_PATH ../../../submodules/pulserain_mcu/common/intel/step_cyc10
+set_global_assignment -name SEARCH_PATH ../../../submodules/pulserain_mcu/common
+set_global_assignment -name SEARCH_PATH ../../../submodules/hw_loader/source
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../source/Intel/cyc10/step_cyc10.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../source/cyc10/sdram_init_loader.sv
+set_global_assignment -name VERILOG_FILE ../../../submodules/PulseRain_MCU/memory/dram_rw_buffer.v
+set_global_assignment -name QIP_FILE ../../../submodules/PulseRain_MCU/synth/PulseRain_MCU.qip
+set_global_assignment -name SDC_FILE ../constraints/step_cyc10.sdc
+set_global_assignment -name QIP_FILE ../../../cores/PLL/PLL.qip
+set_global_assignment -name QIP_FILE ../../../submodules/HW_Loader/synth/HW_Loader.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
