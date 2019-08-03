@@ -556,6 +556,7 @@ module PulseRain_Rattlesnake_core (
                 .rd_addr_in (exe_rd_addr_out),
                 .rd_data_in (exe_data_out),
                 
+                .mul_div_active   (mul_div_active),
                 .load_active      (exe_load_active),
                 .store_active     (exe_store_active),
                 .width_load_store (exe_width_load_store),

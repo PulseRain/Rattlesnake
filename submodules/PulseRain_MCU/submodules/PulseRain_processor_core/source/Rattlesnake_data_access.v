@@ -48,6 +48,7 @@ module Rattlesnake_data_access (
         input wire [`REG_ADDR_BITS - 1 : 0]                     rd_addr_in,
         input wire [`XLEN - 1 : 0]                              rd_data_in,
         
+        input wire                                              mul_div_active,
         input wire                                              load_active,
         input wire                                              store_active,
         input wire [2 : 0]                                      width_load_store,
@@ -340,9 +341,9 @@ module Rattlesnake_data_access (
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // FSM
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-            localparam S_IDLE = 0, S_EXCEPTION = 1, S_LOAD = 2, S_STORE = 3; 
+            localparam S_IDLE = 0, S_EXCEPTION = 1, S_LOAD = 2, S_STORE = 3, S_MUL_DIV = 4; 
             
-            reg [3 : 0] current_state, next_state;
+            reg [4 : 0] current_state, next_state;
                     
             // Declare states
             always @(posedge clk, negedge reset_n) begin : state_machine_reg
@@ -398,6 +399,8 @@ module Rattlesnake_data_access (
                                     ctl_mem_re = 1'b1;
                                     next_state [S_LOAD] = 1'b1;
                                 end
+                            end else if (mul_div_active) begin
+                                next_state [S_MUL_DIV] = 1'b1;
                             end else begin
                                 next_state [S_IDLE] = 1'b1;
                             end
@@ -431,6 +434,13 @@ module Rattlesnake_data_access (
                         end
                     end
                     
+                    current_state [S_MUL_DIV] : begin
+                        if (mul_div_done) begin
+                            next_state [S_IDLE] = 1'b1;
+                        end else begin
+                            next_state[S_MUL_DIV] = 1'b1;
+                        end
+                    end
                     
                     default: begin
                         next_state[S_IDLE] = 1'b1;

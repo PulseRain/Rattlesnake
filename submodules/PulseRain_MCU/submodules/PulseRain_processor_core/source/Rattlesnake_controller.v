@@ -509,9 +509,9 @@ module Rattlesnake_controller (
                        S_DECODE = 3, S_FETCH_EXE = 4, S_DECODE_DATA = 5,
                        S_STORE = 6, S_STORE_WAIT = 7, S_LOAD = 8, S_LOAD_WAIT = 9,
                        S_EXCEPTION = 10, S_EXCEPTION_REINIT = 11, S_MUL_DIV = 12,
-                       S_WFI = 13, S_WFI_WAIT = 14, S_PRE_WFI = 15;
+                       S_WFI = 13, S_WFI_WAIT = 14, S_PRE_WFI = 15, S_MUL_DIV_WAIT=16;
                        
-            reg [15 : 0] current_state, next_state;
+            reg [16 : 0] current_state, next_state;
                   
             // Declare states
             always @(posedge clk, negedge reset_n) begin : state_machine_reg
@@ -732,8 +732,17 @@ module Rattlesnake_controller (
                     end
                     
                     current_state [S_MUL_DIV] : begin
-                        if (!mul_div_done) begin
+                        if (!fetch_active) begin 
+                            ctl_data_access_enable = 1'b1;
+                            next_state [S_MUL_DIV_WAIT] = 1'b1;
+                        end else begin
                             next_state [S_MUL_DIV] = 1'b1;
+                        end
+                    end
+                    
+                    current_state [S_MUL_DIV_WAIT] : begin
+                        if (!mul_div_done) begin
+                            next_state [S_MUL_DIV_WAIT] = 1'b1;
                         end else begin
                             ctl_fetch_enable = 1'b1; 
                             ctl_disable_data_access = 1'b1;

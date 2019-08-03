@@ -80,7 +80,7 @@ module mem_controller #(parameter sim = 0) (
     // SRAM
     //=======================================================================
         /* verilator lint_off UNSIGNED */
-        assign mem_sram0_dram1 = (mem_addr >= (`SRAM_SIZE_IN_BYTES / 4)) ? 1'b1 : 1'b0; 
+        assign mem_sram0_dram1 = 0; // (mem_addr >= (`SRAM_SIZE_IN_BYTES / 4)) ? 1'b1 : 1'b0; 
            
             generate 
                 
@@ -120,16 +120,16 @@ module mem_controller #(parameter sim = 0) (
 
 
 
-       // assign mem_read_data = {dout_high, dout_low};
-        assign mem_read_data = {dout_high_d1, dout_low_d1};
-       //  assign mem_read_data = {dout_high_d2, dout_low_d2};
+     //  assign mem_read_data = {dout_high, dout_low};
+       // assign mem_read_data = {dout_high_d1, dout_low_d1};
+         assign mem_read_data = {dout_high_d2, dout_low_d2};
 
-        assign sram_read_ack_pre = mem_read_en_d1 & (~mem_sram0_dram1_d1);
+       // assign sram_read_ack_pre = mem_read_en_d1 & (~mem_sram0_dram1_d1);
         
         always @(posedge clk, negedge reset_n) begin : ack_proc
             if (!reset_n) begin
                 sram_read_ack <= 0;
-              //  sram_read_ack_pre <= 0;
+                sram_read_ack_pre <= 0;
                 sram_read_ack_pre_pre <= 0;
                 dout_high_d1 <= 0;
                 dout_low_d1  <= 0;
@@ -150,13 +150,13 @@ module mem_controller #(parameter sim = 0) (
                 mem_read_en_d1 <= mem_read_en;
                 
                // sram_read_ack_pre <= mem_read_en & (~mem_sram0_dram1);
-                sram_read_ack <= sram_read_ack_pre;
+         //       sram_read_ack <= sram_read_ack_pre;
          
-        //        sram_read_ack_pre_pre <= mem_read_en & (~mem_sram0_dram1);
-          //      sram_read_ack_pre <= sram_read_ack_pre_pre;
-            //    sram_read_ack <= sram_read_ack_pre;
+                sram_read_ack_pre_pre <= mem_read_en & (~mem_sram0_dram1);
+                sram_read_ack_pre <= sram_read_ack_pre_pre;
+                sram_read_ack <= sram_read_ack_pre;
                 
-            //    sram_read_ack <= mem_read_en & (~mem_sram0_dram1);
+             //   sram_read_ack <= mem_read_en & (~mem_sram0_dram1);
                 
                 dout_high_d1 <= dout_high;
                 dout_low_d1  <= dout_low;

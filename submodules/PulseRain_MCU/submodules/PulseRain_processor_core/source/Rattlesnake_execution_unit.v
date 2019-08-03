@@ -94,6 +94,7 @@ module Rattlesnake_execution_unit (
         output reg                                              reg_ctl_save_to_rd,
         output reg [`XLEN - 1 : 0]                              data_out,
         
+        output reg                                              mul_div_active,
         output reg                                              load_active,
         output reg                                              store_active,
         output wire [2 : 0]                                     width_load_store,
@@ -109,7 +110,7 @@ module Rattlesnake_execution_unit (
         output wire                                             ecall_active,
         output wire                                             ebreak_active,
         output reg                                              mret_active,
-        output wire                                             mul_div_active,
+
         output reg                                              mul_div_done
 ); 
 
@@ -183,6 +184,8 @@ module Rattlesnake_execution_unit (
         wire [31 : 0]                                           Q_neg;
         wire [31 : 0]                                           R_neg;
         
+      
+        
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // data path
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -237,12 +240,12 @@ module Rattlesnake_execution_unit (
                     exe_enable_d1 <= 0;
                     
                     mul_div_done <= 0;
-						  
-						  enable_out <= 0;
+                    
+                    enable_out <= 0;
                     
                 end else begin
-					 
-						  enable_out <= enable_in;
+                     
+                    enable_out <= enable_in;
                     
                     X <= rs1_in;
                     Y <= ctl_load_Y_from_imm_12 ? {{20{I_immediate_12[11]}}, I_immediate_12} : rs2_in;
@@ -252,6 +255,7 @@ module Rattlesnake_execution_unit (
                     
                     exe_enable_d1 <= exe_enable;
                     
+                 
                     mul_div_done <= (`ENABLE_HW_MUL_DIV) ? mul_div_enable_out : 1'b0; 
                     
                     if (exe_enable) begin
@@ -503,7 +507,7 @@ module Rattlesnake_execution_unit (
             assign x_mul_div_signed0_unsigned1 = funct3[2] ? funct3[0] : funct3[1] & funct3[0];
             assign y_mul_div_signed0_unsigned1 = funct3[2] ? funct3[0] : funct3[1];
             assign mul_div_enable = exe_enable_d1 & reg_ctl_MUL_DIV_FUNCT3;
-            assign mul_div_active = reg_ctl_MUL_DIV_FUNCT3;
+            //assign mul_div_active = reg_ctl_MUL_DIV_FUNCT3;
             
             assign Z_neg  = (~Z) + 1;
             assign Q_neg  = (~Q) + 1;
@@ -627,12 +631,18 @@ module Rattlesnake_execution_unit (
                     
                     load_active  <= 0;
                     store_active <= 0;
+                    
+                    mul_div_active <= 0;
+                    
                 end else if (exe_enable) begin
                     rd_addr_out <= IR_in [11 : 7];
                     reg_ctl_save_to_rd <= ctl_save_to_rd;
                     
                     load_active  <= ctl_LOAD;
                     store_active <= ctl_STORE;
+                    
+                    mul_div_active <= ctl_MUL_DIV_FUNCT3;
+                    
                 end
             end
             
