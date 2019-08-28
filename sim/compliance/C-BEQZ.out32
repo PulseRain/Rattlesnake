@@ -1,0 +1,69 @@
+Info Session started: Sun Aug  4 22:08:44 2019
+
+Info ------------- ENVIRONMENT -------------
+Info LM_LICENSE_FILE                          = 1702@storm04d
+Info --------------------------------------
+Info -------- FLAGS (from /home/lenovo/riscv-compliance/riscv-ovpsim/bin/Linux64/riscvOVPsim.exe)
+Info --variant  RV32IMC
+Info --program  /home/lenovo/riscv-compliance/work/rv32imc/C-BEQZ.elf
+Info --signaturedump
+Info --customcontrol
+Info --override  riscvOVPsim/cpu/sigdump/SignatureFile=/home/lenovo/riscv-compliance/work/rv32imc/C-BEQZ.signature.output
+Info --override  riscvOVPsim/cpu/sigdump/ResultReg=3
+Info --override  riscvOVPsim/cpu/simulateexceptions=T
+Info --override  riscvOVPsim/cpu/defaultsemihost=F
+Info --logfile  /home/lenovo/riscv-compliance/work/rv32imc/C-BEQZ.out32
+Info --override  riscvOVPsim/cpu/user_version=2.3
+Info --override  riscvOVPsim/cpu/priv_version=1.11
+Info --------------------------------------
+Imperas riscvOVPsim
+
+CpuManagerFixedPlatform (64-Bit) v20190607.0 Open Virtual Platform simulator from www.IMPERAS.com.
+Copyright (c) 2005-2019 Imperas Software Ltd.  Contains Imperas Proprietary Information.
+Licensed Software, All Rights Reserved.
+Visit www.IMPERAS.com for multicore debug, verification and analysis solutions.
+
+CpuManagerFixedPlatform started: Sun Aug  4 22:08:44 2019
+
+
+Info (OR_OF) Target 'riscvOVPsim/cpu' has object file read from '/home/lenovo/riscv-compliance/work/rv32imc/C-BEQZ.elf'
+Info (OR_PH) Program Headers:
+Info (OR_PH) Type           Offset     VirtAddr   PhysAddr   FileSiz    MemSiz     Flags Align
+Info (OR_PD) LOAD           0x00001000 0x80000000 0x80000000 0x0000017e 0x0000017e R-E   1000
+Info (OR_PD) LOAD           0x00002000 0x80001000 0x80001000 0x00001204 0x00001204 RW-   1000
+Info (SIGNATURE_DUMP) Found Symbol 'begin_signature' in application at 0x80002000
+Info (SIGNATURE_DUMP) Found Symbol 'end_signature' in application at 0x80002020
+Info (SIGNATURE_DUMP) Signature File enabled, file '/home/lenovo/riscv-compliance/work/rv32imc/C-BEQZ.signature.output'.
+Info (SIGNATURE_DUMP) Extracting signature from 0x80002000 size 32 bytes
+Info (SIGNATURE_DUMP) Symbol 'begin_signature' at 0x80002000
+Info (SIGNATURE_DUMP) Symbol 'end_signature' at 0x80002020
+Info (SIGNATURE_DUMP) Intercept 'write_tohost'. Generate Signature file
+00000000000000000000000000000000
+00000000000000000000000000000000
+Test PASSED
+Info 
+Info ---------------------------------------------------
+Info CPU 'riscvOVPsim/cpu' STATISTICS
+Info   Type                  : riscv (RV32IMC)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x8000003a
+Info   Simulated instructions: 82
+Info   Simulated MIPS        : run too short for meaningful result
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info SIMULATION TIME STATISTICS
+Info   Simulated time        : 0.00 seconds
+Info   User time             : 0.00 seconds
+Info   System time           : 0.00 seconds
+Info   Elapsed time          : 0.00 seconds
+Info ---------------------------------------------------
+
+CpuManagerFixedPlatform finished: Sun Aug  4 22:08:44 2019
+
+
+CpuManagerFixedPlatform (64-Bit) v20190607.0 Open Virtual Platform simulator from www.IMPERAS.com.
+Visit www.IMPERAS.com for multicore debug, verification and analysis solutions.
+
+Info Session ended: Sun Aug  4 22:08:44 2019
+
