@@ -312,7 +312,7 @@ void uut_memory_load (testbench *tb, UUT *uut, unsigned char* memblock, unsigned
                   ((memblock[offset + 2] << 16) & 0xFF0000) + ((memblock[offset + 3] << 24) & 0xFF000000);
         std::cout << "\t" << std::setfill('0') << std::setw(8) << std::hex << addr << " " << std::setfill('0') << std::setw(8) << data << std::dec << "\n";
        
-        uut->ocd_rw_addr = addr >> 2;
+        uut->ocd_rw_addr = addr >> 1;
         uut->ocd_write_word = data;
         uut->ocd_write_enable = 1;
         tb->run();
@@ -350,7 +350,7 @@ int uut_memory_peek (testbench *tb, UUT *uut, unsigned long lma, unsigned long l
     for (addr = lma; addr < (lma + length); addr = addr + 4) {
         offset = addr - lma;
 
-        uut->ocd_rw_addr = (addr >> 2);
+        uut->ocd_rw_addr = (addr >> 1);
         uut->ocd_write_word = 0;
         uut->ocd_write_enable = 0;
         uut->ocd_read_enable = 1;
@@ -510,12 +510,13 @@ void ref_file_process(std::string ref_file)
             break; 
         } else {
             // std::cout << std::hex << "==> " << signature << "\n";
+            // std::cout << "============================================ " << signature.length() << "\n";
             
-            for (i = 0; i < 4; ++i) {
+            for (i = 0; i < signature.length() / 8; ++i) {
                 
                 data = 0;
                 for (j = 0; j < 8; ++j) {
-                    data += (std::stoul (signature.substr(31 - i * 8 - j, 1), nullptr, 16)) << (j*4);
+                    data += (std::stoul (signature.substr(signature.length() - 1 - i * 8 - j, 1), nullptr, 16)) << (j*4);
                 } // End of for loop j
                 
                 sig_list.push_back (data);

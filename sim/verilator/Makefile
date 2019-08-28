@@ -43,6 +43,8 @@ src_sub = \
 ../submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit \
 ../submodules/PulseRain_processor_core/source/Rattlesnake_data_access \
 ../submodules/PulseRain_processor_core/source/Rattlesnake_controller \
+../submodules/PulseRain_processor_core/source/Rattlesnake_block_write_detect \
+../submodules/PulseRain_processor_core/source/Rattlesnake_indirect_pointer_detect \
 ../peripherals/UART/UART_TX
 
 src_top = PulseRain_Rattlesnake_MCU
@@ -59,6 +61,31 @@ target = ./obj_dir/VPulseRain_Rattlesnake_MCU
 # All test cases
 ###############################################################################
 all_test_cases =  \
+C-ADD \
+C-ADDI \
+C-ADDI4SPN \
+C-ADDI16SP \
+C-AND \
+C-ANDI \
+C-BEQZ \
+C-BNEZ \
+C-J \
+C-JAL \
+C-JALR \
+C-JR \
+C-LI \
+C-LUI \
+C-LW \
+C-LWSP \
+C-MV \
+C-OR \
+C-SLLI \
+C-SRAI \
+C-SRLI \
+C-SUB \
+C-SW \
+C-SWSP \
+C-XOR \
 I-MISALIGN_LDST-01 \
 I-MISALIGN_JMP-01 \
 MUL \
