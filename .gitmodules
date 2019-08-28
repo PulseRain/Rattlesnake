@@ -1,0 +1,3 @@
+[submodule "RISC-V-IoT-Contest"]
+	path = RISC-V-IoT-Contest
+	url = https://github.com/PulseRain/RISC-V-IoT-Contest.git
