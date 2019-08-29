@@ -58,7 +58,7 @@ module UART_TX #(parameter STABLE_TIME = `UART_STABLE_COUNT, BAUD_PERIOD_BITS= $
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         
         reg [$clog2(STABLE_TIME + 1) - 1 : 0]                    stable_counter;
-        reg [BAUD_PERIOD_BITS - 1 : 0]                           baud_rate_counter;
+        reg [BAUD_PERIOD_BITS - 1 : 0]                           baud_rate_counter = 0;
         reg                                                      baud_rate_pulse;
         reg [BAUD_PERIOD_BITS - 1 : 0]                           counter;
         reg                                                      ctl_reset_stable_counter;
