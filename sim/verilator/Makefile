@@ -31,9 +31,9 @@ src_sub = \
 ../submodules/PulseRain_processor_core/source/mul_div/absolute_value \
 ../submodules/PulseRain_processor_core/source/mul_div/long_slow_div_denom_reg \
 ../submodules/PulseRain_processor_core/source/mul_div/mul_div_32 \
-../memory/Intel/cyclone10_LP/dual_port_ram \
-../memory/Intel/cyclone10_LP/single_port_ram_8bit \
-../memory/Intel/cyclone10_LP/single_port_ram \
+../memory/Microchip/IGLOO2/dual_port_ram \
+../memory/Microchip/IGLOO2/single_port_ram_9bit \
+../memory/Microchip/IGLOO2/single_port_ram \
 ../memory/mem_controller \
 ../submodules/PulseRain_processor_core/source/Rattlesnake_reg_file \
 ../submodules/PulseRain_processor_core/source/Rattlesnake_memory \
