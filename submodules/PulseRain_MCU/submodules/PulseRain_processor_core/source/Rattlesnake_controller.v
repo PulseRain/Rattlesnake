@@ -47,7 +47,7 @@ module Rattlesnake_controller (
         input wire                                          start,
         input wire [`PC_BITWIDTH - 1 : 0]                   start_addr,
     
-   
+        input wire                                          compressed_instruction_detected,
         
     //=====================================================================
     // interface for instruction fetch
@@ -108,6 +108,10 @@ module Rattlesnake_controller (
     // exception
     //=====================================================================
         input wire  [`PC_BITWIDTH - 1 : 0]                  PC_in,
+        input wire  [2 : 0]                                 addr_step_in,
+        input wire                                          address_dirty,
+        
+        input wire                                          exe_protect_active,
         
         input wire  [`XLEN - 1 : 0]                         mtvec_in,
         input wire  [`XLEN - 1 : 0]                         mepc_in,
@@ -125,7 +129,9 @@ module Rattlesnake_controller (
         output reg [`PC_BITWIDTH - 1 : 0]                   exception_PC,
         output reg [`PC_BITWIDTH - 1 : 0]                   exception_addr,
         
-        output wire                                         paused
+        output wire                                         paused,
+        
+        output reg                                          exception_handler_active = 0
         
 );
 
@@ -150,6 +156,7 @@ module Rattlesnake_controller (
             reg                                             ctl_load_active;
             reg                                             ctl_fetch_exe_active;
             reg                                             ctl_paused;
+            reg                                             ctl_exe_protect_active_exception;
             
             reg                                             ctl_set_timer_interrupt_active;
             reg                                             ctl_interrupt_set_reg;
@@ -178,6 +185,8 @@ module Rattlesnake_controller (
             reg                                             exception_ebreak_reg;
             reg                                             exception_instruction_addr_misalign_reg;
             reg                                             exception_alignment_reg;
+            reg                                             exception_exe_protect_reg;
+            
             reg                                             timer_interrupt_active;
             reg                                             ext_interrupt_active;
                         
@@ -195,12 +204,13 @@ module Rattlesnake_controller (
                 
             reg                                             fetch_init_active;
             
+            
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // data path
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                 assign exception_active     = exception_storage_page_fault | exception_ecall | exception_ebreak | ctl_instruction_addr_misalign_exception | exception_alignment;
                 assign exception_active_reg = 
-                            exception_storage_page_fault_reg | exception_ecall_reg | exception_ebreak_reg | exception_instruction_addr_misalign_reg | exception_alignment_reg;
+                            exception_storage_page_fault_reg | exception_ecall_reg | exception_ebreak_reg | exception_instruction_addr_misalign_reg | exception_alignment_reg | exception_exe_protect_reg;
                 
                 assign csr_mret_active = ctl_fetch_init_mret_active;
                 
@@ -215,6 +225,7 @@ module Rattlesnake_controller (
                         exception_ecall_reg  <= 0;
                         exception_ebreak_reg <= 0;
                         exception_instruction_addr_misalign_reg <= 0;
+                        exception_exe_protect_reg <= 0;
                         
                         exception_code <= 0;
                         
@@ -254,6 +265,8 @@ module Rattlesnake_controller (
                         
                         ctl_interrupt_set_reg <= 0;
                         
+                        exception_handler_active <= 0;
+                        
                     end else begin
                                     
                         load_active_d1 <= load_active;
@@ -288,7 +301,7 @@ module Rattlesnake_controller (
                         
                         ctl_interrupt_set_reg <= ctl_set_timer_interrupt_active + ctl_set_ext_interrupt_active;
                         
-                        if (exception_ebreak | exception_ecall | exception_storage_page_fault | ctl_instruction_addr_misalign_exception ) begin
+                        if (exception_ebreak | exception_ecall | exception_storage_page_fault | ctl_instruction_addr_misalign_exception | ctl_exe_protect_active_exception ) begin
                             exception_PC <= PC_in;
                         end else if (exception_alignment) begin
                         
@@ -299,7 +312,7 @@ module Rattlesnake_controller (
                             end
                             
                         end else if (data_access_enable & decode_ctl_WFI_d1) begin
-                            exception_PC <= PC_in + 4;
+                            exception_PC <= PC_in + {(`PC_BITWIDTH - 3)'(0), addr_step_in};
                         end else if (ctl_set_timer_interrupt_active | ctl_set_ext_interrupt_active) begin
                             
                             if (fetch_init_active | fetch_init) begin
@@ -307,7 +320,7 @@ module Rattlesnake_controller (
                             end else if (ctl_back_to_exe_d1) begin
                                 exception_PC <= PC_in;
                             end else begin
-                                exception_PC <= PC_in  + 4;
+                                exception_PC <= PC_in  + {(`PC_BITWIDTH - 3)'(0), addr_step_in};
                             end
                         end else if (ctl_interrupt_set_reg & fetch_init) begin
                             // This could happen when the timer hits an active branch/jump instruction
@@ -383,6 +396,12 @@ module Rattlesnake_controller (
                         end
                         
                         if (ctl_clear_exception) begin
+                            exception_exe_protect_reg <= 0;
+                        end else if (ctl_exe_protect_active_exception) begin
+                            exception_exe_protect_reg <= 1'b1;
+                        end
+                        
+                        if (ctl_clear_exception) begin
                             exception_alignment_reg <= 0;
                         end else if (exception_alignment) begin
                             exception_alignment_reg <= 1'b1;
@@ -424,6 +443,10 @@ module Rattlesnake_controller (
                                 
                                 exception_instruction_addr_misalign_reg : begin
                                     exception_code <= `EXCEPTION_INSTRUCTION_ADDR_MISALIGN;
+                                end
+                                
+                                ctl_exe_protect_active_exception : begin
+                                    exception_code <= `EXCEPTION_ILLEGAL_INSTRUCTION;
                                 end
                                 
                                 exception_alignment_reg : begin
@@ -480,6 +503,11 @@ module Rattlesnake_controller (
 
                         endcase
                         
+                        if (ctl_fetch_init_exception) begin
+                            exception_handler_active <= 1;
+                        end else if (mret_active) begin
+                            exception_handler_active <= 0;
+                        end
                     end
                     
                 end
@@ -558,6 +586,8 @@ module Rattlesnake_controller (
                 
                 ctl_back_to_exe = 0;
                 
+                ctl_exe_protect_active_exception = 0;
+                
                 case (1'b1) // synthesis parallel_case 
                     
                     current_state[S_INIT]: begin
@@ -595,18 +625,21 @@ module Rattlesnake_controller (
                         ctl_fetch_exe_active = 1'b1;
                         
                         ctl_data_access_enable = first_exe & (~ctl_disable_data_access_reg);
-                        ctl_fetch_init_jal = jal_active & (~(jal_addr[1]));
-                        ctl_fetch_init_branch = branch_active & (~(branch_addr[1]));
-                        ctl_fetch_init_jalr = jalr_active & (~(jalr_addr[1]));
+                        ctl_fetch_init_jal = jal_active & (~(jal_addr[1] & (~compressed_instruction_detected)));
+                        ctl_fetch_init_branch = branch_active & (~(branch_addr[1] & (~compressed_instruction_detected)));
+                        ctl_fetch_init_jalr = jalr_active & (~(jalr_addr[1] & (~compressed_instruction_detected))) & (~address_dirty);
                         ctl_fetch_init_mret_active = mret_active;
                         
-                        if (timer_triggered & (~timer_interrupt_active) & (~ext_interrupt_active) & (~ecall_active)) begin
+                        if (exe_protect_active || (jalr_active & (~(jalr_addr[1] & (~compressed_instruction_detected))) & address_dirty)) begin
+                            ctl_exe_protect_active_exception = 1'b1;
+                            next_state [S_EXCEPTION] = 1'b1;
+                        end else if (timer_triggered & (~timer_interrupt_active) & (~ext_interrupt_active) & (~ecall_active)) begin
                             ctl_set_timer_interrupt_active = 1'b1;
                             next_state [S_EXCEPTION] = 1'b1;
                         end else if (ext_int_triggered & (~timer_interrupt_active) & (~ext_interrupt_active) & (~ecall_active)) begin
                             ctl_set_ext_interrupt_active = 1'b1;
                             next_state [S_EXCEPTION] = 1'b1;
-                        end else if ((jal_active & jal_addr[1]) | (jalr_active & jalr_addr[1]) | (branch_active & branch_addr[1])) begin
+                        end else if ((jal_active & jal_addr[1] & (~compressed_instruction_detected)) | (jalr_active & jalr_addr[1] & (~compressed_instruction_detected)) | (branch_active & branch_addr[1] & (~compressed_instruction_detected))) begin
                             ctl_instruction_addr_misalign_exception = 1'b1;
                             next_state [S_EXCEPTION] = 1'b1;
                         end else if ((exception_active | exception_active_reg) & data_access_enable) begin
@@ -758,6 +791,14 @@ module Rattlesnake_controller (
                 endcase
                   
             end  
+
+/*
+     reg_stp reg_stp_vi (
+            .acq_clk (clk),
+            .acq_data_in ({3'd0, fetch_init, exe_enable, exe_protect_active, fetch_start_addr, PC_in}),    //     tap.acq_data_in
+            .acq_trigger_in (exe_protect_active)  //        .acq_trigger_in
+);
+*/        
 
 endmodule
 

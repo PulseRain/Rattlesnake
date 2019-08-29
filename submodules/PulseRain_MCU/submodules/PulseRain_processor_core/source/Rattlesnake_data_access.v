@@ -53,6 +53,8 @@ module Rattlesnake_data_access (
         input wire                                              store_active,
         input wire [2 : 0]                                      width_load_store,
         input wire [`XLEN - 1 : 0]                              data_to_store,
+        input wire                                              indirect_protect_active,
+        
         input wire [`XLEN - 1 : 0]                              mem_write_addr,
         input wire [`XLEN - 1 : 0]                              mem_read_addr,
         input wire                                              unaligned_write,
@@ -64,7 +66,7 @@ module Rattlesnake_data_access (
     // interface to write to the register file
     //=====================================================================
         output wire                                             ctl_reg_we,
-        output wire [`XLEN - 1 : 0]                             ctl_reg_data_to_write,
+        output wire [`EXT_BITS + `XLEN - 1 : 0]                 ctl_reg_data_to_write,
         output wire [`REG_ADDR_BITS - 1 : 0]                    ctl_reg_addr,
     
     //=====================================================================
@@ -78,7 +80,7 @@ module Rattlesnake_data_access (
     // interface for memory
     //=====================================================================
         input  wire                                             mem_enable_in,
-        input  wire [`XLEN - 1 : 0]                             mem_data_in,
+        input  wire [`EXT_BITS + `XLEN - 1 : 0]                 mem_data_in,
         
         input  wire                                             mm_reg_enable_in,
         input  wire [`XLEN - 1 : 0]                             mm_reg_data_in,
@@ -86,7 +88,7 @@ module Rattlesnake_data_access (
         
         output wire                                             mem_re,
         output reg [`XLEN_BYTES - 1 : 0]                        mem_we,
-        output reg [`XLEN - 1 : 0]                              mem_data_to_write,
+        output reg [`EXT_BITS + `XLEN - 1 : 0]                  mem_data_to_write,
         output reg [`XLEN - 1 : 0]                              mem_addr_rw_out,
         output reg                                              store_done,
         output reg                                              write_active,
@@ -124,12 +126,12 @@ module Rattlesnake_data_access (
         reg [2 : 0]                                             width_reg;
         reg [3 : 0]                                             width_mask;
         
-        reg [`XLEN - 1 : 0]                                     mem_data_in_reg;
-        reg [`XLEN - 1 : 0]                                     load_masked_data;
+        wire [`EXT_BITS +`XLEN - 1 : 0]                         mem_data_in_reg;
+        reg [`EXT_BITS + `XLEN - 1 : 0]                         load_masked_data;
         
         reg [1 : 0]                                             mem_addr_rw_out_tail_reg;
         
-        wire [`XLEN - 1 : 0]                                    mem_data_in_mux;
+        wire [`EXT_BITS + `XLEN - 1 : 0]                        mem_data_in_mux;
         reg [`XLEN - 1 : 0]                                     mem_write_addr_d1;
         
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -139,7 +141,7 @@ module Rattlesnake_data_access (
         //  register write back
         //---------------------------------------------------------------------
             assign ctl_reg_we            = (data_access_enable & ctl_save_to_rd) | ctl_load_reg_write | mul_div_done;
-            assign ctl_reg_data_to_write = ctl_CSR ? csr_old_value : (ctl_load_reg_write ? load_masked_data : rd_data_in);
+            assign ctl_reg_data_to_write = ctl_CSR ? {1'b0, csr_old_value} : (ctl_load_reg_write ? load_masked_data : {1'b0, rd_data_in});
             assign ctl_reg_addr          = rd_addr_in;
 
         //---------------------------------------------------------------------
@@ -196,7 +198,7 @@ module Rattlesnake_data_access (
             end
              
            // assign mem_we ={ctl_mem_we, ctl_mem_we, ctl_mem_we, ctl_mem_we} & width_mask;
-            assign mem_re = ctl_mem_re & mem_read_addr [`MEM_SPACE_BIT];
+            assign mem_re = ctl_mem_re & (mem_read_addr [`MEM_SPACE_BIT]);
             
             always @(*) begin
                 if (ctl_mem_we_d1) begin
@@ -206,45 +208,26 @@ module Rattlesnake_data_access (
                 end
             end
             
-            assign mem_data_in_mux = mem_enable_in ? mem_data_in : mm_reg_data_in;
-            
-            always @(*) begin
-                case (mem_addr_rw_out_tail_reg) // synthesis parallel_case 
-                    2'b01 : begin
-                        mem_data_in_reg = {8'd0, mem_data_in_mux[`XLEN - 1 : 8]};
-                    end
-                    
-                    2'b10 : begin
-                        mem_data_in_reg = {16'd0, mem_data_in_mux[`XLEN - 1 : 16]};
-                    end
-                    
-                    2'b11 : begin
-                        mem_data_in_reg = {24'd0, mem_data_in_mux[`XLEN - 1 : 24]};
-                    end
-                    
-                    default : begin
-                        mem_data_in_reg = mem_data_in_mux;
-                    end
-                    
-                endcase
-            end
-            
+            assign mem_data_in_mux = mem_enable_in ? mem_data_in : {1'b0, mm_reg_data_in};
+            assign mem_data_in_reg [`EXT_BITS + `XLEN - 1 : 8] = mem_data_in_mux [`EXT_BITS + `XLEN - 1 : 8];
+            assign mem_data_in_reg [7 : 0] = (mem_addr_rw_out_tail_reg[0]) ? mem_data_in_mux[15 : 8] : mem_data_in_mux [7 : 0];
+           
             always @(*) begin
                 case (width_reg)
                     3'b000 : begin  // LB
-                        load_masked_data = {{24{mem_data_in_reg[7]}}, mem_data_in_reg[7 : 0]};
+                        load_masked_data = {1'b0, {24{mem_data_in_reg[7]}}, mem_data_in_reg[7 : 0]};
                     end
                     
                     3'b001 : begin // LH
-                        load_masked_data = {{16{mem_data_in_reg[15]}}, mem_data_in_reg[15 : 0]};
+                        load_masked_data = {1'b0, {16{mem_data_in_reg[15]}}, mem_data_in_reg[15 : 0]};
                     end
                     
                     3'b100 : begin  // LBU
-                        load_masked_data = {24'd0, mem_data_in_reg[7 : 0]};
+                        load_masked_data = {1'b0, 24'd0, mem_data_in_reg[7 : 0]};
                     end
                     
                     3'b101 : begin // LHU
-                        load_masked_data = {16'd0, mem_data_in_reg[15 : 0]};
+                        load_masked_data = {1'b0, 16'd0, mem_data_in_reg[15 : 0]};
                     end
                     
                     default : begin
@@ -255,7 +238,7 @@ module Rattlesnake_data_access (
             end
             
             assign load_done = ctl_load_done;
-            assign mm_reg_data_to_write = mem_data_to_write;
+            assign mm_reg_data_to_write = mem_data_to_write[`XLEN - 1 : 0];
             
             always @(posedge clk, negedge reset_n) begin
                 if (!reset_n) begin
@@ -300,24 +283,25 @@ module Rattlesnake_data_access (
                     
                     store_done <= ctl_store_done;
                     
-                    mem_we <= {(`XLEN_BYTES){ctl_mem_we & mem_write_addr [`MEM_SPACE_BIT]}} & width_mask;
+                    mem_we <= {(`XLEN_BYTES){ctl_mem_we & (mem_write_addr [`MEM_SPACE_BIT])}} & width_mask;
                     
-                 
+                    mem_data_to_write[`XLEN] <= indirect_protect_active;
+                    
                     case (mem_write_addr[1 : 0]) // synthesis parallel_case 
                         2'b01 : begin
-                              mem_data_to_write <= {data_to_store[23 : 0], 8'd0};
+                              mem_data_to_write [`XLEN - 1 : 0] <= {data_to_store[23 : 0], 8'd0};
                         end
 
                         2'b10 : begin
-                              mem_data_to_write <= {data_to_store[15 : 0], 16'd0};
+                              mem_data_to_write [`XLEN - 1 : 0] <= {data_to_store[15 : 0], 16'd0};
                         end
                       
                         2'b11 : begin
-                              mem_data_to_write <= {data_to_store[7 : 0], 24'd0};
+                              mem_data_to_write [`XLEN - 1 : 0] <= {data_to_store[7 : 0], 24'd0};
                         end
                       
                         default : begin
-                              mem_data_to_write <= data_to_store;
+                              mem_data_to_write [`XLEN - 1 : 0] <= data_to_store;
                         end
                           
                     endcase

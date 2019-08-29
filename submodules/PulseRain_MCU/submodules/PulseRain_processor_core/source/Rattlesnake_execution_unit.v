@@ -38,10 +38,11 @@ module Rattlesnake_execution_unit (
      //=====================================================================
         input wire                                              enable_in,
         input wire [`XLEN - 1 : 0]                              IR_in,
+        input wire [`XLEN - 1 : 0]                              IR_original_in,
         input wire [`PC_BITWIDTH - 1 : 0]                       PC_in,
         input wire [`CSR_BITS - 1 : 0]                          csr_addr_in,
         
-         
+        input wire [`EXT_BITS - 1 : 0]                          ext_bits_rs1,
         
         input wire                                              ctl_load_Y_from_imm_12,
         input wire                                              ctl_save_to_rd,
@@ -72,7 +73,12 @@ module Rattlesnake_execution_unit (
      //=====================================================================
         input wire [`XLEN - 1 : 0]                              csr_in,
          
-      
+    //=====================================================================
+    // exe protect
+    //=====================================================================
+        input wire unsigned [`XLEN - 1 : 0]                     exe_proetect_start_addr,
+        input wire unsigned [`XLEN - 1 : 0]                     exe_proetect_end_addr,
+    
      //=====================================================================
      // output
      //=====================================================================
@@ -81,6 +87,7 @@ module Rattlesnake_execution_unit (
 
         output reg [`XLEN - 1 : 0]                              IR_out,
         output reg [`PC_BITWIDTH - 1 : 0]                       PC_out,
+        output reg [2 : 0]                                      addr_step_out,
         
         output wire                                             branch_active,
         output reg [`PC_BITWIDTH - 1 : 0]                       branch_addr,
@@ -111,7 +118,9 @@ module Rattlesnake_execution_unit (
         output wire                                             ebreak_active,
         output reg                                              mret_active,
 
-        output reg                                              mul_div_done
+        output reg                                              mul_div_done,
+        output reg                                              exe_protect_active,
+        output reg                                              address_dirty
 ); 
 
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -184,8 +193,13 @@ module Rattlesnake_execution_unit (
         wire [31 : 0]                                           Q_neg;
         wire [31 : 0]                                           R_neg;
         
-      
+        wire                                                    addr_debug;
+        wire                                                    addr_debug2;
+        wire                                                    addr_debug3;
         
+        assign addr_debug =  (exe_enable && (PC_in === 32'h80043310)) ? 1'b1 : 1'b0;
+        assign addr_debug2 = (exe_enable && (PC_in === 32'h80042d60)) ? 1'b1 : 1'b0;
+        assign addr_debug3 = (exe_enable && (PC_in === 32'h8004328e)) ? 1'b1 : 1'b0;
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // data path
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -243,15 +257,29 @@ module Rattlesnake_execution_unit (
                     
                     enable_out <= 0;
                     
+                    addr_step_out <= 3'b100;
+                    
+                    address_dirty <= 0;
+                    
                 end else begin
                      
                     enable_out <= enable_in;
                     
+                    
                     X <= rs1_in;
                     Y <= ctl_load_Y_from_imm_12 ? {{20{I_immediate_12[11]}}, I_immediate_12} : rs2_in;
                     
+                    address_dirty <= ext_bits_rs1 [0];
+                    
                     PC_out <= PC_in;
                     IR_out <= IR_in;
+                    
+                    if (IR_in [1 : 0]    == 2'b11) begin
+                        addr_step_out <= 3'b100;
+                    end else begin
+                        addr_step_out <= 3'b010;
+                    end
+                    
                     
                     exe_enable_d1 <= exe_enable;
                     
@@ -608,7 +636,7 @@ module Rattlesnake_execution_unit (
                     end
                     
                     reg_ctl_JAL | reg_ctl_JALR : begin
-                        data_out = PC_out + 4;
+                        data_out = PC_out + {(`PC_BITWIDTH - 3)'(0), addr_step_out};
                     end
                     
                     mul_div_done : begin
@@ -655,6 +683,26 @@ module Rattlesnake_execution_unit (
             
             assign unaligned_write = (width == `WIDTH_32) ? (mem_write_addr[0] | mem_write_addr[1]) : ( (width == `WIDTH_16) || (width == `WIDTH_16U) ?  mem_write_addr[0] : 1'b0 );
             assign width_load_store = width;
+        
+        //---------------------------------------------------------------------
+        //  exe protect 
+        //---------------------------------------------------------------------
+            always @(posedge clk, negedge reset_n) begin : exe_protect_proc
+                if (!reset_n) begin
+                    exe_protect_active <= 0;
+                end else if (exe_enable) begin
+                    if ((PC_in >= exe_proetect_start_addr[`PC_BITWIDTH - 1 : 0]) && (PC_in < exe_proetect_end_addr[`PC_BITWIDTH - 1 : 0])) begin
+                        exe_protect_active <= 0;
+                    end else begin
+                        exe_protect_active <= |exe_proetect_end_addr[`PC_BITWIDTH - 1 : 0];
+                    end
+                end else begin
+                    exe_protect_active <= 0;
+                end
+            
+            end 
+        
+        
         
 endmodule
 

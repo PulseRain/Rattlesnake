@@ -37,7 +37,7 @@ module Rattlesnake_machine_timer (
         input wire                                              load_mtimecmp_high,
         input wire [`XLEN - 1 : 0]                              mtimecmp_write_data,
         
-        output reg                                              timer_triggered,
+        output reg                                              timer_triggered = 0,
         
         input  wire [1 : 0]                                     reg_read_addr,
         output reg [`XLEN - 1 : 0]                              reg_read_data 

@@ -58,8 +58,9 @@ module Rattlesnake_memory (
         input   wire  [`XLEN_BYTES - 1 : 0]                             data_write_enable,
         
         input   wire  [`MEM_ADDR_BITS - 1 : 0]                          data_rw_addr,
-        input   wire  [`XLEN - 1 : 0]                                   data_write_word,
+        input   wire  [`EXT_BITS + `XLEN - 1 : 0]                       data_write_word,
         
+        input   wire                                                    blk_write_active,
         
     //=======================================================================
     // output
@@ -70,9 +71,9 @@ module Rattlesnake_memory (
         output  wire  [`MEM_ADDR_BITS - 1 : 0]                          mem_addr,
         output  wire                                                    mem_read_en,
         output  wire [`XLEN_BYTES - 1 : 0]                              mem_write_en,
-        output  wire [`XLEN - 1 : 0]                                    mem_write_data,
+        output  wire [`EXT_BITS + `XLEN - 1 : 0]                        mem_write_data,
         
-        input   wire [`XLEN - 1 : 0]                                    mem_read_data
+        input   wire [`EXT_BITS + `XLEN - 1 : 0]                        mem_read_data
             
         
 );
@@ -82,7 +83,7 @@ module Rattlesnake_memory (
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             reg  [`MEM_ADDR_BITS - 1 : 0]     addr;
-            wire [`XLEN - 1 : 0]              din;
+            wire [`EXT_BITS + `XLEN - 1 : 0]  din;
             wire [`XLEN_BYTES - 1 : 0]        write_en;
             wire [15 : 0]                     dout_high;
             wire [15 : 0]                     dout_low;
@@ -103,7 +104,7 @@ module Rattlesnake_memory (
                 end
             end
 
-            assign din = ocd_write_enable ? ocd_write_word : data_write_word;
+            assign din = ocd_write_enable ? {1'b0, ocd_write_word} : data_write_word;
 
             /*single_port_ram_sim_high #(.ADDR_WIDTH (`MEM_ADDR_BITS), .DATA_WIDTH (16) ) single_port_ram_sim_high_i (
                 .addr (addr),
@@ -137,7 +138,7 @@ module Rattlesnake_memory (
             
            // assign word_out = {dout_high, dout_low};
            
-            assign word_out = mem_read_data;
+            assign word_out = mem_read_data [`XLEN - 1 : 0];
             
             always @(posedge clk, negedge reset_n) begin : output_proc
                 if (!reset_n) begin
@@ -149,7 +150,8 @@ module Rattlesnake_memory (
 
             assign mem_addr = addr;
             assign mem_write_en = write_en;
-            assign mem_write_data = din;
+            assign mem_write_data = {din[`XLEN] | blk_write_active, din [`XLEN - 1 : 0]};
+           
             
             assign mem_read_en = ocd_read_enable | code_read_enable | data_read_enable;
         

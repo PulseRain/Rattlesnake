@@ -47,6 +47,7 @@ module Rattlesnake_fetch_instruction (
 
         output reg                                          fetch_enable_out,
         output reg [`XLEN - 1 : 0]                          IR_out,
+        output reg [`XLEN - 1 : 0]                          IR_original_out,
         output reg [`PC_BITWIDTH - 1 : 0]                   PC_out,
     
     //=====================================================================
@@ -76,9 +77,34 @@ module Rattlesnake_fetch_instruction (
             reg                                             ctl_save_start_addr;
             reg                                             ctl_mem_ack_suppress;
              
+            wire                                            c_ext_enable_out;
+            wire [`XLEN - 1 : 0]                            c_ext_instruction_out;
+            wire [`MEM_ADDR_BITS - 1 : 0]                   c_ext_mem_addr_ack_out;
+            wire [`XLEN - 1 : 0]                            instruction_original;
+            
+            reg   [2 : 0]                                   addr_step = 3'b100;
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // data path
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            //---------------------------------------------------------------------
+            // C Extension
+            //---------------------------------------------------------------------
+                
+                Rattlesnake_instruction_decompress C_extension_i (
+                    .clk        (clk),
+                    .reset_n    (reset_n),
+                    .sync_reset (sync_reset),
+                    
+                    .mem_read_done      (mem_read_done),
+                    .mem_data_in        (mem_data),
+                    .mem_addr_ack_in    (mem_addr_ack),
+                    
+                    .enable_out         (c_ext_enable_out),
+                    .instruction_out    (c_ext_instruction_out),
+                    .instruction_original (instruction_original),
+                    .mem_addr_ack_out   (c_ext_mem_addr_ack_out));   
+
 
             //---------------------------------------------------------------------
             // read memory
@@ -102,12 +128,12 @@ module Rattlesnake_fetch_instruction (
                             read_mem_addr <= start_addr;
                             
                         end else if (ctl_inc_read_addr) begin
-                            read_mem_addr <= read_mem_addr + 4;
+                            read_mem_addr <= read_mem_addr + {(`PC_BITWIDTH - 3)'(0), addr_step};
                         end
                         
                         if (ctl_read_mem_enable) begin
                             read_active <= 1'b1;
-                        end else if (mem_read_done) begin
+                        end else if (c_ext_enable_out) begin
                             read_active <= 0;
                         end
                                                 
@@ -121,28 +147,39 @@ module Rattlesnake_fetch_instruction (
                     if (!reset_n) begin
                         PC_out <= 0;
                         IR_out <= 0;
+                        IR_original_out <= 0;
                         fetch_enable_out <= 0;
                         PC_out <= 0;
+                        addr_step <= 3'b100;
                     end else begin
                         
                         
-                        fetch_enable_out <= mem_read_done & (~ctl_mem_ack_suppress) & read_active;
+                        fetch_enable_out <= c_ext_enable_out & (~ctl_mem_ack_suppress) & read_active;
                         
                         
-                        if (mem_read_done & read_active) begin
-                            PC_out <= {start_addr_reg [`PC_BITWIDTH - 1 : `MEM_ADDR_BITS + 2], mem_addr_ack, 2'b00};
+                        if (c_ext_enable_out & read_active) begin
+                            PC_out <= {start_addr_reg [`PC_BITWIDTH - 1 : `MEM_ADDR_BITS + 1], c_ext_mem_addr_ack_out, 1'b0};
+                        end
+                        
+                        if (c_ext_enable_out & read_active) begin
+                            IR_out <= c_ext_instruction_out;
+                            IR_original_out <= instruction_original;
                         end
                         
                         if (mem_read_done & read_active) begin
-                            IR_out <= mem_data;
-                        end
+                            if (mem_data[1 : 0] == 2'b11) begin
+                                addr_step <= 3'b100;
+                            end else begin
+                                addr_step <= 3'b010;
+                            end
+                        end                        
                     end
                 end
             
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // FSM
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-            localparam S_IDLE = 0, S_FETCH = 1, S_WAIT_DRAM = 2;
+            localparam S_IDLE = 0, S_FETCH = 1;
             reg [2 : 0] current_state, next_state;
                     
             // Declare states
@@ -172,7 +209,6 @@ module Rattlesnake_fetch_instruction (
                     
                     current_state[S_IDLE]: begin
                         
-                        
                         if (fetch_init) begin
                             ctl_load_start_addr = 1'b1;
                             ctl_read_mem_enable = 1'b1;
@@ -187,15 +223,12 @@ module Rattlesnake_fetch_instruction (
                     current_state [S_FETCH] : begin
                         
                         if (fetch_init) begin
-                           
                             ctl_read_mem_enable = 1'b1;
                             next_state [S_FETCH] = 1'b1;
-                           
                         end else begin
                             ctl_read_mem_enable = fetch_next;
                             next_state [S_FETCH] = 1'b1;
                         end
-                       
                         
                         if (fetch_init) begin
                             ctl_load_start_addr = 1'b1;
@@ -204,24 +237,6 @@ module Rattlesnake_fetch_instruction (
                         end
                         
                     end
-                    
-                    current_state [S_WAIT_DRAM] : begin
-                        
-                        if (fetch_init) begin
-                            // Timer interrupt could happen at this point
-                            ctl_mem_ack_suppress = 1'b1;
-                            next_state [S_WAIT_DRAM] = 1'b1;
-                        end else begin
-                            ctl_read_mem_enable = 1'b1;
-                            next_state [S_FETCH] = 1'b1;
-                        end
-                        
-                        if (fetch_init) begin
-                            ctl_load_start_addr = 1'b1;
-                        end 
-                        
-                    end
-                    
           
                     default: begin
                         next_state[S_IDLE] = 1'b1;

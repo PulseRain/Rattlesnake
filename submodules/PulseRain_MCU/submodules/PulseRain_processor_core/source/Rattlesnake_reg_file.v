@@ -25,6 +25,7 @@
 //=============================================================================
 
 `include "common.vh"
+`include "config.vh"
 
 `default_nettype none
 
@@ -45,28 +46,35 @@ module Rattlesnake_reg_file (
         input   wire  [`REG_ADDR_BITS - 1 : 0]                  read_rs2_addr,
         
         output  reg                                             read_en_out,
-        output  wire  [`XLEN - 1 : 0]                           read_rs1_data_out,
-        output  wire  [`XLEN - 1 : 0]                           read_rs2_data_out,
+        output  wire  [`EXT_BITS + `XLEN - 1 : 0]               read_rs1_data_out,
+        output  wire  [`EXT_BITS + `XLEN - 1 : 0]               read_rs2_data_out,
+        
+        output  wire  [`EXT_BITS + `XLEN - 1 : 0]               read_rs1_data_out_copy,
+        output  wire  [`EXT_BITS + `XLEN - 1 : 0]               read_rs2_data_out_copy,
         
         input   wire                                            write_enable,
         input   wire  [`REG_ADDR_BITS - 1 : 0]                  write_addr,
-        input   wire  [`XLEN - 1 : 0]                           write_data_in
+        input   wire  [`EXT_BITS + `XLEN - 1 : 0]               write_data_in
 
 );
 
    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
    // Signals
    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        wire   [`XLEN - 1 : 0]                                  read_rs1_data_out_i;
-        wire   [`XLEN - 1 : 0]                                  read_rs2_data_out_i;
+        wire   [`EXT_BITS + `XLEN - 1 : 0]                      read_rs1_data_out_i;
+        wire   [`EXT_BITS + `XLEN - 1 : 0]                      read_rs1_data_out_i_copy;
+                
+        wire   [`EXT_BITS + `XLEN - 1 : 0]                      read_rs2_data_out_i;
+        wire   [`EXT_BITS + `XLEN - 1 : 0]                      read_rs2_data_out_i_copy;
+        
         reg                                                     write_enable_d1;
-        reg    [`XLEN - 1 : 0]                                  write_data_in_d1;
+        reg    [`EXT_BITS + `XLEN - 1 : 0]                      write_data_in_d1;
         
    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
    // datapath
    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         
-        dual_port_ram #(.ADDR_WIDTH (`REG_ADDR_BITS), .DATA_WIDTH (`XLEN)) single_clk_ram_rs1 (
+        dual_port_ram #(.ADDR_WIDTH (`REG_ADDR_BITS), .DATA_WIDTH (`XLEN + `EXT_BITS)) single_clk_ram_rs1 (
             .waddr (write_addr),
             .raddr (read_rs1_addr),
             .din (write_data_in),
@@ -74,7 +82,7 @@ module Rattlesnake_reg_file (
             .clk (clk),
             .dout (read_rs1_data_out_i) );
             
-        dual_port_ram #(.ADDR_WIDTH (`REG_ADDR_BITS), .DATA_WIDTH (`XLEN)) single_clk_ram_rs2 (
+        dual_port_ram #(.ADDR_WIDTH (`REG_ADDR_BITS), .DATA_WIDTH (`XLEN + `EXT_BITS)) single_clk_ram_rs2 (
             .waddr (write_addr),
             .raddr (read_rs2_addr),
             .din (write_data_in),
@@ -84,6 +92,9 @@ module Rattlesnake_reg_file (
            
         assign read_rs1_data_out = (|read_rs1_addr) ? (((write_enable_d1 == 1'b1) && (read_rs1_addr == write_addr)) ? write_data_in_d1 : read_rs1_data_out_i) : 0;
         assign read_rs2_data_out = (|read_rs2_addr) ? (((write_enable_d1 == 1'b1) && (read_rs2_addr == write_addr)) ? write_data_in_d1 : read_rs2_data_out_i) : 0;
+        
+        assign read_rs1_data_out_copy = (|read_rs1_addr) ? (((write_enable_d1 == 1'b1) && (read_rs1_addr == write_addr)) ? write_data_in_d1 : read_rs1_data_out_i_copy) : 0;
+        assign read_rs2_data_out_copy = (|read_rs2_addr) ? (((write_enable_d1 == 1'b1) && (read_rs2_addr == write_addr)) ? write_data_in_d1 : read_rs2_data_out_i_copy) : 0;
         
         always @(posedge clk, negedge reset_n) begin : output_proc
             if (!reset_n) begin
@@ -96,6 +107,30 @@ module Rattlesnake_reg_file (
                 write_data_in_d1 <= write_data_in;
             end
         end
+ 
+//=============================================================================
+// for security
+//=============================================================================
+
+
+        dual_port_ram #(.ADDR_WIDTH (`REG_ADDR_BITS), .DATA_WIDTH (`XLEN + `EXT_BITS)) single_clk_ram_rs1_copy (
+            .waddr (write_addr),
+            .raddr (read_rs1_addr),
+            .din (write_data_in),
+            .write_en (write_enable),
+            .clk (clk),
+            .dout (read_rs1_data_out_i_copy) );
+
+ 
+        dual_port_ram #(.ADDR_WIDTH (`REG_ADDR_BITS), .DATA_WIDTH (`XLEN + `EXT_BITS)) single_clk_ram_rs2_copy (
+            .waddr (write_addr),
+            .raddr (read_rs2_addr),
+            .din (write_data_in),
+            .write_en (write_enable),
+            .clk (clk),
+            .dout (read_rs2_data_out_i_copy) );
+
+ 
  
 endmodule
 

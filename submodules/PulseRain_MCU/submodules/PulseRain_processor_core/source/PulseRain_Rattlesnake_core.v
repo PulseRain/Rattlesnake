@@ -69,6 +69,12 @@ module PulseRain_Rattlesnake_core (
         input  wire                                             WB_WR_ACK_I,
     
     //=====================================================================
+    // exe protect
+    //=====================================================================
+        input wire unsigned [`XLEN - 1 : 0]                     exe_proetect_start_addr,
+        input wire unsigned [`XLEN - 1 : 0]                     exe_proetect_end_addr,
+        
+    //=====================================================================
     // Interface for init/start
     //=====================================================================
         input   wire                                            start,
@@ -81,9 +87,9 @@ module PulseRain_Rattlesnake_core (
         output  wire  [`MEM_ADDR_BITS - 1 : 0]                  mem_addr,
         output  wire                                            mem_read_en,
         output  wire [`XLEN_BYTES - 1 : 0]                      mem_write_en,
-        output  wire [`XLEN - 1 : 0]                            mem_write_data,
+        output  wire [`EXT_BITS + `XLEN - 1 : 0]                mem_write_data,
         
-        input   wire [`XLEN - 1 : 0]                            mem_read_data,
+        input   wire [`EXT_BITS + `XLEN - 1 : 0]                mem_read_data,
         
         input   wire                                            mem_write_ack,
         input   wire                                            mem_read_ack,
@@ -108,12 +114,14 @@ module PulseRain_Rattlesnake_core (
         wire  [`REG_ADDR_BITS - 1 : 0]                  reg_file_read_rs1_addr;
         wire  [`REG_ADDR_BITS - 1 : 0]                  reg_file_read_rs2_addr;
         
-        wire  [`XLEN - 1 : 0]                           reg_file_read_rs1_data_out;
-        wire  [`XLEN - 1 : 0]                           reg_file_read_rs2_data_out;
+        wire  [`EXT_BITS + `XLEN - 1 : 0]               reg_file_read_rs1_data_out;
+        wire  [`EXT_BITS + `XLEN - 1 : 0]               reg_file_read_rs2_data_out;
+        wire  [`EXT_BITS + `XLEN - 1 : 0]               reg_file_read_rs1_data_out_copy;
+        wire  [`EXT_BITS + `XLEN - 1 : 0]               reg_file_read_rs2_data_out_copy;
         
         wire                                            reg_file_write_enable;
         wire  [`REG_ADDR_BITS - 1 : 0]                  reg_file_write_addr;
-        wire  [`XLEN - 1 : 0]                           reg_file_write_data;
+        wire  [`EXT_BITS + `XLEN - 1 : 0]               reg_file_write_data;
                 
         wire                                            fetch_init;
         wire  [`PC_BITWIDTH - 1 : 0]                    fetch_init_addr;
@@ -121,6 +129,8 @@ module PulseRain_Rattlesnake_core (
         
         wire                                            fetch_enable_out;
         wire  [`XLEN - 1 : 0]                           fetch_IR_out;
+        wire  [`XLEN - 1 : 0]                           fetch_IR_original_out;
+        
         wire  [`PC_BITWIDTH - 1 : 0]                    fetch_PC_out;
     
         wire                                            fetch_read_mem_enable;
@@ -132,6 +142,7 @@ module PulseRain_Rattlesnake_core (
         wire  [`REG_ADDR_BITS - 1 : 0]                  rs2;
         
         wire  [`XLEN - 1 : 0]                           decode_IR_out ;
+        wire  [`XLEN - 1 : 0]                           decode_IR_original_out;
         wire  [`PC_BITWIDTH - 1 : 0]                    decode_PC_out ;
         
         wire  [`CSR_BITS - 1 : 0]                       decode_csr;
@@ -169,7 +180,7 @@ module PulseRain_Rattlesnake_core (
         wire                                            data_access_enable;
         
         wire                                            data_access_reg_we;
-        wire [`XLEN - 1 : 0]                            data_access_reg_data_to_write;
+        wire [`EXT_BITS + `XLEN - 1 : 0]                data_access_reg_data_to_write;
         wire [`REG_ADDR_BITS - 1 : 0]                   data_access_reg_addr;
         
         wire                                            exe_branch_active;
@@ -196,7 +207,7 @@ module PulseRain_Rattlesnake_core (
         
         wire                                            data_access_mem_re;
         wire [`XLEN_BYTES - 1 : 0]                      data_access_mem_we;
-        wire [`XLEN - 1 : 0]                            data_access_mem_data_to_write;
+        wire [`EXT_BITS + `XLEN - 1 : 0]                data_access_mem_data_to_write;
         wire [`XLEN - 1 : 0]                            data_access_mem_addr_rw;
         
         wire                                            data_access_ctl_csr_we;
@@ -251,13 +262,32 @@ module PulseRain_Rattlesnake_core (
 
         wire                                            is_interrupt;
         
+        reg                                             mem_read_ack_d1;
+        reg  [`EXT_BITS + `XLEN - 1 : 0]                mem_read_data_d1;
+        reg  [`MEM_ADDR_BITS - 1 : 0]                   mem_addr_ack_d1;
+        
+        wire [2 : 0]                                    exe_addr_step_out;
+        
+        reg                                             compressed_instruction_detected;
+        reg                                             start_d1;
+        
+        wire                                            exe_protect_active;
+        wire                                            exception_handler_active;
+        
+        wire [`MEM_ADDR_BITS - 1 : 0]                   mem_addr_blk_wr_start;
+        wire  [`MEM_ADDR_BITS - 1 : 0]                  mem_addr_blk_wr_end;
+
+        wire                                            indirect_protect_active;
+        wire                                            address_dirty;
+        wire                                            blk_write_active;
+        
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // Data Path
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         //---------------------------------------------------------------------
         // memory mapped registers
         //---------------------------------------------------------------------
-             Rattlesnake_mm_reg Rattlesnake_mm_reg_i (
+            Rattlesnake_mm_reg Rattlesnake_mm_reg_i (
                 .clk (clk),
                 .reset_n (reset_n),
                 .sync_reset (sync_reset),
@@ -300,13 +330,15 @@ module PulseRain_Rattlesnake_core (
                 .ocd_write_word (ocd_write_word),
                 
                 .code_read_enable (fetch_read_mem_enable),
-                .code_read_addr (fetch_read_mem_addr [`MEM_ADDR_BITS + 1 : 2]),
+                .code_read_addr (fetch_read_mem_addr [`MEM_ADDR_BITS : 1]),
                 
                 .data_read_enable  (data_access_mem_re),
                 .data_write_enable (data_access_mem_we),
                 
-                .data_rw_addr (data_access_mem_addr_rw [`MEM_ADDR_BITS + 1 : 2]),
+                .data_rw_addr (data_access_mem_addr_rw [`MEM_ADDR_BITS : 1]),
                 .data_write_word (data_access_mem_data_to_write),
+                
+                .blk_write_active (blk_write_active),
                 
                 .enable_out (),
                 .word_out (mem_word_out),
@@ -317,11 +349,22 @@ module PulseRain_Rattlesnake_core (
                 .mem_write_data (mem_write_data),
                 .mem_read_data  (mem_read_data));
         
-            assign mem_enable_out = mem_read_ack;
-        
+            assign mem_enable_out = mem_read_ack_d1;
         
             assign ocd_mem_enable_out = mem_enable_out;
-            assign ocd_mem_word_out   = mem_read_data;
+            assign ocd_mem_word_out   = mem_read_data_d1[`XLEN - 1 : 0];
+            
+            always @(posedge clk, negedge reset_n) begin : delay_proc
+                if (!reset_n) begin
+                    mem_read_ack_d1  <= 0;
+                    mem_read_data_d1 <= 0;
+                    mem_addr_ack_d1  <= 0;
+                end else begin
+                    mem_read_ack_d1  <= mem_read_ack;
+                    mem_read_data_d1 <= mem_read_data;
+                    mem_addr_ack_d1  <= mem_addr_ack;
+                end
+            end 
         
         //---------------------------------------------------------------------
         // register file
@@ -334,7 +377,7 @@ module PulseRain_Rattlesnake_core (
             
             assign reg_file_write_enable = run1_pause0 ? data_access_reg_we : ocd_reg_we;
             assign reg_file_write_addr   = run1_pause0 ? data_access_reg_addr : ocd_reg_write_addr;
-            assign reg_file_write_data   = run1_pause0 ? data_access_reg_data_to_write : ocd_reg_write_data;
+            assign reg_file_write_data   = run1_pause0 ? data_access_reg_data_to_write : {1'b0, ocd_reg_write_data};
              
             Rattlesnake_reg_file Rattlesnake_reg_file_i (
                 .clk (clk),
@@ -348,6 +391,9 @@ module PulseRain_Rattlesnake_core (
                 .read_en_out(),
                 .read_rs1_data_out (reg_file_read_rs1_data_out),
                 .read_rs2_data_out (reg_file_read_rs2_data_out),
+                
+                .read_rs1_data_out_copy (reg_file_read_rs1_data_out_copy),
+                .read_rs2_data_out_copy (reg_file_read_rs2_data_out_copy),
         
                 .write_enable  (reg_file_write_enable),
                 .write_addr    (reg_file_write_addr),
@@ -408,15 +454,31 @@ module PulseRain_Rattlesnake_core (
                 
                 .fetch_enable_out (fetch_enable_out),
                 .IR_out (fetch_IR_out),
+                .IR_original_out (fetch_IR_original_out),
                 .PC_out (fetch_PC_out),
                 
-                .mem_read_done (mem_enable_out),
-                .mem_data (mem_word_out),
+                .mem_read_done (mem_read_ack),
+                .mem_data (mem_read_data [`XLEN - 1 : 0]),
                 
                 .read_mem_enable (fetch_read_mem_enable),
                 .read_mem_addr (fetch_read_mem_addr),
                 .mem_addr_ack (mem_addr_ack));
 
+            always @(posedge clk, negedge reset_n) begin
+                if (!reset_n) begin
+                    compressed_instruction_detected <= 0;
+                    start_d1 <= 0;
+                end else begin
+                    start_d1 <= start;
+                    
+                    if (start & (~start_d1)) begin
+                        compressed_instruction_detected <= 0;
+                    end else if (fetch_enable_out & (fetch_IR_out [1 : 0] != 2'b11)) begin
+                        compressed_instruction_detected <= 1'b1;
+                    end 
+                end
+            
+            end 
         //---------------------------------------------------------------------
         // instruction decode
         //---------------------------------------------------------------------
@@ -429,6 +491,7 @@ module PulseRain_Rattlesnake_core (
                                     
                 .enable_in (fetch_enable_out),
                 .IR_in (fetch_IR_out),
+                .IR_original_in (fetch_IR_original_out),
                 .PC_in (fetch_PC_out),
                 
                 .rs1 (rs1),
@@ -439,6 +502,7 @@ module PulseRain_Rattlesnake_core (
                 
                 .enable_out (decode_enable_out),
                 .IR_out (decode_IR_out),
+                .IR_original_out (decode_IR_original_out),
                 .PC_out (decode_PC_out),
                 
                 .ctl_load_X_from_rs1             (decode_ctl_load_X_from_rs1),
@@ -473,8 +537,10 @@ module PulseRain_Rattlesnake_core (
          
                 .enable_in (1'b0),
                 .IR_in       (decode_IR_out),
+                .IR_original_in (decode_IR_original_out),
                 .PC_in       (decode_PC_out),
                 .csr_addr_in (decode_csr),
+                .ext_bits_rs1 (reg_file_read_rs1_data_out[`EXT_BITS + `XLEN - 1 : `XLEN]),
                 
                 .ctl_load_Y_from_imm_12 (decode_ctl_load_Y_from_imm_12),
                 .ctl_save_to_rd         (decode_ctl_save_to_rd),
@@ -493,16 +559,20 @@ module PulseRain_Rattlesnake_core (
                 .ctl_MRET               (decode_ctl_MRET),
                 .ctl_MUL_DIV_FUNCT3     (decode_ctl_MUL_DIV_FUNCT3),
                 
-                .rs1_in (reg_file_read_rs1_data_out),
-                .rs2_in (reg_file_read_rs2_data_out),
+                .rs1_in (reg_file_read_rs1_data_out [`XLEN - 1 : 0]),
+                .rs2_in (reg_file_read_rs2_data_out [`XLEN - 1 : 0]),
      
                 .csr_in (csr_read_data_out),
+                
+                .exe_proetect_start_addr (exe_proetect_start_addr),
+                .exe_proetect_end_addr   (exe_proetect_end_addr),
          
                 .enable_out (),
                 .rd_addr_out (exe_rd_addr_out),
                 
                 .IR_out (exe_IR_out),
                 .PC_out (exe_PC_out),
+                .addr_step_out (exe_addr_step_out),
         
                 .branch_active  (exe_branch_active),
                 .branch_addr    (exe_branch_addr),
@@ -516,22 +586,24 @@ module PulseRain_Rattlesnake_core (
                 .reg_ctl_save_to_rd (exe_ctl_save_to_rd),
                 .data_out (exe_data_out),
                 
-                .load_active       (exe_load_active),
-                .store_active      (exe_store_active),
-                .width_load_store  (exe_width_load_store),
-                .data_to_store     (exe_data_to_store),
-                .mem_write_addr    (exe_mem_write_addr),
-                .mem_read_addr     (exe_mem_read_addr),
-                .unaligned_write   (exe_unaligned_write),
-                .unaligned_read    (exe_unaligned_read),
-                .reg_ctl_CSR       (exe_reg_ctl_CSR),
-                .reg_ctl_CSR_write (exe_reg_ctl_CSR_write),
-                .csr_addr_out      (exe_csr_addr),
-                .ecall_active      (exception_ecall),
-                .ebreak_active     (exception_ebreak),
-                .mret_active       (mret_active),
-                .mul_div_active    (mul_div_active),
-                .mul_div_done      (mul_div_done)
+                .load_active        (exe_load_active),
+                .store_active       (exe_store_active),
+                .width_load_store   (exe_width_load_store),
+                .data_to_store      (exe_data_to_store),
+                .mem_write_addr     (exe_mem_write_addr),
+                .mem_read_addr      (exe_mem_read_addr),
+                .unaligned_write    (exe_unaligned_write),
+                .unaligned_read     (exe_unaligned_read),
+                .reg_ctl_CSR        (exe_reg_ctl_CSR),
+                .reg_ctl_CSR_write  (exe_reg_ctl_CSR_write),
+                .csr_addr_out       (exe_csr_addr),
+                .ecall_active       (exception_ecall),
+                .ebreak_active      (exception_ebreak),
+                .mret_active        (mret_active),
+                .mul_div_active     (mul_div_active),
+                .mul_div_done       (mul_div_done),
+                .exe_protect_active (exe_protect_active),
+                .address_dirty      (address_dirty)
                 );
                 
      
@@ -561,6 +633,7 @@ module PulseRain_Rattlesnake_core (
                 .store_active     (exe_store_active),
                 .width_load_store (exe_width_load_store),
                 .data_to_store    (exe_data_to_store),
+                .indirect_protect_active (indirect_protect_active),
                 .mem_write_addr   (exe_mem_write_addr),
                 .mem_read_addr    (exe_mem_read_addr),
                 .unaligned_write  (exe_unaligned_write),
@@ -574,8 +647,8 @@ module PulseRain_Rattlesnake_core (
                 .ctl_csr_write_addr (data_access_ctl_csr_write_addr),
                 .ctl_csr_write_data (data_access_ctl_csr_write_data),
                  
-                .mem_enable_in (mem_enable_out),
-                .mem_data_in   (mem_word_out),
+                .mem_enable_in (mem_read_ack_d1),
+                .mem_data_in   (mem_read_data_d1),
                 
                 .mm_reg_enable_in (mm_reg_enable_out),
                 .mm_reg_data_in   (mm_reg_word_out),
@@ -587,7 +660,7 @@ module PulseRain_Rattlesnake_core (
                 .store_done (store_done),
                 
                 .write_active (data_access_write_active),
-                .mem_read_ack (mem_read_ack),
+                .mem_read_ack (mem_read_ack_d1),
                 .mem_write_ack (mem_write_ack),
                 
                 .load_done  (load_done),
@@ -607,12 +680,13 @@ module PulseRain_Rattlesnake_core (
                 .reset_n (reset_n),
                 .sync_reset (sync_reset),
                 
-                .mem_read_ack (mem_read_ack),
+                .mem_read_ack (mem_read_ack_d1),
                 .mem_write_ack (mem_write_ack),
                 .data_access_write_active (data_access_write_active),
                 
                 .start (start),
                 .start_addr (start_address),
+                .compressed_instruction_detected (compressed_instruction_detected),
                 
                 .fetch_init (fetch_init),
                 .fetch_start_addr (fetch_init_addr),
@@ -640,6 +714,7 @@ module PulseRain_Rattlesnake_core (
                 .load_active     (exe_load_active),
                 .store_active    (exe_store_active),
                 .data_to_store   (exe_data_to_store),
+                
                 .mem_write_addr  (exe_mem_write_addr),
                 .mem_read_addr   (exe_mem_read_addr),
                 .unaligned_write (exe_unaligned_write),
@@ -654,6 +729,9 @@ module PulseRain_Rattlesnake_core (
                 .data_access_enable (data_access_enable),
    
                 .PC_in              (exe_PC_out),
+                .addr_step_in       (exe_addr_step_out),
+                .address_dirty      (address_dirty),
+                .exe_protect_active (exe_protect_active),
                 .mtvec_in           (mtvec_value),
                 .mepc_in            (mepc_value),
                 
@@ -668,10 +746,48 @@ module PulseRain_Rattlesnake_core (
                 .activate_exception           (activate_exception),
                 .exception_PC                 (exception_PC),
                 .exception_addr               (exception_addr),
-                .paused                       (paused)
-                
-                );
+                .paused                       (paused),
+                .exception_handler_active     (exception_handler_active)
+            );
             
+
+//----------------------------------------------------------------------------
+// block write detect
+//----------------------------------------------------------------------------
+            
+            
+        Rattlesnake_block_write_detect Rattlesnake_block_write_detect_i (.*,
+            
+            .mem_write_en               (data_access_mem_we),
+            .mem_addr                   (data_access_mem_addr_rw [`MEM_ADDR_BITS : 1]),
+            .exception_handler_active   (exception_handler_active),
+            
+            .mem_addr_blk_wr_start      (mem_addr_blk_wr_start),
+            .mem_addr_blk_wr_end        (mem_addr_blk_wr_end),
+            .blk_write_active           (blk_write_active));
+
+
+//----------------------------------------------------------------------------
+// indirect pointer detect
+//----------------------------------------------------------------------------
+
+        Rattlesnake_indirect_pointer_detect Rattlesnake_indirect_pointer_detect_i (.*,
+            .exe_enable (exe_enable),
+            .rs1_in_copy (reg_file_read_rs1_data_out_copy),
+            .rs2_in_copy (reg_file_read_rs2_data_out_copy),
+                     
+            .IR_in           (decode_IR_out),
+            .IR_original_in  (decode_IR_original_out),
+            .PC_in           (decode_PC_out),
+                
+            .exception_handler_active (exception_handler_active),
+            
+            .mem_addr_blk_wr_start (mem_addr_blk_wr_start),
+            .mem_addr_blk_wr_end   (mem_addr_blk_wr_end),
+                
+            .indirect_protect_active (indirect_protect_active)
+        ); 
+
 //----------------------------------------------------------------------------
 // DEBUG
 //----------------------------------------------------------------------------
