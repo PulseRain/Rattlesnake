@@ -49,6 +49,10 @@ module debug_coprocessor (
     output reg [`DEBUG_PRAM_ADDR_WIDTH - 3 : 0]                                 pram_write_addr_out,
     output reg [`DEBUG_DATA_WIDTH * `DEBUG_FRAME_DATA_LEN - 1 : 0]              pram_write_data_out,
     
+    output reg                                                                  preg_write_enable_out,
+    output wire [`DEBUG_PRAM_ADDR_WIDTH - 3 : 0]                                preg_write_addr_out,
+    output wire [`DEBUG_DATA_WIDTH * `DEBUG_FRAME_DATA_LEN - 1 : 0]             preg_write_data_out,
+    
     output reg                                                                  cpu_reset,
     output reg                                                                  cpu_start,
     output reg [`DEBUG_DATA_WIDTH * `DEBUG_FRAME_DATA_LEN - 1 : 0]              cpu_start_addr,
@@ -72,6 +76,8 @@ module debug_coprocessor (
                     
         reg                                                             ctl_pram_write_enable;
         reg                                                             ctl_pram_read_enable;
+        reg                                                             ctl_preg_write_enable;
+        
         
         wire [`DEBUG_PRAM_ADDR_WIDTH - 1 : 0]                           pram_addr;
         wire [`DEBUG_FRAME_DATA_LEN * `DEBUG_DATA_WIDTH -  1 : 0]       pram_data;
@@ -122,8 +128,8 @@ module debug_coprocessor (
     // CRC
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         crc16_CCITT crc16_CCITT_i (
-				.clk (clk),
-				.reset_n (reset_n),
+                .clk (clk),
+                .reset_n (reset_n),
             .sync_reset (ctl_crc_sync_reset),
             .crc_en (enable_in_sr[0]),
             .data_in (new_data_in),
@@ -197,8 +203,12 @@ module debug_coprocessor (
                 pram_write_enable_out <= 0;
                 pram_write_addr_out   <= 0;
                 pram_write_data_out   <= 0;
+                
+                preg_write_enable_out <= 0;
+                
             end else begin
                 pram_write_enable_out <= ctl_pram_write_enable;
+                preg_write_enable_out <= ctl_preg_write_enable;
                 
                 if (wr_ext_enable) begin
                     pram_write_addr_out   <= pram_addr_ext [`DEBUG_PRAM_ADDR_WIDTH - 1 : 2];
@@ -209,6 +219,9 @@ module debug_coprocessor (
                 pram_write_data_out   <= pram_data;
             end
         end 
+        
+        assign  preg_write_addr_out = pram_write_addr_out;
+        assign  preg_write_data_out = pram_write_data_out;
             
         always @(posedge clk, negedge reset_n) begin : pram_read_proc
             if (!reset_n) begin
@@ -328,6 +341,7 @@ module debug_coprocessor (
             
             ctl_pram_write_enable = 0;
             ctl_pram_read_enable = 0;
+            ctl_preg_write_enable = 0;
             
             ctl_reply_wr_ack = 0;
             
@@ -426,8 +440,12 @@ module debug_coprocessor (
                             end
                             
                             `DEBUG_TYPE_PRAM_WRITE_4_BYTES_WITH_ACK : begin
-                                
                                 ctl_pram_write_enable = 1'b1;
+                                next_state [S_WR_ACK] = 1;
+                            end
+                            
+                            `DEBUG_TYPE_PREG_WRITE_4_BYTES_WITH_ACK : begin
+                                ctl_preg_write_enable = 1'b1;
                                 next_state [S_WR_ACK] = 1;
                             end
                             
@@ -539,27 +557,6 @@ module debug_coprocessor (
             endcase
             
         end 
-        
-/*        
-         ocd inside_ocd_stp (
-	            .acq_clk (clk), 
-	            .acq_data_in (acq_data_in), 
-	            .acq_trigger_in ({ctl_pram_write_enable,ctl_wr_ext_enable, ctl_crc_sync_reset, enable_in_sr[0]})
-	        );
-	        
-	        assign acq_data_in[0] = enable_in_sr[0];
-	        assign acq_data_in[8 : 1] = new_data_in;
-	        assign acq_data_in[16 : 9] = input_counter;
-	        assign acq_data_in[17] = ctl_crc_sync_reset;
-	        assign acq_data_in [18] = ctl_wr_ext_enable;
-	        assign acq_data_in [30 : 19] = current_state;
-	        assign acq_data_in [46 : 31] = crc_out;
-	        assign acq_data_in [150 : 47] = data_in_sr;
-	        assign acq_data_in[151] = debug_uart_tx_sel_ocd1_cpu0;
-	        assign acq_data_in[183 : 152] = pram_write_data_out;
-	        assign acq_data_in [207 : 184] = pram_addr;
-	        assign acq_data_in [255 : 208] = 0;
-*/
     
 endmodule
 

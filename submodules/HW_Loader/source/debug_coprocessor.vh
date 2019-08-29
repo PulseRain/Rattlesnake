@@ -38,6 +38,7 @@
 
 `define                     DEBUG_TYPE_PRAM_WRITE_4_BYTES_WITHOUT_ACK   (7'b101_1100)
 `define                     DEBUG_TYPE_PRAM_WRITE_4_BYTES_WITH_ACK      (7'b101_1101)
+`define                     DEBUG_TYPE_PREG_WRITE_4_BYTES_WITH_ACK      (7'b101_1111)
 
 `define                     DEBUG_TYPE_PRAM_WRITE_128_BYTES_WITH_ACK    (7'b101_1011)
 `define                     DEBUG_TYPE_PRAM_READ_4_BYTES                (7'b110_1101)

@@ -42,6 +42,10 @@ module debug_coprocessor_wrapper #(parameter BAUD_PERIOD=208) (
         output wire [`DEBUG_PRAM_ADDR_WIDTH - 3 : 0]                                pram_write_addr_out,
         output wire [`DEBUG_DATA_WIDTH * `DEBUG_FRAME_DATA_LEN  - 1 : 0]            pram_write_data_out,
         
+        output wire                                                                 preg_write_enable_out,
+        output wire [`DEBUG_PRAM_ADDR_WIDTH - 3 : 0]                                preg_write_addr_out,
+        output wire [`DEBUG_DATA_WIDTH * `DEBUG_FRAME_DATA_LEN - 1 : 0]             preg_write_data_out,
+
         output wire                                                                 cpu_reset,
         output wire                                                                 cpu_start,
         output wire [`DEBUG_DATA_WIDTH * `DEBUG_FRAME_DATA_LEN - 1 : 0]             cpu_start_addr,
@@ -114,9 +118,13 @@ module debug_coprocessor_wrapper #(parameter BAUD_PERIOD=208) (
             .pram_read_addr_out (pram_read_addr_out),
             
             .pram_write_enable_out (pram_write_enable_out),
-            .pram_write_addr_out (pram_write_addr_out),
-            .pram_write_data_out (pram_write_data_out),
+            .pram_write_addr_out   (pram_write_addr_out),
+            .pram_write_data_out   (pram_write_data_out),
             
+            .preg_write_enable_out (preg_write_enable_out),
+            .preg_write_addr_out   (preg_write_addr_out),
+            .preg_write_data_out   (preg_write_data_out),
+        
             .cpu_reset (cpu_reset),
             
             .cpu_start (cpu_start),
