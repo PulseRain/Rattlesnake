@@ -192,14 +192,7 @@ module Rattlesnake_execution_unit (
         wire [63 : 0]                                           Z_neg;
         wire [31 : 0]                                           Q_neg;
         wire [31 : 0]                                           R_neg;
-        
-        wire                                                    addr_debug;
-        wire                                                    addr_debug2;
-        wire                                                    addr_debug3;
-        
-        assign addr_debug =  (exe_enable && (PC_in === 32'h80043310)) ? 1'b1 : 1'b0;
-        assign addr_debug2 = (exe_enable && (PC_in === 32'h80042d60)) ? 1'b1 : 1'b0;
-        assign addr_debug3 = (exe_enable && (PC_in === 32'h8004328e)) ? 1'b1 : 1'b0;
+    
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // data path
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
