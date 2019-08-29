@@ -33,7 +33,7 @@ import subprocess
 import re
 
             
-class Reindeer_OCD:
+class Rattlesnake_OCD:
 
     _OCD_DEBUG_SYNC = [0x5A, 0xA5, 0x01]
     _OCD_DEBUG_TYPE_PRAM_WRITE_4_BYTES_WITHOUT_ACK = 0x5C
@@ -68,6 +68,11 @@ class Reindeer_OCD:
     _CONFIG_TYPE_PRAM_WRITE_4_BYTES_WITH_ACK    = 0x5C | 1
     _CONFIG_TYPE_PRAM_WRITE_128_BYTES_WITH_ACK  = 0x5B
     
+    _CONFIG_TYPE_PREG_WRITE_4_BYTES_WITH_ACK    = 0x5F
+    
+    _RATTLESNAKE_EXE_PROTECT_START_ADDR = 0x2000002C
+    _RATTLESNAKE_EXE_PROTECT_END_ADDR   = 0x20000030
+    
     _crc16_ccitt = CRC16_CCITT()
     
     _toggle = 0
@@ -79,9 +84,9 @@ class Reindeer_OCD:
     #========================================================================
     def _verify_crc (self, data):
         data_list = [i for i in data]
-        crc_data = Reindeer_OCD._crc16_ccitt.get_crc (data_list [0 : Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 2])
+        crc_data = Rattlesnake_OCD._crc16_ccitt.get_crc (data_list [0 : Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 2])
      
-        if (crc_data == data_list [Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 2 : Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN]):
+        if (crc_data == data_list [Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 2 : Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN]):
             return True
         else:
             return False
@@ -91,11 +96,11 @@ class Reindeer_OCD:
     #========================================================================
     def uart_select (self, ocd1_cpu0):
     
-        frame_type_byte = Reindeer_OCD._OCD_DEBUG_TYPE_UART_SEL * 2 + Reindeer_OCD._toggle;
-        Reindeer_OCD._toggle = 1 - Reindeer_OCD._toggle
+        frame_type_byte = Rattlesnake_OCD._OCD_DEBUG_TYPE_UART_SEL * 2 + Rattlesnake_OCD._toggle;
+        Rattlesnake_OCD._toggle = 1 - Rattlesnake_OCD._toggle
             
-        frame = Reindeer_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [0x99, 0x12, 0x34, 0xab, 0xcd, 0xab, ocd1_cpu0*2]
-        frame = frame + Reindeer_OCD._crc16_ccitt.get_crc (frame)
+        frame = Rattlesnake_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [0x99, 0x12, 0x34, 0xab, 0xcd, 0xab, ocd1_cpu0*2]
+        frame = frame + Rattlesnake_OCD._crc16_ccitt.get_crc (frame)
         
         sleep(0.5)
         if (self._serial.in_waiting):
@@ -115,17 +120,17 @@ class Reindeer_OCD:
     
         condition = True
         while (condition):
-            frame_type_byte = Reindeer_OCD._OCD_DEBUG_TYPE_CPU_RESET_WITH_ACK * 2 + Reindeer_OCD._toggle;
-            Reindeer_OCD._toggle = 1 - Reindeer_OCD._toggle
+            frame_type_byte = Rattlesnake_OCD._OCD_DEBUG_TYPE_CPU_RESET_WITH_ACK * 2 + Rattlesnake_OCD._toggle;
+            Rattlesnake_OCD._toggle = 1 - Rattlesnake_OCD._toggle
             
-            frame = Reindeer_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [0x88, 0x12, 0x34, 0xab, 0xcd, 0xab, 0xcd]
-            frame = frame + Reindeer_OCD._crc16_ccitt.get_crc (frame)
+            frame = Rattlesnake_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [0x88, 0x12, 0x34, 0xab, 0xcd, 0xab, 0xcd]
+            frame = frame + Rattlesnake_OCD._crc16_ccitt.get_crc (frame)
             
             if (self._verbose):
                 print ("send: ", [hex(i) for i in frame])
    
             self._serial.write (frame)
-            ret = self._serial.read (Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
+            ret = self._serial.read (Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
      
             condition = not self._verify_crc (ret)
             if (condition):
@@ -150,21 +155,21 @@ class Reindeer_OCD:
         
         while (condition):
         
-            frame_type_byte = Reindeer_OCD._OCD_DEBUG_TYPE_PRAM_READ_4_BYTES * 2 + Reindeer_OCD._toggle;
-            Reindeer_OCD._toggle = 1 - Reindeer_OCD._toggle
+            frame_type_byte = Rattlesnake_OCD._OCD_DEBUG_TYPE_PRAM_READ_4_BYTES * 2 + Rattlesnake_OCD._toggle;
+            Rattlesnake_OCD._toggle = 1 - Rattlesnake_OCD._toggle
             
-            frame = Reindeer_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [addr_write_high_high_byte, addr_write_high_byte, addr_write_low_byte]
+            frame = Rattlesnake_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [addr_write_high_high_byte, addr_write_high_byte, addr_write_low_byte]
             
             fill_data = 0x00FF00FF
             for i in range(4):
                 frame.append ((fill_data >> 24) & 0xFF)
                 fill_data = fill_data << 8
-            frame = frame + Reindeer_OCD._crc16_ccitt.get_crc (frame)
+            frame = frame + Rattlesnake_OCD._crc16_ccitt.get_crc (frame)
             
             if (self._verbose):
                 print ("Asend: ", [hex(i) for i in frame])
             self._serial.write (frame)
-            ret = self._serial.read (Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
+            ret = self._serial.read (Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
             
             condition = not self._verify_crc (ret)
             if (condition):
@@ -173,10 +178,10 @@ class Reindeer_OCD:
                                 
         if (self._verbose):
             print ("receive: ", [hex(i) for i in ret])
-            print ("====> ", [hex(i) for i in ret[Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 6 : Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 2]])
+            print ("====> ", [hex(i) for i in ret[Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 6 : Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 2]])
         
         
-        return [i for i in ret[Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 6 : Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 2]]
+        return [i for i in ret[Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 6 : Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN - 2]]
         
     #========================================================================
     #  mem_read
@@ -213,13 +218,13 @@ class Reindeer_OCD:
         while (condition):
             data_in = data
             if (ack):
-                frame_type_byte = Reindeer_OCD._CONFIG_TYPE_PRAM_WRITE_4_BYTES_WITH_ACK * 2 + Reindeer_OCD._toggle
+                frame_type_byte = Rattlesnake_OCD._CONFIG_TYPE_PRAM_WRITE_4_BYTES_WITH_ACK * 2 + Rattlesnake_OCD._toggle
             else:
-                frame_type_byte = Reindeer_OCD._CONFIG_TYPE_PRAM_WRITE_4_BYTES_WITHOUT_ACK * 2 + Reindeer_OCD._toggle
+                frame_type_byte = Rattlesnake_OCD._CONFIG_TYPE_PRAM_WRITE_4_BYTES_WITHOUT_ACK * 2 + Rattlesnake_OCD._toggle
             
-            Reindeer_OCD._toggle = 1 - Reindeer_OCD._toggle
+            Rattlesnake_OCD._toggle = 1 - Rattlesnake_OCD._toggle
             
-            frame = Reindeer_OCD._CONFIG_SYNC + [frame_type_byte] + [addr_write_high_high_byte, addr_write_high_byte, addr_write_low_byte]
+            frame = Rattlesnake_OCD._CONFIG_SYNC + [frame_type_byte] + [addr_write_high_high_byte, addr_write_high_byte, addr_write_low_byte]
             
             for i in range(4):
                 frame.append ((data_in >> 24) & 0xFF)
@@ -232,7 +237,7 @@ class Reindeer_OCD:
                 print ("Ysend: ", [hex(i) for i in frame])
             
             if (ack):
-                ret = self._serial.read (Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
+                ret = self._serial.read (Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
                 condition = not self._verify_crc (ret)
                 if (condition):
                     if (show_crc_error):
@@ -240,6 +245,47 @@ class Reindeer_OCD:
                     self.mem_zero_fill_frame()
             else:
                 condition = False    
+
+    #========================================================================
+    #  reg_write_32bit
+    #========================================================================
+    def reg_write_32bit (self, addr, data, ack=1, show_crc_error=0):
+        addr_write_low_byte  = addr & 0xFF
+        addr_write_high_byte = (addr >> 8) & 0xFF
+        addr_write_high_high_byte = (addr >> 16) & 0xFF
+        
+        #print ("wr32bit, addr = 0x%x" % addr)
+        
+        condition = True
+        
+        while (condition):
+            data_in = data
+            frame_type_byte = Rattlesnake_OCD._CONFIG_TYPE_PREG_WRITE_4_BYTES_WITH_ACK * 2 + Rattlesnake_OCD._toggle
+            
+            Rattlesnake_OCD._toggle = 1 - Rattlesnake_OCD._toggle
+            
+            frame = Rattlesnake_OCD._CONFIG_SYNC + [frame_type_byte] + [addr_write_high_high_byte, addr_write_high_byte, addr_write_low_byte]
+            
+            for i in range(4):
+                frame.append ((data_in >> 24) & 0xFF)
+                data_in = data_in << 8
+            
+            frame = frame + self._crc16_ccitt.get_crc (frame)
+            self._serial.write (frame)
+            
+            if (self._verbose):
+                print ("Ysend: ", [hex(i) for i in frame])
+            
+            if (ack):
+                ret = self._serial.read (Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
+                condition = not self._verify_crc (ret)
+                if (condition):
+                    if (show_crc_error):
+                        print ("\naddr=", addr, "Write 32bit reply CRC failed, Retry!")
+                    self.mem_zero_fill_frame()
+            else:
+                condition = False    
+
 
 
     #========================================================================
@@ -255,10 +301,10 @@ class Reindeer_OCD:
         #print ("wr128, addr = ", addr)
         
         while (condition):
-            frame_type_byte = Reindeer_OCD._CONFIG_TYPE_PRAM_WRITE_128_BYTES_WITH_ACK * 2 + Reindeer_OCD._toggle
-            Reindeer_OCD._toggle = 1 - Reindeer_OCD._toggle
+            frame_type_byte = Rattlesnake_OCD._CONFIG_TYPE_PRAM_WRITE_128_BYTES_WITH_ACK * 2 + Rattlesnake_OCD._toggle
+            Rattlesnake_OCD._toggle = 1 - Rattlesnake_OCD._toggle
             
-            frame = Reindeer_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [addr_write_high_high_byte, addr_write_high_byte, addr_write_low_byte]
+            frame = Rattlesnake_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [addr_write_high_high_byte, addr_write_high_byte, addr_write_low_byte]
             frame = frame + (data_list [0:4])
             frame = frame + self._crc16_ccitt.get_crc (frame)
             frame = frame + data_list [4 : 128] + self._crc16_ccitt.get_crc (data_list [4 : 128])
@@ -269,7 +315,7 @@ class Reindeer_OCD:
             if (self._verbose):
                 print ("Xsend: ", [hex(i) for i in frame])
             
-            ret = self._serial.read (Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
+            ret = self._serial.read (Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
 
             condition = not self._verify_crc (ret)
             if (condition):
@@ -402,6 +448,19 @@ class Reindeer_OCD:
             
             ###with open(os.devnull, 'w')  as FNULL:       
             ###    subprocess.run([self.objcopy, '--dump-section', section_name + '=' + bin_file, elf_file], stdout=FNULL, stderr=FNULL )
+                    
+            if ('READONLY' in section_property_list[total_sections]):
+                new_start_addr = section_vma
+                new_end_addr   = section_vma + section_size
+                
+                self.read_only_block_merge (new_start_addr, new_end_addr)
+        
+            if ('CODE' in section_property_list[total_sections]):
+                new_start_addr = section_vma
+                new_end_addr   = section_vma + section_size
+                
+                self.code_block_merge (new_start_addr, new_end_addr)
+        
                                 
             if ('LOAD' in section_property_list[total_sections]):
                 ###try:
@@ -430,7 +489,7 @@ class Reindeer_OCD:
                 ###f.close()
                 total_sections = total_sections + 1
 
-        
+           
         
         byte_index = 0
         for i in range(total_sections):
@@ -519,20 +578,20 @@ class Reindeer_OCD:
         condition = True
         while (condition):
                 
-            frame_type_byte = Reindeer_OCD._OCD_DEBUG_TYPE_COUNTER_CONFIG * 2 + Reindeer_OCD._toggle;
-            Reindeer_OCD._toggle = 1 - Reindeer_OCD._toggle
+            frame_type_byte = Rattlesnake_OCD._OCD_DEBUG_TYPE_COUNTER_CONFIG * 2 + Rattlesnake_OCD._toggle;
+            Rattlesnake_OCD._toggle = 1 - Rattlesnake_OCD._toggle
             
             
                   
-            frame = Reindeer_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [0x77, 0x12, 0x34, (start_address >> 24) & 0xFF, (start_address >> 16) & 0xFF, (start_address >> 8) & 0xFF, (start_address >> 0) & 0xFF]
-            frame = frame + Reindeer_OCD._crc16_ccitt.get_crc (frame)
+            frame = Rattlesnake_OCD._OCD_DEBUG_SYNC + [frame_type_byte] + [0x77, 0x12, 0x34, (start_address >> 24) & 0xFF, (start_address >> 16) & 0xFF, (start_address >> 8) & 0xFF, (start_address >> 0) & 0xFF]
+            frame = frame + Rattlesnake_OCD._crc16_ccitt.get_crc (frame)
             
             if (self._verbose):
                 print ("Gsend: ", [hex(i) for i in frame])
             
             self._serial.write (frame)
             condition = 0
-            #ret = self._serial.read (Reindeer_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
+            #ret = self._serial.read (Rattlesnake_OCD._OCD_DEBUG_FRAME_REPLY_LEN)
             
             #condition = not self._verify_crc (ret)
             
@@ -543,15 +602,81 @@ class Reindeer_OCD:
         if (self._verbose):
             print ("receive: ", [hex(i) for i in ret])
     
-
-
     
+    #========================================================================
+    #  read_only block merge
+    #========================================================================
+    def read_only_block_merge (self, new_start_addr, new_end_addr):
+        
+        num_of_blks = len (self.read_only_start_address)
+        
+        found = 0
+        for i in range(num_of_blks):
+            if ((self.read_only_start_address == new_end_addr) or (self.read_only_start_address == (new_end_addr + 2))):
+                self.read_only_start_address[i] = new_start_addr
+                found = 1
+                break
+                
+            if ((self.read_only_end_address[i] == new_start_addr) or ((self.read_only_end_address[i] + 2) == new_start_addr)):
+                self.read_only_end_address[i] = new_end_addr
+                found = 1
+                break
+                
+        if (found == 0):
+            self.read_only_start_address.append (new_start_addr)
+            self.read_only_end_address.append (new_end_addr)
+
+    #========================================================================
+    #  code block merge
+    #========================================================================
+    def code_block_merge (self, new_start_addr, new_end_addr):
+        
+        num_of_blks = len (self.code_start_address)
+        
+        found = 0
+        for i in range(num_of_blks):
+            if ((self.code_start_address == new_end_addr) or (self.code_start_address == (new_end_addr + 2))):
+                self.code_start_address[i] = new_start_addr
+                found = 1
+                break
+                
+            if ((self.code_end_address[i] == new_start_addr) or ((self.code_end_address[i] + 2) == new_start_addr)):
+                self.code_end_address[i] = new_end_addr
+                found = 1
+                break
+                
+        if (found == 0):
+            self.code_start_address.append (new_start_addr)
+            self.code_end_address.append (new_end_addr)
+
+
+    #========================================================================
+    #  exe protect
+    #========================================================================
+    def exe_protect (self):
+        
+        min = 0xFFFFFFFF
+        max = 0
+        if (len(self.code_start_address) == 0):
+            print ("===============> text section does not exist!!!!!!!")
+        else:
+            for i in range (len(self.code_start_address)):
+                if(min > self.code_start_address[i]) :
+                    min = self.code_start_address[i]
+                
+                if (max < self.code_end_address[i]):
+                    max = self.code_end_address[i]
+        
+        print ("============> exe protect, [0x%08x, 0x%8x)" % (min, max))
+        self.reg_write_32bit(Rattlesnake_OCD._RATTLESNAKE_EXE_PROTECT_START_ADDR, min)
+        self.reg_write_32bit(Rattlesnake_OCD._RATTLESNAKE_EXE_PROTECT_END_ADDR, max)
+        
     #========================================================================
     #  __init__
     #========================================================================
     
     def __init__ (self, com_port, baud_rate, verbose=0):
-        self._serial = serial.Serial(com_port, baud_rate, timeout=Reindeer_OCD._OCD_SERIAL_TIME_OUT)
+        self._serial = serial.Serial(com_port, baud_rate, timeout=Rattlesnake_OCD._OCD_SERIAL_TIME_OUT)
         self._verbose = verbose
         
         
@@ -565,6 +690,13 @@ class Reindeer_OCD:
         self.objcopy = self.toolchain + 'objcopy'
         
         self.image_file = ""
+        
+        self.read_only_start_address = []
+        self.read_only_end_address = []
+        
+        self.code_start_address = []
+        self.code_end_address = []
+        
         
 #==============================================================================
 # main            
@@ -594,6 +726,7 @@ if __name__ == "__main__":
     dump_length = 64
     
     console_enable = 0
+    mem_protect = 1
     
     #=========================================================================
     # print banner
@@ -601,7 +734,7 @@ if __name__ == "__main__":
     
     print ("===============================================================================")
     print ("# Copyright (c) 2019, PulseRain Technology LLC ")
-    print ("# Reindeer Configuration Utility, Version 2.3")
+    print ("# Rattlesnake Configuration Utility, Version 1.1")
     
     
     #=========================================================================
@@ -609,11 +742,11 @@ if __name__ == "__main__":
     #=========================================================================
     
     try:
-          opts, args = getopt.getopt(sys.argv[1:],"t:a:RrhP:b:i:d:l:c",["help", "run", "reset", "toolchain=", "port=", "start_addr=", "baud=", "image=", "dump_addr=", "dump_length=", "console_enable", "mem_test_len="])
+          opts, args = getopt.getopt(sys.argv[1:],"t:a:RrhP:b:i:d:l:c",["help", "run", "reset", "toolchain=", "port=", "start_addr=", "baud=", "image=", "dump_addr=", "dump_length=", "console_enable", "mem_test_len=", "no_mem_protect"])
     except (getopt.GetoptError, err):
           print (str(err))
           sys.exit(1)
-    
+      
     for opt, args in opts:
         if opt in ('-b', '--baud'): 
             baud_rate = int (args)
@@ -638,7 +771,6 @@ if __name__ == "__main__":
             cpu_reset = 1
         elif opt in ('-d', '--dump_addr'):
             dump_mem = 1
-            
             if (args.startswith("0x")):
                 dump_addr = int (args, 16)
             else:
@@ -656,6 +788,11 @@ if __name__ == "__main__":
                 mem_test_length = int (args, 16)
             else:
                 mem_test_length = int (args)
+        
+        elif opt in ('--no_mem_protect'):
+            mem_protect = 0
+        
+        
         else:
             print ("Usage:\n  ")
             print ("  Options: \n")
@@ -672,7 +809,7 @@ if __name__ == "__main__":
             print ("    --mem_test_len=      : run memory test for the specified number of words.")
             print (" ")
             print ("    Example: To run the zephyr hello_world application")
-            print ("     python reindeer_config.py --port=COM9 --reset --image=C:\GitHub\Reindeer\bitstream_and_binary\zephyr\hello_world.elf --console_enable --run")
+            print ("     python Rattlesnake_config.py --port=COM9 --reset --image=C:\GitHub\Rattlesnake\bitstream_and_binary\zephyr\hello_world.elf --console_enable --run")
             
             sys.exit(1)
             
@@ -683,7 +820,7 @@ if __name__ == "__main__":
     print ("===============================================================================")
 
     try:
-        ocd = Reindeer_OCD (com_port, baud_rate, verbose=0)
+        ocd = Rattlesnake_OCD (com_port, 921600, verbose=0)
         
         ocd.toolchain = toolchain
         ocd.objdump = objdump
@@ -741,6 +878,9 @@ if __name__ == "__main__":
                         print ("end_signature %x" % addr)
             
             ocd.load_elf (image_file)
+            
+            if (mem_protect):
+                ocd.exe_protect()
         
         elif (image_file.endswith (".hex") or image_file.endswith (".ihx")):
             start_addr = ocd.load_hex (image_file)
@@ -782,12 +922,14 @@ if __name__ == "__main__":
     
     if (run):
         print ("\n===================> start the CPU, entry point = 0x%08x" % start_addr)
+        #print ([hex(i) for i in ocd.code_start_address])
+        #print ([hex(i) for i in ocd.code_end_address])
         print (" ")
         ocd.start_to_run (start_addr)
     
         if (console_enable):
             ocd._serial.close()
-            ocd._serial = serial.Serial(com_port, 115200)
+            ocd._serial = serial.Serial(com_port, baud_rate)
         
         while(console_enable):
             if (ocd._serial.in_waiting):
