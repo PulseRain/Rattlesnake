@@ -37,9 +37,9 @@ module mem_controller #(parameter sim = 0) (
         input  wire  [`MEM_ADDR_BITS - 1 : 0]                           mem_addr,
         input  wire                                                     mem_read_en,
         input  wire  [`XLEN_BYTES - 1 : 0]                              mem_write_en,
-        input  wire  [`XLEN - 1 : 0]                                    mem_write_data,
+        input  wire  [`EXT_BITS + `XLEN - 1 : 0]                        mem_write_data,
         
-        output wire  [`XLEN - 1 : 0]                                    mem_read_data,
+        output wire  [`EXT_BITS + `XLEN - 1 : 0]                        mem_read_data,
         output wire                                                     mem_write_ack,
         output wire                                                     mem_read_ack,
         
@@ -51,19 +51,19 @@ module mem_controller #(parameter sim = 0) (
     // signal
     //=======================================================================
         wire                                              mem_sram0_dram1; 
-        wire [15 : 0]                                     dout_high;
-        wire [15 : 0]                                     dout_low;
+        wire [`EXT_BITS + 15 : 0]                         dout_high;
+        wire [`EXT_BITS + 15 : 0]                         dout_low;
         
-        reg [15 : 0]                                      dout_high_d1;
-        reg [15 : 0]                                      dout_low_d1;
+        reg [`EXT_BITS + 15 : 0]                          dout_high_d1;
+        reg [`EXT_BITS + 15 : 0]                          dout_low_d1;
         
-        reg [15 : 0]                                      dout_high_d2;
-        reg [15 : 0]                                      dout_low_d2;
+        reg [`EXT_BITS + 15 : 0]                          dout_high_d2;
+        reg [`EXT_BITS + 15 : 0]                          dout_low_d2;
         
         reg                                               mem_sram0_dram1_d1;
         reg                                               mem_read_en_d1;
         
-        wire                                              sram_read_ack_pre;
+        reg                                               sram_read_ack_pre;
         reg                                               sram_read_ack_pre_pre;
         reg                                               sram_read_ack;
         
@@ -74,55 +74,57 @@ module mem_controller #(parameter sim = 0) (
         
         reg   [`MEM_ADDR_BITS - 1 : 0]                    mem_read_addr_reg;
         
-        
+        wire  [`SRAM_ADDR_BITS - 1 : 0]                   sram_addr_low;
                 
     //=======================================================================
     // SRAM
     //=======================================================================
         /* verilator lint_off UNSIGNED */
-        assign mem_sram0_dram1 = 0; // (mem_addr >= (`SRAM_SIZE_IN_BYTES / 4)) ? 1'b1 : 1'b0; 
+        assign mem_sram0_dram1 = 0; 
            
-            generate 
-                
-                if ((`SRAM_SIZE_IN_BYTES != 0) && (sim == 0)) begin 
-                    single_port_ram #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_high_i (
-                        .addr (mem_addr [`SRAM_ADDR_BITS - 1 : 0]),
-                        .din (mem_write_data [31 : 16]),
-                        .write_en (mem_write_en[3 : 2] & {~mem_sram0_dram1, ~mem_sram0_dram1} ),
-                        .clk (clk),
-                        .dout (dout_high));
+        assign sram_addr_low = mem_addr[`SRAM_ADDR_BITS : 1] + {(`SRAM_ADDR_BITS - 1)'(0), mem_addr[0]};
+        
+        generate 
+            
+            if ((`SRAM_SIZE_IN_BYTES != 0) && (sim == 0)) begin 
+                single_port_ram #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16), .EXT_WIDTH(`EXT_BITS) ) ram_high_i (
+                    .addr (mem_addr [`SRAM_ADDR_BITS : 1]),
+                    .din ({mem_write_data[`EXT_BITS + `XLEN - 1], mem_write_data [31 : 16]}),
+                    .write_en (mem_write_en[3 : 2] & {~mem_sram0_dram1, ~mem_sram0_dram1} ),
+                    .clk (clk),
+                    .dout (dout_high));
 
-                    single_port_ram #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_low_i (
-                        .addr (mem_addr[`SRAM_ADDR_BITS - 1 : 0]),
-                        .din (mem_write_data [15 : 0]),
-                        .write_en (mem_write_en[1 : 0] & {~mem_sram0_dram1, ~mem_sram0_dram1} ),
-                        .clk (clk),
-                        .dout (dout_low));
-                end
+                single_port_ram #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16), .EXT_WIDTH(`EXT_BITS) ) ram_low_i (
+                    .addr (sram_addr_low),
+                    .din ({mem_write_data[`EXT_BITS + `XLEN - 1], mem_write_data [15 : 0]}),
+                    .write_en (mem_write_en[1 : 0] & {~mem_sram0_dram1, ~mem_sram0_dram1} ),
+                    .clk (clk),
+                    .dout (dout_low));
+            end
 
-                if (sim != 0) begin
-                    single_port_ram_sim_high #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_high_i (
-                    .addr (mem_addr[`SRAM_ADDR_BITS - 1 : 0]),
-                    .din (mem_write_data [31 : 16]),
+            if (sim != 0) begin
+                single_port_ram_sim_high #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_high_i (
+                    .addr (mem_addr[`SRAM_ADDR_BITS  : 1]),
+                    .din ({mem_write_data[32], mem_write_data [31 : 16]}),
                     .write_en (mem_write_en[3 : 2]),
                     .clk (clk),
                     .dout (dout_high));
                   
-                    single_port_ram_sim_low #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_low_i (
-                        .addr (mem_addr[`SRAM_ADDR_BITS - 1 : 0]),
-                        .din (mem_write_data [15 : 0]),
-                        .write_en (mem_write_en[1 : 0]),
-                        .clk (clk),
-                        .dout (dout_low));
-                end
-            endgenerate
+                single_port_ram_sim_low #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_low_i (
+                    .addr (sram_addr_low),
+                    .din ({mem_write_data[32], mem_write_data [15 : 0]}),
+                    .write_en (mem_write_en[1 : 0]),
+                    .clk (clk),
+                    .dout (dout_low));
+            end
+        endgenerate
 
 
 
 
      //  assign mem_read_data = {dout_high, dout_low};
-       // assign mem_read_data = {dout_high_d1, dout_low_d1};
-         assign mem_read_data = {dout_high_d2, dout_low_d2};
+        assign mem_read_data = {dout_high_d1, dout_low_d1 [15 : 0]};
+        // assign mem_read_data = {dout_high_d2, dout_low_d2};
 
        // assign sram_read_ack_pre = mem_read_en_d1 & (~mem_sram0_dram1_d1);
         
@@ -154,12 +156,17 @@ module mem_controller #(parameter sim = 0) (
          
                 sram_read_ack_pre_pre <= mem_read_en & (~mem_sram0_dram1);
                 sram_read_ack_pre <= sram_read_ack_pre_pre;
-                sram_read_ack <= sram_read_ack_pre;
+                sram_read_ack <= sram_read_ack_pre_pre;
                 
              //   sram_read_ack <= mem_read_en & (~mem_sram0_dram1);
                 
-                dout_high_d1 <= dout_high;
-                dout_low_d1  <= dout_low;
+                if (mem_read_addr_reg[0] == 1'b0) begin
+                    dout_high_d1 <= dout_high;
+                    dout_low_d1  <= dout_low;
+                end else begin
+                    dout_high_d1 <= dout_low;
+                    dout_low_d1  <= dout_high;
+                end
                 
                 dout_high_d2 <= dout_high_d1;
                 dout_low_d2  <= dout_low_d1;
@@ -185,6 +192,14 @@ module mem_controller #(parameter sim = 0) (
         assign mem_read_ack  = sram_read_ack;
 
         
+      /*  
+         mon mon_i (
+            .acq_clk (clk), 
+            .acq_data_in ({2'b00, mem_read_addr_reg[0], mem_read_en}),    //     tap.acq_data_in 
+            .acq_trigger_in ({mem_read_addr_reg[0], mem_read_en})  //        .acq_trigger_in 
+        );
+*/
+
 endmodule
 
 `default_nettype wire

@@ -47,6 +47,15 @@ module PulseRain_Rattlesnake_MCU #(parameter sim = 0) (
         input   wire  [`REG_ADDR_BITS - 1 : 0]                  ocd_reg_write_addr,
         input   wire  [`XLEN - 1 : 0]                           ocd_reg_write_data,
 
+
+    //=====================================================================
+    // peripheral register write
+    //=====================================================================
+        input   wire                                            peripheral_reg_we,
+        input   wire  [`REG_ADDR_BITS - 1 : 0]                  peripheral_reg_write_addr,
+        input   wire  [`XLEN - 1 : 0]                           peripheral_reg_write_data,
+
+
     //=====================================================================
     // UART
     //=====================================================================
@@ -79,8 +88,8 @@ module PulseRain_Rattlesnake_MCU #(parameter sim = 0) (
         
         wire                                                    mem_read_en;
         wire [`XLEN_BYTES - 1 : 0]                              mem_write_en;
-        wire [`XLEN - 1 : 0]                                    mem_write_data;
-        wire [`XLEN - 1 : 0]                                    mem_read_data;
+        wire [`EXT_BITS + `XLEN - 1 : 0]                        mem_write_data;
+        wire [`EXT_BITS + `XLEN - 1 : 0]                        mem_read_data;
         wire                                                    mem_write_ack;
         wire                                                    mem_read_ack;
                         
@@ -105,6 +114,9 @@ module PulseRain_Rattlesnake_MCU #(parameter sim = 0) (
         wire                                                    WB_WR_ACK;
         
         wire                                                    int_gen;
+        
+        wire unsigned [`XLEN - 1 : 0]                           exe_proetect_start_addr;
+        wire unsigned [`XLEN - 1 : 0]                           exe_proetect_end_addr;
         
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // processor core
@@ -144,6 +156,9 @@ module PulseRain_Rattlesnake_MCU #(parameter sim = 0) (
                 .WB_WR_ADR_O (WB_WR_ADR),
                 .WB_WR_DAT_O (WB_WR_DAT),
                 .WB_WR_ACK_I (WB_WR_ACK),
+                
+                .exe_proetect_start_addr (exe_proetect_start_addr),
+                .exe_proetect_end_addr   (exe_proetect_end_addr),
     
                 .start (start),
                 .start_address (start_address),
@@ -206,8 +221,15 @@ module PulseRain_Rattlesnake_MCU #(parameter sim = 0) (
                     .WB_WR_DAT_I (WB_WR_DAT),
                     .WB_WR_ACK_O (WB_WR_ACK),
                     
+                    .peripheral_reg_we          (peripheral_reg_we),
+                    .peripheral_reg_write_addr  (peripheral_reg_write_addr),
+                    .peripheral_reg_write_data  (peripheral_reg_write_data),
+                    
                     .int_gen     (int_gen),
                 
+                    .exe_proetect_start_addr (exe_proetect_start_addr),
+                    .exe_proetect_end_addr   (exe_proetect_end_addr),
+
                     .RXD         (RXD),
                     .TXD         (TXD)
                 
@@ -216,7 +238,7 @@ module PulseRain_Rattlesnake_MCU #(parameter sim = 0) (
         endgenerate
         
         assign  peek_mem_write_en   = mem_write_en;
-        assign  peek_mem_write_data = mem_write_data;
+        assign  peek_mem_write_data = mem_write_data [`XLEN - 1 : 0];
         assign  peek_mem_addr       = mem_addr;    
             
 endmodule
