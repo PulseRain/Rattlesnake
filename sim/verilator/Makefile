@@ -191,10 +191,10 @@ run : build
 $(target) : $(src_sub_v) $(src_base)/$(src_top_v) $(testbench_cpp)
 	@echo "====> Building $(target)"
 	for s in $(src_sub_v) ; do \
-		verilator -I../../submodules/PulseRain_MCU/memory/Intel/cyclone10_LP -I../../submodules/PulseRain_MCU/common -I../../submodules/PulseRain_MCU/common/verilator -I../../submodules/PulseRain_MCU/memory -I../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source  -I../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div --cc $$s ; \
+		verilator -I../../submodules/PulseRain_MCU/memory/Microchip/IGLOO2 -I../../submodules/PulseRain_MCU/common -I../../submodules/PulseRain_MCU/common/verilator -I../../submodules/PulseRain_MCU/memory -I../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source  -I../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div --cc $$s ; \
 	done
 
-	verilator -I../../submodules/PulseRain_MCU/peripherals/UART -I../../submodules/PulseRain_MCU/memory/Intel/cyclone10_LP -I../../submodules/PulseRain_MCU/common -I../../submodules/PulseRain_MCU/memory -I../../submodules/PulseRain_MCU/common/verilator -I../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source  -I../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div --cc $(src_base)/$(src_top_v) --exe $(testbench_cpp)
+	verilator -I../../submodules/PulseRain_MCU/peripherals/UART -I../../submodules/PulseRain_MCU/memory/Microchip/IGLOO2 -I../../submodules/PulseRain_MCU/common -I../../submodules/PulseRain_MCU/memory -I../../submodules/PulseRain_MCU/common/verilator -I../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source  -I../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div --cc $(src_base)/$(src_top_v) --exe $(testbench_cpp)
 	
 	make -j -C ./obj_dir -f V$(src_top).mk V$(src_top)
 
