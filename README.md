@@ -1,7 +1,7 @@
 # PulseRain Rattlesnake 
 ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RISC-V RV32IMC Soft CPU, with a Security-Hardened Processor Core
 ------------------------------------------------
-## Table of contents
+## Table of Contents
 1. [Overview](#overview)
 2. [Quick Start](#quickstart)
 3. [Folder Structure of the Repository](#folder)
