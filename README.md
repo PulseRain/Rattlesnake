@@ -15,9 +15,8 @@
 overview 
 
 ## 2. Quick Start <a name="quickstart"></a>
-Quick start
-
-### Program the Creative Board
+* ### Program the Creative Board
+* ### Running Software on the soft CPU
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
 folder
