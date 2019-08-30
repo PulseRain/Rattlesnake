@@ -5,7 +5,7 @@
 1. [Overview](#overview)
 2. [Quick Start](#quickstart)
 3. [Folder Structure of the Repository](#folder)
-4. [Simulation with [Verilator](#sim)
+4. [Simulation with [Verilator](https://www.veripool.org/wiki/verilator)](#sim)
 5. [Regenerate the Bitstream](#regen_bitstream)
 6. [Zephyr](#zephyr)
 7. [Security Measure Details](#security)
@@ -22,7 +22,7 @@ Quick start
 ## 3. Folder Structure of the Repository <a name="folder"></a>
 folder
 
-## 4. Simulation with [Verilator](https://www.veripool.org/wiki/verilator)<a name="sim"></a>
+## 4. Simulation with [Verilator](https://www.veripool.org/wiki/verilator) <a name="sim"></a>
 sim
 
 ## 5. Regenerate the Bitstream <a name="regen_bitstream"></a>
