@@ -1,0 +1,72 @@
+
+Starting:    C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\mbin\synbatch.exe
+Install:     C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+Hostname:    THINK
+Date:        Thu Aug 29 22:09:22 2019
+Version:     N-2018.03M-SP1-1
+
+Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log creative_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+Running in Vendor Mode
+
+auto_infer_blackbox is not supported in current product.
+log file: "C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.srr"
+Running: synthesis in foreground
+
+Running creative_syn|synthesis
+
+Running Flow: compile (Compile) on creative_syn|synthesis
+# Thu Aug 29 22:09:22 2019
+
+Running Flow: compile_flow (Compile Process) on creative_syn|synthesis
+# Thu Aug 29 22:09:22 2019
+
+Running: compiler (Compile Input) on creative_syn|synthesis
+# Thu Aug 29 22:09:22 2019
+
+compiler completed
+# Thu Aug 29 22:09:24 2019
+
+Return Code: 0
+Run Time:00h:00m:02s
+
+Running: multi_srs_gen (Multi-srs Generator) on creative_syn|synthesis
+# Thu Aug 29 22:09:24 2019
+Up-To-Date: multi_srs_gen. No run necessary
+Complete: Compile Process on creative_syn|synthesis
+
+Running: premap (Premap) on creative_syn|synthesis
+# Thu Aug 29 22:09:24 2019
+
+premap completed
+# Thu Aug 29 22:09:26 2019
+
+Return Code: 0
+Run Time:00h:00m:02s
+Complete: Compile on creative_syn|synthesis
+
+Running Flow: map (Map) on creative_syn|synthesis
+# Thu Aug 29 22:09:27 2019
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on creative_syn|synthesis
+# Thu Aug 29 22:09:27 2019
+Copied C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\creative_m.srm to C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.srm
+
+fpga_mapper completed with warnings
+# Thu Aug 29 22:09:37 2019
+
+Return Code: 1
+Run Time:00h:00m:10s
+Complete: Map on creative_syn|synthesis
+Complete: Logic Synthesis on creative_syn|synthesis
+TCL script complete: "creative_syn.tcl"
+exit status=0
+exit status=0
+License checkin: synplifypro_actel

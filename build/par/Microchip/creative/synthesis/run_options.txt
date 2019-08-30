@@ -1,0 +1,84 @@
+#--  Synopsys, Inc.
+#--  Version N-2018.03M-SP1-1
+#--  Project file C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\run_options.txt
+#--  Written on Thu Aug 29 22:09:22 2019
+
+
+#project files
+add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/FCCC_C0/FCCC_C0_0/FCCC_C0_FCCC_C0_0_FCCC.v"
+add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/FCCC_C0/FCCC_C0.v"
+add_file -verilog "C:/GitHub/Rattlesnake/build/synth/Microchip/IGLOO2/Rattlesnake.vm"
+add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/creative/creative.v"
+add_file -fpga_constraint "C:/GitHub/Rattlesnake/build/par/Microchip/creative/designer/creative/synthesis.fdc"
+
+
+
+#implementation: "synthesis"
+impl -add synthesis -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+
+#device options
+set_option -technology IGLOO2
+set_option -part M2GL025
+set_option -package VF256
+set_option -speed_grade STD
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "creative"
+
+# hdl_compiler_options
+set_option -distributed_compile 0
+
+# mapper_without_write_options
+set_option -frequency 100.000
+set_option -srs_instrumentation 1
+
+# mapper_options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+# actel_options
+set_option -rw_check_on_ram 0
+
+# Microsemi G4
+set_option -run_prop_extract 1
+set_option -maxfan 10000
+set_option -clock_globalthreshold 2
+set_option -async_globalthreshold 12
+set_option -globalthreshold 5000
+set_option -low_power_ram_decomp 0
+set_option -seqshift_to_uram 0
+set_option -disable_io_insertion 0
+set_option -opcond COMTC
+set_option -retiming 0
+set_option -report_path 4000
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+set_option -disable_ramindex 0
+set_option -microsemi_enhanced_flow 1
+
+# NFilter
+set_option -no_sequential_opt 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./creative.vm"
+impl -active "synthesis"

@@ -1,0 +1,11 @@
+Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)
+
+Date      :  Thu Aug 29 21:03:32 2019
+Project   :  C:\GitHub\Rattlesnake\build\par\Microchip\creative
+Component :  creative
+Family    :  IGLOO2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/creative/creative.v
+

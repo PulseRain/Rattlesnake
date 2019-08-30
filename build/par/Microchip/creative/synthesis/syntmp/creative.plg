@@ -1,0 +1,23 @@
+@P:  Worst Slack : 0.362
+@P:  FCCC_C0_0/FCCC_C0_0/GL0 - Estimated Frequency : 125.4 MHz
+@P:  FCCC_C0_0/FCCC_C0_0/GL0 - Requested Frequency : 120.0 MHz
+@P:  FCCC_C0_0/FCCC_C0_0/GL0 - Estimated Period : 7.971
+@P:  FCCC_C0_0/FCCC_C0_0/GL0 - Requested Period : 8.333
+@P:  FCCC_C0_0/FCCC_C0_0/GL0 - Slack : 0.362
+@P:  osc_in - Estimated Frequency : NA
+@P:  osc_in - Requested Frequency : 50.0 MHz
+@P:  osc_in - Estimated Period : NA
+@P:  osc_in - Requested Period : 20.000
+@P:  osc_in - Slack : NA
+@P:  System - Estimated Frequency : 181.4 MHz
+@P:  System - Requested Frequency : 100.0 MHz
+@P:  System - Estimated Period : 5.514
+@P:  System - Requested Period : 10.000
+@P:  System - Slack : 4.486
+@P: creative Part : m2gl025vf256std
+@P: creative Register bits  : 3129 
+@P: creative DSP Blocks  : 4
+@P: creative I/O primitives : 5
+@P: creative RAM1K18 :  28
+@P: creative RAM64x18 :  2
+@P:  CPU Time : 0h:00m:09s

@@ -1,0 +1,53 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+
+# Written on Thu Aug 29 22:09:24 2019
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\synthesis.fdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                         Requested     Requested     Clock                       Clock                Clock
+Level     Clock                         Frequency     Period        Type                        Group                Load 
+--------------------------------------------------------------------------------------------------------------------------
+0 -       osc_in                        50.0 MHz      20.000        declared                    default_clkgroup     0    
+1 .         FCCC_C0_0/FCCC_C0_0/GL0     120.0 MHz     8.333         generated (from osc_in)     default_clkgroup     3171 
+                                                                                                                          
+0 -       System                        100.0 MHz     10.000        system                      system_clkgroup      0    
+==========================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                            Clock     Source                                    Clock Pin                                                                                                                                             Non-clock Pin     Non-clock Pin                            
+Clock                       Load      Pin                                       Seq Example                                                                                                                                           Seq Example       Comb Example                             
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+osc_in                      0         osc_in(port)                              -                                                                                                                                                     -                 FCCC_C0_0.FCCC_C0_0.CLK0_PAD_INST.I(IBUF)
+FCCC_C0_0/FCCC_C0_0/GL0     3171      FCCC_C0_0.FCCC_C0_0.CCC_INST.GL0(CCC)     Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.genblk1\.mul_div_32_i\.WideMult_0_0.CLK[1]     -                 Rattlesnake_0.clk_RNIQRC3.I(BUFG)        
+                                                                                                                                                                                                                                                                                                 
+System                      0         -                                         -                                                                                                                                                     -                 -                                        
+=================================================================================================================================================================================================================================================================================================

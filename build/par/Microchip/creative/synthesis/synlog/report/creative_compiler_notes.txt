@@ -1,0 +1,22 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":376:7:376:9|Synthesizing module VCC in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":372:7:372:9|Synthesizing module GND in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":362:7:362:12|Synthesizing module CLKINT in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":727:7:727:9|Synthesizing module CCC in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":268:7:268:11|Synthesizing module INBUF in library work.
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v":5:7:5:28|Synthesizing module FCCC_C0_FCCC_C0_0_FCCC in library work.
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v":9:7:9:13|Synthesizing module FCCC_C0 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":567:7:567:10|Synthesizing module MACC in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":104:7:104:10|Synthesizing module CFG2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":90:7:90:10|Synthesizing module CFG4 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":97:7:97:10|Synthesizing module CFG3 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":84:7:84:10|Synthesizing module ARI1 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":382:7:382:13|Synthesizing module RAM1K18 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":455:7:455:14|Synthesizing module RAM64x18 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":4:7:4:9|Synthesizing module SLE in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":111:7:111:10|Synthesizing module CFG1 in library work.
+@N: CG364 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":54:7:54:17|Synthesizing module Rattlesnake in library work.
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v":9:7:9:14|Synthesizing module creative in library work.
+@N|Running in 64-bit mode
+

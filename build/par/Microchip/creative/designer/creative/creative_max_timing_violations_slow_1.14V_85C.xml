@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<title>Timing Violation Report Max Delay Analysis
+</title>
+<text>SmartTime Version 12.600.0.14</text>
+<text>Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)</text>
+<text>Date: Thu Aug 29 22:23:02 2019
+</text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design</cell>
+ <cell>creative</cell>
+</row>
+<row>
+ <cell>Family</cell>
+ <cell>IGLOO2</cell>
+</row>
+<row>
+ <cell>Die</cell>
+ <cell>M2GL025</cell>
+</row>
+<row>
+ <cell>Package</cell>
+ <cell>256 VF</cell>
+</row>
+<row>
+ <cell>Temperature Range</cell>
+ <cell>0 - 85 C</cell>
+</row>
+<row>
+ <cell>Voltage Range</cell>
+ <cell>1.14 - 1.26 V</cell>
+</row>
+<row>
+ <cell>Speed Grade</cell>
+ <cell>STD</cell>
+</row>
+<row>
+ <cell>Design State</cell>
+ <cell>Post-Layout</cell>
+</row>
+<row>
+ <cell>Data source</cell>
+ <cell>Production</cell>
+</row>
+<row>
+ <cell>Min Operating Conditions</cell>
+ <cell>BEST - 1.26 V - 0 C</cell>
+</row>
+<row>
+ <cell>Max Operating Conditions</cell>
+ <cell>WORST - 1.14 V - 85 C</cell>
+</row>
+<row>
+ <cell>Operating Conditions</cell>
+ <cell>WORST - 1.14 V - 85 C</cell>
+</row>
+<row>
+ <cell>Scenario for Timing Analysis</cell>
+ <cell>timing_analysis</cell>
+</row>
+</table>
+<text></text>
+<table>
+<header>
+ <cell/>
+ <cell>From</cell>
+ <cell>To</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Slack (ns)</cell>
+ <cell>Arrival (ns)</cell>
+ <cell>Required (ns)</cell>
+</header>
+<row>
+ <cell>Path 1</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[12]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[9]</cell>
+ <cell>8.189</cell>
+ <cell>0.206</cell>
+ <cell>12.706</cell>
+ <cell>12.912</cell>
+</row>
+<row>
+ <cell>Path 2</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[11]:EN</cell>
+ <cell>7.677</cell>
+ <cell>0.269</cell>
+ <cell>12.226</cell>
+ <cell>12.495</cell>
+</row>
+<row>
+ <cell>Path 3</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[13]:EN</cell>
+ <cell>7.677</cell>
+ <cell>0.269</cell>
+ <cell>12.226</cell>
+ <cell>12.495</cell>
+</row>
+<row>
+ <cell>Path 4</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[9]:EN</cell>
+ <cell>7.677</cell>
+ <cell>0.269</cell>
+ <cell>12.226</cell>
+ <cell>12.495</cell>
+</row>
+<row>
+ <cell>Path 5</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[11]:EN</cell>
+ <cell>7.666</cell>
+ <cell>0.272</cell>
+ <cell>12.223</cell>
+ <cell>12.495</cell>
+</row>
+<row>
+ <cell>Path 6</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[13]:EN</cell>
+ <cell>7.666</cell>
+ <cell>0.272</cell>
+ <cell>12.223</cell>
+ <cell>12.495</cell>
+</row>
+<row>
+ <cell>Path 7</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[9]:EN</cell>
+ <cell>7.666</cell>
+ <cell>0.272</cell>
+ <cell>12.223</cell>
+ <cell>12.495</cell>
+</row>
+<row>
+ <cell>Path 8</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[10]:EN</cell>
+ <cell>7.677</cell>
+ <cell>0.282</cell>
+ <cell>12.226</cell>
+ <cell>12.508</cell>
+</row>
+<row>
+ <cell>Path 9</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[10]:EN</cell>
+ <cell>7.666</cell>
+ <cell>0.285</cell>
+ <cell>12.223</cell>
+ <cell>12.508</cell>
+</row>
+<row>
+ <cell>Path 10</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[7]:EN</cell>
+ <cell>7.645</cell>
+ <cell>0.296</cell>
+ <cell>12.194</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 11</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[8]:EN</cell>
+ <cell>7.645</cell>
+ <cell>0.296</cell>
+ <cell>12.194</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 12</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[7]:EN</cell>
+ <cell>7.634</cell>
+ <cell>0.299</cell>
+ <cell>12.191</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 13</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[8]:EN</cell>
+ <cell>7.634</cell>
+ <cell>0.299</cell>
+ <cell>12.191</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 14</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[6]:EN</cell>
+ <cell>7.645</cell>
+ <cell>0.310</cell>
+ <cell>12.194</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 15</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[9]:EN</cell>
+ <cell>7.645</cell>
+ <cell>0.310</cell>
+ <cell>12.194</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 16</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[6]:EN</cell>
+ <cell>7.634</cell>
+ <cell>0.313</cell>
+ <cell>12.191</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 17</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[9]:EN</cell>
+ <cell>7.634</cell>
+ <cell>0.313</cell>
+ <cell>12.191</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 18</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[22]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.write_data_in_d1[15]:D</cell>
+ <cell>7.712</cell>
+ <cell>0.318</cell>
+ <cell>12.224</cell>
+ <cell>12.542</cell>
+</row>
+<row>
+ <cell>Path 19</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[22]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[17]</cell>
+ <cell>8.043</cell>
+ <cell>0.334</cell>
+ <cell>12.555</cell>
+ <cell>12.889</cell>
+</row>
+<row>
+ <cell>Path 20</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_0_rep1:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.write_data_in_d1[15]:D</cell>
+ <cell>7.679</cell>
+ <cell>0.339</cell>
+ <cell>12.203</cell>
+ <cell>12.542</cell>
+</row>
+<row>
+ <cell>Path 21</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.mem_we_ret:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.763</cell>
+ <cell>0.360</cell>
+ <cell>12.266</cell>
+ <cell>12.626</cell>
+</row>
+<row>
+ <cell>Path 22</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.mem_we_ret:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.740</cell>
+ <cell>0.380</cell>
+ <cell>12.243</cell>
+ <cell>12.623</cell>
+</row>
+<row>
+ <cell>Path 23</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[23]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[17]</cell>
+ <cell>7.983</cell>
+ <cell>0.394</cell>
+ <cell>12.495</cell>
+ <cell>12.889</cell>
+</row>
+<row>
+ <cell>Path 24</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[4]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.write_data_in_d1[8]:D</cell>
+ <cell>7.589</cell>
+ <cell>0.424</cell>
+ <cell>12.117</cell>
+ <cell>12.541</cell>
+</row>
+<row>
+ <cell>Path 25</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[6]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.668</cell>
+ <cell>0.428</cell>
+ <cell>12.198</cell>
+ <cell>12.626</cell>
+</row>
+<row>
+ <cell>Path 26</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[15]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[9]</cell>
+ <cell>7.958</cell>
+ <cell>0.431</cell>
+ <cell>12.481</cell>
+ <cell>12.912</cell>
+</row>
+<row>
+ <cell>Path 27</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[5]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[16]</cell>
+ <cell>8.005</cell>
+ <cell>0.432</cell>
+ <cell>12.519</cell>
+ <cell>12.951</cell>
+</row>
+<row>
+ <cell>Path 28</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_0_rep2:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[9]</cell>
+ <cell>7.968</cell>
+ <cell>0.432</cell>
+ <cell>12.480</cell>
+ <cell>12.912</cell>
+</row>
+<row>
+ <cell>Path 29</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.mem_we_ret:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.687</cell>
+ <cell>0.433</cell>
+ <cell>12.190</cell>
+ <cell>12.623</cell>
+</row>
+<row>
+ <cell>Path 30</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[15]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[13]</cell>
+ <cell>7.939</cell>
+ <cell>0.436</cell>
+ <cell>12.462</cell>
+ <cell>12.898</cell>
+</row>
+<row>
+ <cell>Path 31</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.mem_we_ret:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.683</cell>
+ <cell>0.436</cell>
+ <cell>12.186</cell>
+ <cell>12.622</cell>
+</row>
+<row>
+ <cell>Path 32</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[5]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.write_data_in_d1[8]:D</cell>
+ <cell>7.589</cell>
+ <cell>0.438</cell>
+ <cell>12.103</cell>
+ <cell>12.541</cell>
+</row>
+<row>
+ <cell>Path 33</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[0]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.652</cell>
+ <cell>0.443</cell>
+ <cell>12.183</cell>
+ <cell>12.626</cell>
+</row>
+<row>
+ <cell>Path 34</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[6]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.645</cell>
+ <cell>0.448</cell>
+ <cell>12.175</cell>
+ <cell>12.623</cell>
+</row>
+<row>
+ <cell>Path 35</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[2]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.640</cell>
+ <cell>0.455</cell>
+ <cell>12.171</cell>
+ <cell>12.626</cell>
+</row>
+<row>
+ <cell>Path 36</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[11]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[9]</cell>
+ <cell>7.942</cell>
+ <cell>0.462</cell>
+ <cell>12.450</cell>
+ <cell>12.912</cell>
+</row>
+<row>
+ <cell>Path 37</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[0]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.629</cell>
+ <cell>0.463</cell>
+ <cell>12.160</cell>
+ <cell>12.623</cell>
+</row>
+<row>
+ <cell>Path 38</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[17]:EN</cell>
+ <cell>7.471</cell>
+ <cell>0.470</cell>
+ <cell>12.020</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 39</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[19]:EN</cell>
+ <cell>7.471</cell>
+ <cell>0.470</cell>
+ <cell>12.020</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 40</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[21]:EN</cell>
+ <cell>7.471</cell>
+ <cell>0.470</cell>
+ <cell>12.020</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 41</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_32[18]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.470</cell>
+ <cell>12.032</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 42</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_32[27]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.470</cell>
+ <cell>12.032</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 43</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[16]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.470</cell>
+ <cell>12.032</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 44</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[18]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.470</cell>
+ <cell>12.032</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 45</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[20]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.470</cell>
+ <cell>12.032</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 46</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[23]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.470</cell>
+ <cell>12.032</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 47</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_fast[3]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.write_data_in_d1[8]:D</cell>
+ <cell>7.541</cell>
+ <cell>0.472</cell>
+ <cell>12.069</cell>
+ <cell>12.541</cell>
+</row>
+<row>
+ <cell>Path 48</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[17]:EN</cell>
+ <cell>7.460</cell>
+ <cell>0.473</cell>
+ <cell>12.017</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 49</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[19]:EN</cell>
+ <cell>7.460</cell>
+ <cell>0.473</cell>
+ <cell>12.017</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 50</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[21]:EN</cell>
+ <cell>7.460</cell>
+ <cell>0.473</cell>
+ <cell>12.017</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 51</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_32[18]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.473</cell>
+ <cell>12.029</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 52</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_32[27]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.473</cell>
+ <cell>12.029</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 53</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[16]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.473</cell>
+ <cell>12.029</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 54</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[18]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.473</cell>
+ <cell>12.029</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 55</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[20]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.473</cell>
+ <cell>12.029</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 56</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[23]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.473</cell>
+ <cell>12.029</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 57</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[2]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.617</cell>
+ <cell>0.475</cell>
+ <cell>12.148</cell>
+ <cell>12.623</cell>
+</row>
+<row>
+ <cell>Path 58</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X[6]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_1/INST_RAM64x18_IP:C_DIN[1]</cell>
+ <cell>7.895</cell>
+ <cell>0.482</cell>
+ <cell>12.412</cell>
+ <cell>12.894</cell>
+</row>
+<row>
+ <cell>Path 59</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[18]:EN</cell>
+ <cell>7.471</cell>
+ <cell>0.484</cell>
+ <cell>12.020</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 60</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[20]:EN</cell>
+ <cell>7.471</cell>
+ <cell>0.484</cell>
+ <cell>12.020</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 61</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_32[20]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.484</cell>
+ <cell>12.032</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 62</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_32[23]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.484</cell>
+ <cell>12.032</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 63</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[13]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.484</cell>
+ <cell>12.032</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 64</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[14]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.484</cell>
+ <cell>12.032</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 65</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[27]:EN</cell>
+ <cell>7.483</cell>
+ <cell>0.484</cell>
+ <cell>12.032</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 66</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[22]:EN</cell>
+ <cell>7.471</cell>
+ <cell>0.485</cell>
+ <cell>12.020</cell>
+ <cell>12.505</cell>
+</row>
+<row>
+ <cell>Path 67</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[18]:EN</cell>
+ <cell>7.460</cell>
+ <cell>0.487</cell>
+ <cell>12.017</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 68</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[20]:EN</cell>
+ <cell>7.460</cell>
+ <cell>0.487</cell>
+ <cell>12.017</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 69</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_32[20]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.487</cell>
+ <cell>12.029</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 70</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_32[23]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.487</cell>
+ <cell>12.029</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 71</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[13]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.487</cell>
+ <cell>12.029</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 72</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[14]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.487</cell>
+ <cell>12.029</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 73</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_64[27]:EN</cell>
+ <cell>7.472</cell>
+ <cell>0.487</cell>
+ <cell>12.029</cell>
+ <cell>12.516</cell>
+</row>
+<row>
+ <cell>Path 74</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[22]:EN</cell>
+ <cell>7.460</cell>
+ <cell>0.488</cell>
+ <cell>12.017</cell>
+ <cell>12.505</cell>
+</row>
+<row>
+ <cell>Path 75</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[6]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.592</cell>
+ <cell>0.501</cell>
+ <cell>12.122</cell>
+ <cell>12.623</cell>
+</row>
+<row>
+ <cell>Path 76</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[6]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.588</cell>
+ <cell>0.504</cell>
+ <cell>12.118</cell>
+ <cell>12.622</cell>
+</row>
+<row>
+ <cell>Path 77</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[14]:EN</cell>
+ <cell>7.433</cell>
+ <cell>0.509</cell>
+ <cell>11.982</cell>
+ <cell>12.491</cell>
+</row>
+<row>
+ <cell>Path 78</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out[17]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[17]:EN</cell>
+ <cell>7.440</cell>
+ <cell>0.512</cell>
+ <cell>11.978</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 79</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out[17]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[19]:EN</cell>
+ <cell>7.440</cell>
+ <cell>0.512</cell>
+ <cell>11.978</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 80</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out[17]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[21]:EN</cell>
+ <cell>7.440</cell>
+ <cell>0.512</cell>
+ <cell>11.978</cell>
+ <cell>12.490</cell>
+</row>
+<row>
+ <cell>Path 81</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[14]:EN</cell>
+ <cell>7.422</cell>
+ <cell>0.512</cell>
+ <cell>11.979</cell>
+ <cell>12.491</cell>
+</row>
+<row>
+ <cell>Path 82</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[0]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.576</cell>
+ <cell>0.516</cell>
+ <cell>12.107</cell>
+ <cell>12.623</cell>
+</row>
+<row>
+ <cell>Path 83</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[0]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.572</cell>
+ <cell>0.519</cell>
+ <cell>12.103</cell>
+ <cell>12.622</cell>
+</row>
+<row>
+ <cell>Path 84</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[12]:EN</cell>
+ <cell>7.433</cell>
+ <cell>0.520</cell>
+ <cell>11.982</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 85</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[12]:EN</cell>
+ <cell>7.422</cell>
+ <cell>0.523</cell>
+ <cell>11.979</cell>
+ <cell>12.502</cell>
+</row>
+<row>
+ <cell>Path 86</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out[17]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[18]:EN</cell>
+ <cell>7.440</cell>
+ <cell>0.526</cell>
+ <cell>11.978</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 87</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out[17]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[20]:EN</cell>
+ <cell>7.440</cell>
+ <cell>0.526</cell>
+ <cell>11.978</cell>
+ <cell>12.504</cell>
+</row>
+<row>
+ <cell>Path 88</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_128[12]:EN</cell>
+ <cell>7.404</cell>
+ <cell>0.526</cell>
+ <cell>11.953</cell>
+ <cell>12.479</cell>
+</row>
+<row>
+ <cell>Path 89</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_96[19]:EN</cell>
+ <cell>7.404</cell>
+ <cell>0.526</cell>
+ <cell>11.953</cell>
+ <cell>12.479</cell>
+</row>
+<row>
+ <cell>Path 90</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out[17]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[22]:EN</cell>
+ <cell>7.440</cell>
+ <cell>0.527</cell>
+ <cell>11.978</cell>
+ <cell>12.505</cell>
+</row>
+<row>
+ <cell>Path 91</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_96[13]:EN</cell>
+ <cell>7.403</cell>
+ <cell>0.527</cell>
+ <cell>11.952</cell>
+ <cell>12.479</cell>
+</row>
+<row>
+ <cell>Path 92</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[2]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.564</cell>
+ <cell>0.528</cell>
+ <cell>12.095</cell>
+ <cell>12.623</cell>
+</row>
+<row>
+ <cell>Path 93</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[17]:EN</cell>
+ <cell>7.418</cell>
+ <cell>0.528</cell>
+ <cell>11.967</cell>
+ <cell>12.495</cell>
+</row>
+<row>
+ <cell>Path 94</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_128[12]:EN</cell>
+ <cell>7.393</cell>
+ <cell>0.529</cell>
+ <cell>11.950</cell>
+ <cell>12.479</cell>
+</row>
+<row>
+ <cell>Path 95</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_96[19]:EN</cell>
+ <cell>7.393</cell>
+ <cell>0.529</cell>
+ <cell>11.950</cell>
+ <cell>12.479</cell>
+</row>
+<row>
+ <cell>Path 96</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_96[13]:EN</cell>
+ <cell>7.392</cell>
+ <cell>0.530</cell>
+ <cell>11.949</cell>
+ <cell>12.479</cell>
+</row>
+<row>
+ <cell>Path 97</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[2]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.560</cell>
+ <cell>0.531</cell>
+ <cell>12.091</cell>
+ <cell>12.622</cell>
+</row>
+<row>
+ <cell>Path 98</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_35:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[17]:EN</cell>
+ <cell>7.407</cell>
+ <cell>0.531</cell>
+ <cell>11.964</cell>
+ <cell>12.495</cell>
+</row>
+<row>
+ <cell>Path 99</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[3]:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]</cell>
+ <cell>7.568</cell>
+ <cell>0.538</cell>
+ <cell>12.088</cell>
+ <cell>12.626</cell>
+</row>
+<row>
+ <cell>Path 100</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK</cell>
+ <cell>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_96[8]:EN</cell>
+ <cell>7.404</cell>
+ <cell>0.539</cell>
+ <cell>11.953</cell>
+ <cell>12.492</cell>
+</row>
+</table>
+<text></text>
+</doc>

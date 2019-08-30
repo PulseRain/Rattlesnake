@@ -1,0 +1,821 @@
+Timing Violation Report Max Delay Analysis
+
+SmartTime Version v12.1
+Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)
+Date: Thu Aug 29 20:05:29 2019
+
+
+Design: creative
+Family: IGLOO2
+Die: M2GL025
+Package: 256 VF
+Temperature Range: 0 - 85 C
+Voltage Range: 1.14 - 1.26 V
+Speed Grade: STD
+Design State: Post-Layout
+Data source: Production
+Min Operating Conditions: BEST - 1.26 V - 0 C
+Max Operating Conditions: WORST - 1.14 V - 85 C
+Scenario for Timing Analysis: timing_analysis
+
+
+Path 1
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              8.014
+  Slack (ns):             -0.583
+  Arrival (ns):           12.454
+  Required (ns):          11.871
+
+Path 2
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              8.014
+  Slack (ns):             -0.583
+  Arrival (ns):           12.454
+  Required (ns):          11.871
+
+Path 3
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_data_access_i.ctl_mem_we_d1:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_1/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.384
+  Slack (ns):             -0.555
+  Arrival (ns):           12.797
+  Required (ns):          12.242
+
+Path 4
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out_ret_2[14]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_1/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.313
+  Slack (ns):             -0.526
+  Arrival (ns):           12.768
+  Required (ns):          12.242
+
+Path 5
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.jalr_active:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[1]
+  Delay (ns):              8.381
+  Slack (ns):             -0.523
+  Arrival (ns):           12.804
+  Required (ns):          12.281
+
+Path 6
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.mem_we_ret:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]
+  Delay (ns):              8.078
+  Slack (ns):             -0.500
+  Arrival (ns):           12.515
+  Required (ns):          12.015
+
+Path 7
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.reg_ctl_LUI:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_1/INST_RAM64x18_IP:C_DIN[10]
+  Delay (ns):              8.354
+  Slack (ns):             -0.499
+  Arrival (ns):           12.819
+  Required (ns):          12.320
+
+Path 8
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.mem_we_ret:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]
+  Delay (ns):              8.057
+  Slack (ns):             -0.488
+  Arrival (ns):           12.494
+  Required (ns):          12.006
+
+Path 9
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_data_access_i.ctl_mem_we_d1:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_2/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.291
+  Slack (ns):             -0.459
+  Arrival (ns):           12.704
+  Required (ns):          12.245
+
+Path 10
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_data_access_i.mem_write_addr_d1[14]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_1/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.268
+  Slack (ns):             -0.456
+  Arrival (ns):           12.698
+  Required (ns):          12.242
+
+Path 11
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.read_mem_enable:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_3/INST_RAM1K18_IP:A_WEN[0]
+  Delay (ns):              7.866
+  Slack (ns):             -0.456
+  Arrival (ns):           12.297
+  Required (ns):          11.841
+
+Path 12
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_19:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.893
+  Slack (ns):             -0.454
+  Arrival (ns):           12.325
+  Required (ns):          11.871
+
+Path 13
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_19:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.893
+  Slack (ns):             -0.454
+  Arrival (ns):           12.325
+  Required (ns):          11.871
+
+Path 14
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_12:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.864
+  Slack (ns):             -0.443
+  Arrival (ns):           12.314
+  Required (ns):          11.871
+
+Path 15
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_12:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.864
+  Slack (ns):             -0.443
+  Arrival (ns):           12.314
+  Required (ns):          11.871
+
+Path 16
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out_ret_2[14]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_2/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.220
+  Slack (ns):             -0.430
+  Arrival (ns):           12.675
+  Required (ns):          12.245
+
+Path 17
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_23:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.822
+  Slack (ns):             -0.408
+  Arrival (ns):           12.279
+  Required (ns):          11.871
+
+Path 18
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_23:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.822
+  Slack (ns):             -0.408
+  Arrival (ns):           12.279
+  Required (ns):          11.871
+
+Path 19
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_43:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.821
+  Slack (ns):             -0.392
+  Arrival (ns):           12.263
+  Required (ns):          11.871
+
+Path 20
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_43:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.821
+  Slack (ns):             -0.392
+  Arrival (ns):           12.263
+  Required (ns):          11.871
+
+Path 21
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_fast[2]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[4]
+  Delay (ns):              8.330
+  Slack (ns):             -0.387
+  Arrival (ns):           12.754
+  Required (ns):          12.367
+
+Path 22
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.ctl_back_to_exe_d1_ret_0:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.872
+  Slack (ns):             -0.369
+  Arrival (ns):           12.304
+  Required (ns):          11.935
+
+Path 23
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.ctl_back_to_exe_d1_ret_0:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.872
+  Slack (ns):             -0.369
+  Arrival (ns):           12.304
+  Required (ns):          11.935
+
+Path 24
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_21:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.817
+  Slack (ns):             -0.365
+  Arrival (ns):           12.236
+  Required (ns):          11.871
+
+Path 25
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_21:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.817
+  Slack (ns):             -0.365
+  Arrival (ns):           12.236
+  Required (ns):          11.871
+
+Path 26
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_data_access_i.mem_write_addr_d1[14]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_2/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.175
+  Slack (ns):             -0.360
+  Arrival (ns):           12.605
+  Required (ns):          12.245
+
+Path 27
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_96[13]:EN
+  Delay (ns):              7.742
+  Slack (ns):             -0.344
+  Arrival (ns):           12.182
+  Required (ns):          11.838
+
+Path 28
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_14:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.780
+  Slack (ns):             -0.340
+  Arrival (ns):           12.211
+  Required (ns):          11.871
+
+Path 29
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_14:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.780
+  Slack (ns):             -0.340
+  Arrival (ns):           12.211
+  Required (ns):          11.871
+
+Path 30
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[16]:EN
+  Delay (ns):              7.777
+  Slack (ns):             -0.340
+  Arrival (ns):           12.217
+  Required (ns):          11.877
+
+Path 31
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[17]:EN
+  Delay (ns):              7.777
+  Slack (ns):             -0.340
+  Arrival (ns):           12.217
+  Required (ns):          11.877
+
+Path 32
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[19]:EN
+  Delay (ns):              7.777
+  Slack (ns):             -0.340
+  Arrival (ns):           12.217
+  Required (ns):          11.877
+
+Path 33
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_fast[0]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_1/INST_RAM64x18_IP:C_DIN[11]
+  Delay (ns):              8.232
+  Slack (ns):             -0.336
+  Arrival (ns):           12.655
+  Required (ns):          12.319
+
+Path 34
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[18]:EN
+  Delay (ns):              7.777
+  Slack (ns):             -0.329
+  Arrival (ns):           12.217
+  Required (ns):          11.888
+
+Path 35
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[20]:EN
+  Delay (ns):              7.777
+  Slack (ns):             -0.328
+  Arrival (ns):           12.217
+  Required (ns):          11.889
+
+Path 36
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out_ret_2[12]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_3/INST_RAM1K18_IP:A_WEN[0]
+  Delay (ns):              7.709
+  Slack (ns):             -0.323
+  Arrival (ns):           12.164
+  Required (ns):          11.841
+
+Path 37
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_fast[0]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[14]
+  Delay (ns):              8.160
+  Slack (ns):             -0.312
+  Arrival (ns):           12.583
+  Required (ns):          12.271
+
+Path 38
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.ctl_back_to_exe_d1_ret_0:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[16]:EN
+  Delay (ns):              7.828
+  Slack (ns):             -0.304
+  Arrival (ns):           12.260
+  Required (ns):          11.956
+
+Path 39
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.ctl_back_to_exe_d1_ret_0:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[12]:EN
+  Delay (ns):              7.828
+  Slack (ns):             -0.303
+  Arrival (ns):           12.260
+  Required (ns):          11.957
+
+Path 40
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[6]:EN
+  Delay (ns):              7.755
+  Slack (ns):             -0.302
+  Arrival (ns):           12.195
+  Required (ns):          11.893
+
+Path 41
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[7]:EN
+  Delay (ns):              7.754
+  Slack (ns):             -0.301
+  Arrival (ns):           12.194
+  Required (ns):          11.893
+
+Path 42
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[10]:EN
+  Delay (ns):              7.730
+  Slack (ns):             -0.292
+  Arrival (ns):           12.170
+  Required (ns):          11.878
+
+Path 43
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[16]:EN
+  Delay (ns):              7.730
+  Slack (ns):             -0.292
+  Arrival (ns):           12.170
+  Required (ns):          11.878
+
+Path 44
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[6]:EN
+  Delay (ns):              7.730
+  Slack (ns):             -0.292
+  Arrival (ns):           12.170
+  Required (ns):          11.878
+
+Path 45
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[8]:EN
+  Delay (ns):              7.730
+  Slack (ns):             -0.292
+  Arrival (ns):           12.170
+  Required (ns):          11.878
+
+Path 46
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[3]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]
+  Delay (ns):              7.871
+  Slack (ns):             -0.286
+  Arrival (ns):           12.301
+  Required (ns):          12.015
+
+Path 47
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_27:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.728
+  Slack (ns):             -0.285
+  Arrival (ns):           12.156
+  Required (ns):          11.871
+
+Path 48
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_27:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.728
+  Slack (ns):             -0.285
+  Arrival (ns):           12.156
+  Required (ns):          11.871
+
+Path 49
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.reg_ctl_JAL:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_1/INST_RAM64x18_IP:C_DIN[10]
+  Delay (ns):              8.164
+  Slack (ns):             -0.278
+  Arrival (ns):           12.598
+  Required (ns):          12.320
+
+Path 50
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[9]:EN
+  Delay (ns):              7.730
+  Slack (ns):             -0.278
+  Arrival (ns):           12.170
+  Required (ns):          11.892
+
+Path 51
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[11]:EN
+  Delay (ns):              7.730
+  Slack (ns):             -0.277
+  Arrival (ns):           12.170
+  Required (ns):          11.893
+
+Path 52
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[3]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]
+  Delay (ns):              7.850
+  Slack (ns):             -0.274
+  Arrival (ns):           12.280
+  Required (ns):          12.006
+
+Path 53
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.mem_we_ret:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]
+  Delay (ns):              7.848
+  Slack (ns):             -0.271
+  Arrival (ns):           12.285
+  Required (ns):          12.014
+
+Path 54
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_113:EN
+  Delay (ns):              7.679
+  Slack (ns):             -0.267
+  Arrival (ns):           12.119
+  Required (ns):          11.852
+
+Path 55
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[20]:EN
+  Delay (ns):              7.684
+  Slack (ns):             -0.256
+  Arrival (ns):           12.124
+  Required (ns):          11.868
+
+Path 56
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out_ret_2[5]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_3/INST_RAM1K18_IP:A_ADDR[4]
+  Delay (ns):              7.624
+  Slack (ns):             -0.239
+  Arrival (ns):           12.063
+  Required (ns):          11.824
+
+Path 57
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_52:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.655
+  Slack (ns):             -0.239
+  Arrival (ns):           12.110
+  Required (ns):          11.871
+
+Path 58
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_52:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.655
+  Slack (ns):             -0.239
+  Arrival (ns):           12.110
+  Required (ns):          11.871
+
+Path 59
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.jalr_active:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_1/INST_RAM64x18_IP:C_DIN[10]
+  Delay (ns):              8.135
+  Slack (ns):             -0.238
+  Arrival (ns):           12.558
+  Required (ns):          12.320
+
+Path 60
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.646
+  Slack (ns):             -0.238
+  Arrival (ns):           12.109
+  Required (ns):          11.871
+
+Path 61
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_57:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.646
+  Slack (ns):             -0.238
+  Arrival (ns):           12.109
+  Required (ns):          11.871
+
+Path 62
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_50:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.686
+  Slack (ns):             -0.237
+  Arrival (ns):           12.108
+  Required (ns):          11.871
+
+Path 63
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_50:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.686
+  Slack (ns):             -0.237
+  Arrival (ns):           12.108
+  Required (ns):          11.871
+
+Path 64
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_69:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.662
+  Slack (ns):             -0.236
+  Arrival (ns):           12.107
+  Required (ns):          11.871
+
+Path 65
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_69:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.662
+  Slack (ns):             -0.236
+  Arrival (ns):           12.107
+  Required (ns):          11.871
+
+Path 66
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_0_rep1:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_1/INST_RAM64x18_IP:C_DIN[11]
+  Delay (ns):              8.130
+  Slack (ns):             -0.232
+  Arrival (ns):           12.551
+  Required (ns):          12.319
+
+Path 67
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_75:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.657
+  Slack (ns):             -0.231
+  Arrival (ns):           12.102
+  Required (ns):          11.871
+
+Path 68
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_75:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.657
+  Slack (ns):             -0.231
+  Arrival (ns):           12.102
+  Required (ns):          11.871
+
+Path 69
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_0_rep1:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[4]
+  Delay (ns):              8.175
+  Slack (ns):             -0.229
+  Arrival (ns):           12.596
+  Required (ns):          12.367
+
+Path 70
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.read_mem_addr[6]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_3/INST_RAM1K18_IP:A_WEN[0]
+  Delay (ns):              7.609
+  Slack (ns):             -0.229
+  Arrival (ns):           12.070
+  Required (ns):          11.841
+
+Path 71
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[4]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_4/INST_RAM1K18_IP:A_DIN[0]
+  Delay (ns):              7.797
+  Slack (ns):             -0.223
+  Arrival (ns):           12.238
+  Required (ns):          12.015
+
+Path 72
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.mem_we_ret:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]
+  Delay (ns):              7.793
+  Slack (ns):             -0.222
+  Arrival (ns):           12.230
+  Required (ns):          12.008
+
+Path 73
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.read_mem_addr[10]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_1/INST_RAM1K18_IP:A_ADDR[10]
+  Delay (ns):              7.995
+  Slack (ns):             -0.216
+  Arrival (ns):           12.456
+  Required (ns):          12.240
+
+Path 74
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_19:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_96[13]:EN
+  Delay (ns):              7.621
+  Slack (ns):             -0.215
+  Arrival (ns):           12.053
+  Required (ns):          11.838
+
+Path 75
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.mem_addr_blk_wr_end_i[4]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd.mem_mem_0_2/INST_RAM1K18_IP:A_DIN[0]
+  Delay (ns):              7.776
+  Slack (ns):             -0.211
+  Arrival (ns):           12.217
+  Required (ns):          12.006
+
+Path 76
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_19:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[16]:EN
+  Delay (ns):              7.656
+  Slack (ns):             -0.211
+  Arrival (ns):           12.088
+  Required (ns):          11.877
+
+Path 77
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_19:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[17]:EN
+  Delay (ns):              7.656
+  Slack (ns):             -0.211
+  Arrival (ns):           12.088
+  Required (ns):          11.877
+
+Path 78
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_19:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[19]:EN
+  Delay (ns):              7.656
+  Slack (ns):             -0.211
+  Arrival (ns):           12.088
+  Required (ns):          11.877
+
+Path 79
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_48:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.654
+  Slack (ns):             -0.211
+  Arrival (ns):           12.082
+  Required (ns):          11.871
+
+Path 80
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_ret_48:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.654
+  Slack (ns):             -0.211
+  Arrival (ns):           12.082
+  Required (ns):          11.871
+
+Path 81
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[12]:EN
+  Delay (ns):              7.645
+  Slack (ns):             -0.208
+  Arrival (ns):           12.085
+  Required (ns):          11.877
+
+Path 82
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_12:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_start_addr_ret_96[13]:EN
+  Delay (ns):              7.592
+  Slack (ns):             -0.204
+  Arrival (ns):           12.042
+  Required (ns):          11.838
+
+Path 83
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_21:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.642
+  Slack (ns):             -0.202
+  Arrival (ns):           12.073
+  Required (ns):          11.871
+
+Path 84
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_21:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.642
+  Slack (ns):             -0.202
+  Arrival (ns):           12.073
+  Required (ns):          11.871
+
+Path 85
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out_ret_2[5]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_1/INST_RAM1K18_IP:A_ADDR[4]
+  Delay (ns):              7.587
+  Slack (ns):             -0.201
+  Arrival (ns):           12.026
+  Required (ns):          11.825
+
+Path 86
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_12:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[16]:EN
+  Delay (ns):              7.627
+  Slack (ns):             -0.200
+  Arrival (ns):           12.077
+  Required (ns):          11.877
+
+Path 87
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_12:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[17]:EN
+  Delay (ns):              7.627
+  Slack (ns):             -0.200
+  Arrival (ns):           12.077
+  Required (ns):          11.877
+
+Path 88
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_12:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[19]:EN
+  Delay (ns):              7.627
+  Slack (ns):             -0.200
+  Arrival (ns):           12.077
+  Required (ns):          11.877
+
+Path 89
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_19:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[18]:EN
+  Delay (ns):              7.656
+  Slack (ns):             -0.200
+  Arrival (ns):           12.088
+  Required (ns):          11.888
+
+Path 90
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.read_mem_enable:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_0/INST_RAM1K18_IP:A_WEN[0]
+  Delay (ns):              7.618
+  Slack (ns):             -0.200
+  Arrival (ns):           12.049
+  Required (ns):          11.849
+
+Path 91
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_19:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[20]:EN
+  Delay (ns):              7.656
+  Slack (ns):             -0.199
+  Arrival (ns):           12.088
+  Required (ns):          11.889
+
+Path 92
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_data_access_i.ctl_mem_we_d1:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_low_i.gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st.mem_mem_0_3/INST_RAM1K18_IP:A_WEN[0]
+  Delay (ns):              7.624
+  Slack (ns):             -0.196
+  Arrival (ns):           12.037
+  Required (ns):          11.841
+
+Path 93
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out_0[1]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_1/INST_RAM64x18_IP:C_DIN[10]
+  Delay (ns):              8.071
+  Slack (ns):             -0.196
+  Arrival (ns):           12.516
+  Required (ns):          12.320
+
+Path 94
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_27:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              7.622
+  Slack (ns):             -0.196
+  Arrival (ns):           12.067
+  Required (ns):          11.871
+
+Path 95
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_27:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              7.622
+  Slack (ns):             -0.196
+  Arrival (ns):           12.067
+  Required (ns):          11.871
+
+Path 96
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_data_access_i.ctl_mem_we_d1:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_0/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.015
+  Slack (ns):             -0.195
+  Arrival (ns):           12.428
+  Required (ns):          12.233
+
+Path 97
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_12:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[18]:EN
+  Delay (ns):              7.627
+  Slack (ns):             -0.189
+  Arrival (ns):           12.077
+  Required (ns):          11.888
+
+Path 98
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.X_ret_12:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[20]:EN
+  Delay (ns):              7.627
+  Slack (ns):             -0.188
+  Arrival (ns):           12.077
+  Required (ns):          11.889
+
+Path 99
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.Y_fast[0]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.write_data_in_d1[14]:D
+  Delay (ns):              7.675
+  Slack (ns):             -0.180
+  Arrival (ns):           12.098
+  Required (ns):          11.918
+
+Path 100
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_17[28]:EN
+  Delay (ns):              7.625
+  Slack (ns):             -0.180
+  Arrival (ns):           12.065
+  Required (ns):          11.885
+

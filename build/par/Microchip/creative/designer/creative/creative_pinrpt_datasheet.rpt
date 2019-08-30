@@ -1,0 +1,18 @@
+----------------------------------------------------------------
+-Pin Report - Date: Thu Aug 29 22:11:45 2019 Pinchecksum: NOT-AVAILABLE
+-Product: Designer
+-Release: v12.1
+-Version: 12.600.0.14
+-Design Name: creative
+-Family: IGLOO2
+-Die: M2GL025
+-Package: 256 VF
+-----------------------------------------------------------------
+
+Port      |Pin |Fixed |Function                 |Bank     |I/O Std   |Direction                      |I/O state in Flash*Freeze mode |Resistor Pull                      |I/O available in Flash*Freeze mode |Schmitt Trigger |Odt_Static    |Odt Imp (Ohm)  |Low Power Exit |Input Delay |Slew         |Pre-Emphasis      |Output Drive (mA) |Output Load (pF) |
+----------|----|------|-------------------------|---------|----------|-------------------------------|-------------------------------|-----------------------------------|-----------------------------------|----------------|--------------|---------------|---------------|------------|-------------|------------------|------------------|-----------------|
+LED_GREEN  J16  Yes    MSIO11PB2//CCC_NE0_CLKI0  Bank2     LVCMOS33   Output                          TRISTATE                        None                                No                                  ---              ---            ---             ---             ---          ---           ---                4                  5                 
+LED_RED    K16  Yes    MSIO4PB2                  Bank2     LVCMOS33   Output                          TRISTATE                        None                                No                                  ---              ---            ---             ---             ---          ---           ---                4                  5                 
+osc_in     H16  Yes    MSIO11NB2/CCC_NE1_CLKI0   Bank2     LVCMOS33   Input                           TRISTATE                        None                                No                                  Off              ---            ---             Off             Off          ---           ---                ---                ---               
+RXD        H3   Yes    MSIO99PB7/CCC_NW0_CLKI0   Bank7     LVCMOS33   Input                           TRISTATE                        None                                No                                  Off              ---            ---             Off             Off          ---           ---                ---                ---               
+TXD        G3   Yes    MSIO98PB7/CCC_NW1_CLKI0   Bank7     LVCMOS33   Output                          TRISTATE                        None                                No                                  ---              ---            ---             ---             ---          ---           ---                4                  5                 

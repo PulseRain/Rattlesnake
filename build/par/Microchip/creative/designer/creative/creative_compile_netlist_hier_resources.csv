@@ -1,0 +1,6 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Fabric DFF,Interface 4LUT,Interface DFF,Single-Ended I/O,uSRAM 1K,LSRAM 18K,Math (18x18),PLLs and CCCs,Chip Globals
+FCCC_C0_0/FCCC_C0_0/Primitives,0,0,0,0,1,0,0,0,1,1
+Primitives/Primitives,1,0,0,0,4,0,0,0,0,0
+Rattlesnake_0/Primitives,4688,3129,1080,1080,0,2,28,0,0,2
+Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_0_0/Primitives,0,0,144,144,0,0,0,4,0,0

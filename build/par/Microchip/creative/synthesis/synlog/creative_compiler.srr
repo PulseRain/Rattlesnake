@@ -1,0 +1,257 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+Synopsys HDL Compiler, Version comp2018q2p1, Build 223R, Built Oct 23 2018 09:18:38
+
+@N|Running in 64-bit mode
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+Synopsys Verilog Compiler, Version comp2018q2p1, Build 223R, Built Oct 23 2018 09:18:38
+
+@N|Running in 64-bit mode
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v" (library work)
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v" (library work)
+@I::"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v" (library work)
+@I::"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm" (library work)
+@I::"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v" (library work)
+Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+Selecting top level module creative
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":376:7:376:9|Synthesizing module VCC in library work.
+Running optimization stage 1 on VCC .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":372:7:372:9|Synthesizing module GND in library work.
+Running optimization stage 1 on GND .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":362:7:362:12|Synthesizing module CLKINT in library work.
+Running optimization stage 1 on CLKINT .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":727:7:727:9|Synthesizing module CCC in library work.
+Running optimization stage 1 on CCC .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":268:7:268:11|Synthesizing module INBUF in library work.
+Running optimization stage 1 on INBUF .......
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v":5:7:5:28|Synthesizing module FCCC_C0_FCCC_C0_0_FCCC in library work.
+Running optimization stage 1 on FCCC_C0_FCCC_C0_0_FCCC .......
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v":9:7:9:13|Synthesizing module FCCC_C0 in library work.
+Running optimization stage 1 on FCCC_C0 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":567:7:567:10|Synthesizing module MACC in library work.
+Running optimization stage 1 on MACC .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":104:7:104:10|Synthesizing module CFG2 in library work.
+Running optimization stage 1 on CFG2 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":90:7:90:10|Synthesizing module CFG4 in library work.
+Running optimization stage 1 on CFG4 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":97:7:97:10|Synthesizing module CFG3 in library work.
+Running optimization stage 1 on CFG3 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":84:7:84:10|Synthesizing module ARI1 in library work.
+Running optimization stage 1 on ARI1 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":382:7:382:13|Synthesizing module RAM1K18 in library work.
+Running optimization stage 1 on RAM1K18 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":455:7:455:14|Synthesizing module RAM64x18 in library work.
+Running optimization stage 1 on RAM64x18 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":4:7:4:9|Synthesizing module SLE in library work.
+Running optimization stage 1 on SLE .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":111:7:111:10|Synthesizing module CFG1 in library work.
+Running optimization stage 1 on CFG1 .......
+@N: CG364 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":54:7:54:17|Synthesizing module Rattlesnake in library work.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":525:5:525:7|Removing wire N_2, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":540:5:540:34|Removing wire ocd_i.debug_coprocessor_i.N_1, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":541:5:541:34|Removing wire ocd_i.debug_coprocessor_i.N_2, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":542:5:542:34|Removing wire ocd_i.debug_coprocessor_i.N_3, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":543:5:543:34|Removing wire ocd_i.debug_coprocessor_i.N_4, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":544:5:544:34|Removing wire ocd_i.debug_coprocessor_i.N_5, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":545:5:545:34|Removing wire ocd_i.debug_coprocessor_i.N_6, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":546:5:546:34|Removing wire ocd_i.debug_coprocessor_i.N_7, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":547:5:547:34|Removing wire ocd_i.debug_coprocessor_i.N_8, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":548:5:548:34|Removing wire ocd_i.debug_coprocessor_i.N_9, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":549:5:549:35|Removing wire ocd_i.debug_coprocessor_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":550:5:550:35|Removing wire ocd_i.debug_coprocessor_i.N_11, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":551:5:551:35|Removing wire ocd_i.debug_coprocessor_i.N_12, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":552:5:552:35|Removing wire ocd_i.debug_coprocessor_i.N_13, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":553:5:553:35|Removing wire ocd_i.debug_coprocessor_i.N_14, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":554:5:554:35|Removing wire ocd_i.debug_coprocessor_i.N_15, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":555:5:555:35|Removing wire ocd_i.debug_coprocessor_i.N_16, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":556:5:556:36|Removing wire ocd_i.debug_coprocessor_i.N_411, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":557:5:557:36|Removing wire ocd_i.debug_coprocessor_i.N_412, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":558:5:558:36|Removing wire ocd_i.debug_coprocessor_i.N_413, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":559:5:559:36|Removing wire ocd_i.debug_coprocessor_i.N_414, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":560:5:560:36|Removing wire ocd_i.debug_coprocessor_i.N_415, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":561:5:561:36|Removing wire ocd_i.debug_coprocessor_i.N_416, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":562:5:562:36|Removing wire ocd_i.debug_coprocessor_i.N_417, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":563:5:563:36|Removing wire ocd_i.debug_coprocessor_i.N_418, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":564:5:564:36|Removing wire ocd_i.debug_coprocessor_i.N_419, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":565:5:565:36|Removing wire ocd_i.debug_coprocessor_i.N_420, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":566:5:566:36|Removing wire ocd_i.debug_coprocessor_i.N_421, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":567:5:567:36|Removing wire ocd_i.debug_coprocessor_i.N_422, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":568:5:568:36|Removing wire ocd_i.debug_coprocessor_i.N_423, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":569:5:569:36|Removing wire ocd_i.debug_coprocessor_i.N_424, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":570:5:570:36|Removing wire ocd_i.debug_coprocessor_i.N_425, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":571:5:571:36|Removing wire ocd_i.debug_coprocessor_i.N_426, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":576:5:576:28|Removing wire ocd_i.debug_reply_i.N_5, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":577:5:577:28|Removing wire ocd_i.debug_reply_i.N_6, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":578:5:578:28|Removing wire ocd_i.debug_reply_i.N_7, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":579:5:579:28|Removing wire ocd_i.debug_reply_i.N_8, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":580:5:580:28|Removing wire ocd_i.debug_reply_i.N_9, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":581:5:581:29|Removing wire ocd_i.debug_reply_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":586:5:586:27|Removing wire ocd_i.debug_UART_i.N_5, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":587:5:587:27|Removing wire ocd_i.debug_UART_i.N_6, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":588:5:588:27|Removing wire ocd_i.debug_UART_i.N_7, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":598:5:598:34|Removing wire ocd_i.debug_UART_i.UART_i.N_8, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":599:5:599:34|Removing wire ocd_i.debug_UART_i.UART_i.N_9, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":600:5:600:35|Removing wire ocd_i.debug_UART_i.UART_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":601:5:601:35|Removing wire ocd_i.debug_UART_i.UART_i.N_11, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":602:5:602:35|Removing wire ocd_i.debug_UART_i.UART_i.N_12, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":603:5:603:35|Removing wire ocd_i.debug_UART_i.UART_i.N_13, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":604:5:604:35|Removing wire ocd_i.debug_UART_i.UART_i.N_14, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":605:5:605:35|Removing wire ocd_i.debug_UART_i.UART_i.N_15, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":624:5:624:68|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.N_3, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":670:5:670:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_6, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":671:5:671:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_7, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":672:5:672:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_8, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":673:5:673:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_9, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":674:5:674:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":675:5:675:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_11, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":676:5:676:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_12, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":677:5:677:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_13, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":678:5:678:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_14, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":679:5:679:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_15, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":680:5:680:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_16, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":681:5:681:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_17, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":682:5:682:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_18, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":683:5:683:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_19, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":684:5:684:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_20, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":685:5:685:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_21, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":686:5:686:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_22, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":687:5:687:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_23, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":688:5:688:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_24, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":689:5:689:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_25, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":690:5:690:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_26, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":691:5:691:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_27, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":692:5:692:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_28, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":693:5:693:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_29, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":694:5:694:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_30, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":695:5:695:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_31, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":696:5:696:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_32, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":697:5:697:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_33, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":698:5:698:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_34, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":699:5:699:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_35, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":700:5:700:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_36, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":701:5:701:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_37, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":702:5:702:86|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_memory_i.N_3, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":706:5:706:38|Removing wire PulseRain_Rattlesnake_MCU_i.N_366, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":707:5:707:38|Removing wire PulseRain_Rattlesnake_MCU_i.N_367, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":709:5:709:79|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.UART_TX_i.N_11, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":710:5:710:79|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.UART_TX_i.N_13, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":711:5:711:79|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.UART_TX_i.N_14, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":712:5:712:79|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.UART_TX_i.N_15, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":716:5:716:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_169, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":717:5:717:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_170, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":718:5:718:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_171, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":719:5:719:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_172, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":720:5:720:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_173, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":721:5:721:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_174, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":723:5:723:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_289, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":724:5:724:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_290, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":729:5:729:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.N_2, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":730:5:730:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.N_3, as there is no assignment to it.
+
+Only the first 100 messages of id 'CG360' are reported. To see all messages use 'report_messages -log C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synlog\creative_compiler.srr -id CG360' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {CG360} -count unlimited' in the Tcl shell.
+Running optimization stage 1 on Rattlesnake .......
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v":9:7:9:14|Synthesizing module creative in library work.
+Running optimization stage 1 on creative .......
+Running optimization stage 2 on creative .......
+Running optimization stage 2 on Rattlesnake .......
+Running optimization stage 2 on CFG1 .......
+Running optimization stage 2 on SLE .......
+Running optimization stage 2 on RAM64x18 .......
+Running optimization stage 2 on RAM1K18 .......
+Running optimization stage 2 on ARI1 .......
+Running optimization stage 2 on CFG3 .......
+Running optimization stage 2 on CFG4 .......
+Running optimization stage 2 on CFG2 .......
+Running optimization stage 2 on MACC .......
+Running optimization stage 2 on FCCC_C0 .......
+Running optimization stage 2 on FCCC_C0_FCCC_C0_0_FCCC .......
+Running optimization stage 2 on INBUF .......
+Running optimization stage 2 on CCC .......
+Running optimization stage 2 on CLKINT .......
+Running optimization stage 2 on GND .......
+Running optimization stage 2 on VCC .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 94MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Aug 29 22:09:23 2019
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 223R, Built Oct 23 2018 09:18:38
+
+@N|Running in 64-bit mode
+
+Linker output is up to date. No re-linking necessary
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 80MB peak: 81MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Aug 29 22:09:24 2019
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Aug 29 22:09:24 2019
+
+###########################################################]

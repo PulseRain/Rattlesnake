@@ -1,0 +1,29 @@
+Software Version: 12.600.0.14
+Opened 'C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\creative_fp\creative.pro'
+The 'open_project' command succeeded.
+PDB file 'C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\creative.pdb' has been loaded successfully.
+DESIGN : creative;  CHECKSUM : 0000;  PDB_VERSION : 1.9
+Load Programming Data(s) Finished : Thu Aug 29 22:45:14 2019 (Elapsed time 00:00:00)
+The 'load_programming_data' command succeeded.
+Successfully exported STAPL file: 'C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\export\creative.stp'; file programs Fabric.
+Fabric component bitstream digest: 0d05f1944ba7deed973c2a8dcf57079e57f3f1f31d17423b604df472f7025af2
+Finished: Thu Aug 29 22:45:24 2019 (Elapsed time 00:00:10)
+
+The 'export_single_stapl' command succeeded.
+Successfully exported PPD file for currently secured device: 'C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\export\creative.ppd'; file programs Fabric.
+Fabric component bitstream digest: 0d05f1944ba7deed973c2a8dcf57079e57f3f1f31d17423b604df472f7025af2
+Finished: Thu Aug 29 22:45:37 2019 (Elapsed time 00:00:13)
+
+The 'export_single_ppd' command succeeded.
+Successfully exported DirectC file: 'C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\export\creative.dat'; file programs Fabric.
+Fabric component bitstream digest: 0d05f1944ba7deed973c2a8dcf57079e57f3f1f31d17423b604df472f7025af2
+Finished: Thu Aug 29 22:45:47 2019 (Elapsed time 00:00:10)
+
+The 'export_single_dat' command succeeded.
+The 'set_programming_file' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.
+Exported log file C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\creative_fp\creative.log.
+The 'close_project' command succeeded.
+The Execute Script command succeeded.

@@ -1,0 +1,40 @@
+Resource Usage Report for creative 
+
+Mapping to part: m2gl025vf256std
+Cell usage:
+CCC             1 use
+CLKINT          3 uses
+CFG1           16 uses
+CFG2           425 uses
+CFG3           1334 uses
+CFG4           1598 uses
+
+Carry cells:
+ARI1            1310 uses - used for arithmetic functions
+
+
+Sequential Cells: 
+SLE            3129 uses
+
+DSP Blocks:    4 of 34 (11%)
+ MACC:         4 Mults
+
+I/O ports: 5
+I/O primitives: 5
+INBUF          2 uses
+OUTBUF         3 uses
+
+
+Global Clock Buffers: 3
+
+Total LUTs:    4683
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18 Interface Logic : SLEs = 72; LUTs = 72;
+RAM1K18  Interface Logic : SLEs = 1008; LUTs = 1008;
+MACC     Interface Logic : SLEs = 144; LUTs = 144;
+
+Total number of SLEs after P&R:  3129 + 72 + 1008 + 144 = 4353;
+Total number of LUTs after P&R:  4683 + 72 + 1008 + 144 = 5907;
+

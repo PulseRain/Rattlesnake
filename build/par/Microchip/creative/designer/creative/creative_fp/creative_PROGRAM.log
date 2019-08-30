@@ -1,0 +1,40 @@
+Software Version: 12.600.0.14
+Embedded FlashPro5 programmer detected.
+programmer 'E20047SLSG' : FlashPro5
+Opened 'C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\creative_fp\creative.pro'
+The 'open_project' command succeeded.
+Warning: Programming is already enabled for device 'M2GL025'.
+The 'enable_device' command succeeded.
+PPD file 'C:/GitHub/Rattlesnake/build/par/Microchip/creative/designer/creative/creative.ppd' has been loaded successfully.
+DESIGN : creative;  CHECKSUM : 78AD;  PDB_VERSION : 1.0
+The 'set_programming_file' command succeeded.
+The 'set_programming_action' command succeeded.
+programmer 'E20047SLSG' : Scan Chain...
+programmer 'E20047SLSG' : Check Chain...
+programmer 'E20047SLSG' : Scan and Check Chain PASSED.
+programmer 'E20047SLSG' : device 'M2GL025' : Executing action PROGRAM
+programmer 'E20047SLSG' : device 'M2GL025' : Family: Igloo2
+programmer 'E20047SLSG' : device 'M2GL025' : Product:      M2GL005
+programmer 'E20047SLSG' : device 'M2GL025' : EXPORT ISC_ENABLE_RESULT[32] = 00806b44
+programmer 'E20047SLSG' : device 'M2GL025' : EXPORT CRCERR[1] = 0
+programmer 'E20047SLSG' : device 'M2GL025' : EXPORT EDCERR[1] = 0
+programmer 'E20047SLSG' : device 'M2GL025' : Programming FPGA Array...
+programmer 'E20047SLSG' : device 'M2GL025' : EXPORT Fabric component digest[256] = 0d05f1944ba7deed973c2a8dcf57079e57f3f1f31d17423b604df472f7025af2
+programmer 'E20047SLSG' : device 'M2GL025' : ===================================================================================
+programmer 'E20047SLSG' : device 'M2GL025' : EXPORT DSN[128] = 52915f225a671e89e187caf0f7f56d84
+programmer 'E20047SLSG' : device 'M2GL025' : ===================================================================================
+programmer 'E20047SLSG' : device 'M2GL025' : Finished: Thu Aug 29 22:33:43 2019 (Elapsed time 00:00:31)
+programmer 'E20047SLSG' : device 'M2GL025' : Executing action PROGRAM PASSED.
+programmer 'E20047SLSG' : Chain programming PASSED.
+Chain Programming Finished: Thu Aug 29 22:33:43 2019 (Elapsed time 00:00:31)
+
+                        o - o - o - o - o - o
+
+The 'run_selected_actions' command succeeded.
+The 'set_programming_file' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.
+Exported log file C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\creative_fp\creative.log.
+The 'close_project' command succeeded.
+The Execute Script command succeeded.

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>creative</design>
+	<target_verilog>C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.vm</target_verilog>
+</SynplifyOutput>

@@ -1,0 +1,1355 @@
+<html>
+    <head>
+        <style>
+      body { font-family:arial; font-size:10pt; text-align:left; }
+      h1, h2 {
+          padding-top: 30px;
+      }
+      h3 {
+          padding-top: 20px;
+      }
+      h4, h5, h6 {
+          padding-top: 10px;
+          font-size:12pt;
+      }
+      table {
+          font-family:arial; font-size:10pt; text-align:left;
+          border-color:#B0B0B0;
+          border-style:solid;
+          border-width:1px;
+          border-collapse:collapse;
+      }
+      table th, table td {
+          font-family:arial; font-size:10pt; text-align:left;
+          border-color:#B0B0B0;
+          border-style:solid;
+          border-width:1px;
+          padding: 4px;
+      }
+     </style>
+    </head>
+    <body>
+        <h1 align="center">Timing Report Min Delay Analysis
+</h1>
+        <p>SmartTime Version 12.600.0.14</p>
+        <p>Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)</p>
+        <p>Date: Thu Aug 29 21:25:20 2019
+</p>
+        <table cellpadding="4">
+            <tr/>
+            <tr>
+                <td>Design</td>
+                <td>creative</td>
+            </tr>
+            <tr>
+                <td>Family</td>
+                <td>IGLOO2</td>
+            </tr>
+            <tr>
+                <td>Die</td>
+                <td>M2GL025</td>
+            </tr>
+            <tr>
+                <td>Package</td>
+                <td>256 VF</td>
+            </tr>
+            <tr>
+                <td>Temperature Range</td>
+                <td>0 - 85 C</td>
+            </tr>
+            <tr>
+                <td>Voltage Range</td>
+                <td>1.14 - 1.26 V</td>
+            </tr>
+            <tr>
+                <td>Speed Grade</td>
+                <td>STD</td>
+            </tr>
+            <tr>
+                <td>Design State</td>
+                <td>Post-Layout</td>
+            </tr>
+            <tr>
+                <td>Data source</td>
+                <td>Production</td>
+            </tr>
+            <tr>
+                <td>Min Operating Conditions</td>
+                <td>BEST - 1.26 V - 0 C</td>
+            </tr>
+            <tr>
+                <td>Max Operating Conditions</td>
+                <td>WORST - 1.14 V - 85 C</td>
+            </tr>
+            <tr>
+                <td>Operating Conditions</td>
+                <td>BEST - 1.26 V - 0 C</td>
+            </tr>
+            <tr>
+                <td>Scenario for Timing Analysis</td>
+                <td>timing_analysis</td>
+            </tr>
+        </table>
+        <p/>
+        <h2>Summary</h2>
+        <table cellpadding="4">
+            <tr>
+                <th>Clock Domain</th>
+                <th>Required Period (ns)</th>
+                <th>Required Frequency (MHz)</th>
+                <th>External Hold (ns)</th>
+                <th>Min Clock-To-Out (ns)</th>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0</td>
+                <td>8.333</td>
+                <td>120.005</td>
+                <td>N/A</td>
+                <td>5.370</td>
+            </tr>
+            <tr>
+                <td>osc_in</td>
+                <td>20.000</td>
+                <td>50.000</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        <p/>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th>Min Delay (ns)</th>
+                <th>Max Delay (ns)</th>
+            </tr>
+            <tr>
+                <td>Input to Output</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        <h2>Clock Domain FCCC_C0_0/FCCC_C0_0/GL0</h2>
+        <p/>
+        <h3>SET Register to Register</h3>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th>From</th>
+                <th>To</th>
+                <th>Delay (ns)</th>
+                <th>Slack (ns)</th>
+                <th>Arrival (ns)</th>
+                <th>Required (ns)</th>
+                <th>Hold (ns)</th>
+            </tr>
+            <tr>
+                <td>Path 1</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.PC_load_store[23]:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:D</td>
+                <td>0.303</td>
+                <td>0.293</td>
+                <td>2.872</td>
+                <td>2.579</td>
+                <td>0.000</td>
+            </tr>
+            <tr>
+                <td>Path 2</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.PC_out_1[18]:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.PC_out[18]:D</td>
+                <td>0.314</td>
+                <td>0.295</td>
+                <td>2.882</td>
+                <td>2.587</td>
+                <td>0.000</td>
+            </tr>
+            <tr>
+                <td>Path 3</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.PC_load_store[24]:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[24]:D</td>
+                <td>0.316</td>
+                <td>0.297</td>
+                <td>2.883</td>
+                <td>2.586</td>
+                <td>0.000</td>
+            </tr>
+            <tr>
+                <td>Path 4</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.PC_out_1[13]:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.PC_out[13]:D</td>
+                <td>0.316</td>
+                <td>0.297</td>
+                <td>2.876</td>
+                <td>2.579</td>
+                <td>0.000</td>
+            </tr>
+            <tr>
+                <td>Path 5</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.start_addr_reg[22]:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.PC_out_1[22]:D</td>
+                <td>0.317</td>
+                <td>0.297</td>
+                <td>2.890</td>
+                <td>2.593</td>
+                <td>0.000</td>
+            </tr>
+        </table>
+        <p/>
+        <h4>Expanded Path 1</h4>
+        <table cellpadding="4">
+            <tr>
+                <th>Pin Name</th>
+                <th>Type</th>
+                <th>Net Name</th>
+                <th>Cell Name</th>
+                <th>Op</th>
+                <th>Delay (ns)</th>
+                <th>Total (ns)</th>
+                <th>Fanout</th>
+                <th>Edge</th>
+            </tr>
+            <tr>
+                <td>From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.PC_load_store[23]:CLK</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>To: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:D</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>data arrival time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2.872</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>data required time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td>-</td>
+                <td/>
+                <td>2.579</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>slack</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>0.293</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr/>
+            <tr>
+                <td>Data arrival time calculation</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0</td>
+                <td>Clock source</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td/>
+                <td>Clock generation</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>1.461</td>
+                <td>1.461</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_net</td>
+                <td/>
+                <td>+</td>
+                <td>0.174</td>
+                <td>1.635</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:YEn</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:GBM</td>
+                <td>+</td>
+                <td>0.118</td>
+                <td>1.753</td>
+                <td>30</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB50:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn_GEast</td>
+                <td/>
+                <td>+</td>
+                <td>0.258</td>
+                <td>2.011</td>
+                <td/>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB50:YL</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:RGB</td>
+                <td>+</td>
+                <td>0.212</td>
+                <td>2.223</td>
+                <td>42</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.PC_load_store[23]:CLK</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB50_rgbl_net_1</td>
+                <td/>
+                <td>+</td>
+                <td>0.346</td>
+                <td>2.569</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.PC_load_store[23]:Q</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:SLE</td>
+                <td>+</td>
+                <td>0.062</td>
+                <td>2.631</td>
+                <td>1</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:D</td>
+                <td>net</td>
+                <td>Rattlesnake_0/PC_load_store[23]</td>
+                <td/>
+                <td>+</td>
+                <td>0.241</td>
+                <td>2.872</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>data arrival time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2.872</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr/>
+            <tr>
+                <td>Data required time calculation</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0</td>
+                <td>Clock Constraint</td>
+                <td/>
+                <td/>
+                <td/>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0</td>
+                <td>Clock source</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td/>
+                <td>Clock generation</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>1.461</td>
+                <td>1.461</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_net</td>
+                <td/>
+                <td>+</td>
+                <td>0.174</td>
+                <td>1.635</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:YEn</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:GBM</td>
+                <td>+</td>
+                <td>0.118</td>
+                <td>1.753</td>
+                <td>30</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB50:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn_GEast</td>
+                <td/>
+                <td>+</td>
+                <td>0.258</td>
+                <td>2.011</td>
+                <td/>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB50:YL</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:RGB</td>
+                <td>+</td>
+                <td>0.212</td>
+                <td>2.223</td>
+                <td>42</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:CLK</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB50_rgbl_net_1</td>
+                <td/>
+                <td>+</td>
+                <td>0.356</td>
+                <td>2.579</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:D</td>
+                <td>Library hold time</td>
+                <td/>
+                <td>ADLIB:SLE</td>
+                <td>+</td>
+                <td>0.000</td>
+                <td>2.579</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>data required time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2.579</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr/>
+        </table>
+        <h3>SET External Hold</h3>
+        <p>No Path</p>
+        <h3>SET Clock to Output</h3>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th>From</th>
+                <th>To</th>
+                <th>Delay (ns)</th>
+                <th>Slack (ns)</th>
+                <th>Arrival (ns)</th>
+                <th>Required (ns)</th>
+                <th>Clock to Out (ns)</th>
+            </tr>
+            <tr>
+                <td>Path 1</td>
+                <td>Rattlesnake_0/TXD_Z:CLK</td>
+                <td>TXD</td>
+                <td>2.809</td>
+                <td/>
+                <td>5.370</td>
+                <td/>
+                <td>5.370</td>
+            </tr>
+            <tr>
+                <td>Path 2</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[1]:CLK</td>
+                <td>LED_RED</td>
+                <td>3.973</td>
+                <td/>
+                <td>6.512</td>
+                <td/>
+                <td>6.512</td>
+            </tr>
+            <tr>
+                <td>Path 3</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[1]:CLK</td>
+                <td>LED_GREEN</td>
+                <td>4.533</td>
+                <td/>
+                <td>7.072</td>
+                <td/>
+                <td>7.072</td>
+            </tr>
+        </table>
+        <p/>
+        <h4>Expanded Path 1</h4>
+        <table cellpadding="4">
+            <tr>
+                <th>Pin Name</th>
+                <th>Type</th>
+                <th>Net Name</th>
+                <th>Cell Name</th>
+                <th>Op</th>
+                <th>Delay (ns)</th>
+                <th>Total (ns)</th>
+                <th>Fanout</th>
+                <th>Edge</th>
+            </tr>
+            <tr>
+                <td>From: Rattlesnake_0/TXD_Z:CLK</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>To: TXD</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>data arrival time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>5.370</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>data required time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td>-</td>
+                <td/>
+                <td>N/C</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>slack</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>N/C</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr/>
+            <tr>
+                <td>Data arrival time calculation</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0</td>
+                <td>Clock source</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td/>
+                <td>Clock generation</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>1.461</td>
+                <td>1.461</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_net</td>
+                <td/>
+                <td>+</td>
+                <td>0.174</td>
+                <td>1.635</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:YWn</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:GBM</td>
+                <td>+</td>
+                <td>0.118</td>
+                <td>1.753</td>
+                <td>35</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB37:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn</td>
+                <td/>
+                <td>+</td>
+                <td>0.249</td>
+                <td>2.002</td>
+                <td/>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB37:YR</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:RGB</td>
+                <td>+</td>
+                <td>0.212</td>
+                <td>2.214</td>
+                <td>123</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/TXD_Z:CLK</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB37_rgbr_net_1</td>
+                <td/>
+                <td>+</td>
+                <td>0.347</td>
+                <td>2.561</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/TXD_Z:Q</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:SLE</td>
+                <td>+</td>
+                <td>0.058</td>
+                <td>2.619</td>
+                <td>1</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>TXD_obuf/U0/U_IOOUTFF:A</td>
+                <td>net</td>
+                <td>TXD_c</td>
+                <td/>
+                <td>+</td>
+                <td>1.225</td>
+                <td>3.844</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>TXD_obuf/U0/U_IOOUTFF:Y</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:IOOUTFF_BYPASS</td>
+                <td>+</td>
+                <td>0.124</td>
+                <td>3.968</td>
+                <td>1</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>TXD_obuf/U0/U_IOPAD:D</td>
+                <td>net</td>
+                <td>TXD_obuf/U0/DOUT</td>
+                <td/>
+                <td>+</td>
+                <td>0.062</td>
+                <td>4.030</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>TXD_obuf/U0/U_IOPAD:PAD</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:IOPAD_TRI</td>
+                <td>+</td>
+                <td>1.340</td>
+                <td>5.370</td>
+                <td>0</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>TXD</td>
+                <td>net</td>
+                <td>TXD</td>
+                <td/>
+                <td>+</td>
+                <td>0.000</td>
+                <td>5.370</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>data arrival time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>5.370</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr/>
+            <tr>
+                <td>Data required time calculation</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>N/C</td>
+                <td>N/C</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0</td>
+                <td>Clock source</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>0.000</td>
+                <td>N/C</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td/>
+                <td>Clock generation</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>1.461</td>
+                <td>N/C</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>TXD</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>N/C</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr/>
+        </table>
+        <h3>SET Register to Asynchronous</h3>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th>From</th>
+                <th>To</th>
+                <th>Delay (ns)</th>
+                <th>Slack (ns)</th>
+                <th>Arrival (ns)</th>
+                <th>Required (ns)</th>
+                <th>Removal (ns)</th>
+                <th>Skew (ns)</th>
+            </tr>
+            <tr>
+                <td>Path 1</td>
+                <td>Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:P_ARST_N[1]</td>
+                <td>2.239</td>
+                <td>2.173</td>
+                <td>4.788</td>
+                <td>2.615</td>
+                <td>0.000</td>
+                <td>-0.066</td>
+            </tr>
+            <tr>
+                <td>Path 2</td>
+                <td>Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:P_ARST_N[0]</td>
+                <td>2.239</td>
+                <td>2.175</td>
+                <td>4.788</td>
+                <td>2.613</td>
+                <td>-0.008</td>
+                <td>-0.072</td>
+            </tr>
+            <tr>
+                <td>Path 3</td>
+                <td>Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:A_ARST_N[0]</td>
+                <td>2.242</td>
+                <td>2.187</td>
+                <td>4.791</td>
+                <td>2.604</td>
+                <td>-0.018</td>
+                <td>-0.073</td>
+            </tr>
+            <tr>
+                <td>Path 4</td>
+                <td>Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:A_ARST_N[1]</td>
+                <td>2.244</td>
+                <td>2.193</td>
+                <td>4.793</td>
+                <td>2.600</td>
+                <td>-0.018</td>
+                <td>-0.069</td>
+            </tr>
+            <tr>
+                <td>Path 5</td>
+                <td>Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:B_ARST_N[0]</td>
+                <td>2.241</td>
+                <td>2.193</td>
+                <td>4.790</td>
+                <td>2.597</td>
+                <td>-0.019</td>
+                <td>-0.067</td>
+            </tr>
+        </table>
+        <p/>
+        <h4>Expanded Path 1</h4>
+        <table cellpadding="4">
+            <tr>
+                <th>Pin Name</th>
+                <th>Type</th>
+                <th>Net Name</th>
+                <th>Cell Name</th>
+                <th>Op</th>
+                <th>Delay (ns)</th>
+                <th>Total (ns)</th>
+                <th>Fanout</th>
+                <th>Edge</th>
+            </tr>
+            <tr>
+                <td>From: Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>To: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:P_ARST_N[1]</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>data arrival time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>4.788</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>data required time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td>-</td>
+                <td/>
+                <td>2.615</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>slack</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2.173</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr/>
+            <tr>
+                <td>Data arrival time calculation</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0</td>
+                <td>Clock source</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td/>
+                <td>Clock generation</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>1.461</td>
+                <td>1.461</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_net</td>
+                <td/>
+                <td>+</td>
+                <td>0.174</td>
+                <td>1.635</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:YWn</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:GBM</td>
+                <td>+</td>
+                <td>0.118</td>
+                <td>1.753</td>
+                <td>35</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB51:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn</td>
+                <td/>
+                <td>+</td>
+                <td>0.255</td>
+                <td>2.008</td>
+                <td/>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB51:YR</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:RGB</td>
+                <td>+</td>
+                <td>0.212</td>
+                <td>2.220</td>
+                <td>83</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB51_rgbr_net_1</td>
+                <td/>
+                <td>+</td>
+                <td>0.329</td>
+                <td>2.549</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:Q</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:SLE</td>
+                <td>+</td>
+                <td>0.072</td>
+                <td>2.621</td>
+                <td>2</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/un1_reset_n:A</td>
+                <td>net</td>
+                <td>Rattlesnake_0/cpu_reset</td>
+                <td/>
+                <td>+</td>
+                <td>1.231</td>
+                <td>3.852</td>
+                <td/>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/un1_reset_n:Y</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:CFG2</td>
+                <td>+</td>
+                <td>0.067</td>
+                <td>3.919</td>
+                <td>17</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/FF_10:EN</td>
+                <td>net</td>
+                <td>Rattlesnake_0/reset_n_i_1_i</td>
+                <td/>
+                <td>+</td>
+                <td>0.791</td>
+                <td>4.710</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/FF_10:IPENn</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:SLE_IP_CLKEN</td>
+                <td>+</td>
+                <td>0.037</td>
+                <td>4.747</td>
+                <td>0</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:P_ARST_N[1]</td>
+                <td>net</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/P_ARST_N_net[1]</td>
+                <td/>
+                <td>+</td>
+                <td>0.041</td>
+                <td>4.788</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>data arrival time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>4.788</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr/>
+            <tr>
+                <td>Data required time calculation</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0</td>
+                <td>Clock Constraint</td>
+                <td/>
+                <td/>
+                <td/>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0</td>
+                <td>Clock source</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td/>
+                <td>Clock generation</td>
+                <td/>
+                <td/>
+                <td>+</td>
+                <td>1.461</td>
+                <td>1.461</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_net</td>
+                <td/>
+                <td>+</td>
+                <td>0.174</td>
+                <td>1.635</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST:YEn</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:GBM</td>
+                <td>+</td>
+                <td>0.118</td>
+                <td>1.753</td>
+                <td>30</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB3:An</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn_GEast</td>
+                <td/>
+                <td>+</td>
+                <td>0.238</td>
+                <td>1.991</td>
+                <td/>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB3:YL</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:RGB</td>
+                <td>+</td>
+                <td>0.212</td>
+                <td>2.203</td>
+                <td>10</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/FF_10:CLK</td>
+                <td>net</td>
+                <td>FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB3_rgbl_net_1</td>
+                <td/>
+                <td>+</td>
+                <td>0.330</td>
+                <td>2.533</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/FF_10:IPCLKn</td>
+                <td>cell</td>
+                <td/>
+                <td>ADLIB:SLE_IP_CLKEN</td>
+                <td>+</td>
+                <td>0.039</td>
+                <td>2.572</td>
+                <td>0</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:P_CLK[1]</td>
+                <td>net</td>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/P_CLK_net[1]</td>
+                <td/>
+                <td>+</td>
+                <td>0.043</td>
+                <td>2.615</td>
+                <td/>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.WideMult_2_0/U0/INST_MACC_IP:P_ARST_N[1]</td>
+                <td>Library removal time</td>
+                <td/>
+                <td>ADLIB:MACC_IP</td>
+                <td>+</td>
+                <td>0.000</td>
+                <td>2.615</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr>
+                <td>data required time</td>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2.615</td>
+                <td/>
+                <td/>
+            </tr>
+            <tr/>
+        </table>
+        <h3>SET External Removal</h3>
+        <p>No Path</p>
+        <h3>SET Asynchronous to Register</h3>
+        <p>No Path</p>
+        <h2>Clock Domain osc_in</h2>
+        <p>Info: The maximum frequency of this clock domain is limited by the minimum pulse widths of pin FCCC_C0_0/FCCC_C0_0/CLK0_PAD_INST/U_IOPAD:PAD</p>
+        <p/>
+        <h3>SET Register to Register</h3>
+        <p>No Path</p>
+        <h3>SET External Hold</h3>
+        <p>No Path</p>
+        <h3>SET Clock to Output</h3>
+        <p>No Path</p>
+        <h3>SET Register to Asynchronous</h3>
+        <p>No Path</p>
+        <h3>SET External Removal</h3>
+        <p>No Path</p>
+        <h3>SET Asynchronous to Register</h3>
+        <p>No Path</p>
+        <h2>Path Set Pin to Pin</h2>
+        <h3>SET Input to Output</h3>
+        <p>No Path</p>
+        <h2>Path Set User Sets</h2>
+    </body>
+</html>

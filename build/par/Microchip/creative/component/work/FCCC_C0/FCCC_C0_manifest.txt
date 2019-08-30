@@ -1,0 +1,12 @@
+Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)
+
+Date      :  Thu Aug 29 21:03:26 2019
+Project   :  C:\GitHub\Rattlesnake\build\par\Microchip\creative
+Component :  FCCC_C0
+Family    :  IGLOO2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/FCCC_C0/FCCC_C0.v
+    C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/FCCC_C0/FCCC_C0_0/FCCC_C0_FCCC_C0_0_FCCC.v
+

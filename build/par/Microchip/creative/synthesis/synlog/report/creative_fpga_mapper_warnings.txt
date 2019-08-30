@@ -1,0 +1,2 @@
+@W: FX739 :"c:\github\rattlesnake\build\synth\microchip\igloo2\rattlesnake.vm":89672:9:89672:19|Removed BUFG instance Rattlesnake_0.clk_RNIQRC3 because it is cascaded to another clock buffer (FCCC_C0_0.FCCC_C0_0.GL0_INST).
+@W: MT246 :"c:\github\rattlesnake\build\par\microchip\creative\component\work\fccc_c0\fccc_c0_0\fccc_c0_fccc_c0_0_fccc.v":20:36:20:43|Blackbox CCC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)

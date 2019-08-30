@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<title>Configuration Report for MSS, SERDES(s), Fabric DDR and Fabric CCC(s)</title>
+<text>Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)</text>
+<text>Date: Thu Aug 29 22:23:38 2019
+</text>
+<section><name>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP</name></section>
+<table>
+<header>
+ <cell>Register</cell>
+ <cell>Field</cell>
+ <cell>INIT</cell>
+ <cell>Value</cell>
+</header>
+<row>
+ <cell>FCCC_RFDIV_CR</cell>
+ <cell>RFDIV[7:0]</cell>
+ <cell>INIT[7:0]</cell>
+ <cell>8&apos;h4</cell>
+</row>
+<row>
+ <cell>FCCC_FBDIV_CR0</cell>
+ <cell>FBDIV[7:0]</cell>
+ <cell>INIT[15:8]</cell>
+ <cell>8&apos;hb</cell>
+</row>
+<row>
+ <cell>FCCC_FBDIV_CR1</cell>
+ <cell>FBDIV[13:8]</cell>
+ <cell>INIT[21:16]</cell>
+ <cell>6&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPD0_CR</cell>
+ <cell>GPDIV[7:0]</cell>
+ <cell>INIT[29:22]</cell>
+ <cell>8&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPD1_CR</cell>
+ <cell>GPDIV[7:0]</cell>
+ <cell>INIT[37:30]</cell>
+ <cell>8&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPD2_CR</cell>
+ <cell>GPDIV[7:0]</cell>
+ <cell>INIT[45:38]</cell>
+ <cell>8&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPD3_CR</cell>
+ <cell>GPDIV[7:0]</cell>
+ <cell>INIT[53:46]</cell>
+ <cell>8&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_RFMUX_CR</cell>
+ <cell>SELRF[3:0]</cell>
+ <cell>INIT[57:54]</cell>
+ <cell>4&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_FBMUX_CR</cell>
+ <cell>SELFB[3:0]</cell>
+ <cell>INIT[61:58]</cell>
+ <cell>4&apos;h7</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX0_CR</cell>
+ <cell>SEL_GPMUX0[4:0]</cell>
+ <cell>INIT[66:62]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX1_CR</cell>
+ <cell>SEL_GPMUX1[4:0]</cell>
+ <cell>INIT[71:67]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX2_CR</cell>
+ <cell>SEL_GPMUX2[4:0]</cell>
+ <cell>INIT[76:72]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX3_CR</cell>
+ <cell>SEL_GPMUX3[4:0]</cell>
+ <cell>INIT[81:77]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX0_CR0</cell>
+ <cell>SELGL[4:0]</cell>
+ <cell>INIT[86:82]</cell>
+ <cell>5&apos;h7</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX0_CR1</cell>
+ <cell>SELGL[9:5]</cell>
+ <cell>INIT[91:87]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX1_CR0</cell>
+ <cell>SELGL[14:10]</cell>
+ <cell>INIT[96:92]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX1_CR1</cell>
+ <cell>SELGL[19:15]</cell>
+ <cell>INIT[101:97]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX2_CR0</cell>
+ <cell>SELGL[24:20]</cell>
+ <cell>INIT[106:102]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX2_CR1</cell>
+ <cell>SELGL[29:25]</cell>
+ <cell>INIT[111:107]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX3_CR0</cell>
+ <cell>SELGL[34:30]</cell>
+ <cell>INIT[116:112]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX3_CR1</cell>
+ <cell>SELGL[39:35]</cell>
+ <cell>INIT[121:117]</cell>
+ <cell>5&apos;h18</cell>
+</row>
+<row>
+ <cell>FCCC_GPD0_SYNC_CR</cell>
+ <cell>RESET_GENEN[0]</cell>
+ <cell>INIT[122:122]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPD1_SYNC_CR</cell>
+ <cell>RESET_GENEN[1]</cell>
+ <cell>INIT[123:123]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPD2_SYNC_CR</cell>
+ <cell>RESET_GENEN[2]</cell>
+ <cell>INIT[124:124]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPD3_SYNC_CR</cell>
+ <cell>RESET_GENEN[3]</cell>
+ <cell>INIT[125:125]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_RFMUX_CR</cell>
+ <cell>INVRF[3:0]</cell>
+ <cell>INIT[131:126]</cell>
+ <cell>6&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_PDLY_CR</cell>
+ <cell>SEL_PLL_DLINE[5:0]</cell>
+ <cell>INIT[137:132]</cell>
+ <cell>6&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_PDLY_CR</cell>
+ <cell>RF_DLINE</cell>
+ <cell>INIT[138:138]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR0</cell>
+ <cell>LOCKWIN[2:0]</cell>
+ <cell>INIT[141:139]</cell>
+ <cell>3&apos;h6</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR1</cell>
+ <cell>LOCKCNT[3:0]</cell>
+ <cell>INIT[145:142]</cell>
+ <cell>4&apos;h5</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR7</cell>
+ <cell>DIVQ[2:0]</cell>
+ <cell>INIT[148:146]</cell>
+ <cell>3&apos;h3</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR5</cell>
+ <cell>MODE32K</cell>
+ <cell>INIT[149:149]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR5</cell>
+ <cell>MODE_1V2</cell>
+ <cell>INIT[150:150]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR5</cell>
+ <cell>MODE_3V3</cell>
+ <cell>INIT[151:151]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR6</cell>
+ <cell>FSE</cell>
+ <cell>INIT[152:152]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR4</cell>
+ <cell>SSE</cell>
+ <cell>INIT[153:153]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR3</cell>
+ <cell>SSMD[1:0]</cell>
+ <cell>INIT[155:154]</cell>
+ <cell>2&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR2</cell>
+ <cell>SSMF[4:0]</cell>
+ <cell>INIT[160:156]</cell>
+ <cell>5&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR8</cell>
+ <cell>DIVR[5:0]</cell>
+ <cell>INIT[166:161]</cell>
+ <cell>6&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR9</cell>
+ <cell>DIVF[5:0]</cell>
+ <cell>INIT[174:167]</cell>
+ <cell>8&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR10</cell>
+ <cell>RANGE</cell>
+ <cell>INIT[178:175]</cell>
+ <cell>4&apos;h5</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX0_CR</cell>
+ <cell>NOPIPE_SYNCRST0</cell>
+ <cell>INIT[179:179]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX1_CR</cell>
+ <cell>NOPIPE_SYNCRST1</cell>
+ <cell>INIT[180:180]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX2_CR</cell>
+ <cell>NOPIPE_SYNCRST2</cell>
+ <cell>INIT[181:181]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX3_CR</cell>
+ <cell>NOPIPE_SYNCRST3</cell>
+ <cell>INIT[182:182]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPD0_SYNC_CR</cell>
+ <cell>SRESET_GENEN[0]</cell>
+ <cell>INIT[183:183]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPD1_SYNC_CR</cell>
+ <cell>SRESET_GENEN[1]</cell>
+ <cell>INIT[184:184]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPD2_SYNC_CR</cell>
+ <cell>SRESET_GENEN[2]</cell>
+ <cell>INIT[185:185]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPD3_SYNC_CR</cell>
+ <cell>SRESET_GENEN[3]</cell>
+ <cell>INIT[186:186]</cell>
+ <cell>1&apos;h1</cell>
+</row>
+<row>
+ <cell>FCCC_GPDS_SYNC_CR</cell>
+ <cell>SW_RESYNC_GPD</cell>
+ <cell>INIT[187:187]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX0_CR</cell>
+ <cell>INV_GPMUX0</cell>
+ <cell>INIT[188:188]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX1_CR</cell>
+ <cell>INV_GPMUX1</cell>
+ <cell>INIT[189:189]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX2_CR</cell>
+ <cell>INV_GPMUX2</cell>
+ <cell>INIT[190:190]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX3_CR</cell>
+ <cell>INV_GPMUX3</cell>
+ <cell>INIT[191:191]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>RESERVED_0</cell>
+ <cell>RESERVED[0]</cell>
+ <cell>INIT[192:192]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>RESERVED_0</cell>
+ <cell>RESERVED[1]</cell>
+ <cell>INIT[193:193]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPD0_SYNC_CR</cell>
+ <cell>GPD_MODE_N[0]</cell>
+ <cell>INIT[194:194]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPD1_SYNC_CR</cell>
+ <cell>GPD_MODE_N[1]</cell>
+ <cell>INIT[195:195]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPD2_SYNC_CR</cell>
+ <cell>GPD_MODE_N[2]</cell>
+ <cell>INIT[196:196]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_GPD3_SYNC_CR</cell>
+ <cell>GPD_MODE_N[3]</cell>
+ <cell>INIT[197:197]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX0_CR1</cell>
+ <cell>SELOUT_0</cell>
+ <cell>INIT[198:198]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX1_CR1</cell>
+ <cell>SELOUT_1</cell>
+ <cell>INIT[199:199]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX2_CR1</cell>
+ <cell>SELOUT_2</cell>
+ <cell>INIT[200:200]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>FCCC_NGMUX3_CR1</cell>
+ <cell>SELOUT_3</cell>
+ <cell>INIT[201:201]</cell>
+ <cell>1&apos;h0</cell>
+</row>
+<row>
+ <cell>RESERVED_1</cell>
+ <cell>RESERVED[7:0]</cell>
+ <cell>INIT[209:202]</cell>
+ <cell>8&apos;h0</cell>
+</row>
+</table>
+</doc>

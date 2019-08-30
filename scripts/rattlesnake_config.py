@@ -658,7 +658,7 @@ class Rattlesnake_OCD:
         min = 0xFFFFFFFF
         max = 0
         if (len(self.code_start_address) == 0):
-            print ("===============> text section does not exist!!!!!!!")
+            print ("=====================> text section does not exist!!!!!!!")
         else:
             for i in range (len(self.code_start_address)):
                 if(min > self.code_start_address[i]) :
@@ -667,7 +667,7 @@ class Rattlesnake_OCD:
                 if (max < self.code_end_address[i]):
                     max = self.code_end_address[i]
         
-        print ("============> exe protect, [0x%08x, 0x%8x)" % (min, max))
+        print ("\n===================> Executable Region [0x%08x, 0x%8x)" % (min, max))
         self.reg_write_32bit(Rattlesnake_OCD._RATTLESNAKE_EXE_PROTECT_START_ADDR, min)
         self.reg_write_32bit(Rattlesnake_OCD._RATTLESNAKE_EXE_PROTECT_END_ADDR, max)
         
@@ -820,7 +820,7 @@ if __name__ == "__main__":
     print ("===============================================================================")
 
     try:
-        ocd = Rattlesnake_OCD (com_port, 921600, verbose=0)
+        ocd = Rattlesnake_OCD (com_port, baud_rate, verbose=0)
         
         ocd.toolchain = toolchain
         ocd.objdump = objdump
@@ -917,19 +917,22 @@ if __name__ == "__main__":
         
         print ("test Pass! Length = ", mem_test_length)
         
-    ocd.uart_select(0)
     
+    ocd.uart_select(0)
     
     if (run):
         print ("\n===================> start the CPU, entry point = 0x%08x" % start_addr)
         #print ([hex(i) for i in ocd.code_start_address])
         #print ([hex(i) for i in ocd.code_end_address])
         print (" ")
+        
+        
+        
         ocd.start_to_run (start_addr)
     
-        if (console_enable):
-            ocd._serial.close()
-            ocd._serial = serial.Serial(com_port, baud_rate)
+        #if (console_enable):
+        #    ocd._serial.close()
+        #    ocd._serial = serial.Serial(com_port, baud_rate)
         
         while(console_enable):
             if (ocd._serial.in_waiting):

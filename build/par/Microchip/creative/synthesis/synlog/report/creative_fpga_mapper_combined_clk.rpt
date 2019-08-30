@@ -1,0 +1,21 @@
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 3171 clock pin(s) of sequential element(s)
+0 instances converted, 3171 sequential instances remain driven by gated/generated clocks
+
+=============================================================================================================================================== Gated/Generated Clocks ================================================================================================================================================
+Clock Tree ID     Driving Element                  Drive Element Type     Fanout     Sample Instance                                                                                                     Explanation                                                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       FCCC_C0_0.FCCC_C0_0.CCC_INST     CCC                    3171       Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.Y_2_rep2     Illegal instance on clock path. See the Gated Clocks description in the user guide for conversion requirements
+=======================================================================================================================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+

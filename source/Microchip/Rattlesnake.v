@@ -89,7 +89,7 @@ module Rattlesnake #(parameter sim = 0) (
                 
             end else begin
                 init_start <= {init_start [$high(init_start) - 1 : 0], 1'b1};
-                actual_cpu_start <= cpu_start | ((~init_start [$high(init_start)]) & init_start [$high(init_start) - 1]);
+                actual_cpu_start <= cpu_start; // | ((~init_start [$high(init_start)]) & init_start [$high(init_start) - 1]);
          
                 if (cpu_start) begin
                     actual_start_addr <= cpu_start_addr;
@@ -145,7 +145,7 @@ module Rattlesnake #(parameter sim = 0) (
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         
     
-        debug_coprocessor_wrapper #(.BAUD_PERIOD ( `MCU_MAIN_CLK_RATE /115200)) ocd_i (
+        debug_coprocessor_wrapper #(.BAUD_PERIOD (`UART_BAUD_PERIOD)) ocd_i (
             .clk (clk),
             .reset_n (reset_n),
             

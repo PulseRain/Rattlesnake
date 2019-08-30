@@ -1,0 +1,27 @@
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       3 
+      Globals that cannot be demoted:      1 
+      Globals considered for demotion:     2 
+
+
+Info: List of globals that cannot be demoted: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    3179   0      0      'FCCC_C0_0/FCCC_C0_0/GL0_INST' 
+
+Info: List of globals considered for demotion: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    0      2399   0      'Rattlesnake_0/un1_reset_n_i_RNIB6E5' 
+    0      527    2      'Rattlesnake_0/reset_n_RNIGUS4' 
+
+Info: Demotion information: 
+      Disconnected 2 data pins from global 'Rattlesnake_0/reset_n_RNIGUS4'. 
+Info: CMPG4-302: Added 0 row global instances.
+Info: CMPG4-303: Deleted 0 global instances.
+
+===============================================================================.
+

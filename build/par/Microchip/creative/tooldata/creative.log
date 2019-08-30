@@ -1,0 +1,16 @@
+Project Name: creative
+Location: C:\GitHub\Rattlesnake\build\par\Microchip\creative
+Description: Porting PulseRain Rattlesnake (RISC-V RV32IMC soft core)  to Future Electronics Creative Board (IGLOO2)
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2GL025-VF256
+Family         : IGLOO2
+Die            : M2GL025
+Package        : 256 VF
+Speed          : STD
+Core Voltage   : 1.2
+Range          : COM

@@ -1,0 +1,75 @@
+Configuration Report for MSS, SERDES(s), Fabric DDR and Fabric CCC(s)
+Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)
+Date: Thu Aug 29 22:23:38 2019
+
+FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP
++-------------------+--------------------+---------------+-------+
+| Register          | Field              | INIT          | Value |
++-------------------+--------------------+---------------+-------+
+| FCCC_RFDIV_CR     | RFDIV[7:0]         | INIT[7:0]     | 8'h4  |
+| FCCC_FBDIV_CR0    | FBDIV[7:0]         | INIT[15:8]    | 8'hb  |
+| FCCC_FBDIV_CR1    | FBDIV[13:8]        | INIT[21:16]   | 6'h0  |
+| FCCC_GPD0_CR      | GPDIV[7:0]         | INIT[29:22]   | 8'h1  |
+| FCCC_GPD1_CR      | GPDIV[7:0]         | INIT[37:30]   | 8'h1  |
+| FCCC_GPD2_CR      | GPDIV[7:0]         | INIT[45:38]   | 8'h1  |
+| FCCC_GPD3_CR      | GPDIV[7:0]         | INIT[53:46]   | 8'h1  |
+| FCCC_RFMUX_CR     | SELRF[3:0]         | INIT[57:54]   | 4'h0  |
+| FCCC_FBMUX_CR     | SELFB[3:0]         | INIT[61:58]   | 4'h7  |
+| FCCC_GPMUX0_CR    | SEL_GPMUX0[4:0]    | INIT[66:62]   | 5'h18 |
+| FCCC_GPMUX1_CR    | SEL_GPMUX1[4:0]    | INIT[71:67]   | 5'h18 |
+| FCCC_GPMUX2_CR    | SEL_GPMUX2[4:0]    | INIT[76:72]   | 5'h18 |
+| FCCC_GPMUX3_CR    | SEL_GPMUX3[4:0]    | INIT[81:77]   | 5'h18 |
+| FCCC_NGMUX0_CR0   | SELGL[4:0]         | INIT[86:82]   | 5'h7  |
+| FCCC_NGMUX0_CR1   | SELGL[9:5]         | INIT[91:87]   | 5'h18 |
+| FCCC_NGMUX1_CR0   | SELGL[14:10]       | INIT[96:92]   | 5'h18 |
+| FCCC_NGMUX1_CR1   | SELGL[19:15]       | INIT[101:97]  | 5'h18 |
+| FCCC_NGMUX2_CR0   | SELGL[24:20]       | INIT[106:102] | 5'h18 |
+| FCCC_NGMUX2_CR1   | SELGL[29:25]       | INIT[111:107] | 5'h18 |
+| FCCC_NGMUX3_CR0   | SELGL[34:30]       | INIT[116:112] | 5'h18 |
+| FCCC_NGMUX3_CR1   | SELGL[39:35]       | INIT[121:117] | 5'h18 |
+| FCCC_GPD0_SYNC_CR | RESET_GENEN[0]     | INIT[122:122] | 1'h0  |
+| FCCC_GPD1_SYNC_CR | RESET_GENEN[1]     | INIT[123:123] | 1'h0  |
+| FCCC_GPD2_SYNC_CR | RESET_GENEN[2]     | INIT[124:124] | 1'h0  |
+| FCCC_GPD3_SYNC_CR | RESET_GENEN[3]     | INIT[125:125] | 1'h0  |
+| FCCC_RFMUX_CR     | INVRF[3:0]         | INIT[131:126] | 6'h0  |
+| FCCC_PDLY_CR      | SEL_PLL_DLINE[5:0] | INIT[137:132] | 6'h0  |
+| FCCC_PDLY_CR      | RF_DLINE           | INIT[138:138] | 1'h1  |
+| FCCC_PLL_CR0      | LOCKWIN[2:0]       | INIT[141:139] | 3'h6  |
+| FCCC_PLL_CR1      | LOCKCNT[3:0]       | INIT[145:142] | 4'h5  |
+| FCCC_PLL_CR7      | DIVQ[2:0]          | INIT[148:146] | 3'h3  |
+| FCCC_PLL_CR5      | MODE32K            | INIT[149:149] | 1'h0  |
+| FCCC_PLL_CR5      | MODE_1V2           | INIT[150:150] | 1'h1  |
+| FCCC_PLL_CR5      | MODE_3V3           | INIT[151:151] | 1'h1  |
+| FCCC_PLL_CR6      | FSE                | INIT[152:152] | 1'h0  |
+| FCCC_PLL_CR4      | SSE                | INIT[153:153] | 1'h0  |
+| FCCC_PLL_CR3      | SSMD[1:0]          | INIT[155:154] | 2'h1  |
+| FCCC_PLL_CR2      | SSMF[4:0]          | INIT[160:156] | 5'h0  |
+| FCCC_PLL_CR8      | DIVR[5:0]          | INIT[166:161] | 6'h0  |
+| FCCC_PLL_CR9      | DIVF[5:0]          | INIT[174:167] | 8'h0  |
+| FCCC_PLL_CR10     | RANGE              | INIT[178:175] | 4'h5  |
+| FCCC_GPMUX0_CR    | NOPIPE_SYNCRST0    | INIT[179:179] | 1'h1  |
+| FCCC_GPMUX1_CR    | NOPIPE_SYNCRST1    | INIT[180:180] | 1'h1  |
+| FCCC_GPMUX2_CR    | NOPIPE_SYNCRST2    | INIT[181:181] | 1'h1  |
+| FCCC_GPMUX3_CR    | NOPIPE_SYNCRST3    | INIT[182:182] | 1'h1  |
+| FCCC_GPD0_SYNC_CR | SRESET_GENEN[0]    | INIT[183:183] | 1'h1  |
+| FCCC_GPD1_SYNC_CR | SRESET_GENEN[1]    | INIT[184:184] | 1'h1  |
+| FCCC_GPD2_SYNC_CR | SRESET_GENEN[2]    | INIT[185:185] | 1'h1  |
+| FCCC_GPD3_SYNC_CR | SRESET_GENEN[3]    | INIT[186:186] | 1'h1  |
+| FCCC_GPDS_SYNC_CR | SW_RESYNC_GPD      | INIT[187:187] | 1'h0  |
+| FCCC_GPMUX0_CR    | INV_GPMUX0         | INIT[188:188] | 1'h0  |
+| FCCC_GPMUX1_CR    | INV_GPMUX1         | INIT[189:189] | 1'h0  |
+| FCCC_GPMUX2_CR    | INV_GPMUX2         | INIT[190:190] | 1'h0  |
+| FCCC_GPMUX3_CR    | INV_GPMUX3         | INIT[191:191] | 1'h0  |
+| RESERVED_0        | RESERVED[0]        | INIT[192:192] | 1'h0  |
+| RESERVED_0        | RESERVED[1]        | INIT[193:193] | 1'h0  |
+| FCCC_GPD0_SYNC_CR | GPD_MODE_N[0]      | INIT[194:194] | 1'h0  |
+| FCCC_GPD1_SYNC_CR | GPD_MODE_N[1]      | INIT[195:195] | 1'h0  |
+| FCCC_GPD2_SYNC_CR | GPD_MODE_N[2]      | INIT[196:196] | 1'h0  |
+| FCCC_GPD3_SYNC_CR | GPD_MODE_N[3]      | INIT[197:197] | 1'h0  |
+| FCCC_NGMUX0_CR1   | SELOUT_0           | INIT[198:198] | 1'h0  |
+| FCCC_NGMUX1_CR1   | SELOUT_1           | INIT[199:199] | 1'h0  |
+| FCCC_NGMUX2_CR1   | SELOUT_2           | INIT[200:200] | 1'h0  |
+| FCCC_NGMUX3_CR1   | SELOUT_3           | INIT[201:201] | 1'h0  |
+| RESERVED_1        | RESERVED[7:0]      | INIT[209:202] | 8'h0  |
++-------------------+--------------------+---------------+-------+
+

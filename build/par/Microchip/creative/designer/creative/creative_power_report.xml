@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<text></text>
+<title>Power Report for design creative with the following settings:</title>
+<text></text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Vendor:</cell>
+ <cell>Microsemi Corporation</cell>
+</row>
+<row>
+ <cell>Program:</cell>
+ <cell>Microsemi Libero Software, Release v12.1 (Version 12.600.0.14)</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Copyright (C) 1989-</cell>
+</row>
+<row>
+ <cell>Date:</cell>
+ <cell>Thu Aug 29 22:22:15 2019</cell>
+</row>
+<row>
+ <cell>Version:</cell>
+ <cell>3.0</cell>
+</row>
+</table>
+<text></text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design:</cell>
+ <cell>creative</cell>
+</row>
+<row>
+ <cell>Family:</cell>
+ <cell>IGLOO2</cell>
+</row>
+<row>
+ <cell>Die:</cell>
+ <cell>M2GL025</cell>
+</row>
+<row>
+ <cell>Package:</cell>
+ <cell>256 VF</cell>
+</row>
+<row>
+ <cell>Temperature Range:</cell>
+ <cell>COM</cell>
+</row>
+<row>
+ <cell>Voltage Range:</cell>
+ <cell>COM</cell>
+</row>
+<row>
+ <cell>Operating Conditions:</cell>
+ <cell>Typical</cell>
+</row>
+<row>
+ <cell>Operating Mode:</cell>
+ <cell>Active</cell>
+</row>
+<row>
+ <cell>Process:</cell>
+ <cell>Typical</cell>
+</row>
+<row>
+ <cell>Data Source:</cell>
+ <cell>Production</cell>
+</row>
+</table>
+<text></text>
+<section><name>Power Summary</name></section>
+<table>
+<header>
+ <cell/>
+ <cell>Power (mW)</cell>
+ <cell>Percentage</cell>
+</header>
+<row>
+ <cell>Total Power</cell>
+ <cell>   198.972</cell>
+ <cell>    100.0%</cell>
+</row>
+<row>
+ <cell>Static Power</cell>
+ <cell>    14.510</cell>
+ <cell>      7.3%</cell>
+</row>
+<row>
+ <cell>Dynamic Power</cell>
+ <cell>   184.462</cell>
+ <cell>     92.7%</cell>
+</row>
+</table>
+<text></text>
+<section><name>Breakdown by Rail</name></section>
+<table>
+<header>
+ <cell/>
+ <cell>Power (mW)</cell>
+ <cell>Voltage (V)</cell>
+ <cell>Current (mA)</cell>
+</header>
+<row>
+ <cell>Rail VDD</cell>
+ <cell>   178.251</cell>
+ <cell>     1.200</cell>
+ <cell>   148.543</cell>
+</row>
+<row>
+ <cell>Rail CCC_NE1_PLL_VDDA</cell>
+ <cell>     9.000</cell>
+ <cell>     3.300</cell>
+ <cell>     2.727</cell>
+</row>
+<row>
+ <cell>Rail VDDI 3.3</cell>
+ <cell>    11.096</cell>
+ <cell>     3.300</cell>
+ <cell>     3.362</cell>
+</row>
+<row>
+ <cell>Rail VPP</cell>
+ <cell>     0.625</cell>
+ <cell>     2.500</cell>
+ <cell>     0.250</cell>
+</row>
+</table>
+<text></text>
+<section><name>Breakdown by Clock</name></section>
+<table>
+<header>
+ <cell/>
+ <cell>Power (mW)</cell>
+ <cell>Percentage</cell>
+</header>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (clocks)</cell>
+ <cell>   108.821</cell>
+ <cell>     62.0%</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (register outputs)</cell>
+ <cell>    21.354</cell>
+ <cell>     12.2%</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (primary inputs)</cell>
+ <cell>     0.000</cell>
+ <cell>      0.0%</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (combinational outputs)</cell>
+ <cell>    40.457</cell>
+ <cell>     23.1%</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (set/reset nets)</cell>
+ <cell>     0.000</cell>
+ <cell>      0.0%</cell>
+</row>
+<row>
+ <cell>osc_in (clocks)</cell>
+ <cell>     3.389</cell>
+ <cell>      1.9%</cell>
+</row>
+<row>
+ <cell>osc_in (register outputs)</cell>
+ <cell>     0.001</cell>
+ <cell>      0.0%</cell>
+</row>
+<row>
+ <cell>osc_in (primary inputs)</cell>
+ <cell>     0.000</cell>
+ <cell>      0.0%</cell>
+</row>
+<row>
+ <cell>osc_in (combinational outputs)</cell>
+ <cell>     1.440</cell>
+ <cell>      0.8%</cell>
+</row>
+<row>
+ <cell>osc_in (set/reset nets)</cell>
+ <cell>     0.000</cell>
+ <cell>      0.0%</cell>
+</row>
+<row>
+ <cell>Input to Output</cell>
+ <cell>     0.000</cell>
+ <cell>      0.0%</cell>
+</row>
+</table>
+<text></text>
+<section><name>Breakdown by Type</name></section>
+<table>
+<header>
+ <cell/>
+ <cell>Power (mW)</cell>
+ <cell>Percentage</cell>
+</header>
+<row>
+ <cell>Type Net</cell>
+ <cell>    41.431</cell>
+ <cell>     20.8%</cell>
+</row>
+<row>
+ <cell>Type Gate</cell>
+ <cell>    50.149</cell>
+ <cell>     25.2%</cell>
+</row>
+<row>
+ <cell>Type I/O</cell>
+ <cell>     7.895</cell>
+ <cell>      4.0%</cell>
+</row>
+<row>
+ <cell>Type Memory</cell>
+ <cell>    79.569</cell>
+ <cell>     40.0%</cell>
+</row>
+<row>
+ <cell>Type Core Static</cell>
+ <cell>    10.625</cell>
+ <cell>      5.3%</cell>
+</row>
+<row>
+ <cell>Type Banks Static</cell>
+ <cell>     3.260</cell>
+ <cell>      1.6%</cell>
+</row>
+<row>
+ <cell>Type VPP Static</cell>
+ <cell>     0.625</cell>
+ <cell>      0.3%</cell>
+</row>
+<row>
+ <cell>Type Built-in Blocks</cell>
+ <cell>     5.419</cell>
+ <cell>      2.7%</cell>
+</row>
+</table>
+<text></text>
+</doc>

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<text>SmartTime Version 12.600.0.14</text>
+<text>Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)
+Date: Thu Aug 29 22:23:03 2019 </text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design</cell>
+ <cell>creative</cell>
+</row>
+<row>
+ <cell>Family</cell>
+ <cell>IGLOO2</cell>
+</row>
+<row>
+ <cell>Die</cell>
+ <cell>M2GL025</cell>
+</row>
+<row>
+ <cell>Package</cell>
+ <cell>256 VF</cell>
+</row>
+<row>
+ <cell>Temperature Range</cell>
+ <cell>0 - 85 C</cell>
+</row>
+<row>
+ <cell>Voltage Range</cell>
+ <cell>1.14 - 1.26 V</cell>
+</row>
+<row>
+ <cell>Speed Grade</cell>
+ <cell>STD</cell>
+</row>
+</table>
+<text></text>
+<text></text>
+<section>
+<name>Coverage Summary</name>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>         5949</cell>
+ <cell>            0</cell>
+ <cell>         5949</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>         2415</cell>
+ <cell>          527</cell>
+ <cell>         2942</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            3</cell>
+ <cell>            3</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>         8364</cell>
+ <cell>          530</cell>
+ <cell>         8894</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>         5949</cell>
+ <cell>            0</cell>
+ <cell>         5949</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>         2415</cell>
+ <cell>          527</cell>
+ <cell>         2942</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            3</cell>
+ <cell>            3</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>         8364</cell>
+ <cell>          530</cell>
+ <cell>         8894</cell>
+</row>
+</table>
+<section>
+<name>Clock domain: </name>
+<text>FCCC_C0_0/FCCC_C0_0/GL0</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>         5949</cell>
+ <cell>            0</cell>
+ <cell>         5949</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>         2415</cell>
+ <cell>          527</cell>
+ <cell>         2942</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            3</cell>
+ <cell>            3</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>         8364</cell>
+ <cell>          530</cell>
+ <cell>         8894</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>         5949</cell>
+ <cell>            0</cell>
+ <cell>         5949</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>         2415</cell>
+ <cell>          527</cell>
+ <cell>         2942</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            3</cell>
+ <cell>            3</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>         8364</cell>
+ <cell>          530</cell>
+ <cell>         8894</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text></text>
+<text> - Max output delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>LED_GREEN</item>
+ <item>LED_RED</item>
+ <item>TXD</item>
+</list>
+<text></text>
+<text> - Min output delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>LED_GREEN</item>
+ <item>LED_RED</item>
+ <item>TXD</item>
+</list>
+<text></text>
+<text></text>
+<text> - Recovery unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_0:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_10:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_11:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_12:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_1:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_2:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_3:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_4:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_5:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_6:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_7:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_8:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_9:ALn</item>
+ <item>Rattlesnake_0/TXD_Z:ALn</item>
+ <item>Rattlesnake_0/actual_cpu_start:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[10]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[11]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[12]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[13]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[14]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[15]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[16]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[17]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[18]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[19]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[1]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[20]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[21]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[22]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[23]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[24]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[25]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[26]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[27]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[28]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[29]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[2]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[30]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[31]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[3]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[4]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[5]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[6]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[7]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[8]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[9]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.TX_done_pulse:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.RI:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[3]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[4]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[5]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[6]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[7]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SM_d1[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.TI:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.baud_rate_pulse:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[10]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[11]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[12]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[13]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[3]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[4]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[5]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[6]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[7]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[8]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[9]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[10]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[11]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[12]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[13]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[3]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[4]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[5]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[6]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[7]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[8]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[9]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[3]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[4]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[5]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[6]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[7]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.data_counter[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.data_counter[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.data_counter[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.data_counter[3]:ALn</item>
+</list>
+<text></text>
+<text> - Removal unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_0:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_10:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_11:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_12:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_1:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_2:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_3:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_4:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_5:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_6:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_7:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_8:ALn</item>
+ <item>Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_mm_reg_i.pram_write_addr_out_1_ret_9:ALn</item>
+ <item>Rattlesnake_0/TXD_Z:ALn</item>
+ <item>Rattlesnake_0/actual_cpu_start:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[10]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[11]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[12]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[13]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[14]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[15]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[16]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[17]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[18]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[19]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[1]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[20]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[21]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[22]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[23]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[24]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[25]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[26]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[27]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[28]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[29]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[2]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[30]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[31]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[3]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[4]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[5]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[6]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[7]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[8]:ALn</item>
+ <item>Rattlesnake_0/actual_start_addr[9]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.TX_done_pulse:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.RI:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[3]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[4]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[5]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[6]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SBUF_out[7]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.SM_d1[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.TI:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.baud_rate_pulse:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[10]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[11]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[12]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[13]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[3]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[4]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[5]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[6]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[7]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[8]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter[9]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[10]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[11]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[12]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[13]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[3]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[4]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[5]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[6]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[7]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[8]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.counter_save[9]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[3]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[4]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[5]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[6]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.current_state[7]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.data_counter[0]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.data_counter[1]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.data_counter[2]:ALn</item>
+ <item>Rattlesnake_0/ocd_i.debug_UART_i.UART_i.data_counter[3]:ALn</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>osc_in</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Input to Output</name>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<separator/>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+</table>
+</section>
+</section>
+</doc>

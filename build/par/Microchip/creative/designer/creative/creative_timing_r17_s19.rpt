@@ -1,0 +1,491 @@
+Timing Report Max Delay Analysis
+
+SmartTime Version v12.1
+Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)
+Date: Thu Aug 29 20:05:28 2019
+
+
+Design: creative
+Family: IGLOO2
+Die: M2GL025
+Package: 256 VF
+Temperature Range: 0 - 85 C
+Voltage Range: 1.14 - 1.26 V
+Speed Grade: STD
+Design State: Post-Layout
+Data source: Production
+Min Operating Conditions: BEST - 1.26 V - 0 C
+Max Operating Conditions: WORST - 1.14 V - 85 C
+Scenario for Timing Analysis: timing_analysis
+
+
+-----------------------------------------------------
+SUMMARY
+
+Clock Domain:               FCCC_C0_0/FCCC_C0_0/GL0
+Period (ns):                8.396
+Frequency (MHz):            119.104
+Required Period (ns):       7.813
+Required Frequency (MHz):   127.992
+External Setup (ns):        N/A
+Max Clock-To-Out (ns):      12.425
+
+Clock Domain:               osc_in
+Period (ns):                1.640
+Frequency (MHz):            609.756
+Required Period (ns):       20.000
+Required Frequency (MHz):   50.000
+External Setup (ns):        N/A
+Max Clock-To-Out (ns):      N/A
+
+                            Input to Output
+Max Delay (ns):             N/A
+
+END SUMMARY
+-----------------------------------------------------
+
+Clock Domain FCCC_C0_0/FCCC_C0_0/GL0
+
+SET Register to Register
+
+Path 1
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  Delay (ns):              8.014
+  Slack (ns):             -0.583
+  Arrival (ns):           12.454
+  Required (ns):          11.871
+  Setup (ns):              0.363
+  Minimum Period (ns):     8.396
+
+Path 2
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[23]:EN
+  Delay (ns):              8.014
+  Slack (ns):             -0.583
+  Arrival (ns):           12.454
+  Required (ns):          11.871
+  Setup (ns):              0.363
+  Minimum Period (ns):     8.396
+
+Path 3
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_data_access_i.ctl_mem_we_d1:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_1/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.384
+  Slack (ns):             -0.555
+  Arrival (ns):           12.797
+  Required (ns):          12.242
+  Setup (ns):              0.159
+  Minimum Period (ns):     8.368
+
+Path 4
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.IR_out_ret_2[14]:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.mem_controller_i.genblk1.ram_high_i.gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st.mem_mem_0_1/INST_RAM1K18_IP:A_ADDR[13]
+  Delay (ns):              8.313
+  Slack (ns):             -0.526
+  Arrival (ns):           12.768
+  Required (ns):          12.242
+  Setup (ns):              0.159
+  Minimum Period (ns):     8.339
+
+Path 5
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.jalr_active:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.single_clk_ram_rs2.mem_mem_0_0/INST_RAM64x18_IP:C_DIN[1]
+  Delay (ns):              8.381
+  Slack (ns):             -0.523
+  Arrival (ns):           12.804
+  Required (ns):          12.281
+  Setup (ns):              0.118
+  Minimum Period (ns):     8.336
+
+
+Expanded Path 1
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK
+  To: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+  data required time                                 11.871
+  data arrival time                          -       12.454
+  slack                                              -0.583
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        FCCC_C0_0/FCCC_C0_0/GL0
+               +     0.000          Clock source
+  0.000                        FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (r)
+               +     2.519          Clock generation
+  2.519                        
+               +     0.305          net: FCCC_C0_0/FCCC_C0_0/GL0_net
+  2.824                        FCCC_C0_0/FCCC_C0_0/GL0_INST:An (r)
+               +     0.209          cell: ADLIB:GBM
+  3.033                        FCCC_C0_0/FCCC_C0_0/GL0_INST:YWn (f)
+               +     0.454          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn
+  3.487                        FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB42:An (f)
+               +     0.372          cell: ADLIB:RGB
+  3.859                        FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB42:YR (r)
+               +     0.581          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB42_rgbr_net_1
+  4.440                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:CLK (r)
+               +     0.102          cell: ADLIB:SLE
+  4.542                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.X_ret_55:Q (r)
+               +     1.173          net: Rattlesnake_0/reg_file_read_rs1_data_out_reto_0[7]
+  5.715                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_7:B (r)
+               +     0.246          cell: ADLIB:ARI1_CC
+  5.961                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_7:UB (r)
+               +     0.000          net: NET_CC_CONFIG1424
+  5.961                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_0_CC_1:UB[3] (r)
+               +     0.669          cell: ADLIB:CC_CONFIG
+  6.630                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_0_CC_1:CO (f)
+               +     0.000          net: CI_TO_CO1400
+  6.630                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_0_CC_2:CI (f)
+               +     0.218          cell: ADLIB:CC_CONFIG
+  6.848                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_0_CC_2:CO (f)
+               +     0.000          net: CI_TO_CO1401
+  6.848                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_0_CC_3:CI (f)
+               +     0.274          cell: ADLIB:CC_CONFIG
+  7.122                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_0_CC_3:CC[4] (f)
+               +     0.000          net: NET_CC_CONFIG1500
+  7.122                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_31_FCINST1:CC (f)
+               +     0.086          cell: ADLIB:FCEND_BUFF_CC
+  7.208                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.alu_proc.un12_ALU_out_cry_31_FCINST1:CO (f)
+               +     0.636          net: Rattlesnake_0/un12_ALU_out
+  7.844                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.branch_active_i.m6_i_a2_1:C (f)
+               +     0.117          cell: ADLIB:CFG4
+  7.961                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.branch_active_i.m6_i_a2_1:Y (r)
+               +     0.108          net: Rattlesnake_0/N_1605
+  8.069                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.branch_active:C (r)
+               +     0.118          cell: ADLIB:CFG4
+  8.187                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.branch_active:Y (f)
+               +     1.047          net: Rattlesnake_0/exe_branch_active
+  9.234                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.state_machine_comb.un1_jal_active_1:C (f)
+               +     0.102          cell: ADLIB:CFG4
+  9.336                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.state_machine_comb.un1_jal_active_1:Y (f)
+               +     0.116          net: Rattlesnake_0/un1_jal_active_1_Z
+  9.452                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_proc.un1_ctl_instruction_addr_misalign_exception_3_sqmuxa_0_i_o2_0:A (f)
+               +     0.117          cell: ADLIB:CFG2
+  9.569                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_proc.un1_ctl_instruction_addr_misalign_exception_3_sqmuxa_0_i_o2_0:Y (r)
+               +     0.964          net: Rattlesnake_0/N_3154
+  10.533                       Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_proc.un1_exception_alignment_7_0_fast:B (r)
+               +     0.118          cell: ADLIB:CFG4
+  10.651                       Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_proc.un1_exception_alignment_7_0_fast:Y (f)
+               +     1.803          net: Rattlesnake_0/un1_exception_alignment_7_fast
+  12.454                       Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN (f)
+                                    
+  12.454                       data arrival time
+  ________________________________________________________
+  Data required time calculation
+  7.813                        FCCC_C0_0/FCCC_C0_0/GL0
+               +     0.000          Clock source
+  7.813                        FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (r)
+               +     2.519          Clock generation
+  10.332                       
+               +     0.305          net: FCCC_C0_0/FCCC_C0_0/GL0_net
+  10.637                       FCCC_C0_0/FCCC_C0_0/GL0_INST:An (r)
+               +     0.209          cell: ADLIB:GBM
+  10.846                       FCCC_C0_0/FCCC_C0_0/GL0_INST:YEn (f)
+               +     0.448          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn_GEast
+  11.294                       FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB13:An (f)
+               +     0.372          cell: ADLIB:RGB
+  11.666                       FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB13:YL (r)
+               +     0.568          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB13_rgbl_net_1
+  12.234                       Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:CLK (r)
+               -     0.363          Library setup time: ADLIB:SLE
+  11.871                       Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[21]:EN
+                                    
+  11.871                       data required time
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Setup
+
+No Path 
+
+END SET External Setup
+
+----------------------------------------------------
+
+SET Clock to Output
+
+Path 1
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[1]:CLK
+  To:   LED_GREEN
+  Delay (ns):              7.976
+  Arrival (ns):           12.425
+  Clock to Out (ns):      12.425
+
+Path 2
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[1]:CLK
+  To:   LED_RED
+  Delay (ns):              6.980
+  Arrival (ns):           11.429
+  Clock to Out (ns):      11.429
+
+Path 3
+  From: Rattlesnake_0/TXD_Z:CLK
+  To:   TXD
+  Delay (ns):              5.302
+  Arrival (ns):            9.789
+  Clock to Out (ns):       9.789
+
+
+Expanded Path 1
+  From: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[1]:CLK
+  To: LED_GREEN
+  data required time                                    N/C
+  data arrival time                          -       12.425
+  slack                                                 N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        FCCC_C0_0/FCCC_C0_0/GL0
+               +     0.000          Clock source
+  0.000                        FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (r)
+               +     2.519          Clock generation
+  2.519                        
+               +     0.305          net: FCCC_C0_0/FCCC_C0_0/GL0_net
+  2.824                        FCCC_C0_0/FCCC_C0_0/GL0_INST:An (r)
+               +     0.209          cell: ADLIB:GBM
+  3.033                        FCCC_C0_0/FCCC_C0_0/GL0_INST:YWn (f)
+               +     0.450          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn
+  3.483                        FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB32:An (f)
+               +     0.372          cell: ADLIB:RGB
+  3.855                        FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB32:YR (r)
+               +     0.594          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB32_rgbr_net_1
+  4.449                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[1]:CLK (r)
+               +     0.102          cell: ADLIB:SLE
+  4.551                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[1]:Q (r)
+               +     3.280          net: LED_RED_c
+  7.831                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state_RNIR03[1]:A (r)
+               +     0.118          cell: ADLIB:CFG1
+  7.949                        Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state_RNIR03[1]:Y (f)
+               +     0.893          net: LED_GREEN_c
+  8.842                        LED_GREEN_obuf/U0/U_IOOUTFF:A (f)
+               +     0.388          cell: ADLIB:IOOUTFF_BYPASS
+  9.230                        LED_GREEN_obuf/U0/U_IOOUTFF:Y (f)
+               +     0.367          net: LED_GREEN_obuf/U0/DOUT
+  9.597                        LED_GREEN_obuf/U0/U_IOPAD:D (f)
+               +     2.828          cell: ADLIB:IOPAD_TRI
+  12.425                       LED_GREEN_obuf/U0/U_IOPAD:PAD (f)
+               +     0.000          net: LED_GREEN
+  12.425                       LED_GREEN (f)
+                                    
+  12.425                       data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          FCCC_C0_0/FCCC_C0_0/GL0
+               +     0.000          Clock source
+  N/C                          FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (r)
+               +     2.519          Clock generation
+  N/C                          
+                                    
+  N/C                          LED_GREEN (f)
+
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+Path 1
+  From: Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_CSR_i.mepc[5]:ALn
+  Delay (ns):              5.572
+  Slack (ns):              1.792
+  Arrival (ns):           10.029
+  Required (ns):          11.821
+  Recovery (ns):           0.415
+  Minimum Period (ns):     6.021
+  Skew (ns):               0.034
+
+Path 2
+  From: Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[13]:ALn
+  Delay (ns):              5.572
+  Slack (ns):              1.792
+  Arrival (ns):           10.029
+  Required (ns):          11.821
+  Recovery (ns):           0.415
+  Minimum Period (ns):     6.021
+  Skew (ns):               0.034
+
+Path 3
+  From: Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[14]:ALn
+  Delay (ns):              5.572
+  Slack (ns):              1.792
+  Arrival (ns):           10.029
+  Required (ns):          11.821
+  Recovery (ns):           0.415
+  Minimum Period (ns):     6.021
+  Skew (ns):               0.034
+
+Path 4
+  From: Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_0[5]:ALn
+  Delay (ns):              5.572
+  Slack (ns):              1.792
+  Arrival (ns):           10.029
+  Required (ns):          11.821
+  Recovery (ns):           0.415
+  Minimum Period (ns):     6.021
+  Skew (ns):               0.034
+
+Path 5
+  From: Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK
+  To:   Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.exception_PC_ret_66[13]:ALn
+  Delay (ns):              5.572
+  Slack (ns):              1.792
+  Arrival (ns):           10.029
+  Required (ns):          11.821
+  Recovery (ns):           0.415
+  Minimum Period (ns):     6.021
+  Skew (ns):               0.034
+
+
+Expanded Path 1
+  From: Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK
+  To: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_CSR_i.mepc[5]:ALn
+  data required time                                 11.821
+  data arrival time                          -       10.029
+  slack                                               1.792
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        FCCC_C0_0/FCCC_C0_0/GL0
+               +     0.000          Clock source
+  0.000                        FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (r)
+               +     2.519          Clock generation
+  2.519                        
+               +     0.305          net: FCCC_C0_0/FCCC_C0_0/GL0_net
+  2.824                        FCCC_C0_0/FCCC_C0_0/GL0_INST:An (r)
+               +     0.209          cell: ADLIB:GBM
+  3.033                        FCCC_C0_0/FCCC_C0_0/GL0_INST:YWn (f)
+               +     0.451          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn
+  3.484                        FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB34:An (f)
+               +     0.372          cell: ADLIB:RGB
+  3.856                        FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB34:YR (r)
+               +     0.601          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB34_rgbr_net_1
+  4.457                        Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:CLK (r)
+               +     0.127          cell: ADLIB:SLE
+  4.584                        Rattlesnake_0/ocd_i.debug_coprocessor_i.cpu_reset:Q (f)
+               +     1.857          net: Rattlesnake_0/cpu_reset
+  6.441                        Rattlesnake_0/un1_reset_n_i:A (f)
+               +     0.173          cell: ADLIB:CFG2
+  6.614                        Rattlesnake_0/un1_reset_n_i:Y (r)
+               +     1.528          net: Rattlesnake_0/N_6035
+  8.142                        Rattlesnake_0/un1_reset_n_i_RNIB6E5:An (f)
+               +     0.440          cell: ADLIB:GBM
+  8.582                        Rattlesnake_0/un1_reset_n_i_RNIB6E5:YWn (f)
+               +     0.441          net: Rattlesnake_0/un1_reset_n_i_RNIB6E5/U0_YWn
+  9.023                        Rattlesnake_0/un1_reset_n_i_RNIB6E5/U0_RGB1_RGB18:An (f)
+               +     0.372          cell: ADLIB:RGB
+  9.395                        Rattlesnake_0/un1_reset_n_i_RNIB6E5/U0_RGB1_RGB18:YR (r)
+               +     0.634          net: Rattlesnake_0/un1_reset_n_i_RNIB6E5/U0_RGB1_RGB18_rgbr_net_1
+  10.029                       Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_CSR_i.mepc[5]:ALn (r)
+                                    
+  10.029                       data arrival time
+  ________________________________________________________
+  Data required time calculation
+  7.813                        FCCC_C0_0/FCCC_C0_0/GL0
+               +     0.000          Clock source
+  7.813                        FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL0 (r)
+               +     2.519          Clock generation
+  10.332                       
+               +     0.305          net: FCCC_C0_0/FCCC_C0_0/GL0_net
+  10.637                       FCCC_C0_0/FCCC_C0_0/GL0_INST:An (r)
+               +     0.209          cell: ADLIB:GBM
+  10.846                       FCCC_C0_0/FCCC_C0_0/GL0_INST:YWn (f)
+               +     0.440          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_YWn
+  11.286                       FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB20:An (f)
+               +     0.372          cell: ADLIB:RGB
+  11.658                       FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB20:YR (r)
+               +     0.578          net: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1_RGB20_rgbr_net_1
+  12.236                       Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_CSR_i.mepc[5]:CLK (r)
+               -     0.415          Library recovery time: ADLIB:SLE
+  11.821                       Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_CSR_i.mepc[5]:ALn
+                                    
+  11.821                       data required time
+
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Recovery
+
+No Path 
+
+END SET External Recovery
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path 
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain osc_in
+
+Info: The maximum frequency of this clock domain is limited by the minimum pulse widths of pin FCCC_C0_0/FCCC_C0_0/CLK0_PAD_INST/U_IOPAD:PAD
+
+SET Register to Register
+
+No Path 
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Setup
+
+No Path 
+
+END SET External Setup
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path 
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path 
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Recovery
+
+No Path 
+
+END SET External Recovery
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path 
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Path set Pin to Pin
+
+SET Input to Output
+
+No Path 
+
+END SET Input to Output
+
+----------------------------------------------------
+
+Path set User Sets
+

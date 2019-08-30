@@ -1,0 +1,30 @@
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\GitHub\\Rattlesnake\\build\\par\\Microchip\\creative\\synthesis\\synwork\\creative_comp.srs|-top|creative|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-I|C:\\GitHub\\Rattlesnake\\build\\par\\Microchip\\creative\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v12.1\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v12.1\\SynplifyPro\\lib\\generic\\igloo2.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v12.1\\SynplifyPro\\bin64\\c_ver.exe":1545375128
+#CUR:"C:\\Microsemi\\Libero_SoC_v12.1\\SynplifyPro\\lib\\generic\\igloo2.v":1545375132
+#CUR:"C:\\Microsemi\\Libero_SoC_v12.1\\SynplifyPro\\lib\\vlog\\hypermods.v":1545375136
+#CUR:"C:\\Microsemi\\Libero_SoC_v12.1\\SynplifyPro\\lib\\vlog\\umr_capim.v":1545375136
+#CUR:"C:\\Microsemi\\Libero_SoC_v12.1\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1545375136
+#CUR:"C:\\Microsemi\\Libero_SoC_v12.1\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1545375136
+#CUR:"C:\\GitHub\\Rattlesnake\\build\\par\\Microchip\\creative\\component\\work\\FCCC_C0\\FCCC_C0_0\\FCCC_C0_FCCC_C0_0_FCCC.v":1567137806
+#CUR:"C:\\GitHub\\Rattlesnake\\build\\par\\Microchip\\creative\\component\\work\\FCCC_C0\\FCCC_C0.v":1567137806
+#CUR:"C:\\GitHub\\Rattlesnake\\build\\synth\\Microchip\\IGLOO2\\Rattlesnake.vm":1567141668
+#CUR:"C:\\GitHub\\Rattlesnake\\build\\par\\Microchip\\creative\\component\\work\\creative\\creative.v":1567137812
+0			"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v" verilog
+1			"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v" verilog
+2			"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm" verilog
+3			"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 0
+2 -1
+3 2 1
+#Dependency Lists(Users Of)
+0 1
+1 3
+2 3
+3 -1
+#Design Unit to File Association
+module work creative 3
+module work Rattlesnake 2
+module work FCCC_C0 1
+module work FCCC_C0_FCCC_C0_0_FCCC 0

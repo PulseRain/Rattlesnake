@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version N-2018.03M-SP1-1
 #--  Project file C:\GitHub\Rattlesnake\build\synth\Microchip\Rattlesnake.prj
-#--  Written on Mon Aug 26 00:34:02 2019
+#--  Written on Thu Aug 29 22:05:53 2019
 
 
 #project files
@@ -64,7 +64,7 @@ set_option -top_module "Rattlesnake"
 set_option -distributed_compile 0
 
 # mapper_without_write_options
-set_option -frequency auto
+set_option -frequency 120
 set_option -srs_instrumentation 1
 
 # mapper_options
@@ -84,7 +84,7 @@ set_option -low_power_ram_decomp 0
 set_option -seqshift_to_uram 0
 set_option -disable_io_insertion 1
 set_option -opcond COMTC
-set_option -retiming 0
+set_option -retiming 1
 set_option -report_path 4000
 set_option -update_models_cp 0
 set_option -preserve_registers 0

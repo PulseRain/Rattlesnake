@@ -1,0 +1,72 @@
+INFO: Reading User SDC file C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.sdc.
+INFO: The option "Abort flow if errors are found in SDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated SDC files. Please uncheck the option to ignore the errors and continue running the tool.
+
+No errors or warnings found.
+INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
+***** Place and Route Configurations *****
+Timing-driven            : ON
+Power-driven             : OFF
+I/O Register Combining   : ON
+High-effort              : ON
+Repair min-delay         : ON
+Incremental              : OFF
+Inter-clock optimization : ON
+TDPR scenario            : place_and_route
+
+INFO: Reading User PDC file C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.pdc. 0 error(s) and 0 warning(s)
+
+Running the I/O Bank and Globals Assigner.
+Info:  I/O Bank and Globals Assigner identified 5 fixed I/O macros, 0 unfixed I/O macros
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 0 seconds
+
+Placer V5.0 - 12.600.0 
+Design: creative                        Started: Thu Aug 29 22:10:02 2019
+
+Initializing High-Effort Timing-Driven Placement ...
+Clustering ...
+Placing ...
+Improving placement ...
+End of placement.
+
+Placer Runtime Summary   :
+Clustering (1 pass)      : 1 seconds
+Placement                : 5 seconds
+Improvement              : 13 seconds
+
+Placer completed successfully.
+
+Design: creative                        
+Finished: Thu Aug 29 22:10:39 2019
+Total CPU Time:     00:00:38            Total Elapsed Time: 00:00:37
+Total Memory Usage: 395.7 Mbytes
+                        o - o - o - o - o - o
+
+
+Timing-driven Router 
+Design: C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\creativeStarted: Thu Aug 29 22:10:44 2019
+
+@ 0
+
+Timing-driven Router completed successfully.
+
+Design: C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\creative
+Finished: Thu Aug 29 22:11:29 2019
+Total CPU Time:     00:00:45            Total Elapsed Time: 00:00:45
+Total Memory Usage: 1130.7 Mbytes
+                        o - o - o - o - o - o
+
+Info: Iteration 1:
+  Total violating paths eligible for improvement: 0
+  Worst minimum delay slack: 
+Resource Usage
++---------------+------+-------+------------+
+| Type          | Used | Total | Percentage |
++---------------+------+-------+------------+
+| 4LUT          | 5913 | 27696 | 21.35      |
+| DFF           | 4353 | 27696 | 15.72      |
+| I/O Register  | 0    | 408   | 0.00       |
+| Logic Element | 6391 | 27696 | 23.08      |
++---------------+------+-------+------------+
+

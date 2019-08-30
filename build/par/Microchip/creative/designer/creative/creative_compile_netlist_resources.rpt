@@ -1,0 +1,196 @@
+Resource Report
+Microsemi Corporation - Microsemi Libero Software Release v12.1 (Version 12.600.0.14)
+Date: Thu Aug 29 22:09:45 2019
+
+Device Selection
++--------------------------------+----------------+
+| Family                         | IGLOO2         |
+| Device                         | M2GL025        |
+| Package                        | 256 VF         |
+| Speed Grade                    | STD            |
+| Temp                           | 0:25:85        |
+| Voltage                        | 1.26:1.20:1.14 |
+| Core Voltage                   | 1.2V           |
+| Ramp Rate                      | 100ms Minimum  |
+| System Controller Suspend Mode | No             |
+| PLL Supply Voltage             | 3.3V           |
+| Default I/O technology         | LVCMOS 3.3V    |
+| Restrict Probe Pins            | Yes            |
+| Restrict SPI Pins              | No             |
++--------------------------------+----------------+
+
+Source Files
++---------+--------------------------------------------------------------------------+
+| Topcell | creative                                                                 |
+| Format  | Verilog                                                                  |
+| Source  | C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.vm |
++---------+--------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+-------+
+| Enable Single Event Transient mitigation           | false |
+| Enable Design Separation Methodology               | false |
+| Limit the number of high fanout nets to display to | 10    |
++----------------------------------------------------+-------+
+
+Resource Usage
++---------------------------+------+-------+------------+
+| Type                      | Used | Total | Percentage |
++---------------------------+------+-------+------------+
+| 4LUT                      | 5913 | 27696 | 21.35      |
+| DFF                       | 4353 | 27696 | 15.72      |
+| I/O Register              | 0    | 414   | 0.00       |
+| User I/O                  | 5    | 138   | 3.62       |
+| -- Single-ended I/O       | 5    | 138   | 3.62       |
+| -- Differential I/O Pairs | 0    | 65    | 0.00       |
+| RAM64x18                  | 2    | 34    | 5.88       |
+| RAM1K18                   | 28   | 31    | 90.32      |
+| MACC                      | 4    | 34    | 11.76      |
+| Chip Globals              | 3    | 16    | 18.75      |
+| CCC                       | 1    | 6     | 16.67      |
+| RCOSC_25_50MHZ            | 0    | 1     | 0.00       |
+| RCOSC_1MHZ                | 0    | 1     | 0.00       |
+| XTLOSC                    | 0    | 1     | 0.00       |
+| HPMS                      | 0    | 1     | 0.00       |
++---------------------------+------+-------+------------+
+
+Detailed Logic Resource Usage
++--------------------------+------+------+
+| Type                     | 4LUT | DFF  |
++--------------------------+------+------+
+| Fabric Logic             | 4689 | 3129 |
+| RAM64x18 Interface Logic | 72   | 72   |
+| RAM1K18 Interface Logic  | 1008 | 1008 |
+| MACC Interface Logic     | 144  | 144  |
+| Total Used               | 5913 | 4353 |
++--------------------------+------+------+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 72   |
+| 7      | 3    |
+| 8      | 1    |
+| 9      | 2    |
+| 12     | 2    |
+| 14     | 1    |
+| 15     | 6    |
+| 17     | 1    |
+| 20     | 1    |
+| 30     | 2    |
+| 31     | 4    |
+| 32     | 5    |
+| 33     | 8    |
+| 34     | 1    |
+| 64     | 4    |
+| 65     | 1    |
+| Total  | 114  |
++--------+------+
+
+Detailed MACC Resource Usage
++--------+------+
+| Length | Used |
+| 4      | 1    |
+| Total  | 1    |
++--------+------+
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 2            | 0           | 0               |
+| Output I/O                    | 3            | 0           | 0               |
+| Bidirectional I/O             | 0            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+I/O Technology
++--------------+--------+------+-------+--------+---------------+
+| I/O Standard | Vddi   | Vref | Input | Output | Bidirectional |
++--------------+--------+------+-------+--------+---------------+
+| LVCMOS33     |  3.30v |  N/A |  2    |  3     |  0            |
++--------------+--------+------+-------+--------+---------------+
+
+I/O Placement
++----------+-------+------------+
+| Type     | Count | Percentage |
++----------+-------+------------+
+| Locked   |  0    | 0.00%      |
+| Placed   |  0    | 0.00%      |
+| UnPlaced |  5    | 100.00%    |
++----------+-------+------------+
+
+Nets assigned to chip global resources
++--------+---------+-----------------------------------------------------+
+| Fanout | Type    | Name                                                |
++--------+---------+-----------------------------------------------------+
+| 3179   | INT_NET | Net   : FCCC_C0_0_GL0                               |
+|        |         | Driver: FCCC_C0_0/FCCC_C0_0/GL0_INST/U0_RGB1        |
+|        |         | Source: NETLIST                                     |
+| 2399   | INT_NET | Net   : Rattlesnake_0/reset_n_i_1_i_i_i             |
+|        |         | Driver: Rattlesnake_0/un1_reset_n_i_RNIB6E5/U0_RGB1 |
+|        |         | Source: NETLIST                                     |
+| 527    | INT_NET | Net   : Rattlesnake_0/NN_2                          |
+|        |         | Driver: Rattlesnake_0/reset_n_RNIGUS4/U0_RGB1       |
+|        |         | Source: NETLIST                                     |
++--------+---------+-----------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                                                                                                 |
++--------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 193    | INT_NET | Net   : Rattlesnake_0/N_54_i_1                                                                                                                                                       |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_proc.un1_exception_alignment_7_0_o2_2_1_RNI03N41                       |
+| 149    | INT_NET | Net   : Rattlesnake_0/rs2[1]                                                                                                                                                         |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.IR_out[21]                                                            |
+| 149    | INT_NET | Net   : Rattlesnake_0/reply_enable                                                                                                                                                   |
+|        |         | Driver: Rattlesnake_0/ocd_i.debug_coprocessor_i.reply_enable_out                                                                                                                     |
+| 139    | INT_NET | Net   : Rattlesnake_0/current_state_3[2]                                                                                                                                             |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.long_slow_div_denom_reg_i.current_state[2]          |
+| 130    | INT_NET | Net   : Rattlesnake_0/N_555_i                                                                                                                                                        |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.long_slow_div_denom_reg_i.current_state_RNIS8FF1[3] |
+| 115    | INT_NET | Net   : Rattlesnake_0/activate_exception                                                                                                                                             |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[12]                                                            |
+| 99     | INT_NET | Net   : Rattlesnake_0/decode_IR_out[31]                                                                                                                                              |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.IR_out[31]                                                           |
+| 97     | INT_NET | Net   : Rattlesnake_0/read_rs1_data_out_1_Z                                                                                                                                          |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.read_rs1_data_out_1                                                            |
+| 91     | INT_NET | Net   : Rattlesnake_0/N_67_i                                                                                                                                                         |
+|        |         | Driver: Rattlesnake_0/ocd_i.debug_reply_i.ctl_inc_data_counter_i_o4                                                                                                                  |
+| 88     | INT_NET | Net   : Rattlesnake_0/un1_ctl_reset_data_counter4_2                                                                                                                                  |
+|        |         | Driver: Rattlesnake_0/ocd_i.debug_reply_i.un1_ctl_reset_data_counter4_2_0                                                                                                            |
++--------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                                                                                                 |
++--------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 193    | INT_NET | Net   : Rattlesnake_0/N_54_i_1                                                                                                                                                       |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.fetch_proc.un1_exception_alignment_7_0_o2_2_1_RNI03N41                       |
+| 149    | INT_NET | Net   : Rattlesnake_0/rs2[1]                                                                                                                                                         |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_fetch_instruction_i.IR_out[21]                                                            |
+| 149    | INT_NET | Net   : Rattlesnake_0/reply_enable                                                                                                                                                   |
+|        |         | Driver: Rattlesnake_0/ocd_i.debug_coprocessor_i.reply_enable_out                                                                                                                     |
+| 139    | INT_NET | Net   : Rattlesnake_0/current_state_3[2]                                                                                                                                             |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.long_slow_div_denom_reg_i.current_state[2]          |
+| 130    | INT_NET | Net   : Rattlesnake_0/N_555_i                                                                                                                                                        |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_execution_unit_i.genblk1.mul_div_32_i.long_slow_div_denom_reg_i.current_state_RNIS8FF1[3] |
+| 115    | INT_NET | Net   : Rattlesnake_0/activate_exception                                                                                                                                             |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_controller_i.current_state[12]                                                            |
+| 99     | INT_NET | Net   : Rattlesnake_0/decode_IR_out[31]                                                                                                                                              |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.IR_out[31]                                                           |
+| 97     | INT_NET | Net   : Rattlesnake_0/read_rs1_data_out_1_Z                                                                                                                                          |
+|        |         | Driver: Rattlesnake_0/PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_reg_file_i.read_rs1_data_out_1                                                            |
+| 91     | INT_NET | Net   : Rattlesnake_0/N_67_i                                                                                                                                                         |
+|        |         | Driver: Rattlesnake_0/ocd_i.debug_reply_i.ctl_inc_data_counter_i_o4                                                                                                                  |
+| 88     | INT_NET | Net   : Rattlesnake_0/un1_ctl_reset_data_counter4_2                                                                                                                                  |
+|        |         | Driver: Rattlesnake_0/ocd_i.debug_reply_i.un1_ctl_reset_data_counter4_2_0                                                                                                            |
++--------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+

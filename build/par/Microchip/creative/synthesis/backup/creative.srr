@@ -1,0 +1,814 @@
+#Build: Synplify Pro (R) N-2018.03M-SP1-1, Build 209R, Oct 23 2018
+#install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+#OS: Windows 8 6.2
+#Hostname: THINK
+
+# Sun Aug 25 23:45:45 2019
+
+#Implementation: synthesis
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+Synopsys HDL Compiler, Version comp2018q2p1, Build 223R, Built Oct 23 2018 09:18:38
+
+@N|Running in 64-bit mode
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+Synopsys Verilog Compiler, Version comp2018q2p1, Build 223R, Built Oct 23 2018 09:18:38
+
+@N|Running in 64-bit mode
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v" (library work)
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v" (library work)
+@I::"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v" (library work)
+@I::"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm" (library work)
+@I::"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v" (library work)
+Verilog syntax check successful!
+Options changed - recompiling
+Selecting top level module creative
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":376:7:376:9|Synthesizing module VCC in library work.
+Running optimization stage 1 on VCC .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":372:7:372:9|Synthesizing module GND in library work.
+Running optimization stage 1 on GND .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":362:7:362:12|Synthesizing module CLKINT in library work.
+Running optimization stage 1 on CLKINT .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":727:7:727:9|Synthesizing module CCC in library work.
+Running optimization stage 1 on CCC .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":268:7:268:11|Synthesizing module INBUF in library work.
+Running optimization stage 1 on INBUF .......
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v":5:7:5:28|Synthesizing module FCCC_C0_FCCC_C0_0_FCCC in library work.
+Running optimization stage 1 on FCCC_C0_FCCC_C0_0_FCCC .......
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v":9:7:9:13|Synthesizing module FCCC_C0 in library work.
+Running optimization stage 1 on FCCC_C0 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":567:7:567:10|Synthesizing module MACC in library work.
+Running optimization stage 1 on MACC .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":104:7:104:10|Synthesizing module CFG2 in library work.
+Running optimization stage 1 on CFG2 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":90:7:90:10|Synthesizing module CFG4 in library work.
+Running optimization stage 1 on CFG4 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":97:7:97:10|Synthesizing module CFG3 in library work.
+Running optimization stage 1 on CFG3 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":84:7:84:10|Synthesizing module ARI1 in library work.
+Running optimization stage 1 on ARI1 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":382:7:382:13|Synthesizing module RAM1K18 in library work.
+Running optimization stage 1 on RAM1K18 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":455:7:455:14|Synthesizing module RAM64x18 in library work.
+Running optimization stage 1 on RAM64x18 .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":4:7:4:9|Synthesizing module SLE in library work.
+Running optimization stage 1 on SLE .......
+@N: CG364 :"C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v":111:7:111:10|Synthesizing module CFG1 in library work.
+Running optimization stage 1 on CFG1 .......
+@N: CG364 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":54:7:54:17|Synthesizing module Rattlesnake in library work.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":537:5:537:34|Removing wire ocd_i.debug_coprocessor_i.N_1, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":538:5:538:34|Removing wire ocd_i.debug_coprocessor_i.N_2, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":539:5:539:34|Removing wire ocd_i.debug_coprocessor_i.N_3, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":540:5:540:34|Removing wire ocd_i.debug_coprocessor_i.N_4, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":541:5:541:34|Removing wire ocd_i.debug_coprocessor_i.N_5, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":542:5:542:34|Removing wire ocd_i.debug_coprocessor_i.N_6, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":543:5:543:34|Removing wire ocd_i.debug_coprocessor_i.N_7, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":544:5:544:34|Removing wire ocd_i.debug_coprocessor_i.N_8, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":545:5:545:34|Removing wire ocd_i.debug_coprocessor_i.N_9, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":546:5:546:35|Removing wire ocd_i.debug_coprocessor_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":547:5:547:35|Removing wire ocd_i.debug_coprocessor_i.N_11, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":548:5:548:35|Removing wire ocd_i.debug_coprocessor_i.N_12, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":549:5:549:35|Removing wire ocd_i.debug_coprocessor_i.N_13, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":550:5:550:35|Removing wire ocd_i.debug_coprocessor_i.N_14, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":551:5:551:35|Removing wire ocd_i.debug_coprocessor_i.N_15, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":552:5:552:35|Removing wire ocd_i.debug_coprocessor_i.N_16, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":553:5:553:36|Removing wire ocd_i.debug_coprocessor_i.N_389, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":554:5:554:36|Removing wire ocd_i.debug_coprocessor_i.N_390, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":555:5:555:36|Removing wire ocd_i.debug_coprocessor_i.N_391, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":556:5:556:36|Removing wire ocd_i.debug_coprocessor_i.N_392, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":557:5:557:36|Removing wire ocd_i.debug_coprocessor_i.N_393, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":558:5:558:36|Removing wire ocd_i.debug_coprocessor_i.N_394, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":559:5:559:36|Removing wire ocd_i.debug_coprocessor_i.N_395, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":560:5:560:36|Removing wire ocd_i.debug_coprocessor_i.N_396, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":561:5:561:36|Removing wire ocd_i.debug_coprocessor_i.N_397, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":562:5:562:36|Removing wire ocd_i.debug_coprocessor_i.N_398, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":563:5:563:36|Removing wire ocd_i.debug_coprocessor_i.N_399, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":564:5:564:36|Removing wire ocd_i.debug_coprocessor_i.N_400, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":565:5:565:36|Removing wire ocd_i.debug_coprocessor_i.N_401, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":566:5:566:36|Removing wire ocd_i.debug_coprocessor_i.N_402, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":567:5:567:36|Removing wire ocd_i.debug_coprocessor_i.N_403, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":572:5:572:28|Removing wire ocd_i.debug_reply_i.N_5, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":573:5:573:28|Removing wire ocd_i.debug_reply_i.N_6, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":574:5:574:28|Removing wire ocd_i.debug_reply_i.N_7, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":575:5:575:28|Removing wire ocd_i.debug_reply_i.N_8, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":576:5:576:28|Removing wire ocd_i.debug_reply_i.N_9, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":577:5:577:29|Removing wire ocd_i.debug_reply_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":582:5:582:27|Removing wire ocd_i.debug_UART_i.N_5, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":583:5:583:27|Removing wire ocd_i.debug_UART_i.N_6, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":584:5:584:27|Removing wire ocd_i.debug_UART_i.N_7, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":594:5:594:34|Removing wire ocd_i.debug_UART_i.UART_i.N_8, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":595:5:595:34|Removing wire ocd_i.debug_UART_i.UART_i.N_9, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":596:5:596:35|Removing wire ocd_i.debug_UART_i.UART_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":597:5:597:35|Removing wire ocd_i.debug_UART_i.UART_i.N_11, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":598:5:598:35|Removing wire ocd_i.debug_UART_i.UART_i.N_12, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":599:5:599:35|Removing wire ocd_i.debug_UART_i.UART_i.N_13, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":600:5:600:35|Removing wire ocd_i.debug_UART_i.UART_i.N_14, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":601:5:601:35|Removing wire ocd_i.debug_UART_i.UART_i.N_15, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":617:5:617:68|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.N_3, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":663:5:663:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_6, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":664:5:664:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_7, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":665:5:665:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_8, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":666:5:666:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_9, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":667:5:667:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":668:5:668:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_11, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":669:5:669:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_12, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":670:5:670:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_13, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":671:5:671:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_14, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":672:5:672:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_15, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":673:5:673:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_16, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":674:5:674:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_17, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":675:5:675:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_18, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":676:5:676:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_19, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":677:5:677:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_20, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":678:5:678:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_21, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":679:5:679:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_22, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":680:5:680:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_23, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":681:5:681:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_24, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":682:5:682:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_25, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":683:5:683:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_26, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":684:5:684:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_27, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":685:5:685:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_28, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":686:5:686:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_29, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":687:5:687:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_30, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":688:5:688:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_31, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":689:5:689:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_32, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":690:5:690:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_33, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":691:5:691:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_34, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":692:5:692:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_35, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":693:5:693:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_36, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":694:5:694:99|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_instruction_decode_i.N_37, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":695:5:695:86|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_memory_i.N_2, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":698:5:698:38|Removing wire PulseRain_Rattlesnake_MCU_i.N_366, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":699:5:699:38|Removing wire PulseRain_Rattlesnake_MCU_i.N_367, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":701:5:701:79|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.UART_TX_i.N_10, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":702:5:702:79|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.UART_TX_i.N_12, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":703:5:703:79|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.UART_TX_i.N_13, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":704:5:704:79|Removing wire PulseRain_Rattlesnake_MCU_i.gen_peripheral[0].peripherals_i.UART_TX_i.N_14, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":712:5:712:104|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_84, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":713:5:713:104|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_85, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":714:5:714:104|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_86, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":715:5:715:104|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_87, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":716:5:716:104|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_88, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":717:5:717:104|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_89, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":719:5:719:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_204, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":720:5:720:105|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_indirect_pointer_detect_i.N_205, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":779:5:779:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.N_2, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":780:5:780:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.N_3, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":781:5:781:98|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_block_write_detect_i.N_4, as there is no assignment to it.
+@W: CG360 :"C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm":790:5:790:91|Removing wire PulseRain_Rattlesnake_MCU_i.PulseRain_Rattlesnake_core_i.Rattlesnake_data_access_i.N_2, as there is no assignment to it.
+
+Only the first 100 messages of id 'CG360' are reported. To see all messages use 'report_messages -log C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synlog\creative_compiler.srr -id CG360' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {CG360} -count unlimited' in the Tcl shell.
+Running optimization stage 1 on Rattlesnake .......
+@N: CG364 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v":9:7:9:14|Synthesizing module creative in library work.
+Running optimization stage 1 on creative .......
+Running optimization stage 2 on creative .......
+Running optimization stage 2 on Rattlesnake .......
+Running optimization stage 2 on CFG1 .......
+Running optimization stage 2 on SLE .......
+Running optimization stage 2 on RAM64x18 .......
+Running optimization stage 2 on RAM1K18 .......
+Running optimization stage 2 on ARI1 .......
+Running optimization stage 2 on CFG3 .......
+Running optimization stage 2 on CFG4 .......
+Running optimization stage 2 on CFG2 .......
+Running optimization stage 2 on MACC .......
+Running optimization stage 2 on FCCC_C0 .......
+Running optimization stage 2 on FCCC_C0_FCCC_C0_0_FCCC .......
+Running optimization stage 2 on INBUF .......
+Running optimization stage 2 on CCC .......
+Running optimization stage 2 on CLKINT .......
+Running optimization stage 2 on GND .......
+Running optimization stage 2 on VCC .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 126MB peak: 131MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Aug 25 23:45:47 2019
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 223R, Built Oct 23 2018 09:18:38
+
+@N|Running in 64-bit mode
+File C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\layer0.srs changed - recompiling
+@N: NF107 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v":9:7:9:14|Selected library: work cell: creative view verilog as top level
+@N: NF107 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v":9:7:9:14|Selected library: work cell: creative view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 81MB peak: 82MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Aug 25 23:45:48 2019
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+
+Process completed successfully.
+# Sun Aug 25 23:45:48 2019
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Database state : C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\|synthesis
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 223R, Built Oct 23 2018 09:18:38
+
+@N|Running in 64-bit mode
+@N: NF107 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v":9:7:9:14|Selected library: work cell: creative view verilog as top level
+@N: NF107 :"C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v":9:7:9:14|Selected library: work cell: creative view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 81MB peak: 82MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Aug 25 23:45:50 2019
+
+###########################################################]
+Premap Report
+
+# Sun Aug 25 23:45:50 2019
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+Synopsys Generic Technology Pre-mapping, Version mapact, Build 2461R, Built Nov 29 2018 09:35:20
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+Reading constraint file: C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\synthesis.fdc
+@N: MF284 |Setting synthesis effort to medium for the design
+@L: C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative_scck.rpt 
+Printing clock  summary report in "C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative_scck.rpt" file 
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 116MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 117MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+syn_allowed_resources : blockrams=31  set on top level netlist creative
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 151MB peak: 154MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                             Requested     Requested     Clock        Clock                   Clock
+Level     Clock                                             Frequency     Period        Type         Group                   Load 
+----------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                            100.0 MHz     10.000        system       system_clkgroup         0    
+                                                                                                                                  
+0 -       FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     3330 
+==================================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                                  Clock     Source                                    Clock Pin                                                                                                                                             Non-clock Pin     Non-clock Pin                    
+Clock                                             Load      Pin                                       Seq Example                                                                                                                                           Seq Example       Comb Example                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                            0         -                                         -                                                                                                                                                     -                 -                                
+                                                                                                                                                                                                                                                                                                               
+FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     3330      FCCC_C0_0.FCCC_C0_0.CCC_INST.GL0(CCC)     Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.genblk1\.mul_div_32_i\.WideMult_0_0.CLK[1]     -                 Rattlesnake_0.clk_RNIQRC3.I(BUFG)
+===============================================================================================================================================================================================================================================================================================================
+
+@W: MT530 :"c:\github\rattlesnake\build\synth\microchip\igloo2\rattlesnake.vm":92596:6:92596:132|Found inferred clock FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock which controls 3330 sequential elements including Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_mm_reg_i\.Rattlesnake_machine_timer_i\.genblk2\.mtimecmp\[49\]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 152MB peak: 154MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 152MB peak: 154MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 153MB peak: 156MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 68MB peak: 156MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
+# Sun Aug 25 23:45:52 2019
+
+###########################################################]
+Map & Optimize Report
+
+# Sun Aug 25 23:45:52 2019
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v12.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: THINK
+
+Implementation : synthesis
+Synopsys Generic Technology Mapper, Version mapact, Build 2461R, Built Nov 29 2018 09:35:20
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 101MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 146MB peak: 148MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 152MB peak: 165MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 152MB peak: 165MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 152MB peak: 165MB)
+
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 152MB peak: 165MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 152MB peak: 165MB)
+
+@W: FX739 :"c:\github\rattlesnake\build\synth\microchip\igloo2\rattlesnake.vm":92858:9:92858:19|Removed BUFG instance Rattlesnake_0.clk_RNIQRC3 because it is cascaded to another clock buffer (FCCC_C0_0.FCCC_C0_0.GL0_INST).
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 153MB peak: 165MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 154MB peak: 165MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 154MB peak: 165MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 153MB peak: 165MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 154MB peak: 165MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 152MB peak: 165MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:05s		     1.05ns		3413 /      3288
+   2		0h:00m:05s		     1.05ns		3413 /      3288
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 152MB peak: 165MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 154MB peak: 165MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 3330 clock pin(s) of sequential element(s)
+0 instances converted, 3330 sequential instances remain driven by gated/generated clocks
+
+================================================================================================================================================ Gated/Generated Clocks ================================================================================================================================================
+Clock Tree ID     Driving Element                  Drive Element Type     Fanout     Sample Instance                                                                                                      Explanation                                                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       FCCC_C0_0.FCCC_C0_0.CCC_INST     CCC                    3330       Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.Y_31_rep1     Illegal instance on clock path. See the Gated Clocks description in the user guide for conversion requirements
+========================================================================================================================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 113MB peak: 165MB)
+
+Writing Analyst data base C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\creative_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 157MB peak: 165MB)
+
+Writing Verilog Simulation files
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 154MB peak: 165MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 153MB peak: 165MB)
+
+@W: MT246 :"c:\github\rattlesnake\build\par\microchip\creative\component\work\fccc_c0\fccc_c0_0\fccc_c0_fccc_c0_0_fccc.v":20:36:20:43|Blackbox CCC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock with period 10.00ns. Please declare a user-defined clock on net FCCC_C0_0.FCCC_C0_0.GL0_net.
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Sun Aug 25 23:46:02 2019
+#
+
+
+Top view:               creative
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 1.717
+
+                                                  Requested     Estimated     Requested     Estimated               Clock        Clock              
+Starting Clock                                    Frequency     Frequency     Period        Period        Slack     Type         Group              
+----------------------------------------------------------------------------------------------------------------------------------------------------
+FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     100.0 MHz     120.7 MHz     10.000        8.283         1.717     inferred     Inferred_clkgroup_0
+System                                            100.0 MHz     259.9 MHz     10.000        3.847         6.153     system       system_clkgroup    
+====================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                        |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                       Ending                                         |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                         FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock  |  10.000      6.153  |  No paths    -      |  No paths    -      |  No paths    -    
+FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock  FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock  |  10.000      1.717  |  No paths    -      |  No paths    -      |  No paths    -    
+====================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                                             Starting                                                                                                  Arrival          
+Instance                                                                                                                     Reference                                         Type     Pin     Net                                    Time        Slack
+                                                                                                                             Clock                                                                                                                      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.IR_out\[3\]       FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       decode_IR_out[3]                       0.108       1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.IR_out\[2\]       FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       decode_IR_out[2]                       0.108       1.766
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.IR_out_0\[1\]         FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       exe_width_load_store[0]                0.108       1.924
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.IR_out_0\[3\]         FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       exe_width_load_store[2]                0.108       1.953
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.IR_out_0\[2\]         FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       exe_width_load_store[1]                0.087       2.203
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.reg_ctl_AUIPC         FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       reg_ctl_AUIPC_Z                        0.108       2.206
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.compressed_instruction_detected                     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       compressed_instruction_detected_Z      0.108       2.211
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_indirect_pointer_detect_i\.X_ret_15     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       reg_file_read_rs1_data_out_reto[0]     0.108       2.226
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.reg_ctl_LUI           FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       reg_ctl_LUI_Z                          0.108       2.230
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_indirect_pointer_detect_i\.X_ret_14     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      Q       reg_file_read_rs1_data_out_reto[1]     0.108       2.243
+========================================================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                                              Starting                                                                                                     Required          
+Instance                                                                                                      Reference                                         Type     Pin     Net                                       Time         Slack
+                                                                                                              Clock                                                                                                                          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[0\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[1\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[2\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[3\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[4\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[5\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[6\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[7\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[8\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[9\]     FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock     SLE      EN      exception_storage_page_fault_2_sqmuxa     9.662        1.717
+=============================================================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.338
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.662
+
+    - Propagation time:                      7.945
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     1.717
+
+    Number of logic level(s):                6
+    Starting point:                          Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.IR_out\[3\] / Q
+    Ending point:                            Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[0\] / EN
+    The start point is clocked by            FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                                                                                          Pin      Pin               Arrival     No. of    
+Name                                                                                                                           Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.IR_out\[3\]         SLE      Q        Out     0.108     0.108       -         
+decode_IR_out[3]                                                                                                               Net      -        -       0.977     -           8         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.ctl_LOAD_1_0_a2     CFG2     B        In      -         1.085       -         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.ctl_LOAD_1_0_a2     CFG2     Y        Out     0.148     1.234       -         
+decode_ctl_LOAD_1                                                                                                              Net      -        -       0.815     -           4         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.ctl_SYSTEM          CFG4     C        In      -         2.048       -         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.ctl_SYSTEM          CFG4     Y        Out     0.203     2.251       -         
+decode_ctl_SYSTEM                                                                                                              Net      -        -       0.855     -           5         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.ctl_CSR_1           CFG4     D        In      -         3.106       -         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_instruction_decode_i\.ctl_CSR_1           CFG4     Y        Out     0.271     3.378       -         
+decode_ctl_CSR                                                                                                                 Net      -        -       0.855     -           5         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.m41_0                              CFG3     A        In      -         4.233       -         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.m41_0                              CFG3     Y        Out     0.100     4.333       -         
+m41_0_Z                                                                                                                        Net      -        -       0.745     -           3         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.m41                                CFG4     D        In      -         5.079       -         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.m41                                CFG4     Y        Out     0.288     5.366       -         
+N_79_mux                                                                                                                       Net      -        -       0.936     -           7         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.m63                                CFG4     D        In      -         6.302       -         
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.m63                                CFG4     Y        Out     0.288     6.590       -         
+exception_storage_page_fault_2_sqmuxa                                                                                          Net      -        -       1.355     -           32        
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_CSR_i\.mscratch\[0\]                      SLE      EN       In      -         7.945       -         
+=========================================================================================================================================================================================
+Total path delay (propagation time + setup) of 8.283 is 1.745(21.1%) logic and 6.538(78.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                 Starting                                           Arrival          
+Instance                         Reference     Type     Pin      Net                Time        Slack
+                                 Clock                                                               
+-----------------------------------------------------------------------------------------------------
+FCCC_C0_0.FCCC_C0_0.CCC_INST     System        CCC      LOCK     FCCC_C0_0_LOCK     0.000       6.153
+=====================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                                                                  Starting                                         Required          
+Instance                                                                                                                          Reference     Type     Pin     Net               Time         Slack
+                                                                                                                                  Clock                                                              
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.reg_ctl_MUL_DIV_FUNCT3     System        SLE      EN      reset_n_i_1_i     9.662        6.153
+=====================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.338
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.662
+
+    - Propagation time:                      3.510
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 6.153
+
+    Number of logic level(s):                2
+    Starting point:                          FCCC_C0_0.FCCC_C0_0.CCC_INST / LOCK
+    Ending point:                            Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.reg_ctl_MUL_DIV_FUNCT3 / EN
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            FCCC_C0_FCCC_C0_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                                                                                               Pin      Pin               Arrival     No. of    
+Name                                                                                                                              Type       Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FCCC_C0_0.FCCC_C0_0.CCC_INST                                                                                                      CCC        LOCK     Out     0.000     0.000       -         
+FCCC_C0_0_LOCK                                                                                                                    Net        -        -       1.117     -           1         
+Rattlesnake_0.reset_n_RNIGUS4                                                                                                     CLKINT     A        In      -         1.117       -         
+Rattlesnake_0.reset_n_RNIGUS4                                                                                                     CLKINT     Y        Out     0.375     1.492       -         
+NN_2                                                                                                                              Net        -        -       0.497     -           496       
+Rattlesnake_0.un1_reset_n                                                                                                         CFG2       B        In      -         1.989       -         
+Rattlesnake_0.un1_reset_n                                                                                                         CFG2       Y        Out     0.164     2.154       -         
+reset_n_i_1_i                                                                                                                     Net        -        -       1.356     -           17        
+Rattlesnake_0.PulseRain_Rattlesnake_MCU_i\.PulseRain_Rattlesnake_core_i\.Rattlesnake_execution_unit_i\.reg_ctl_MUL_DIV_FUNCT3     SLE        EN       In      -         3.510       -         
+==============================================================================================================================================================================================
+Total path delay (propagation time + setup) of 3.847 is 0.877(22.8%) logic and 2.970(77.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 154MB peak: 165MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 154MB peak: 165MB)
+
+---------------------------------------
+Resource Usage Report for creative 
+
+Mapping to part: m2gl025vf256std
+Cell usage:
+CCC             1 use
+CLKINT          3 uses
+CFG1           19 uses
+CFG2           380 uses
+CFG3           1378 uses
+CFG4           1636 uses
+
+Carry cells:
+ARI1            1376 uses - used for arithmetic functions
+
+
+Sequential Cells: 
+SLE            3288 uses
+
+DSP Blocks:    4 of 34 (11%)
+ MACC:         4 Mults
+
+I/O ports: 5
+I/O primitives: 5
+INBUF          2 uses
+OUTBUF         3 uses
+
+
+Global Clock Buffers: 3
+
+RAM/ROM usage summary
+Total Block RAMs (RAM1K18) : 28 of 31 (90%)
+Total Block RAMs (RAM64x18) : 2 of 34 (5%)
+
+Total LUTs:    4789
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18 Interface Logic : SLEs = 72; LUTs = 72;
+RAM1K18  Interface Logic : SLEs = 1008; LUTs = 1008;
+MACC     Interface Logic : SLEs = 144; LUTs = 144;
+
+Total number of SLEs after P&R:  3288 + 72 + 1008 + 144 = 4512;
+Total number of LUTs after P&R:  4789 + 72 + 1008 + 144 = 6013;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 35MB peak: 165MB)
+
+Process took 0h:00m:10s realtime, 0h:00m:09s cputime
+# Sun Aug 25 23:46:03 2019
+
+###########################################################]

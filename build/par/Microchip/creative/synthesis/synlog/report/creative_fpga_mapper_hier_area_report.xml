@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+The file contains the information about resource utilization per module to be displayed in the summary report.
+*******************************************************************************************-->
+<modules>
+<column_headers>
+<data>Module name</data>
+<data>SLE</data>
+<data>CFG</data>
+<data>ARI1</data>
+<data>BUFFER</data>
+<data>MACC</data>
+<data>RAM1K18</data>
+<data>RAM64X18</data>
+<data>GLOBAL</data>
+<data>IO</data>
+</column_headers>
+<module>
+<data>creative</data>
+<data>3129</data>
+<data>3373</data>
+<data>1310</data>
+<data>0</data>
+<data>4</data>
+<data>28</data>
+<data>2</data>
+<data>3</data>
+<data>5</data>
+<module>
+<data>FCCC_C0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>1</data>
+<data>1</data>
+<module>
+<data>FCCC_C0_FCCC_C0_0_FCCC</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>0</data>
+<data>1</data>
+<data>1</data>
+</module>
+</module>
+<module>
+<data>Rattlesnake</data>
+<data>3129</data>
+<data>3373</data>
+<data>1310</data>
+<data>0</data>
+<data>4</data>
+<data>28</data>
+<data>2</data>
+<data>2</data>
+<data>0</data>
+</module>
+</module>
+</modules>
