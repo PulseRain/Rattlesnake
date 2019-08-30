@@ -4,14 +4,14 @@ PPD file 'c:\temp\flash\Rattlesnake_flashpro_express\creative.ppd' has been load
 DESIGN : creative;  CHECKSUM : 78AD;  PDB_VERSION : 1.0
 Embedded FlashPro5 programmer detected.
 programmer 'E20047SLSG' : FlashPro5
-Opened 'C:\temp\flash\Rattlesnake_flashpro_express\Rattlesnake_flashpro_express.pro'
+Opened 'C:\GitHub\Rattlesnake\bitstream_and_binary\creative\Rattlesnake_flashpro_express\Rattlesnake_flashpro_express.pro'
 programmer 'E20047SLSG' : Scan Chain...
 programmer 'E20047SLSG' : Check Chain...
 programmer 'E20047SLSG' : Scan and Check Chain PASSED.
 programmer 'E20047SLSG' : device 'M2GL025' : Executing action PROGRAM
 programmer 'E20047SLSG' : device 'M2GL025' : Family: Igloo2
 programmer 'E20047SLSG' : device 'M2GL025' : Product:      M2GL005
-programmer 'E20047SLSG' : device 'M2GL025' : EXPORT ISC_ENABLE_RESULT[32] = 00806b44
+programmer 'E20047SLSG' : device 'M2GL025' : EXPORT ISC_ENABLE_RESULT[32] = 00806944
 programmer 'E20047SLSG' : device 'M2GL025' : EXPORT CRCERR[1] = 0
 programmer 'E20047SLSG' : device 'M2GL025' : EXPORT EDCERR[1] = 0
 programmer 'E20047SLSG' : device 'M2GL025' : Programming FPGA Array...
@@ -19,10 +19,10 @@ programmer 'E20047SLSG' : device 'M2GL025' : EXPORT Fabric component digest[256]
 programmer 'E20047SLSG' : device 'M2GL025' : ===================================================================================
 programmer 'E20047SLSG' : device 'M2GL025' : EXPORT DSN[128] = 52915f225a671e89e187caf0f7f56d84
 programmer 'E20047SLSG' : device 'M2GL025' : ===================================================================================
-programmer 'E20047SLSG' : device 'M2GL025' : Finished: Thu Aug 29 23:14:00 2019 (Elapsed time 00:00:32)
+programmer 'E20047SLSG' : device 'M2GL025' : Finished: Thu Aug 29 23:30:21 2019 (Elapsed time 00:00:32)
 programmer 'E20047SLSG' : device 'M2GL025' : Executing action PROGRAM PASSED.
 programmer 'E20047SLSG' : Chain programming PASSED.
-Chain Programming Finished: Thu Aug 29 23:14:00 2019 (Elapsed time 00:00:32)
+Chain Programming Finished: Thu Aug 29 23:30:21 2019 (Elapsed time 00:00:32)
 
                         o - o - o - o - o - o
 

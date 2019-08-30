@@ -1,6 +1,6 @@
 <project name="Rattlesnake_flashpro_express" version="1.1">
     <ProjectDirectory>
-        C:\temp\flash\Rattlesnake_flashpro_express
+        C:\GitHub\Rattlesnake\bitstream_and_binary\creative\Rattlesnake_flashpro_express
     </ProjectDirectory>
     <View>
         ChainView
@@ -9,7 +9,7 @@
         
     </LiberoTargetDevice>
     <LogFile>
-        C:\temp\flash\Rattlesnake_flashpro_express\Rattlesnake_flashpro_express.log
+        C:\GitHub\Rattlesnake\bitstream_and_binary\creative\Rattlesnake_flashpro_express\Rattlesnake_flashpro_express.log
     </LogFile>
     <SerializationOption>
         Skip
