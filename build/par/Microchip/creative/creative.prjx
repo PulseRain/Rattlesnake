@@ -31,7 +31,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
 KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
 KEY VendorTechnology_VOLTR "COM"
-KEY ProjectLocation "C:\GitHub\Rattlesnake\build\par\Microchip\3b0c7d0e-627b-4430-b0fc-190cdd3659c5.tmp\creative"
+KEY ProjectLocation "C:\GitHub\Rattlesnake\build\par\Microchip\creative"
 KEY ProjectDescription "Porting PulseRain Rattlesnake (RISC-V RV32IMC soft core)  to Future Electronics Creative Board (IGLOO2)"
 KEY Pa4PeripheralNewSeq "GOOD"
 KEY SimulationType "VERILOG"
@@ -50,7 +50,7 @@ PARENT="<project>\component\work\FCCC_C0\FCCC_C0.cxf"
 ENDFILE
 VALUE "<project>\component\work\creative\creative.cxf,actgen_cxf"
 STATE="utd"
-TIME="1567137813"
+TIME="1567137812"
 SIZE="2216"
 ENDFILE
 VALUE "<project>\component\work\creative\creative.v,hdl"
@@ -87,23 +87,23 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\designer\impl1\creative.ide_des,ide_des"
 STATE="utd"
-TIME="1566802005"
+TIME="1566802004"
 SIZE="488"
 ENDFILE
 VALUE "<project>\synthesis\creative.so,so"
 STATE="utd"
-TIME="1567141777"
+TIME="1567141776"
 SIZE="241"
 ENDFILE
 VALUE "<project>\synthesis\creative.vm,syn_vm"
 STATE="utd"
-TIME="1567141775"
+TIME="1567141774"
 SIZE="2864464"
 ENDFILE
 VALUE "<project>\synthesis\creative_syn.prj,prj"
 STATE="utd"
-TIME="1567141777"
-SIZE="2382"
+TIME="1567144548"
+SIZE="2587"
 ENDFILE
 VALUE "<project>\synthesis\creative_vm.sdc,syn_sdc"
 STATE="utd"
@@ -112,7 +112,7 @@ SIZE="1126"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer0.so,so"
 STATE="utd"
-TIME="1567132843"
+TIME="1567132842"
 SIZE="159"
 ENDFILE
 VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.pdc,io_pdc"
@@ -264,12 +264,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Export Bitstream:creative_exportBitstream.log
 StartPage;StartPage;0
-SmartDesign;creative;0
-Constraint Manager;Constraint Manager;0
-ACTIVEVIEW;Reports
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "creative::work","component\work\creative\creative.v","TRUE","FALSE"

@@ -1,15 +1,15 @@
 #--  Synopsys, Inc.
 #--  Version N-2018.03M-SP1-1
-#--  Project file C:\GitHub\Rattlesnake\build\par\Microchip\3b0c7d0e-627b-4430-b0fc-190cdd3659c5.tmp\creative\synthesis\creative_syn.prj
+#--  Project file C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative_syn.prj
 #--  Written on Thu Aug 29 22:09:37 2019
 
 
 #project files
-add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/3b0c7d0e-627b-4430-b0fc-190cdd3659c5.tmp/creative/component/work/FCCC_C0/FCCC_C0_0/FCCC_C0_FCCC_C0_0_FCCC.v"
-add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/3b0c7d0e-627b-4430-b0fc-190cdd3659c5.tmp/creative/component/work/FCCC_C0/FCCC_C0.v"
+add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/FCCC_C0/FCCC_C0_0/FCCC_C0_FCCC_C0_0_FCCC.v"
+add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/FCCC_C0/FCCC_C0.v"
 add_file -verilog "C:/GitHub/Rattlesnake/build/synth/Microchip/IGLOO2/Rattlesnake.vm"
-add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/3b0c7d0e-627b-4430-b0fc-190cdd3659c5.tmp/creative/component/work/creative/creative.v"
-add_file -fpga_constraint "C:/GitHub/Rattlesnake/build/par/Microchip/3b0c7d0e-627b-4430-b0fc-190cdd3659c5.tmp/creative/designer/creative/synthesis.fdc"
+add_file -verilog "C:/GitHub/Rattlesnake/build/par/Microchip/creative/component/work/creative/creative.v"
+add_file -fpga_constraint "C:/GitHub/Rattlesnake/build/par/Microchip/creative/designer/creative/synthesis.fdc"
 
 
 

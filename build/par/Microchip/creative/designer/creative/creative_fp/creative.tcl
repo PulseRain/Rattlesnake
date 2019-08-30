@@ -9,25 +9,9 @@ if { [catch {load_programming_data \
     save_project
     close_project
     exit }
-if { [catch {export_single_stapl \
-    -name {M2GL025} \
-    -file {C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\export\creative.stp} \
-    -secured} return_val ] } {
-    save_project
-    close_project
-    exit}
-
 if { [catch {export_single_ppd \
     -name {M2GL025} \
-    -file {C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\export\creative.ppd}} return_val ] } {
-    save_project
-    close_project
-    exit}
-
-if { [catch {export_single_dat \
-    -name {M2GL025} \
-    -file {C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\export\creative.dat} \
-    -secured} return_val ] } {
+    -file {C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\export/tempExport\creative.ppd}} return_val ] } {
     save_project
     close_project
     exit}
