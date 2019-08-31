@@ -12,7 +12,9 @@
 
 
 ## 1. Overview <a name="overview"></a>
-overview 
+PulseRain Rattlesnake is a RISC-V soft CPU with a Security-Hardened processor core. It supports RV32IMC instruction set, and has a Von Neumann architecture. 
+
+![Security-Hardened Processor Core](https://github.com/PulseRain/Rattlesnake/raw/master/docs/rattlesnake_core.png "Security-Hardened Processor Core")
 
 ## 2. Quick Start <a name="quickstart"></a>
 * ### Program the Creative Board
