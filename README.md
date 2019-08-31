@@ -41,6 +41,15 @@ In addition, the PulseRain Rattlesnake has been successfully ported to [**Future
 
 ## 2. Quick Start <a name="quickstart"></a>
 * ### Clone the GitHub Repository
+Assume Windows Platform is used. And assume Cygwin is installed. To clone the GitHub Repository of PulseRain Rattlesnake, do the following in Cygwin:
+
+    git clone https://github.com/PulseRain/Rattlesnake.git
+    cd Rattlesnake
+    git submodule update --init --recursive --progress
+ 
+ And the following is a screen capture for Cygwin on Windows 10
+ ![Clone the GitHub Repository](https://github.com/PulseRain/Rattlesnake/raw/master/docs/github_clone.png "Clone the GitHub Repository")
+ 
 * ### Program the Creative Board
 * ### Running Software on the soft CPU
 
