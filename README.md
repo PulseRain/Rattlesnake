@@ -61,7 +61,9 @@ Click **RUN** to program the Creative Board, as shown below:
 ![Program the Creative Board](https://github.com/PulseRain/Rattlesnake/raw/master/docs/flash_program.png "Program the Creative Board")
 
 * ### Running Software on the soft CPU
-As illustrated below, a python script called rattlesnake_config.py is provided to load software (.elf file) into the soft CPU and execute. At this point, this script is only tested on Windows platform.
+As illustrated below, a python script called rattlesnake_config.py is provided to load software (.elf file) into the soft CPU and execute. At this point, this script has only been tested on Windows platform.
+
+
 ![Rattlesnake Config](https://github.com/PulseRain/Rattlesnake/raw/master/docs/rattlesnake_config.png "Rattlesnake Config")
 
 Before using this script, the following should be done to setup the environment on Windows:
