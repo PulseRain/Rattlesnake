@@ -29,11 +29,13 @@ These security units form two different security strategies:
 
 To verify the effectiveness of the above two strategies, 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)) were used as a bench mark. As the results are as following:
 
+  
 |      | NR1 | NR2 | NR3 | NR4 | NR5 |
 | ---- |:---:|:---:|:---:|:---:|:---:|
 | **ERP**  |  P  |  P  |  **_F_**  |  **_F_**  |  P  |
 | **DAT**  |  P  |  P  |  P  |  P  |  P  |
 
+As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while the DAT strategy can thwart all of them. The details of the DAT strategy will be discussed [at the end of this document](#security).
 
 ## 2. Quick Start <a name="quickstart"></a>
 * ### Program the Creative Board
