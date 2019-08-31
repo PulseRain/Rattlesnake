@@ -119,9 +119,9 @@ The other 4 attacks' output are as following:
 
 &nbsp;
 &nbsp;
+&nbsp;
 
 **_ATTACK_NR3:_**
-
    **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR3\build\zephyr\zephyr.elf**
 
 ![ATTACK_NR3](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR3_output.png "ATTACK_NR3")
@@ -130,9 +130,9 @@ The other 4 attacks' output are as following:
 
 &nbsp;
 &nbsp;
+&nbsp;
 
 **_ATTACK_NR4:_**
-
    **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR4\build\zephyr\zephyr.elf**
 
 ![ATTACK_NR4](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR4_output.png "ATTACK_NR4")
