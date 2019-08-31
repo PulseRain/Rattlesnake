@@ -117,6 +117,8 @@ The other 4 attacks' output are as following:
 ![ATTACK_NR2](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR2_output.png "ATTACK_NR2")
 
 
+&nbsp;
+&nbsp;
 
 **_ATTACK_NR3:_**
 
@@ -125,6 +127,9 @@ The other 4 attacks' output are as following:
 ![ATTACK_NR3](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR3_output.png "ATTACK_NR3")
 
 
+
+&nbsp;
+&nbsp;
 
 **_ATTACK_NR4:_**
 
