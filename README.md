@@ -26,7 +26,7 @@ These security units form two different security strategies:
 *	Execution Region Protection (ERP)
 *	Dirty Address Trace (DAT), with extended memory/register width to store dirty address bit.
 
-To verify the effectiveness of the above two strategies, 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)) are used as a bench mark. And the results are shown as following:
+To verify the effectiveness of the above two strategies, 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)) are used as a bench mark. **_The 5 mock tests are compiled without any change to the compiler_**. And the results are shown as following:
 
   
 |      | NR1 | NR2 | NR3 | NR4 | NR5 |
