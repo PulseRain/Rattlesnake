@@ -31,8 +31,8 @@ To verify the effectiveness of the above two strategies, 5 mock tests from ripe 
   
 |      | NR1 | NR2 | NR3 | NR4 | NR5 |
 | ---- |:---:|:---:|:---:|:---:|:---:|
-| **ERP**  |  Pass  |  Pass  |  **_Fail_**  |  **_Fail_**  |  Pass  |
-| **DAT**  |  Pass  |  Pass  |  Pass  |  Pass  |  Pass  |
+| **ERP**  |  **_Pass_**  |  **_Pass_**  |  Fail  |  Fail  |  **_Pass_**  |
+| **DAT**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |
 
 As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while **the DAT strategy can thwart all of them**. The details of the DAT strategy will be discussed [at the end of this document](#security).
 
