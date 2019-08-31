@@ -108,6 +108,14 @@ And ATTACK_NR1's output is as following:
 
 ![ATTACK_NR1](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR1_output.png "ATTACK_NR1")
 
+The other 4 attacks' output are as following:
+
+**_ATTACK_NR2:_**
+
+   **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR2\build\zephyr\zephyr.elf**
+
+![ATTACK_NR2](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR2_output.png "ATTACK_NR2")
+
 ## 3. Folder Structure of the Repository <a name="folder"></a>
 folder
 
