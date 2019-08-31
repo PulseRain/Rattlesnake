@@ -53,7 +53,7 @@ Assume Windows Platform is used. And assume Cygwin is installed. To clone the Gi
 * ### Program the Creative Board
 On Windows 10, Download and Install [Programming and Debug v12.1 for Windows](http://download-soc.microsemi.com/FPGA/v12.1/prod/Program_Debug_v12.1_win.exe). 
 
-Connect the Creative Board to host PC through USB cable
+Connect the Creative Board to the host PC through USB cable
 
 Launch **FPExpress v12.1**, and open **Rattlesnake\bitstream_and_binary\creative\Rattlesnake_flashpro_express\Rattlesnake_flashpro_express.pro**
 
