@@ -51,7 +51,11 @@ Assume Windows Platform is used. And assume Cygwin is installed. To clone the Gi
  ![Clone the GitHub Repository](https://github.com/PulseRain/Rattlesnake/raw/master/docs/github_clone.png "Clone the GitHub Repository")
  
 * ### Program the Creative Board
-On Windows 10, Download and Install [Programming and Debug v12.1 for Windows](http://download-soc.microsemi.com/FPGA/v12.1/prod/Program_Debug_v12.1_win.exe). Launch **FPExpress v12.1**, and open **Rattlesnake\bitstream_and_binary\creative\Rattlesnake_flashpro_express\Rattlesnake_flashpro_express.pro**
+On Windows 10, Download and Install [Programming and Debug v12.1 for Windows](http://download-soc.microsemi.com/FPGA/v12.1/prod/Program_Debug_v12.1_win.exe). 
+
+Connect the Creative Board to host PC through USB cable
+
+Launch **FPExpress v12.1**, and open **Rattlesnake\bitstream_and_binary\creative\Rattlesnake_flashpro_express\Rattlesnake_flashpro_express.pro**
 
 Click **RUN** to program the Creative Board, as shown below:
 ![Program the Creative Board](https://github.com/PulseRain/Rattlesnake/raw/master/docs/flash_program.png "Program the Creative Board")
@@ -85,9 +89,11 @@ Before using this script, the following should be done to setup the environment 
          C:\Users\XYZ\AppData\Local\Programs\Python\Python37\Scripts
 
 
-  5. open a command prompt (You might need to Run as Administrator), and install the pyserial package for python:
+  5. Open a command prompt (You might need to Run as Administrator), and install the pyserial package for python:
   
      **pip3 install pyserial**
+
+  6. Connect the Creative Board to the host PC
 
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
