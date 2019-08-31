@@ -17,6 +17,22 @@ PulseRain Rattlesnake is a RISC-V soft CPU with a Security-Hardened processor co
 
 ![Security-Hardened Processor Core](https://github.com/PulseRain/Rattlesnake/raw/master/docs/rattlesnake_core.png "Security-Hardened Processor Core")
 
+As shown above, on top of a regular RV32IMC core (2 x 2 pipeline stage), 3 additional security units are added. They are:
+
+*	DATU (Dirty Address Trace Unit)
+*	BRDU (Block Write Detection Unit
+*	ERPU (Execution Region Protection Unit)
+
+These security units form two different security strategies: 
+*	Execution Region Protection (ERP)
+*	Dirty Address Trace (DAT)
+
+To verify the effectiveness of the above two strategies, 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)) were used as a bench mark. As the results are as following:
+
+|      | NR1 | NR2 | NR3 | NR4 | NR5 |
+| ---- |:---:|:---:|:---:|:---:|:---:|
+| **ERP**  |  P  |  P  |  **_F_**  |  **_F_**  |  P  |
+| **DAT**  |  P  |  P  |  P  |  P  |  P  |
 
 
 ## 2. Quick Start <a name="quickstart"></a>
