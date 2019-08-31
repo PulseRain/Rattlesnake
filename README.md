@@ -17,7 +17,7 @@ PulseRain Rattlesnake is a RISC-V soft CPU with a Security-Hardened processor co
 
 ![Security-Hardened Processor Core](https://github.com/PulseRain/Rattlesnake/raw/master/docs/rattlesnake_core.png "Security-Hardened Processor Core")
 
-<p align="center">**Security-Hardened Processor Core**</p>
+
 
 ## 2. Quick Start <a name="quickstart"></a>
 * ### Program the Creative Board
