@@ -38,6 +38,7 @@ To verify the effectiveness of the above two strategies, 5 mock tests from ripe 
 As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while the DAT strategy can thwart all of them. The details of the DAT strategy will be discussed [at the end of this document](#security).
 
 ## 2. Quick Start <a name="quickstart"></a>
+* ### Clone GitHub Repository
 * ### Program the Creative Board
 * ### Running Software on the soft CPU
 
