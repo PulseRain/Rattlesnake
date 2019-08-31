@@ -12,7 +12,7 @@
 
 
 ## 1. Overview <a name="overview"></a>
-PulseRain Rattlesnake is a RISC-V soft CPU with a Security-Hardened processor core. It supports RV32IMC instruction set, and has a Von Neumann architecture. 
+PulseRain Rattlesnake is a RISC-V soft CPU with a Security-Hardened processor core. It supports RV32IMC instruction set, and carries a Von Neumann architecture. 
 
 
 ![Security-Hardened Processor Core](https://github.com/PulseRain/Rattlesnake/raw/master/docs/rattlesnake_core.png "Security-Hardened Processor Core")
@@ -25,9 +25,9 @@ As shown above, on top of a regular RV32IMC core (2 x 2 pipeline stage), 3 addit
 
 These security units form two different security strategies: 
 *	Execution Region Protection (ERP)
-*	Dirty Address Trace (DAT)
+*	Dirty Address Trace (DAT), with extended memory/register width to store dirty address bit.
 
-To verify the effectiveness of the above two strategies, 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)) were used as a bench mark. As the results are as following:
+To verify the effectiveness of the above two strategies, 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)) are used as a bench mark. And the results are shown as following:
 
   
 |      | NR1 | NR2 | NR3 | NR4 | NR5 |
