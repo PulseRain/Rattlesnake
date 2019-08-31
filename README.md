@@ -105,6 +105,9 @@ Before using this script, the following should be done to setup the environment 
     
   ![Load elf file](https://github.com/PulseRain/Rattlesnake/raw/master/docs/run_script.png "Load elf file")
 
+And ATTACK_NR1's output is as following:
+
+![ATTACK_NR1](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR1_output.png "ATTACK_NR1")
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
 folder
