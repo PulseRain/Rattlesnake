@@ -17,11 +17,10 @@ PulseRain Rattlesnake is a RISC-V soft CPU with a Security-Hardened processor co
 
 ![Security-Hardened Processor Core](https://github.com/PulseRain/Rattlesnake/raw/master/docs/rattlesnake_core.png "Security-Hardened Processor Core")
 
-As shown above, on top of a regular RV32IMC core (2 x 2 pipeline stage), 3 additional security units are added. They are:
+As shown above, on top of a regular RV32IMC core (2 x 2 pipeline stage), 2 additional security units are added. They are:
 
-*	DATU (Dirty Address Trace Unit)
-*	BRDU (Block Write Detection Unit
 *	ERPU (Execution Region Protection Unit)
+*	DATU (Dirty Address Trace Unit)
 
 These security units form two different security strategies: 
 *	Execution Region Protection (ERP)
@@ -35,7 +34,7 @@ To verify the effectiveness of the above two strategies, 5 mock tests from ripe 
 | **ERP**  |  Pass  |  Pass  |  **_Fail_**  |  **_Fail_**  |  Pass  |
 | **DAT**  |  Pass  |  Pass  |  Pass  |  Pass  |  Pass  |
 
-As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while the DAT strategy **can thwart all of them**. The details of the DAT strategy will be discussed [at the end of this document](#security).
+As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while the DAT strategy <span style="font-family:Papyrus; font-size:16em;">**can thwart all of them**</span>. The details of the DAT strategy will be discussed [at the end of this document](#security).
 
 In addition, the PulseRain Rattlesnake has been successfully ported to [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), with a clock rate of **_120MHz_** (for STD speed grade device), and a total power of **_199mW_**.
 
