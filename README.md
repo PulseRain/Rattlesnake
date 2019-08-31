@@ -56,9 +56,8 @@ On Windows 10, Download and Install [Programming and Debug v12.1 for Windows](ht
 Click **RUN** to program the Creative Board, as shown below:
 ![Program the Creative Board](https://github.com/PulseRain/Rattlesnake/raw/master/docs/flash_program.png "Program the Creative Board")
 
-
-
 * ### Running Software on the soft CPU
+![Rattlesnake Config](https://github.com/PulseRain/Rattlesnake/raw/master/docs/rattlesnake_core.png "Rattlesnake Config")
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
 folder
