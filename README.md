@@ -95,7 +95,15 @@ Before using this script, the following should be done to setup the environment 
   
      **pip3 install pyserial**
 
-  6. Connect the Creative Board to the host PC
+  6. Make sure the Creative Board is connected to the host PC, and is programmed with the Rattlesnake bitstream.
+  
+  7. Open the Device Manager in Windows to figure out which COM port is assigned to the Creative Board.
+  
+  8. Enter the Rattlesnake\scripts directory. Assume COM7 is used by the  hardware, then the following command can be used to load the ATTACK_NR1
+  
+    **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR1\build\zephyr\zephyr.elf**
+    
+  
 
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
