@@ -146,6 +146,8 @@ The other 4 attacks' output are as following:
 
 ![ATTACK_NR5](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR5_output.png "ATTACK_NR5")
 
+&nbsp;
+The details of the 5 attacks will be discussed [at the end of this document](#security).
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
 folder
