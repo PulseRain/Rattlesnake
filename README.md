@@ -17,11 +17,10 @@ PulseRain Rattlesnake is a RISC-V soft CPU with a Security-Hardened processor co
 
 ![Security-Hardened Processor Core](https://github.com/PulseRain/Rattlesnake/raw/master/docs/rattlesnake_core.png "Security-Hardened Processor Core")
 
-As shown above, on top of a regular RV32IMC core (2 x 2 pipeline stage), 3 additional security units are added. They are:
+As shown above, on top of a regular RV32IMC core (2 x 2 pipeline stage), 2 additional security units are added. They are:
 
-*	DATU (Dirty Address Trace Unit)
-*	BRDU (Block Write Detection Unit
 *	ERPU (Execution Region Protection Unit)
+*	DATU (Dirty Address Trace Unit)
 
 These security units form two different security strategies: 
 *	Execution Region Protection (ERP)
@@ -32,10 +31,10 @@ To verify the effectiveness of the above two strategies, 5 mock tests from ripe 
   
 |      | NR1 | NR2 | NR3 | NR4 | NR5 |
 | ---- |:---:|:---:|:---:|:---:|:---:|
-| **ERP**  |  Pass  |  Pass  |  **_Fail_**  |  **_Fail_**  |  Pass  |
-| **DAT**  |  Pass  |  Pass  |  Pass  |  Pass  |  Pass  |
+| **ERP**  |  **_Pass_**  |  **_Pass_**  |  _Fail_  |  _Fail_  |  **_Pass_**  |
+| **DAT**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |
 
-As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while the DAT strategy **can thwart all of them**. The details of the DAT strategy will be discussed [at the end of this document](#security).
+As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while **the DAT strategy can thwart all of them**. The details of the DAT strategy will be discussed [at the end of this document](#security).
 
 In addition, the PulseRain Rattlesnake has been successfully ported to [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), with a clock rate of **_120MHz_** (for STD speed grade device), and a total power of **_199mW_**.
 
@@ -108,6 +107,47 @@ Before using this script, the following should be done to setup the environment 
 And ATTACK_NR1's output is as following:
 
 ![ATTACK_NR1](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR1_output.png "ATTACK_NR1")
+
+The other 4 attacks' output are as following:
+
+**_ATTACK_NR2:_** &nbsp;
+   **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR2\build\zephyr\zephyr.elf**
+
+![ATTACK_NR2](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR2_output.png "ATTACK_NR2")
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+**_ATTACK_NR3:_** &nbsp;
+   **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR3\build\zephyr\zephyr.elf**
+
+![ATTACK_NR3](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR3_output.png "ATTACK_NR3")
+
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+**_ATTACK_NR4:_** &nbsp;
+   **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR4\build\zephyr\zephyr.elf**
+
+![ATTACK_NR4](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR4_output.png "ATTACK_NR4")
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+**_ATTACK_NR5:_** &nbsp;
+   **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR5\build\zephyr\zephyr.elf**
+
+![ATTACK_NR5](https://github.com/PulseRain/Rattlesnake/raw/master/docs/ATTACK_NR5_output.png "ATTACK_NR5")
+
+&nbsp;
+The details of the 5 attacks will be discussed [at the end of this document](#security).
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
 folder
