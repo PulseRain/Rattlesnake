@@ -37,6 +37,8 @@ To verify the effectiveness of the above two strategies, 5 mock tests from ripe 
 
 As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while the DAT strategy can thwart all of them. The details of the DAT strategy will be discussed [at the end of this document](#security).
 
+The PulseRain Rattlesnake has been successfully ported to [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), with a clock rate of **_120MHz_**, and a total power of **_199mW_**.
+
 ## 2. Quick Start <a name="quickstart"></a>
 * ### Clone GitHub Repository
 * ### Program the Creative Board
