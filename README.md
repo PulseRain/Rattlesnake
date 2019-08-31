@@ -103,7 +103,7 @@ Before using this script, the following should be done to setup the environment 
   
      **python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\RISC-V-IoT-Contest\ATTACK_NR1\build\zephyr\zephyr.elf**
     
-  
+  ![Load elf file](https://github.com/PulseRain/Rattlesnake/raw/master/docs/run_script.png "Load elf file")
 
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
