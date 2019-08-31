@@ -47,7 +47,7 @@ Assume Windows Platform is used. And assume Cygwin is installed. To clone the Gi
     cd Rattlesnake
     git submodule update --init --recursive --progress
  
- And the following is a screen capture for Cygwin on Windows 10
+ And the following is a screen capture for Cygwin operations on Windows 10
  ![Clone the GitHub Repository](https://github.com/PulseRain/Rattlesnake/raw/master/docs/github_clone.png "Clone the GitHub Repository")
  
 * ### Program the Creative Board
