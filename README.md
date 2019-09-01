@@ -190,12 +190,12 @@ To build applications for zephyr, please do the following under Linux:
   
   2. To build for sample applications, users can do as following: (take the sample application of philosophers for example)
      
-     $ git clone https://github.com/PulseRain/zephyr.git
-     $ cd zephyr;rm -f build
-     $ cmake -B build -DBOARD=rattlesnake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON VERBOSE=1 samples/philosophers
-     $ make -C build
+    $ git clone https://github.com/PulseRain/zephyr.git
+    $ cd zephyr;rm -f build
+    $ cmake -B build -DBOARD=rattlesnake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON VERBOSE=1 samples/philosophers
+    $ make -C build
 
-     And the elf file can be found in build/zephyr/zephyr.elf
+    And the elf file can be found in build/zephyr/zephyr.elf
      
 ## 7. Security Strategy Details <a name="security"></a>
 security
