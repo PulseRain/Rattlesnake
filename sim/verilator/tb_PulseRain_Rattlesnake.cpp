@@ -585,7 +585,7 @@ int main(int argc, char** argv) {
     
     std::cout << "\n\n\n";
     std::cout << "=============================================================\n";
-    std::cout << "=== PulseRain Technology, RISC-V RV32IM Test Bench\n";
+    std::cout << "=== PulseRain Technology, RISC-V RV32IMC Test Bench\n";
     std::cout << "=============================================================\n";
     std::cout << "\n";
     
