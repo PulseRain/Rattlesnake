@@ -197,5 +197,17 @@ To build applications for zephyr, please do the following under Linux:
 
     And the elf file can be found in build/zephyr/zephyr.elf
      
+  3. In particular, to build the mock test from [RISC-V-IoT-Contest](https://github.com/PulseRain/RISC-V-IoT-Contest/tree/5fd366a0beec4b06054d38bcdca5e6fc5276de96), users can do as following: (take the ATTACK_NR1 for example)
+  
+    $ git clone https://github.com/PulseRain/Rattlesnake.git
+    $ cd Rattlesnake
+    $ git submodule update --init --recursive --progress
+    $ cd RISC-V-IoT-Contest/ATTACK_NR1;rm -rf build
+    $ cmake -B build -DBOARD=rattlesnake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON VERBOSE=1 .
+    $ make -C build
+    
+    And the elf file can be found in build/zephyr/zephyr.elf
+        
+     
 ## 7. Security Strategy Details <a name="security"></a>
 security
