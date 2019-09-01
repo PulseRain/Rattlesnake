@@ -59,7 +59,7 @@ Launch **FPExpress v12.1**, and open **Rattlesnake\bitstream_and_binary\creative
 Click **RUN** to program the Creative Board, as shown below:
 ![Program the Creative Board](https://github.com/PulseRain/Rattlesnake/raw/master/docs/flash_program.png "Program the Creative Board")
 
-After bitstream is programmed, please **unplug and re-plug the USB cable** to make sure the board is properly re-initialized.
+After the board is programmed, please **unplug and re-plug the USB cable** to make sure the board is properly re-initialized.
 
 * ### Running Software on the soft CPU
 As illustrated below, a python script called **rattlesnake_config.py** is provided to load software (.elf file) into the soft CPU and execute. At this point, this script has only been tested on Windows platform.
