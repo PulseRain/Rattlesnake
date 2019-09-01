@@ -150,16 +150,20 @@ The other 4 attacks' output are as following:
 The details of the 5 attacks will be discussed [at the end of this document](#security).
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
-folder
+The folder structure of the [GitHub Repository](https://github.com/PulseRain/Rattlesnake) is illustrated below:
+
+![Folder Structure](https://github.com/PulseRain/Rattlesnake/raw/master/docs/folder_structure.png "Folder Structure")
 
 ## 4. Simulation with [Verilator](https://www.veripool.org/wiki/verilator) <a name="sim"></a>
-sim
+The PulseRain Rattlesnake can be simulated with [Verialtor](https://www.veripool.org/wiki/verilator). To prepare the simulation, the following steps (tested on Ubuntu and Debian hosts) can be followed:
+  1. Install 
 
 ## 5. Regenerate the Bitstream <a name="regen_bitstream"></a>
 bistream
 
 ## 6. Zephyr <a name="zephyr"></a>
-zephyr
+cmake -B build -DBOARD=rattlesnake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON VERBOSE=1 samples/philosophers
+
 
 ## 7. Security Strategy Details <a name="security"></a>
 security
