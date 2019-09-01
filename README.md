@@ -8,7 +8,7 @@
 4. [Simulation with Verilator](#sim)
 5. [Regenerate the Bitstream](#regen_bitstream)
 6. [Zephyr](#zephyr)
-7. [Security Strategy Details](#security)
+7. **_[Security Strategy Details](#security)_**
 
 
 ## 1. Overview <a name="overview"></a>
