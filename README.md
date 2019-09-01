@@ -181,6 +181,11 @@ To build bitstream for [**Future Electronics Creative board (IGLOO2)**](https://
   5. Generate bitstream with Libero SoC V12.1, and verify the timing is passed.
   
 ## 6. Zephyr <a name="zephyr"></a>
+[zephyr 1.14.1-rc1](https://github.com/PulseRain/zephyr) has been successfully ported to PulseRain Rattlesnake. Basically, a board called **rattlesnake** is created, and a SoC called **pulserain-rattlesnake** is added. The details of the porting job can be found [here](https://github.com/PulseRain/zephyr/commit/d84996362d748e84b22b8de2545f8bba96fab6b1). The OS infrastructure of zephyr has not been modified during the porting. Only a driver for UART and modifications to the Makefile were added.
+
+
+
+
 cmake -B build -DBOARD=rattlesnake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON VERBOSE=1 samples/philosophers
 
 
