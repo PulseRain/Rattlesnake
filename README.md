@@ -188,7 +188,7 @@ To build applications for zephyr, please do the following under Linux:
   
      The rest of the document assumes Linux is used as host for build, and Zephyr SDK 0.10.3 is used for toolchain.
   
-  2. To build for sample applications, users can do as following: (take the sample application of philosophers for example)
+  2. To build for sample applications, users can do the following: (take the sample application of philosophers for example)
      
     $ git clone https://github.com/PulseRain/zephyr.git
     $ cd zephyr;rm -rf build
@@ -197,7 +197,7 @@ To build applications for zephyr, please do the following under Linux:
 
     And the elf file can be found in build/zephyr/zephyr.elf
      
-  3. In particular, to build the mock test from [RISC-V-IoT-Contest](https://github.com/PulseRain/RISC-V-IoT-Contest/tree/5fd366a0beec4b06054d38bcdca5e6fc5276de96), users can do as following: (take the ATTACK_NR1 for example)
+  3. In particular, to build the mock test from [RISC-V-IoT-Contest](https://github.com/PulseRain/RISC-V-IoT-Contest/tree/5fd366a0beec4b06054d38bcdca5e6fc5276de96), users can do the following: (take the ATTACK_NR1 for example)
   
     $ git clone https://github.com/PulseRain/Rattlesnake.git
     $ cd Rattlesnake
