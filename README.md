@@ -157,7 +157,7 @@ The folder structure of the [GitHub Repository](https://github.com/PulseRain/Rat
 ## 4. Simulation with [Verilator](https://www.veripool.org/wiki/verilator) <a name="sim"></a>
 The PulseRain Rattlesnake can be simulated with [Verialtor](https://www.veripool.org/wiki/verilator). To prepare the simulation and run the compliance test, the following steps (tested on Ubuntu and Debian hosts) can be followed:
   1. Install [zephyr-sdk 0.10.3](https://github.com/zephyrproject-rtos/sdk-ng/releases/tag/v0.10.3)
-  2. Install Verilator from https://www.veripool.org/wiki/verilator or use apt-get install verilator. At this point, only Verilator version 4.0 or later is supported
+  2. Install Verilator from https://www.veripool.org/wiki/verilator (or use apt-get install verilator). At this point, only Verilator version 4.0 or later is supported
   3. **git clone https://github.com/PulseRain/Rattlesnake.git**
   4. **cd Rattlesnake**
   5. **git submodule update --init --recursive --progress**
