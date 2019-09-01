@@ -168,7 +168,7 @@ The PulseRain Rattlesnake can be simulated with [Verialtor](https://www.veripool
 If everything goes smooth, the final output of the compliance test may look like the following:
 ![verilator compliance test](https://github.com/PulseRain/Rattlesnake/raw/master/docs/verilator.png "verilator compliance test")
 
-For RV32IMC compliance test, there are total of 88 test cases. Among them, 55 are for RV32I, 25 are for C extension and 8 are for M extension.
+For the RV32IMC compliance test, there are total of 88 test cases. Among them, 55 are for RV32I, 25 are for C extension and 8 are for M extension.
 
 ## 5. Regenerate the Bitstream <a name="regen_bitstream"></a>
 bistream
