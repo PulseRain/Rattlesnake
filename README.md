@@ -150,7 +150,9 @@ The other 4 attacks' output are as following:
 The details of the 5 attacks will be discussed [at the end of this document](#security).
 
 ## 3. Folder Structure of the Repository <a name="folder"></a>
-folder
+The folder structure of the [GitHub Repository](https://github.com/PulseRain/Rattlesnake) is illustrated below:
+
+![Folder Structure](https://github.com/PulseRain/Rattlesnake/raw/master/docs/folder_structure.png "Folder Structure")
 
 ## 4. Simulation with [Verilator](https://www.veripool.org/wiki/verilator) <a name="sim"></a>
 sim
