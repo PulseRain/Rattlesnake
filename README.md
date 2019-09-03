@@ -243,3 +243,4 @@ In fact, among the 5 mock tests (attacks), only 3 out of the 5 attacks can be th
 ### **_DAT (Dirty Address Trace)_**
 
 
+![Dirty Bit in Memory](https://github.com/PulseRain/Rattlesnake/raw/master/docs/dirty_bit_memory.png "Dirty Bit in Memory")
