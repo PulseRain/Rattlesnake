@@ -228,13 +228,14 @@ During normal operation, if PC is moved out of the region marked by **ERP Start 
 
 The plus side of ERP strategy is:
 
-    * easy to implement
-    * hardware overhead is low
+* easy to implement
+* hardware overhead is low
 
 The drawbacks of ERP are:
 
-    * Intrusive to software design. The bootloader or the application itself has to figure out the protected region, and do the proper configuration right after reset.
-    * It can not defend against those attacks that invoke system code. 
+* Intrusive to software design. 
+    The bootloader or the application itself has to figure out the protected region, and do the proper configuration right after reset.
+* It can not defend against those attacks that invoke system code. 
 
 In fact, among the 5 mock tests (attacks), only 3 out of the 5 attacks can be thwarted by ERP. In order to thwart all 5 attacks, a more sophisticated defense scheme is needed. And for PulseRain Rattlesnake, the answer is **DAT (Dirty Address Trace)**.
 
