@@ -240,6 +240,6 @@ The drawbacks of ERP are:
 In fact, among the 5 mock tests (attacks), only 3 out of the 5 attacks can be thwarted by ERP. In order to thwart all 5 attacks, a more sophisticated defense scheme is needed. And for PulseRain Rattlesnake, the answer is **DAT (Dirty Address Trace)**.
 
 
-
+### **_DAT (Dirty Address Trace)_**
 
 
