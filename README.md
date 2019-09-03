@@ -210,4 +210,35 @@ To build applications for zephyr, please do the following under Linux:
         
      
 ## 7. Security Strategy Details <a name="security"></a>
-security
+
+As mentioned early, PulseRain Rattlesnake mainly carries two security strategies: **ERP** and **DAT**. The details of those two strategies are now discussed below:
+
+### **_ERP (Executable Region Protection)_**
+
+This strategy is similar to PMP (Physical Memory Protection) in other processors. Inside the Rattlesnake soft CPU, there is a module called ERPU (Executable Region Protection), which exposes two memory mapped registers:
+
+| **0x2000002C** | **_Register for ERP Start Address_** |
+| ---- |:---:|
+| **0x20000030** | **_Register for ERP End Address_** |
+
+
+Those two registers can only be written for once after reset. And usually those two registers are configured by bootloader. If the image is loaded from host PC, the loader script (In this case, rattlesnake_config.py) will configure them. 
+
+During normal operation, if PC is moved out of the region marked by **ERP Start Address** and **ERP End Address**, an exception (illegal instruction) will be thrown to stop the execution of malicious code.
+
+The plus side of ERP strategy is:
+
+    * easy to implement
+    * hardware overhead is low
+
+The drawbacks of ERP are:
+
+    * Intrusive to software design. The bootloader or the application itself has to figure out the protected region, and do the proper configuration right after reset.
+    * It can not defend against those attacks that invoke system code. 
+
+In fact, among the 5 mock tests (attacks), only 3 out of the 5 attacks can be thwarted by ERP. In order to thwart all 5 attacks, a more sophisticated defense scheme is needed. And for PulseRain Rattlesnake, the answer is **DAT (Dirty Address Trace)**.
+
+
+
+
+
