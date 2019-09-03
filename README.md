@@ -8,7 +8,7 @@
 4. [Simulation with Verilator](#sim)
 5. [Regenerate the Bitstream](#regen_bitstream)
 6. [Zephyr](#zephyr)
-7. [Security Strategy Details](#security)
+7. **_[Security Strategy Details](#security)_**
 
 
 ## 1. Overview <a name="overview"></a>
@@ -34,7 +34,7 @@ To verify the effectiveness of the above two strategies, 5 mock tests from ripe 
 | **ERP**  |  **_Pass_**  |  **_Pass_**  |  _Fail_  |  _Fail_  |  **_Pass_**  |
 | **DAT**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |  **_Pass_**  |
 
-As indicated by the above table, the ERP strategy (which is basically identical to Physical Memory Protection) can only thwart 3 out of the 5 attacks, while **_the DAT strategy can thwart all of them_**. The details of the DAT strategy will be discussed [at the end of this document](#security).
+As indicated by the above table, the ERP strategy (which is similar to Physical Memory Protection in other processors) can only thwart 3 out of the 5 attacks, while **_the DAT strategy can thwart all of them_**. The details of the DAT strategy will be discussed [at the end of this document](#security).
 
 In addition, the PulseRain Rattlesnake has been successfully ported to [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), with a clock rate of **_120MHz_** (for STD speed grade device), and a total power of **_199mW_**.
 
@@ -58,6 +58,8 @@ Launch **FPExpress v12.1**, and open **Rattlesnake\bitstream_and_binary\creative
 
 Click **RUN** to program the Creative Board, as shown below:
 ![Program the Creative Board](https://github.com/PulseRain/Rattlesnake/raw/master/docs/flash_program.png "Program the Creative Board")
+
+After the board is programmed, please **unplug and re-plug the USB cable** to make sure the board is properly re-initialized.
 
 * ### Running Software on the soft CPU
 As illustrated below, a python script called **rattlesnake_config.py** is provided to load software (.elf file) into the soft CPU and execute. At this point, this script has only been tested on Windows platform.
@@ -155,15 +157,89 @@ The folder structure of the [GitHub Repository](https://github.com/PulseRain/Rat
 ![Folder Structure](https://github.com/PulseRain/Rattlesnake/raw/master/docs/folder_structure.png "Folder Structure")
 
 ## 4. Simulation with [Verilator](https://www.veripool.org/wiki/verilator) <a name="sim"></a>
-The PulseRain Rattlesnake can be simulated with [Verialtor](https://www.veripool.org/wiki/verilator). To prepare the simulation, the following steps (tested on Ubuntu and Debian hosts) can be followed:
-  1. Install 
+The PulseRain Rattlesnake can be simulated with [Verialtor](https://www.veripool.org/wiki/verilator). To prepare the simulation and run the compliance test, the following steps (tested on Ubuntu and Debian hosts) can be followed:
+  1. Install [zephyr-sdk 0.10.3](https://github.com/zephyrproject-rtos/sdk-ng/releases/tag/v0.10.3)
+  2. Install Verilator from https://www.veripool.org/wiki/verilator (or use apt-get install verilator). At this point, only Verilator version 4.0 or later is supported
+  3. **git clone https://github.com/PulseRain/Rattlesnake.git**
+  4. **cd Rattlesnake**
+  5. **git submodule update --init --recursive --progress**
+  6. **cd sim/verilator**
+  7. Build the verilog code and C++ test bench: **make**
+  8. Run the simulation for compliance test: **make test_all**
 
-## 5. Regenerate the Bitstream <a name="regen_bitstream"></a>
-bistream
+If everything goes smooth, the final output of the compliance test may look like the following:
+![verilator compliance test](https://github.com/PulseRain/Rattlesnake/raw/master/docs/verilator.png "verilator compliance test")
 
+For the RV32IMC compliance test, there are total of 88 test cases. Among them, 55 are for RV32I, 25 are for C extension and 8 are for M extension.
+
+## 5. Regenerate the Bitstream (SYN and PAR) <a name="regen_bitstream"></a>
+To build bitstream for [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), do the following:
+  1. Install [Microsemi Libero SoC V12.1 for Windows](http://download-soc.microsemi.com/FPGA/v12.1/prod/Libero_SoC_v12.1_win.zip), and get a License for it if necessary.
+  2. Use synplify_pro (part of  Microsemi Libero SoC V12.1) to open Rattlesnake\build\synth\Microchip\Rattlesnake.prj, and generate **Rattlesnake.vm**
+  3. Use a text editor (such as Notepad++) to open the **Rattlesnake.vm** generated above, search for those lines that contain the text "**RAMINDEX**", and comment those lines out by putting a "//" at the beginning of the line. This step is just a way to circumvent a bug of the Libero SoC V12.1.
+  4. Close synplify_pro and use Libero SoC V12.1 to open Rattlesnake\build\par\Microchip\creative\creative.prjx
+  5. Generate bitstream with Libero SoC V12.1, and verify the timing is passed.
+  
 ## 6. Zephyr <a name="zephyr"></a>
-cmake -B build -DBOARD=rattlesnake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON VERBOSE=1 samples/philosophers
+[zephyr 1.14.1-rc1](https://github.com/PulseRain/zephyr) ([https://github.com/PulseRain/zephyr](https://github.com/PulseRain/zephyr)) has been successfully ported to PulseRain Rattlesnake. Basically, a board called **rattlesnake** is created, and a SoC called **pulserain-rattlesnake** is added. The details of the porting job can be found [here](https://github.com/PulseRain/zephyr/commit/d84996362d748e84b22b8de2545f8bba96fab6b1). The OS infrastructure of zephyr has not been modified during the porting. Only a driver for UART and modifications to the Makefile were added.
 
+To build applications for zephyr, please do the following under Linux:
+  1. Follow the instructions [here](https://docs.zephyrproject.org/latest/getting_started/installation_linux.html) to setup development environment.
+  
+     The rest of the document assumes Linux is used as host for build, and Zephyr SDK 0.10.3 is used for toolchain.
+  
+  2. To build for sample applications, users can do the following: (take the sample application of philosophers for example)
+     
+    $ git clone https://github.com/PulseRain/zephyr.git
+    $ cd zephyr;rm -rf build
+    $ cmake -B build -DBOARD=rattlesnake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON VERBOSE=1 samples/philosophers
+    $ make -C build
 
+    And the elf file can be found in build/zephyr/zephyr.elf
+     
+  3. In particular, to build the mock test from [RISC-V-IoT-Contest](https://github.com/PulseRain/RISC-V-IoT-Contest/tree/5fd366a0beec4b06054d38bcdca5e6fc5276de96), users can do the following: (take the ATTACK_NR1 for example)
+  
+    $ git clone https://github.com/PulseRain/Rattlesnake.git
+    $ cd Rattlesnake
+    $ git submodule update --init --recursive --progress
+    $ cd RISC-V-IoT-Contest/ATTACK_NR1;rm -rf build
+    $ cmake -B build -DBOARD=rattlesnake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON VERBOSE=1 .
+    $ make -C build
+    
+    And the elf file can be found in build/zephyr/zephyr.elf
+        
+     
 ## 7. Security Strategy Details <a name="security"></a>
-security
+
+As mentioned early, PulseRain Rattlesnake mainly carries two security strategies: **ERP** and **DAT**. The details of those two strategies are now discussed below:
+
+### **_ERP (Executable Region Protection)_**
+
+This strategy is similar to PMP (Physical Memory Protection) in other processors. Inside the Rattlesnake soft CPU, there is a module called ERPU (Executable Region Protection), which exposes two memory mapped registers:
+
+| **0x2000002C** | **_Register for ERP Start Address_** |
+| ---- |:---:|
+| **0x20000030** | **_Register for ERP End Address_** |
+
+
+Those two registers can only be written for once after reset. And usually those two registers are configured by bootloader. If the image is loaded from host PC, the loader script (In this case, rattlesnake_config.py) will configure them. 
+
+During normal operation, if PC is moved out of the region marked by **ERP Start Address** and **ERP End Address**, an exception (illegal instruction) will be thrown to stop the execution of malicious code.
+
+The plus side of ERP strategy is:
+
+* easy to implement
+* hardware overhead is low
+
+The drawbacks of ERP are:
+
+* Intrusive to software design. 
+    The bootloader or the application itself has to figure out the protected region, and do the proper configuration right after reset.
+* It can not defend against those attacks that invoke system code. 
+
+In fact, among the 5 mock tests (attacks), only 3 out of the 5 attacks can be thwarted by ERP. In order to thwart all 5 attacks, a more sophisticated defense scheme is needed. And for PulseRain Rattlesnake, the answer is **DAT (Dirty Address Trace)**.
+
+
+### **_DAT (Dirty Address Trace)_**
+
+
