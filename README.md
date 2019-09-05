@@ -352,7 +352,7 @@ Its output is as following:
       a6: 0x0  a7: 0x1
     Fatal fault in essential thread! Spinning...
 
-The Faulting instruction address = 0x8004331a in the list file is correspondent to the folllowing instructions:
+The Faulting instruction address = **_0x8004331a_** in the list file is correspondent to the folllowing instructions:
 
        ((int (*)(char *, int)) * heap_func_ptr)(NULL, 0);
     80043310:	93442783          	lw	a5,-1740(s0)
@@ -363,4 +363,103 @@ The Faulting instruction address = 0x8004331a in the list file is correspondent 
     8004331c:	b7e9                	j	800432e6 <perform_attack+0xaa0>
     
     
+####  Attach NR2. -t direct -i shellcode -c longjmpstackparam -l stack -f homebrew
+The list file of this attack program can be found in [here](https://github.com/PulseRain/RISC-V-IoT-Contest/blob/5fd366a0beec4b06054d38bcdca5e6fc5276de96/ATTACK_NR2/build/zephyr/zephyr.lst)
+
+    ***** Booting Zephyr OS zephyr-v1.14.1-rc1-2-g936510fd3ed7 *****
+    [z_sched_lock]  scheduler locked (0x800471d8:255)
+    [k_sched_unlock]  scheduler unlocked (0x800471d8:0)
+    RIPE is alive! rattlesnake
+    -t direct -i shellcode -c longjmpstackparam -l stack -f homebrew----------------
+    Shellcode instructions:
+    lui t1,  0x80042               80042337
+    addi t1, t1, 0x2de                 2de30313
+    jalr t1000300e7
+    ----------------
+    target_addr == 0x80047fc0
+    buffer == 0x80047b90
+    payload size == 1077
+    bytes to pad: 1060
+
+    overflow_ptr: 0x80047b90
+    payload: 7#-
+
+    Executing attack... Exception cause Illegal instruction (2)
+    Current thread ID = 0x800471d8
+    Faulting instruction address = 0x80040b8c
+      ra: 0x80047b90  gp: 0xaaaaaaaa  tp: 0xaaaaaaaa  t0: 0x80042406
+      t1: 0xf  t2: 0xfffffff5  t3: 0x0  t4: 0x7fffffff
+      t5: 0x19  t6: 0x800464f0  a0: 0x457  a1: 0x457
+      a2: 0x80045c54  a3: 0x80047a04  a4: 0x800454a0  a5: 0x8004333e
+      a6: 0x0  a7: 0x1
+    Fatal fault in essential thread! Spinning...
+
+The Faulting instruction address = **_0x80040b8c_** in the list file is correspondent to the folllowing instructions:
+
+    80040b4c <longjmp>:
+    80040b4c:	00052083          	lw	ra,0(a0)
+    80040b50:	00452403          	lw	s0,4(a0)
+    80040b54:	00852483          	lw	s1,8(a0)
+    80040b58:	00c52903          	lw	s2,12(a0)
+    80040b5c:	01052983          	lw	s3,16(a0)
+    80040b60:	01452a03          	lw	s4,20(a0)
+    80040b64:	01852a83          	lw	s5,24(a0)
+    80040b68:	01c52b03          	lw	s6,28(a0)
+    80040b6c:	02052b83          	lw	s7,32(a0)
+    80040b70:	02452c03          	lw	s8,36(a0)
+    80040b74:	02852c83          	lw	s9,40(a0)
+    80040b78:	02c52d03          	lw	s10,44(a0)
+    80040b7c:	03052d83          	lw	s11,48(a0)
+    80040b80:	03452103          	lw	sp,52(a0)
+    80040b84:	0015b513          	seqz	a0,a1
+    80040b88:	00b50533          	add	a0,a0,a1
+    80040b8c:	00008067          	ret
+    
+    
+####  Attach NR3. -t indirect -i returnintolibc -c ret -l stack -f memcpy
+The list file of this attack program can be found in [here](https://github.com/PulseRain/RISC-V-IoT-Contest/blob/5fd366a0beec4b06054d38bcdca5e6fc5276de96/ATTACK_NR3/build/zephyr/zephyr.lst)
+
+    ***** Booting Zephyr OS zephyr-v1.14.1-rc1-2-g936510fd3ed7 *****
+    [z_sched_lock]  scheduler locked (0x800471d8:255)
+    [k_sched_unlock]  scheduler unlocked (0x800471d8:0)
+    RIPE is alive! rattlesnake
+    -t indirect -i returnintolibc -c ret -l stack -f memcpy----------------
+    Shellcode instructions:
+    lui t1,  0x80042               80042337
+    addi t1, t1, 0x2de                 2de30313
+    jalr t1000300e7
+    ----------------
+    target_addr == 0x80047fb8
+    buffer == 0x80047b90
+    payload size == 1069
+    bytes to pad: 1064
+
+    overflow_ptr: 0x8004810c
+    payload: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    bytes to pad: 1060
+
+    overflow_ptr: 0x800422f4
+    payload: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    target_addr_aux: 0x80047fb4
+
+    Executing attack... Exception cause Illegal instruction (2)
+    Current thread ID = 0x800471d8
+    Faulting instruction address = 0x80043302
+      ra: 0x800422f4  gp: 0xaaaaaaaa  tp: 0xaaaaaaaa  t0: 0x41414141
+      t1: 0x41414141  t2: 0x41414141  t3: 0x41414141  t4: 0x41414141
+      t5: 0x41414141  t6: 0x41414141  a0: 0x0  a1: 0x20
+      a2: 0x80045c48  a3: 0x80047a04  a4: 0x10  a5: 0xffffffff
+      a6: 0x41414141  a7: 0x41414141
+    Fatal fault in essential thread! Spinning...
+
+The Faulting instruction address = **_0x80043302_** in the list file is correspondent to the folllowing instructions:
+
+    800432e6:	6ec12083          	lw	ra,1772(sp)
+    800432ea:	6e812403          	lw	s0,1768(sp)
+    800432ee:	6e412483          	lw	s1,1764(sp)
+    800432f2:	6e012903          	lw	s2,1760(sp)
+    800432f6:	6dc12983          	lw	s3,1756(sp)
+    800432fa:	6d812a03          	lw	s4,1752(sp)
+    800432fe:	6f010113          	addi	sp,sp,1776
+    80043302:	8082                	ret
 
