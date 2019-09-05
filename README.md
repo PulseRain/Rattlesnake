@@ -259,9 +259,20 @@ Through the analysis of existing attack schemes, it is noticed that:
   3.	To circumvent Physical Memory Protection, a more sophisticated scheme will set the pointer to code section, and invoke system functions such as a system console shell.
   4.	To circumvent other software guarding measures, such as stack canaries, some more sophisticated schemes will carry out indirect pointer attack, by modifying the pointer of a pointer. 
 
+Based on such observation, the DAT strategy is conceived to comprise the following 3 parts:
+  * Expanded Memory and Register
+  * Block Write Detection
+  * Indirect Pointer Detection
+
+####  1. Expand the memory and register width, add a dirty address bit
+
+For PulseRain Rattlesnake, the memory is made of 4 banks, each bank is expanded from 8 bits to 9 bits, with 1 extra bit to indicate dirty address. The direct address bit is used to indicate that its content is suspicious, as it has been modified through block write. Fortunately, for most mainstream FPGA vendors, port width of 9 is natively supported by their block RAMs.
+  
 
 ![Dirty Bit in Memory](https://github.com/PulseRain/Rattlesnake/raw/master/docs/dirty_bit_memory.png "Dirty Bit in Memory")
 
 
-![Register Expansion](https://github.com/PulseRain/Rattlesnake/raw/master/docs/register.png "Register Expansion")
+The 32 general purpose registers are also expanded by 1 bit. When data are loaded from memory to registers, the dirty address bit attached to the most significant byte will also be loaded into the highest bit (bit 32) of the expanded register.
 
+
+![Register Expansion](https://github.com/PulseRain/Rattlesnake/raw/master/docs/register.png "Register Expansion")
