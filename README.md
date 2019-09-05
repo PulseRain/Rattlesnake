@@ -280,5 +280,24 @@ The Block Write Detection will issue a dirty address flag if it seems a batch of
 
 The block write detection module will also take interrupt into account. Thus for a buffer-overflow to fly under the radar, its size has to be no more than 8, or it can manage to switch thread context every 8 write operations. For IoT application, this will make the attacker a lot more difficult to escape from the block write detection.
 
-For a memory word, merely having its dirty address bit set will not cause any reaction from the processor. However, if later on the processor sees a JAL instruction whose target address is dirty, the processor will throw an illegal instruction exception to prevent the malicious code from being reached.
+####  3. DAT - Indirect Pointer Detection
 
+However, a more sophisticated attacker will use indirect pointer to circumvent the block write detection. To thwart such attackers, another module called indirect pointer detection is adopted by PulseRain Rattlesnake. The indirect pointer detection module will identify such indirect pointer, and spread the direct address bit to its final target address.
+
+By observing the assembly code produced by the compiler (At this point, the GCC (ver 8.3) from zephyr-sdk 0.10.3 is used.), it can be concluded that the indirect pointer operation is done with the following instruction patterns:
+
+    1 LW   registerA, xxx(s0)
+      Load something on the stack frame (s0 is the frame pointer) into registerA. 
+      If the pointer is a global variable stored in data section, it may produce a different code pattern.
+ 
+    2. LW   registerB, xxx(registerA)
+      indirect pointer(pointer of the pointer)
+      
+    3. LW registerC, xxx(s0)
+      If the pointer is a global variable stored in data section, it may produce a different code pattern.
+
+    4. SW registerC, (registerB)
+
+The indirect pointer detection module will recognize the above pattern. For the last step, if registerC or registerB contains dirty address bit, such dirty address bit will be further spread into the memory word pointed by registerB.
+
+**_For a memory word, merely having its dirty address bit set will not cause any reaction from the processor. However, if later on the processor sees a JAL instruction whose target address is dirty, the processor will throw an illegal instruction exception to prevent the malicious code from being reached._**
