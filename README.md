@@ -253,6 +253,15 @@ In fact, among the 5 mock tests (attacks), only 3 out of the 5 attacks can be th
 
 
 ### **_DAT (Dirty Address Trace)_**
+Through the analysis of existing attack schemes, it is noticed that:
+  1.	The attacker will usually take advantage of a software loophole to carry out buffer-overflow attacks
+  2.	The buffer-overflow attack will overwrite certain pointers. For example, some direct attack scheme will overwrite the return address on the stack, and re-point it to malicious code.
+  3.	To circumvent Physical Memory Protection, a more sophisticated scheme will set the pointer to code section, and invoke system functions such as a system console shell.
+  4.	To circumvent other software guarding measures, such as stack canaries, some more sophisticated schemes will carry out indirect pointer attack, by modifying the pointer of a pointer. 
 
 
 ![Dirty Bit in Memory](https://github.com/PulseRain/Rattlesnake/raw/master/docs/dirty_bit_memory.png "Dirty Bit in Memory")
+
+
+![Register Expansion](https://github.com/PulseRain/Rattlesnake/raw/master/docs/register.png "Register Expansion")
+
