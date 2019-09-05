@@ -266,13 +266,19 @@ Based on such observation, the DAT strategy is conceived to comprise the followi
 
 ####  1. Expand the memory and register width, add a dirty address bit
 
-For PulseRain Rattlesnake, the memory is made of 4 banks, each bank is expanded from 8 bits to 9 bits, with 1 extra bit to indicate dirty address. The direct address bit is used to indicate that its content is suspicious, as it has been modified through block write. Fortunately, for most mainstream FPGA vendors, port width of 9 is natively supported by their block RAMs.
+For PulseRain Rattlesnake, the memory is made of 4 banks, each bank is expanded from 8 bits to 9 bits, with 1 extra bit to indicate dirty address. The direct address bit is an indication for its content to be suspicious, as its content has been modified through block write. Fortunately, for most mainstream FPGA vendors, port width of 9 is natively supported by their block RAMs.
   
-
 ![Dirty Bit in Memory](https://github.com/PulseRain/Rattlesnake/raw/master/docs/dirty_bit_memory.png "Dirty Bit in Memory")
-
 
 The 32 general purpose registers are also expanded by 1 bit. When data are loaded from memory to registers, the dirty address bit attached to the most significant byte will also be loaded into the highest bit (bit 32) of the expanded register.
 
-
 ![Register Expansion](https://github.com/PulseRain/Rattlesnake/raw/master/docs/register.png "Register Expansion")
+
+####  2. Block Write Detection
+
+The Block Write Detection will issue a dirty address flag if it seems a batch of consecutive write that are more than 8. Here the threshold 8 is used because according to the RISC-V calling convection, register s0-s7 need to be stored on the stack. A threshold of 8 will avoid the store of s0-s7 being flagged as dirty address. 
+
+The block write detection module will also take interrupt into account. Thus for a buffer-overflow to fly under the radar, its size has to be no more than 8, or it can manage to switch thread context every 8 write operations. For IoT application, this will make the attacker a lot more difficult to escape from the block write detection.
+
+For a memory word, merely having its dirty address bit set will not cause any reaction from the processor. However, if later on the processor sees a JAL instruction whose target address is dirty, the processor will throw an illegal instruction exception to prevent the malicious code from being reached.
+
