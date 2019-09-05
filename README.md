@@ -261,3 +261,7 @@ Through the analysis of existing attack schemes, it is noticed that:
 
 
 ![Dirty Bit in Memory](https://github.com/PulseRain/Rattlesnake/raw/master/docs/dirty_bit_memory.png "Dirty Bit in Memory")
+
+
+![Register Expansion](https://github.com/PulseRain/Rattlesnake/raw/master/docs/register.png "Register Expansion")
+
