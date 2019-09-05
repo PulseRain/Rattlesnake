@@ -315,8 +315,8 @@ Users can use the following command (assume COM7 is used by the Create Board) to
 
 **_python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\bitstream_and_binary\zephyr\synchronization_rv32imc.elf_**
 
+### **_TEST with RIPE_**
 
-### **_Test with Ripe_**
 As mentioned early, for the 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)), they can all be stopped by DAT alone, before ERP can catch them. Here is a quick review of those 5 attacks:
 
 ####  Attach NR1. -t direct -i shellcode -c funcptrheap -l heap -f memcpy
