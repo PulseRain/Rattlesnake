@@ -38,6 +38,18 @@ As indicated by the above table, the ERP strategy (which is similar to Physical 
 
 In addition, the PulseRain Rattlesnake has been successfully ported to [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), with a clock rate of **_120MHz_** (for STD speed grade device), and a total power of **_199mW_**.
 
+And the Resource Usage on IGLOO2 (M2GL025) is as following (with 48KB memory size):
+
+| **Resource Name** | **Resource Usage** |
+| ---- |:---:|
+| _Fabric 4LUT_ | 4689 |
+| _Fabric DFF_ | 3129 |
+| _Interface 4LUT_ | 1224 |
+| _Interface DFF_ | 1224 |
+| _uSRAM 1K_ | 2 |
+| _LSRAM 18K_ | 28 |
+| _Math 18x18_ | 4 |
+
 ## 2. Quick Start <a name="quickstart"></a>
 * ### Clone the GitHub Repository
 Assume Windows Platform is used. And assume Cygwin is installed. To clone the GitHub Repository of PulseRain Rattlesnake, do the following in Cygwin:
@@ -243,3 +255,4 @@ In fact, among the 5 mock tests (attacks), only 3 out of the 5 attacks can be th
 ### **_DAT (Dirty Address Trace)_**
 
 
+![Dirty Bit in Memory](https://github.com/PulseRain/Rattlesnake/raw/master/docs/dirty_bit_memory.png "Dirty Bit in Memory")
