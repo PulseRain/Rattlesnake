@@ -301,3 +301,66 @@ By observing the assembly code produced by the compiler (At this point, the GCC 
 The indirect pointer detection module will recognize the above pattern. For the last step, if registerC or registerB contains dirty address bit, such dirty address bit will be further spread into the memory word pointed by registerB.
 
 **_For a memory word, merely having its dirty address bit set will not cause any reaction from the processor. However, if later on the processor sees a JAL instruction whose target address is dirty, the processor will throw an illegal instruction exception to prevent the malicious code from being reached._**
+
+####  4. DAT - Side Effect Discussion
+
+Theoretically, the DAT would have some side effect for the software. If the software uses block copy to write a function table that is more than 8 items, the function table might be marked as dirty by DAT. However, practically it is very rare of normal code flow to do something like that, as most function table will be saved as constant, or modified individually instead of a batch fashion.
+
+As a way to test this, the following two zephyr applications (philosopher and synchronization) have been tested along with DAT
+bitstream_and_binary\zephyr\philosophers_rv32imc.elf
+bitstream_and_binary\zephyr\synchronization_rv32imc.elf
+Users can use the following command (assume COM7 is used by the Create Board) to load them
+
+**_python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\bitstream_and_binary\zephyr\philosophers_rv32imc.elf_**
+
+**_python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\bitstream_and_binary\zephyr\synchronization_rv32imc.elf_**
+
+
+### **_Test with Ripe_**
+As mentioned early, for the 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)), they can all be stopped by DAT alone, before ERP can catch them. Here is a quick review of those 5 attacks:
+
+####  Attach NR1. -t direct -i shellcode -c funcptrheap -l heap -f memcpy
+The list file of this attack program can be found in [here](https://github.com/PulseRain/RISC-V-IoT-Contest/blob/5fd366a0beec4b06054d38bcdca5e6fc5276de96/ATTACK_NR1/build/zephyr/zephyr.lst)
+
+Its output is as following:
+
+    ***** Booting Zephyr OS zephyr-v1.14.1-rc1-2-g936510fd3ed7 *****
+    [z_sched_lock]  scheduler locked (0x800471d8:255)
+    [k_sched_unlock]  scheduler unlocked (0x800471d8:0)
+    RIPE is alive! rattlesnake
+    -t direct -i shellcode -c funcptrheap -l heap -f memcpy----------------
+    Shellcode instructions:
+    lui t1,  0x80042               80042337
+    addi t1, t1, 0x2de                 2de30313
+    jalr t1000300e7
+    ----------------
+    target_addr == 0x80049ac0
+    buffer == 0x80049790
+    payload size == 821
+    bytes to pad: 804
+
+    overflow_ptr: 0x80049790
+    payload: 7#-
+
+    Executing attack... Exception cause Illegal instruction (2)
+    Current thread ID = 0x800471d8
+    Faulting instruction address = 0x8004331a
+      ra: 0x8004331c  gp: 0xaaaaaaaa  tp: 0xaaaaaaaa  t0: 0x800407d4
+      t1: 0xf  t2: 0xfffffff5  t3: 0x0  t4: 0x7fffffff
+      t5: 0x19  t6: 0x800464f0  a0: 0x0  a1: 0x0
+      a2: 0x80045c48  a3: 0x80047a04  a4: 0x800454a0  a5: 0x80049790
+      a6: 0x0  a7: 0x1
+    Fatal fault in essential thread! Spinning...
+
+The Faulting instruction address = 0x8004331a in the list file is correspondent to the folllowing instructions:
+
+       ((int (*)(char *, int)) * heap_func_ptr)(NULL, 0);
+    80043310:	93442783          	lw	a5,-1740(s0)
+    80043314:	439c                	lw	a5,0(a5)
+    80043316:	4581                	li	a1,0
+    80043318:	4501                	li	a0,0
+    8004331a:	9782                	jalr	a5
+    8004331c:	b7e9                	j	800432e6 <perform_attack+0xaa0>
+    
+    
+
