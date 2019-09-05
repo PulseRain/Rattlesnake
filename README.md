@@ -356,15 +356,17 @@ The Faulting instruction address = **_0x8004331a_** in the list file is correspo
 
        ((int (*)(char *, int)) * heap_func_ptr)(NULL, 0);
     80043310:	93442783          	lw	a5,-1740(s0)
-    80043314:	439c                	lw	a5,0(a5)
-    80043316:	4581                	li	a1,0
-    80043318:	4501                	li	a0,0
-    8004331a:	9782                	jalr	a5
-    8004331c:	b7e9                	j	800432e6 <perform_attack+0xaa0>
+    80043314:	439c               	lw	a5,0(a5)
+    80043316:	4581               	li	a1,0
+    80043318:	4501               	li	a0,0
+    8004331a:	9782               	jalr	a5
+    8004331c:	b7e9               	j	800432e6 <perform_attack+0xaa0>
     
     
 ####  Attach NR2. -t direct -i shellcode -c longjmpstackparam -l stack -f homebrew
 The list file of this attack program can be found in [here](https://github.com/PulseRain/RISC-V-IoT-Contest/blob/5fd366a0beec4b06054d38bcdca5e6fc5276de96/ATTACK_NR2/build/zephyr/zephyr.lst)
+
+Its output is as following:
 
     ***** Booting Zephyr OS zephyr-v1.14.1-rc1-2-g936510fd3ed7 *****
     [z_sched_lock]  scheduler locked (0x800471d8:255)
@@ -419,6 +421,8 @@ The Faulting instruction address = **_0x80040b8c_** in the list file is correspo
 ####  Attach NR3. -t indirect -i returnintolibc -c ret -l stack -f memcpy
 The list file of this attack program can be found in [here](https://github.com/PulseRain/RISC-V-IoT-Contest/blob/5fd366a0beec4b06054d38bcdca5e6fc5276de96/ATTACK_NR3/build/zephyr/zephyr.lst)
 
+Its output is as following:
+
     ***** Booting Zephyr OS zephyr-v1.14.1-rc1-2-g936510fd3ed7 *****
     [z_sched_lock]  scheduler locked (0x800471d8:255)
     [k_sched_unlock]  scheduler unlocked (0x800471d8:0)
@@ -461,5 +465,92 @@ The Faulting instruction address = **_0x80043302_** in the list file is correspo
     800432f6:	6dc12983          	lw	s3,1756(sp)
     800432fa:	6d812a03          	lw	s4,1752(sp)
     800432fe:	6f010113          	addi	sp,sp,1776
-    80043302:	8082                	ret
+    80043302:	8082               	ret
 
+####  Attach NR4. -t indirect -i returnintolibc -c funcptrstackvar -l stack -f memcpy
+The list file of this attack program can be found in [here](https://github.com/PulseRain/RISC-V-IoT-Contest/blob/5fd366a0beec4b06054d38bcdca5e6fc5276de96/ATTACK_NR4/build/zephyr/zephyr.lst)
+
+Its output is as following:
+
+    ***** Booting Zephyr OS zephyr-v1.14.1-rc1-2-g936510fd3ed7 *****
+    [z_sched_lock]  scheduler locked (0x800471e8:255)
+    [k_sched_unlock]  scheduler unlocked (0x800471e8:0)
+    RIPE is alive! rattlesnake
+    -t indirect -i returnintolibc -c funcptrstackvar -l stack -f memcpy----------------
+    Shellcode instructions:
+    lui t1,  0x80042               80042337
+    addi t1, t1, 0x2de                 2de30313
+    jalr t1000300e7
+    ----------------
+    target_addr == 0x80047fc8
+    buffer == 0x80047ba0
+    payload size == 1069
+    bytes to pad: 1064
+
+    overflow_ptr: 0x80047fcc
+    payload: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    bytes to pad: 1060
+
+    overflow_ptr: 0x800422f4
+    payload: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    target_addr_aux: 0x80047fc4
+
+    Executing attack... Exception cause Illegal instruction (2)
+    Current thread ID = 0x800471e8
+    Faulting instruction address = 0x800432e4
+      ra: 0x800432e6  gp: 0xaaaaaaaa  tp: 0xaaaaaaaa  t0: 0x41414141
+      t1: 0x41414141  t2: 0x41414141  t3: 0x41414141  t4: 0x41414141
+      t5: 0x41414141  t6: 0x41414141  a0: 0x0  a1: 0x20
+      a2: 0x80045c54  a3: 0x80047a14  a4: 0x800454a0  a5: 0x800422f4
+      a6: 0x41414141  a7: 0x41414141
+    Fatal fault in essential thread! Spinning...
+
+The Faulting instruction address = **_0x800432e4_** in the list file is correspondent to the folllowing instructions:
+
+    stack_func_ptr(NULL);
+    800432de:	4501               	li	a0,0
+    800432e0:	eac42783          	lw	a5,-340(s0)
+    800432e4:	9782               	jalr	a5
+
+####  Attach NR5. -t indirect -i shellcode -c funcptrheap -l heap -f memcpy
+The list file of this attack program can be found in [here](https://github.com/PulseRain/RISC-V-IoT-Contest/blob/5fd366a0beec4b06054d38bcdca5e6fc5276de96/ATTACK_NR5/build/zephyr/zephyr.lst)
+
+Its output is as following:
+
+    ***** Booting Zephyr OS zephyr-v1.14.1-rc1-2-g936510fd3ed7 *****
+    [z_sched_lock]  scheduler locked (0x800471e0:255)
+    [k_sched_unlock]  scheduler unlocked (0x800471e0:0)
+    RIPE is alive! rattlesnake
+    -t indirect -i shellcode -c funcptrheap -l heap -f memcpy----------------
+    Shellcode instructions:
+    lui t1,  0x80042               80042337
+    addi t1, t1, 0x2de                 2de30313
+    jalr t1000300e7
+    ----------------
+    target_addr == 0x800499a8
+    buffer == 0x80049790
+    payload size == 541
+    bytes to pad: 524
+
+    overflow_ptr: 0x80049788
+    payload: 7#-
+
+    Executing attack... Exception cause Illegal instruction (2)
+    Current thread ID = 0x800471e0
+    Faulting instruction address = 0x80043386
+      ra: 0x80043388  gp: 0xaaaaaaaa  tp: 0xaaaaaaaa  t0: 0x80042406
+      t1: 0xf  t2: 0xfffffff5  t3: 0x0  t4: 0x7fffffff
+      t5: 0x19  t6: 0x800464f8  a0: 0x0  a1: 0x0
+      a2: 0x80045c4c  a3: 0x80047a04  a4: 0x800454a0  a5: 0x80049790
+      a6: 0x0  a7: 0x1
+    Fatal fault in essential thread! Spinning...
+
+The Faulting instruction address = **_0x80043386_** in the list file is correspondent to the folllowing instructions:
+
+     (*heap_struct->func_ptr)(NULL, 0);
+    8004337a:	92c42783          	lw	a5,-1748(s0)
+    8004337e:	1007a783          	lw	a5,256(a5)
+    80043382:	4581                li	a1,0
+    80043384:	4501                li	a0,0
+    80043386:	9782                jalr	a5
+    80043388:	bfb9                j	800432e6 <perform_attack+0xaa0>
