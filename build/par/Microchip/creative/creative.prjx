@@ -130,7 +130,7 @@ STATE="utd"
 TIME="1567316008"
 SIZE="159"
 ENDFILE
-VALUE "C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm,hdl"
+VALUE "<project>\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm,hdl"
 STATE="utd"
 TIME="1567316008"
 SIZE="5660868"
