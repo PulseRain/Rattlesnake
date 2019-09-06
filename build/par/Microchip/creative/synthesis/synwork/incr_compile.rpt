@@ -14,20 +14,32 @@ Hostname: THINK
 Implementation : synthesis
 Synopsys HDL compiler and linker, Version comp2018q2p1, Build 223R, Built Oct 23 2018 09:18:38
 
-Modified Files: 0
+Modified Files: 4
 FID:  path (prevtimestamp, timestamp)
+0        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v (2019-08-29 21:03:26, 2019-08-31 22:33:28)
+1        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v (2019-08-29 21:03:26, 2019-08-31 22:33:28)
+2        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v (2019-08-29 21:03:32, 2019-08-31 22:33:28)
+8        C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm (2019-08-29 22:07:48, 2019-08-31 22:33:28)
 
 *******************************************************************
-Modules that may have changed as a result of file changes: 0
+Modules that may have changed as a result of file changes: 4
 MID:  lib.cell.view
+0        work.FCCC_C0.verilog may have changed because the following files changed:
+                        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v (2019-08-29 21:03:26, 2019-08-31 22:33:28) <-- (module definition)
+                        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v (2019-08-29 21:03:32, 2019-08-31 22:33:28) <-- (may instantiate this module)
+1        work.FCCC_C0_FCCC_C0_0_FCCC.verilog may have changed because the following files changed:
+                        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v (2019-08-29 21:03:26, 2019-08-31 22:33:28) <-- (may instantiate this module)
+                        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v (2019-08-29 21:03:26, 2019-08-31 22:33:28) <-- (module definition)
+                        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v (2019-08-29 21:03:32, 2019-08-31 22:33:28) <-- (may instantiate this module)
+3        work.Rattlesnake.verilog may have changed because the following files changed:
+                        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v (2019-08-29 21:03:32, 2019-08-31 22:33:28) <-- (may instantiate this module)
+                        C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm (2019-08-29 22:07:48, 2019-08-31 22:33:28) <-- (module definition)
+2        work.creative.verilog may have changed because the following files changed:
+                        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v (2019-08-29 21:03:32, 2019-08-31 22:33:28) <-- (module definition)
 
 *******************************************************************
-Unmodified files: 9
+Unmodified files: 5
 FID:  path (timestamp)
-0        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v (2019-08-29 21:03:26)
-1        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v (2019-08-29 21:03:26)
-2        C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v (2019-08-29 21:03:32)
-8        C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm (2019-08-29 22:07:48)
 3        C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v (2018-12-20 22:52:12)
 4        C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\hypermods.v (2018-12-20 22:52:16)
 5        C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\scemi_objects.v (2018-12-20 22:52:16)
@@ -35,9 +47,5 @@ FID:  path (timestamp)
 7        C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\vlog\umr_capim.v (2018-12-20 22:52:16)
 
 *******************************************************************
-Unchanged modules: 4
+Unchanged modules: 0
 MID:  lib.cell.view
-0        work.FCCC_C0.verilog
-1        work.FCCC_C0_FCCC_C0_0_FCCC.verilog
-3        work.Rattlesnake.verilog
-2        work.creative.verilog

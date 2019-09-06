@@ -1,7 +1,7 @@
 C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  creative  -multisrs  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\creative_comp.srs  -osyn  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\creative_mult.srs  -log  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synlog\creative_multi_srs_gen.srr 
 relcom:..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\syn_nfilter.exe -link -top creative -multisrs ..\synwork\creative_comp.srs -osyn ..\synwork\creative_mult.srs -log ..\synlog\creative_multi_srs_gen.srr
-rc:0 success:1 runtime:0
-file:..\synwork\creative_comp.srs|io:i|time:1567141690|size:417238|exec:0|csum:637F8F9BB7A525B1BD88DAE039AD0461
-file:..\synwork\creative_mult.srs|io:o|time:1567141691|size:2106|exec:0|csum:
-file:..\synlog\creative_multi_srs_gen.srr|io:o|time:1567141691|size:1166|exec:0|csum:
+rc:0 success:1 runtime:1
+file:..\synwork\creative_comp.srs|io:i|time:1567800403|size:417239|exec:0|csum:65D101EB175EF11C6D4990AF82578B8C
+file:..\synwork\creative_mult.srs|io:o|time:1567800405|size:2105|exec:0|csum:
+file:..\synlog\creative_multi_srs_gen.srr|io:o|time:1567800405|size:1166|exec:0|csum:
 file:..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1545375129|size:8731136|exec:1|csum:FDA9CE3068B3473AD3F7DDB573109F00

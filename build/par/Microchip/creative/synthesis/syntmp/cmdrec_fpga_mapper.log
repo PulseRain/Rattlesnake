@@ -1,16 +1,16 @@
 C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\m_generic.exe  -prodtype  synplify_pro  -encrypt  -pro  -rundir  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis   -part M2GL025  -package VF256  -grade STD    -continue_on_error -maxfan 10000 -infer_seqShift -clock_globalthreshold 2 -async_globalthreshold 12 -globalthreshold 5000 -low_power_ram_decomp 0 -seqshift_to_uram 0 -opcond COMTC -report_path 4000 -disable_ramindex 0 -microsemi_enhanced_flow 1 -RWCheckOnRam 0 -summaryfile C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synlog\report\creative_fpga_mapper.xml -merge_inferred_clocks 0  -top_level_module  creative  -licensetype  synplifypro_actel  -flow mapping  -mp  4  -prjfile  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\scratchproject.prs  -implementation  synthesis  -multisrs  -ovm  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.vm   -freq 100.000   -tcl  C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\synthesis.fdc  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\creative_prem.srd  -sap  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.sap  -otap  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.tap  -omap  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.map  -devicelib  C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v  -sap  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.sap  -ologparam  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\syntmp\creative.plg  -osyn  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative.srm  -prjdir  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\  -prjname  creative_syn  -log  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synlog\creative_fpga_mapper.srr  -sn  2018.03  -jobname  "fpga_mapper" 
 relcom:..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\m_generic.exe -prodtype synplify_pro -encrypt -pro -rundir ..\..\synthesis -part M2GL025 -package VF256 -grade STD -continue_on_error -maxfan 10000 -infer_seqShift -clock_globalthreshold 2 -async_globalthreshold 12 -globalthreshold 5000 -low_power_ram_decomp 0 -seqshift_to_uram 0 -opcond COMTC -report_path 4000 -disable_ramindex 0 -microsemi_enhanced_flow 1 -RWCheckOnRam 0 -summaryfile ..\synlog\report\creative_fpga_mapper.xml -merge_inferred_clocks 0 -top_level_module creative -licensetype synplifypro_actel -flow mapping -mp 4 -prjfile ..\scratchproject.prs -implementation synthesis -multisrs -ovm ..\creative.vm -freq 100.000 -tcl ..\..\designer\creative\synthesis.fdc ..\synwork\creative_prem.srd -sap ..\creative.sap -otap ..\creative.tap -omap ..\creative.map -devicelib ..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v -sap ..\creative.sap -ologparam creative.plg -osyn ..\creative.srm -prjdir ..\ -prjname creative_syn -log ..\synlog\creative_fpga_mapper.srr -sn 2018.03 -jobname "fpga_mapper"
 rc:1 success:1 runtime:10
-file:..\scratchproject.prs|io:o|time:1566806990|size:2450|exec:0|csum:
-file:..\creative.vm|io:o|time:1567141775|size:2864464|exec:0|csum:
-file:..\..\designer\creative\synthesis.fdc|io:i|time:1567141762|size:515|exec:0|csum:B1937D66CB5F16F5D75CC8330B53E555
-file:..\synwork\creative_prem.srd|io:i|time:1567141765|size:608328|exec:0|csum:AF3FFBD15D4F4B9FEA9474E45FE87347
-file:..\creative.sap|io:o|time:1567141766|size:43543|exec:0|csum:
+file:..\scratchproject.prs|io:o|time:1567316008|size:2450|exec:0|csum:
+file:..\creative.vm|io:o|time:1567800416|size:2864464|exec:0|csum:
+file:..\..\designer\creative\synthesis.fdc|io:i|time:1567800400|size:514|exec:0|csum:8C9ED8F74413F9173EC025D060333616
+file:..\synwork\creative_prem.srd|io:i|time:1567800406|size:608328|exec:0|csum:AF3FFBD15D4F4B9FEA9474E45FE87347
+file:..\creative.sap|io:o|time:1567800407|size:43543|exec:0|csum:
 file:..\creative.tap|io:o|time:0|size:-1|exec:0|csum:
-file:..\creative.map|io:o|time:1567141777|size:28|exec:0|csum:
+file:..\creative.map|io:o|time:1567800417|size:28|exec:0|csum:
 file:..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v|io:i|time:1545375132|size:16387|exec:0|csum:015F6E2B83BBEFD2952183BB96E6609B
-file:..\creative.sap|io:o|time:1567141766|size:43543|exec:0|csum:
-file:creative.plg|io:o|time:1567141777|size:929|exec:0|csum:
-file:..\creative.srm|io:o|time:1567141774|size:5162|exec:0|csum:
-file:..\synlog\creative_fpga_mapper.srr|io:o|time:1567141777|size:32956|exec:0|csum:
+file:..\creative.sap|io:o|time:1567800407|size:43543|exec:0|csum:
+file:creative.plg|io:o|time:1567800417|size:929|exec:0|csum:
+file:..\creative.srm|io:o|time:1567800415|size:5162|exec:0|csum:
+file:..\synlog\creative_fpga_mapper.srr|io:o|time:1567800417|size:32956|exec:0|csum:
 file:..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\m_generic.exe|io:i|time:1545375129|size:35620864|exec:1|csum:AFC1D03A121E8E2C0389EDEDDE1E630A

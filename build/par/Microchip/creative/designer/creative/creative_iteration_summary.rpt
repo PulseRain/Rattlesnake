@@ -195,3 +195,17 @@
           36  66421044    N/A                        0.206  creative_timing_violations_max_r21_s36.rpt     creative_r21_s36
   The best result creative_r21_s36 has been saved into the project.
 
+#------------------------------------------------------------------------------------------------------------------------------------------
+# RUN NUMBER: 22   DATE: 13:07:07 06-Sep-2019
+# INVOKED AS: C:/Microsemi/Libero_SoC_v12.1/Designer/bin/libero.exe extended_run_lib.tcl -skip_open_project -root {C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative} -n 12 -starting_seed_index 37 -compare_criteria violations -analysis max -slack_criteria worst -stop_on_success
+#------------------------------------------------------------------------------------------------------------------------------------------
+# Seed Index  Seed      Maximum Delay        Worst Slack  Report Analyzed                                Saved Design
+# ==========  ========  ===============  ===============  =============================================  ===================================
+          37  60426452    N/A                       -0.027  creative_timing_violations_max_r22_s37.rpt     creative_r22_s37
+          38  61936054    N/A                       -0.329  creative_timing_violations_max_r22_s38.rpt     creative_r22_s38
+          39   3381876    N/A                       -0.080  creative_timing_violations_max_r22_s39.rpt     creative_r22_s39
+          40  21928008    N/A                       -0.777  creative_timing_violations_max_r22_s40.rpt     creative_r22_s40
+          41  61837010    N/A                       -0.521  creative_timing_violations_max_r22_s41.rpt     creative_r22_s41
+          42  69297693    N/A                        0.005  creative_timing_violations_max_r22_s42.rpt     creative_r22_s42
+  The best result creative_r22_s42 has been saved into the project.
+

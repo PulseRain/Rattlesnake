@@ -1,7 +1,7 @@
 # Microsemi Corp.
-# Date: 2019-Aug-29 22:22:49
+# Date: 2019-Sep-06 13:20:17
 # This file was generated based on the following SDC source files:
-#   C:/GitHub/Rattlesnake/build/par/constraints/Microchip/creative/Rattlesnake.sdc
+#   C:/GitHub/Rattlesnake/build/par/Microchip/creative/constraint/Rattlesnake.sdc
 #
 
 create_clock -name {osc_in} -period 20 [ get_ports { osc_in } ]

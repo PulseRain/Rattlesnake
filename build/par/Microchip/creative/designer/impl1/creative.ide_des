@@ -1,8 +1,8 @@
 KEY IDE_DES_TOOL "Ide"
 KEY IDE_DES_ADB_PATH "C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\impl1\creative.adb"
 LIST SOURCE_FILES
-VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.pdc;pdc"
-VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.sdc;sdc"
+VALUE "C:\GitHub\Rattlesnake\build\par\Microchip\creative\constraint\io\Rattlesnake.pdc;pdc"
+VALUE "C:\GitHub\Rattlesnake\build\par\Microchip\creative\constraint\Rattlesnake.sdc;sdc"
 ENDLIST
 LIST OPTIONAL_FILES
 VALUE "C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\creative_vm.sdc;Skipped"

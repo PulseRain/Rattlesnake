@@ -5,6 +5,6 @@ read_verilog -mode verilog_2k {C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO
 read_verilog -mode verilog_2k {C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v}
 set_top_level {creative}
 map_netlist
-read_sdc {C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.sdc}
+read_sdc {C:\GitHub\Rattlesnake\build\par\Microchip\creative\constraint\Rattlesnake.sdc}
 check_constraints {C:\GitHub\Rattlesnake\build\par\Microchip\creative\constraint\synthesis_sdc_errors.log}
 write_fdc {C:\GitHub\Rattlesnake\build\par\Microchip\creative\designer\creative\synthesis.fdc}

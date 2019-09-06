@@ -1,11 +1,11 @@
 C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\c_hdl.exe  -osyn  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synwork\creative_comp.srs  -top  creative  -hdllog  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\synlog\creative_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -verilog  -prodtype  synplify_pro   -infer_seqShift -primux -dspmac -pqdpadd -fixsmult -sdff_counter -divnmod -nram   -I C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\  -I C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib   -v2001  -devicelib  C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v  -encrypt  -pro  -dmgen  C:\GitHub\Rattlesnake\build\par\Microchip\creative\synthesis\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -lib work C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v -lib work C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\FCCC_C0\FCCC_C0.v -lib work C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm -lib work C:\GitHub\Rattlesnake\build\par\Microchip\creative\component\work\creative\creative.v  -jobname  "compiler" 
 relcom:..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\c_hdl.exe -osyn ..\synwork\creative_comp.srs -top creative -hdllog ..\synlog\creative_compiler.srr -encrypt -mp 4 -verification_mode 0 -verilog -prodtype synplify_pro -infer_seqShift -primux -dspmac -pqdpadd -fixsmult -sdff_counter -divnmod -nram -I ..\ -I ..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib -v2001 -devicelib ..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v -encrypt -pro -dmgen ..\dm -ui -fid2 -ram -sharing on -ll 2000 -autosm -lib work ..\..\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v -lib work ..\..\component\work\FCCC_C0\FCCC_C0.v -lib work ..\..\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm -lib work ..\..\component\work\creative\creative.v -jobname "compiler"
-rc:0 success:1 runtime:2
-file:..\synwork\creative_comp.srs|io:o|time:1567141690|size:417238|exec:0|csum:
-file:..\synlog\creative_compiler.srr|io:o|time:1567141764|size:28899|exec:0|csum:
+rc:0 success:1 runtime:3
+file:..\synwork\creative_comp.srs|io:o|time:1567800403|size:417239|exec:0|csum:
+file:..\synlog\creative_compiler.srr|io:o|time:1567800403|size:29347|exec:0|csum:
 file:..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\lib\generic\igloo2.v|io:i|time:1545375132|size:16387|exec:0|csum:015F6E2B83BBEFD2952183BB96E6609B
-file:..\..\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v|io:i|time:1567137806|size:1786|exec:0|csum:BCEE4EF7430CABD9C710E8EB69C3D001
-file:..\..\component\work\FCCC_C0\FCCC_C0.v|io:i|time:1567137806|size:2227|exec:0|csum:065D78462B1894DB1842A74866D29FB1
-file:..\..\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm|io:i|time:1567141668|size:5660868|exec:0|csum:365DAB6FB335764C107CD37BC20F15E1
-file:..\..\component\work\creative\creative.v|io:i|time:1567137812|size:2309|exec:0|csum:031F89E9C24B60E583BB967D2CDF998F
+file:..\..\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v|io:i|time:1567316008|size:1786|exec:0|csum:BCEE4EF7430CABD9C710E8EB69C3D001
+file:..\..\component\work\FCCC_C0\FCCC_C0.v|io:i|time:1567316008|size:2227|exec:0|csum:065D78462B1894DB1842A74866D29FB1
+file:..\..\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm|io:i|time:1567316008|size:5660868|exec:0|csum:365DAB6FB335764C107CD37BC20F15E1
+file:..\..\component\work\creative\creative.v|io:i|time:1567316008|size:2309|exec:0|csum:031F89E9C24B60E583BB967D2CDF998F
 file:..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin64\c_hdl.exe|io:i|time:1545375128|size:5663232|exec:1|csum:4B110847B6678BD0545BB2CF888D834B
