@@ -550,8 +550,8 @@ Its output is as following:
 The Faulting instruction address = **_0x80043386_** in the list file is correspondent to the folllowing instructions:
 
      (*heap_struct->func_ptr)(NULL, 0);
-    8004337a:	92c42783            lw	a5,-1748(s0)
-    8004337e:	1007a783            lw	a5,256(a5)
+    8004337a:	92c42783              lw	a5,-1748(s0)
+    8004337e:	1007a783              lw	a5,256(a5)
     80043382:	4581                  li	a1,0
     80043384:	4501                  li	a0,0
     80043386:	9782                  jalr	a5
