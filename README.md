@@ -200,7 +200,7 @@ And for the sake of completeness, the Makefile for Verilator supports the follow
 
   * **make build** : the default target to build the verilog uut and C++ testbench for Verilator
 
-  * **make test_all** : run compliance test for all 55 cases
+  * **make test_all** : run compliance test for all 88 cases
 
   * **make test compliance_case_name** : run compliance test for individual case. For example: make test I-ADD-01
 
