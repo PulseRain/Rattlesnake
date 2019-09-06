@@ -115,19 +115,19 @@ STATE="utd"
 TIME="1567132842"
 SIZE="159"
 ENDFILE
-VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.pdc,io_pdc"
+VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.pdc,io_pdc"
 STATE="utd"
 TIME="1566801021"
 SIZE="1620"
 IS_READONLY="TRUE"
 ENDFILE
-VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
+VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
 STATE="utd"
 TIME="1567137824"
 SIZE="314"
 IS_READONLY="TRUE"
 ENDFILE
-VALUE "C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm,hdl"
+VALUE "<project>\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm,hdl"
 STATE="utd"
 TIME="1567141668"
 SIZE="5660868"
@@ -139,10 +139,10 @@ LIST NewModulesInfo
 LIST "creative::work"
 FILE "<project>\component\work\creative\creative.v,hdl"
 LIST SynthesisConstraints
-VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
+VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
 ENDLIST
 LIST TimingConstraints
-VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
+VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
 ENDLIST
 ENDLIST
 ENDLIST
@@ -274,25 +274,25 @@ ENDLIST
 LIST ModuleSubBlockList
 LIST "creative::work","component\work\creative\creative.v","TRUE","FALSE"
 SUBBLOCK "FCCC_C0::work","component\work\FCCC_C0\FCCC_C0.v","TRUE","FALSE"
-SUBBLOCK "Rattlesnake::work","C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm","FALSE","FALSE"
+SUBBLOCK "Rattlesnake::work","<project>\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm","FALSE","FALSE"
 ENDLIST
 LIST "FCCC_C0::work","component\work\FCCC_C0\FCCC_C0.v","TRUE","FALSE"
 SUBBLOCK "FCCC_C0_FCCC_C0_0_FCCC::work","component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v","FALSE","FALSE"
 ENDLIST
 LIST "FCCC_C0_FCCC_C0_0_FCCC::work","component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v","FALSE","FALSE"
 ENDLIST
-LIST "Rattlesnake::work","C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm","FALSE","FALSE"
+LIST "Rattlesnake::work","<project>\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm","FALSE","FALSE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
 ENDLIST
 LIST IOTabList
-VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.pdc"
+VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.pdc"
 ENDLIST
 LIST FPTabList
 ENDLIST
 LIST TimingTabList
-VALUE "C:\GitHub\Rattlesnake\build\par\constraints\Microchip\creative\Rattlesnake.sdc"
+VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.sdc"
 ENDLIST
 LIST FDCTabList
 ENDLIST
