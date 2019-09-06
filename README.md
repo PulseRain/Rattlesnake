@@ -182,7 +182,19 @@ The PulseRain Rattlesnake can be simulated with [Verialtor](https://www.veripool
 If everything goes smooth, the final output of the compliance test may look like the following:
 ![verilator compliance test](https://github.com/PulseRain/Rattlesnake/raw/master/docs/verilator.png "verilator compliance test")
 
-For the RV32IMC compliance test, there are total of 88 test cases. Among them, 55 are for RV32I, 25 are for C extension and 8 are for M extension.
+As mentioned early, the PulseRain Rattlesnake soft CPU uses a HW loader to load code/data. And for the verilator simulation, a C++ testbench will replace the HW loader. The testbench will invoke the toolchain (objdump, readelf) to extract code/data from sections of the .elf file. The testbench will mimic the OCD bus to load the code/data into CPU's memory. Afterwards, the start-address of the .elf file ("_start" or "__start" symbol) will be passed onto the CPU, and turn the CPU into active state.
+
+For the RV32IMC compliance test, there are total of 88 test cases. Among them, 55 are for RV32I, 25 are for C extension and 8 are for M extension. For each test case, the test bench will automatically extract the address for begin_signature and end_signature symbol. The compliance test will hold and load the soft CPU, and do the following:
+
+  1. Reset the CPU, put it into hold state
+  2. Call upon toolchain to extract code/data from the .elf file for the test case
+  3. Start the CPU, run for 2000 clock cycles
+  4. Reset the CPU, put it into hold state for the second time
+  5. Read the data out of the memory, and compare them against the reference signature
+
+And the diagram below also illustrates the same idea:
+
+![verilator testbench](https://github.com/PulseRain/Rattlesnake/raw/master/docs/verilator_tb.png "verilator testbench")
 
 ## 5. Regenerate the Bitstream (SYN and PAR) <a name="regen_bitstream"></a>
 To build bitstream for [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), do the following:
