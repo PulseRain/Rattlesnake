@@ -44,92 +44,90 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\SgCore\FCCC\2.0.201\FCCC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1567137806"
+TIME="1567316008"
 SIZE="241"
 PARENT="<project>\component\work\FCCC_C0\FCCC_C0.cxf"
 ENDFILE
 VALUE "<project>\component\work\creative\creative.cxf,actgen_cxf"
 STATE="utd"
-TIME="1567137812"
+TIME="1567316008"
 SIZE="2216"
 ENDFILE
 VALUE "<project>\component\work\creative\creative.v,hdl"
 STATE="utd"
-TIME="1567137812"
+TIME="1567316008"
 SIZE="2309"
 PARENT="<project>\component\work\creative\creative.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\FCCC_C0\FCCC_C0.cxf,actgen_cxf"
 STATE="utd"
-TIME="1567137806"
+TIME="1567316008"
 SIZE="10080"
 ENDFILE
 VALUE "<project>\component\work\FCCC_C0\FCCC_C0.v,hdl"
 STATE="utd"
-TIME="1567137806"
+TIME="1567316008"
 SIZE="2227"
 PARENT="<project>\component\work\FCCC_C0\FCCC_C0.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1567137806"
+TIME="1567316008"
 SIZE="706"
 PARENT="<project>\component\work\FCCC_C0\FCCC_C0.cxf"
 ENDFILE
 VALUE "<project>\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v,hdl"
 STATE="utd"
-TIME="1567137806"
+TIME="1567316008"
 SIZE="1786"
 PARENT="<project>\component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.cxf"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\constraint\io\Rattlesnake.pdc,io_pdc"
+STATE="utd"
+TIME="1567800342"
+SIZE="1620"
+ENDFILE
+VALUE "<project>\constraint\Rattlesnake.sdc,sdc"
+STATE="utd"
+TIME="1567800348"
+SIZE="314"
+ENDFILE
 VALUE "<project>\designer\impl1\creative.ide_des,ide_des"
 STATE="utd"
-TIME="1566802004"
-SIZE="488"
+TIME="1567800351"
+SIZE="489"
 ENDFILE
 VALUE "<project>\synthesis\creative.so,so"
 STATE="utd"
-TIME="1567141776"
+TIME="1567316008"
 SIZE="241"
 ENDFILE
 VALUE "<project>\synthesis\creative.vm,syn_vm"
 STATE="utd"
-TIME="1567141774"
+TIME="1567316008"
 SIZE="2864464"
 ENDFILE
 VALUE "<project>\synthesis\creative_syn.prj,prj"
 STATE="utd"
-TIME="1567144548"
-SIZE="2587"
+TIME="1567316008"
+SIZE="2382"
 ENDFILE
 VALUE "<project>\synthesis\creative_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1567141776"
+TIME="1567316008"
 SIZE="1126"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer0.so,so"
 STATE="utd"
-TIME="1567132842"
+TIME="1567316008"
 SIZE="159"
 ENDFILE
-VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.pdc,io_pdc"
+VALUE "C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm,hdl"
 STATE="utd"
-TIME="1566801021"
-SIZE="1620"
-IS_READONLY="TRUE"
-ENDFILE
-VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
-STATE="utd"
-TIME="1567137824"
-SIZE="314"
-IS_READONLY="TRUE"
-ENDFILE
-VALUE "<project>\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm,hdl"
-STATE="utd"
-TIME="1567141668"
+TIME="1567316008"
 SIZE="5660868"
 ENDFILE
 ENDLIST
@@ -139,10 +137,22 @@ LIST NewModulesInfo
 LIST "creative::work"
 FILE "<project>\component\work\creative\creative.v,hdl"
 LIST SynthesisConstraints
-VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
+VALUE "<project>\constraint\Rattlesnake.sdc,sdc"
 ENDLIST
 LIST TimingConstraints
-VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.sdc,sdc"
+VALUE "<project>\constraint\Rattlesnake.sdc,sdc"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\creative.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -217,8 +227,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v12.1\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -251,6 +261,18 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "creative::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\creative.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -265,7 +287,7 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
-ReportsCurrentItem;Export FlashPro Express Job:creative_exportJob.log
+ReportsCurrentItem;Verify Timing:creative_max_timing_slow_1.14V_85C.xml
 StartPage;StartPage;0
 SmartDesign;creative;0
 Constraint Manager;Constraint Manager;0
@@ -274,25 +296,25 @@ ENDLIST
 LIST ModuleSubBlockList
 LIST "creative::work","component\work\creative\creative.v","TRUE","FALSE"
 SUBBLOCK "FCCC_C0::work","component\work\FCCC_C0\FCCC_C0.v","TRUE","FALSE"
-SUBBLOCK "Rattlesnake::work","<project>\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm","FALSE","FALSE"
+SUBBLOCK "Rattlesnake::work","C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm","FALSE","FALSE"
 ENDLIST
 LIST "FCCC_C0::work","component\work\FCCC_C0\FCCC_C0.v","TRUE","FALSE"
 SUBBLOCK "FCCC_C0_FCCC_C0_0_FCCC::work","component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v","FALSE","FALSE"
 ENDLIST
 LIST "FCCC_C0_FCCC_C0_0_FCCC::work","component\work\FCCC_C0\FCCC_C0_0\FCCC_C0_FCCC_C0_0_FCCC.v","FALSE","FALSE"
 ENDLIST
-LIST "Rattlesnake::work","<project>\..\..\..\synth\Microchip\IGLOO2\Rattlesnake.vm","FALSE","FALSE"
+LIST "Rattlesnake::work","C:\GitHub\Rattlesnake\build\synth\Microchip\IGLOO2\Rattlesnake.vm","FALSE","FALSE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
 ENDLIST
 LIST IOTabList
-VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.pdc"
+VALUE "constraint\io\Rattlesnake.pdc"
 ENDLIST
 LIST FPTabList
 ENDLIST
 LIST TimingTabList
-VALUE "<project>\..\..\constraints\Microchip\creative\Rattlesnake.sdc"
+VALUE "constraint\Rattlesnake.sdc"
 ENDLIST
 LIST FDCTabList
 ENDLIST
