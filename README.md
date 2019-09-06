@@ -196,6 +196,17 @@ And the diagram below also illustrates the same idea:
 
 ![verilator testbench](https://github.com/PulseRain/Rattlesnake/raw/master/docs/verilator_tb.png "verilator testbench")
 
+And for the sake of completeness, the Makefile for Verilator supports the following targets:
+
+  * **make build** : the default target to build the verilog uut and C++ testbench for Verilator
+
+  * **make test_all** : run compliance test for all 55 cases
+
+  * **make test compliance_case_name** : run compliance test for individual case. For example: make test I-ADD-01
+
+  * **make run elf_file** : run sim on an .elf file for 2000 cycles. 
+  
+  
 ## 5. Regenerate the Bitstream (SYN and PAR) <a name="regen_bitstream"></a>
 To build bitstream for [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), do the following:
   1. Install [Microsemi Libero SoC V12.1 for Windows](http://download-soc.microsemi.com/FPGA/v12.1/prod/Libero_SoC_v12.1_win.zip), and get a License for it if necessary.
