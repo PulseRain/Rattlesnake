@@ -26,7 +26,7 @@ These security units form two different security strategies:
 *	Execution Region Protection (ERP)
 *	Dirty Address Trace (DAT), with extended memory/register width to store dirty address bit.
 
-To verify the effectiveness of the above two strategies, 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)) are used as a bench mark. **_The 5 mock tests are compiled without any change to the compiler_**. And the results are shown as following:
+To verify the effectiveness of the above two strategies, 5 mock tests from ripe program ([https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)) are used as a bench mark. **_The 5 mock tests are compiled without any change to the compiler_**. And the results are shown as following:
 
   
 |      | NR1 | NR2 | NR3 | NR4 | NR5 |
@@ -317,9 +317,9 @@ Users can use the following command (assume COM7 is used by the Create Board) to
 
 **_python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\bitstream_and_binary\zephyr\synchronization_rv32imc.elf_**
 
-### **_TEST with RIPE_**
+### **_TEST with RIPE_** <a name="ripe"></a>
 
-As mentioned early, for the 5 mock tests from ripe program (![https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)), they can all be stopped by DAT alone. Here is a quick review of those 5 attacks:
+As mentioned early, for the 5 mock tests from ripe program ([https://github.com/Thales-RISC-V/RISC-V-IoT-Contest](https://github.com/Thales-RISC-V/RISC-V-IoT-Contest)), they can all be stopped by DAT alone. Here is a quick review of those 5 attacks:
 
 ####  Attach NR1. -t direct -i shellcode -c funcptrheap -l heap -f memcpy
 The list file of this attack program can be found in [here](https://github.com/PulseRain/RISC-V-IoT-Contest/blob/5fd366a0beec4b06054d38bcdca5e6fc5276de96/ATTACK_NR1/build/zephyr/zephyr.lst)
