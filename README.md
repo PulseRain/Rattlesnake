@@ -306,9 +306,11 @@ The indirect pointer detection module will recognize the above pattern. For the 
 
 Theoretically, the DAT would have some side effect for the software. If the software uses block copy to write a function table that is more than 8 items, the function table might be marked as dirty by DAT. However, practically it is very rare of normal code flow to do something like that, as most function table will be saved as constant, or modified individually instead of a batch fashion.
 
-As a way to test this, the following two zephyr applications (philosopher and synchronization) have been tested along with DAT
-bitstream_and_binary\zephyr\philosophers_rv32imc.elf
-bitstream_and_binary\zephyr\synchronization_rv32imc.elf
+As a way to test this, the following two zephyr applications (philosopher and synchronization) have been tested along with DAT:
+
+  * bitstream_and_binary\zephyr\philosophers_rv32imc.elf
+  * bitstream_and_binary\zephyr\synchronization_rv32imc.elf
+  
 Users can use the following command (assume COM7 is used by the Create Board) to load them
 
 **_python rattlesnake_config.py --port=COM7 --console_enable --reset --run --image=..\bitstream_and_binary\zephyr\philosophers_rv32imc.elf_**
