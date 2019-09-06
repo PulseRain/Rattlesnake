@@ -182,7 +182,7 @@ The PulseRain Rattlesnake can be simulated with [Verialtor](https://www.veripool
 If everything goes smooth, the final output of the compliance test may look like the following:
 ![verilator compliance test](https://github.com/PulseRain/Rattlesnake/raw/master/docs/verilator.png "verilator compliance test")
 
-As mentioned early, the PulseRain Rattlesnake soft CPU uses a HW loader to load code/data. And for the verilator simulation, a C++ testbench will replace the HW loader. The testbench will invoke the toolchain (objdump, readelf) to extract code/data from sections of the .elf file. The testbench will mimic the OCD bus to load the code/data into CPU's memory. Afterwards, the start-address of the .elf file ("_start" or "__start" symbol) will be passed onto the CPU, and turn the CPU into active state.
+As mentioned early, the PulseRain Rattlesnake soft CPU uses a hardware loader to load code/data. And for the verilator simulation, a C++ testbench will replace the hardware loader. The testbench will invoke the toolchain (objdump, readelf) to extract code/data from sections of the .elf file. The testbench will mimic the OCD bus to load the code/data into CPU's memory. Afterwards, the start-address of the .elf file ("_start" or "__start" symbol) will be passed onto the CPU, and turn the CPU into active state.
 
 For the RV32IMC compliance test, there are total of 88 test cases. Among them, 55 are for RV32I, 25 are for C extension and 8 are for M extension. For each test case, the test bench will automatically extract the address for begin_signature and end_signature symbol. The compliance test will hold and load the soft CPU, and do the following:
 
