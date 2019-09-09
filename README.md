@@ -210,7 +210,7 @@ And for the sake of completeness, the Makefile for Verilator supports the follow
 ## 5. Regenerate the Bitstream (SYN and PAR) <a name="regen_bitstream"></a>
 To build bitstream for [**Future Electronics Creative board (IGLOO2)**](https://www.futureelectronics.com/fr/p/development-tools--development-tool-hardware/futurem2gl-evb-future-electronics-dev-tools-7091559), do the following:
   1. Install [Microsemi Libero SoC V12.1 for Windows](http://download-soc.microsemi.com/FPGA/v12.1/prod/Libero_SoC_v12.1_win.zip), and get a License for it if necessary.
-  2. Use Synplify Pro (Synplify Pro N-2018.03M-SP1-1, **part of  Microsemi Libero SoC V12.1**) to open Rattlesnake\build\synth\Microchip\Rattlesnake.prj, and generate **Rattlesnake.vm**
+  2. Use Synplify Pro (Synplify Pro N-2018.03M-SP1-1, **part of  Microsemi Libero SoC V12.1**) to open Rattlesnake\build\synth\Microchip\Rattlesnake.prj, and generate **Rattlesnake.vm** (It will be under Rattlesnake\build\synth\Microchip\IGLOO2)
   3. Use a text editor (such as Notepad++) to open the **Rattlesnake.vm** generated above, search for those lines that contain the text "**RAMINDEX**", and comment those lines out by putting a "//" at the beginning of the line. This step is just a way to circumvent a bug of the Libero SoC V12.1.
   4. **Close Synplify Pro** and use Libero SoC V12.1 to open Rattlesnake\build\par\Microchip\creative\creative.prjx
   5. Generate bitstream with Libero SoC V12.1, and verify the timing is passed.
