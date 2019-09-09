@@ -47,7 +47,7 @@ impl -add IGLOO2 -type fpga
 #implementation attributes
 
 set_option -vlog_std sysv
-set_option -include_path {C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/common/;C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/common/Microchip/IGLOO2/;C:/GitHub/Rattlesnake/submodules/HW_Loader/source/}
+set_option -include_path {../../submodules/PulseRain_MCU/common;../../submodules/PulseRain_MCU/common/Microchip/IGLOO2;../common;../common/Microchip/IGLOO2;../../common;../../common/Microchip/IGLOO2;../../../common;../../../common/Microchip/IGLOO2;../../submodules/HW_Loader/source/}
 
 #device options
 set_option -technology IGLOO2
