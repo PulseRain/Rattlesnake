@@ -212,7 +212,7 @@ To build bitstream for [**Future Electronics Creative board (IGLOO2)**](https://
   1. Install [Microsemi Libero SoC V12.1 for Windows](http://download-soc.microsemi.com/FPGA/v12.1/prod/Libero_SoC_v12.1_win.zip), and get a License for it if necessary.
   2. Use synplify_pro (part of  Microsemi Libero SoC V12.1) to open Rattlesnake\build\synth\Microchip\Rattlesnake.prj, and generate **Rattlesnake.vm**
   3. Use a text editor (such as Notepad++) to open the **Rattlesnake.vm** generated above, search for those lines that contain the text "**RAMINDEX**", and comment those lines out by putting a "//" at the beginning of the line. This step is just a way to circumvent a bug of the Libero SoC V12.1.
-  4. Close synplify_pro and use Libero SoC V12.1 to open Rattlesnake\build\par\Microchip\creative\creative.prjx
+  4. **Close synplify_pro** and use Libero SoC V12.1 to open Rattlesnake\build\par\Microchip\creative\creative.prjx
   5. Generate bitstream with Libero SoC V12.1, and verify the timing is passed.
   
 ## 6. Zephyr <a name="zephyr"></a>
