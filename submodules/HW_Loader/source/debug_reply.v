@@ -91,8 +91,8 @@ module debug_reply (
     // CRC
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         crc16_CCITT crc16_CCITT_i (
-				.clk (clk),
-				.reset_n (reset_n),
+			.clk (clk),
+			.reset_n (reset_n),
             .sync_reset (ctl_crc_sync_reset),
             .crc_en (ctl_crc_enable_in),
             .data_in (uart_data_out),
