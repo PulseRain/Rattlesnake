@@ -1,0 +1,129 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Oct 27 17:16:36 2019
+| Host         : think running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Rattlesnake_control_sets_placed.rpt
+| Design       : Rattlesnake
+| Device       : xc7a100ti
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    51 |
+|    Minimum number of control sets                        |    51 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    76 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    51 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     5 |
+| >= 16              |    34 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              36 |           32 |
+| No           | No                    | Yes                    |            1001 |          420 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              96 |           29 |
+| Yes          | No                    | Yes                    |            1336 |          526 |
+| Yes          | Yes                   | No                     |              71 |           23 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|       Clock Signal       |                                                                       Enable Signal                                                                      |                                                                Set/Reset Signal                                                                | Slice Load Count | Bel Load Count |
++--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/exception_code[3]_i_1_n_0                                              | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                2 |              4 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_reply_i/data_counter[3]_i_1__0_n_0                                                                                                           | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                2 |              4 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/UART_TX_i/data_counter[3]_i_1_n_0                                                            | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                2 |              4 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[4]_1[0]                                              | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                2 |              4 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_UART_i/UART_i/data_counter[3]_i_1__1_n_0                                                                                                     | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                2 |              4 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[2]_0[0]                                              | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                2 |              5 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_block_write_detect_i/write_cnt[4]_i_1_n_0                                           | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                2 |              5 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_indirect_pointer_detect_i/ctl_save_rd                                               | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                1 |              5 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_UART_i/UART_i/ctl_shift_rx_data                                                                                                              | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                3 |              8 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_coprocessor_i/input_counter[7]_i_1_n_0                                                                                                       | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                5 |              8 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_UART_i/UART_i/tx_data[10]_i_1__0_n_0                                                                                                         | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                4 |             11 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/UART_TX_i/tx_data[10]_i_1_n_0                                                                | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                3 |             11 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_UART_i/UART_i/counter_save[13]_i_1_n_0                                                                                                       | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                4 |             14 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/read_mem_addr[1]_i_1_n_0                                        | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                5 |             15 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_coprocessor_i/pram_addr_ext[1]_i_1_n_0                                                                                                       | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                4 |             15 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_block_write_detect_i/mem_addr_blk_wr_end_i0                                         | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                4 |             15 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/E[0]                                                               | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                9 |             15 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_reply_i/crc16_CCITT_i/lfsr_q[15]_i_1_n_0                                                                                                     | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                5 |             16 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_coprocessor_i/crc16_CCITT_i/lfsr_q[15]_i_1__0_n_0                                                                                            | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                7 |             16 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/ctl_save_start_addr                                             | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                4 |             16 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_reply_i/data_out_sr[87]_i_1_n_0                                                                                                              | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |                5 |             16 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_coprocessor_i/crc16_CCITT_i/E[0]                                                                                                             | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |               14 |             31 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/PC_load_store0__0                                                      | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               10 |             31 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/mm_reg_addr_rw_out_reg[4]_1[0]                                        | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                7 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/mm_reg_addr_rw_out_reg[4]_1[1]                                        | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                8 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/mm_reg_addr_rw_out_reg[0]_0[0]                                        | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                6 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/exe_protect_reg_has_been_written_reg[0]                               | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               11 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/ctl_load_exception_d1_reg_0[0]                                        | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               23 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/long_slow_div_denom_reg_i/denominator_reg[31]_i_1_n_0 |                                                                                                                                                |                9 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/activate_exception_reg_0[0]                                        | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               17 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/activate_exception_reg_2[0]                                        | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               23 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/activate_exception_reg_1[0]                                        | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               21 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/csr_addr_out_reg[4]_0[0]                                           | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               16 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/current_state_reg[11][0]                                           | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               22 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/exception_PC[31]_i_1_n_0                                               | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               12 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[31]_0[0]                                             | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               25 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[20]_2[0]                                             | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                5 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[29]_0[0]                                             | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |                8 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/csr_addr_out_reg[0]_0[0]                                           | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               13 |             32 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/exe_protect_reg_has_been_written_reg_0[0]                             | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               11 |             33 |
+|  clk_mmcm_i/inst/clk_out |                                                                                                                                                          |                                                                                                                                                |               32 |             36 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/C_extension_i/E[0]                                              | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               26 |             63 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_mm_reg_i/Rattlesnake_machine_timer_i/mtime_cycle_pulse                              | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               16 |             64 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/long_slow_div_denom_reg_i/next_state[2]               |                                                                                                                                                |               20 |             64 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/E[0]                                                  | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               26 |             70 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/long_slow_div_denom_reg_i/ctl_division_enable         | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/long_slow_div_denom_reg_i/ctl_division_init |               23 |             71 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_reply_i/data_out_sr[71]_i_1_n_0                                                                                                              | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |               34 |             72 |
+|  clk_mmcm_i/inst/clk_out | ocd_i/debug_UART_i/UART_i/E[0]                                                                                                                           | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |               27 |             80 |
+|  clk_mmcm_i/inst/clk_out | PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[5]_0                                                 | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |               68 |            201 |
+|  clk_mmcm_i/inst/clk_out |                                                                                                                                                          | ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked                                                                                          |              110 |            241 |
+|  clk_mmcm_i/inst/clk_out |                                                                                                                                                          | ocd_i/debug_coprocessor_i/cpu_reset_reg_0                                                                                                      |              310 |            760 |
++--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,15 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Oct 27 17:17:30 2019
+| Host         : think running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file Rattlesnake_bus_skew_routed.rpt -pb Rattlesnake_bus_skew_routed.pb -rpx Rattlesnake_bus_skew_routed.rpx
+| Design       : Rattlesnake
+| Device       : 7a100ti-csg324
+| Speed File   : -1L  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

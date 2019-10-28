@@ -1,0 +1,1467 @@
+
+*** Running vivado
+    with args -log Rattlesnake.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Rattlesnake.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Rattlesnake.tcl -notrace
+Command: synth_design -top Rattlesnake -part xc7a100ticsg324-1L -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100ti'
+INFO: [Device 21-403] Loading part xc7a100ticsg324-1L
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12872 
+WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:104]
+WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:105]
+WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:111]
+WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:112]
+WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:113]
+WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:118]
+WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:119]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 734.973 ; gain = 184.738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake' [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:26]
+	Parameter sim bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clk_mmcm' [C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/synth_1/.Xil/Vivado-6736-think/realtime/clk_mmcm_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_mmcm' (1#1) [C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/synth_1/.Xil/Vivado-6736-think/realtime/clk_mmcm_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'PulseRain_Rattlesnake_MCU' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:24]
+	Parameter sim bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'peripherals' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/peripherals.v:31]
+INFO: [Synth 8-6157] synthesizing module 'UART_TX' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_TX.v:29]
+	Parameter STABLE_TIME bound to: 542 - type: integer 
+	Parameter BAUD_PERIOD_BITS bound to: 11 - type: integer 
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_TX_START bound to: 1 - type: integer 
+	Parameter S_TX_DATA bound to: 2 - type: integer 
+	Parameter S_TX_WAIT bound to: 3 - type: integer 
+	Parameter S_TX_WAIT2 bound to: 4 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_TX.v:217]
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_TX.v:125]
+WARNING: [Synth 8-6014] Unused sequential element stable_counter_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_TX.v:154]
+INFO: [Synth 8-6155] done synthesizing module 'UART_TX' (2#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_TX.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'peripherals' (3#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/peripherals.v:31]
+INFO: [Synth 8-6157] synthesizing module 'PulseRain_Rattlesnake_core' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/PulseRain_Rattlesnake_core.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_mm_reg' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_mm_reg.v:28]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_machine_timer' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_machine_timer.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_machine_timer' (4#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_machine_timer.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_mm_reg' (5#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_mm_reg.v:28]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_memory' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_memory.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_memory' (6#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_memory.v:28]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_reg_file' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_reg_file.v:32]
+INFO: [Synth 8-6157] synthesizing module 'dual_port_ram' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/dual_port_ram.v:20]
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DATA_WIDTH bound to: 33 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dual_port_ram' (7#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/dual_port_ram.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_reg_file' (8#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_reg_file.v:32]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_CSR' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_CSR.v:22]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_CSR.v:196]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_CSR.v:293]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_CSR' (9#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_CSR.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_fetch_instruction' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_fetch_instruction.v:29]
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_FETCH bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_instruction_decompress' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decompress.v:30]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decompress.v:150]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decompress.v:217]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decompress.v:219]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_instruction_decompress' (10#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decompress.v:30]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_fetch_instruction.v:208]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_fetch_instruction' (11#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_fetch_instruction.v:29]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_instruction_decode' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decode.v:22]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decode.v:174]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_instruction_decode' (12#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decode.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_execution_unit' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:22]
+INFO: [Synth 8-6157] synthesizing module 'mul_div_32' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:20]
+INFO: [Synth 8-6157] synthesizing module 'absolute_value' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/absolute_value.v:20]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'absolute_value' (13#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/absolute_value.v:20]
+INFO: [Synth 8-6157] synthesizing module 'long_slow_div_denom_reg' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/long_slow_div_denom_reg.v:20]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_CHECK bound to: 1 - type: integer 
+	Parameter S_DIVISION bound to: 2 - type: integer 
+	Parameter S_OUTPUT bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'long_slow_div_denom_reg' (14#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/long_slow_div_denom_reg.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'mul_div_32' (15#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:20]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:571]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:571]
+INFO: [Synth 8-226] default block is never used [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:571]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:318]
+INFO: [Synth 8-226] default block is never used [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:318]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:376]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:459]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:622]
+WARNING: [Synth 8-5788] Register reg_ctl_MUL_DIV_FUNCT3_reg in module Rattlesnake_execution_unit is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:291]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_execution_unit' (16#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_data_access' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_data_access.v:22]
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_EXCEPTION bound to: 1 - type: integer 
+	Parameter S_LOAD bound to: 2 - type: integer 
+	Parameter S_STORE bound to: 3 - type: integer 
+	Parameter S_MUL_DIV bound to: 4 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_data_access.v:290]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_data_access.v:356]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_data_access' (17#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_data_access.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_controller' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_controller.v:27]
+	Parameter S_INIT bound to: 0 - type: integer 
+	Parameter S_INIT_WAIT1 bound to: 1 - type: integer 
+	Parameter S_FETCH bound to: 2 - type: integer 
+	Parameter S_DECODE bound to: 3 - type: integer 
+	Parameter S_FETCH_EXE bound to: 4 - type: integer 
+	Parameter S_DECODE_DATA bound to: 5 - type: integer 
+	Parameter S_STORE bound to: 6 - type: integer 
+	Parameter S_STORE_WAIT bound to: 7 - type: integer 
+	Parameter S_LOAD bound to: 8 - type: integer 
+	Parameter S_LOAD_WAIT bound to: 9 - type: integer 
+	Parameter S_EXCEPTION bound to: 10 - type: integer 
+	Parameter S_EXCEPTION_REINIT bound to: 11 - type: integer 
+	Parameter S_MUL_DIV bound to: 12 - type: integer 
+	Parameter S_WFI bound to: 13 - type: integer 
+	Parameter S_WFI_WAIT bound to: 14 - type: integer 
+	Parameter S_PRE_WFI bound to: 15 - type: integer 
+	Parameter S_MUL_DIV_WAIT bound to: 16 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_controller.v:335]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_controller.v:431]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_controller.v:471]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_controller.v:591]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_controller' (18#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_controller.v:27]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_block_write_detect' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_block_write_detect.v:23]
+	Parameter S_1ST_WRITE bound to: 0 - type: integer 
+	Parameter S_NEXT_WRITES bound to: 1 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_block_write_detect.v:112]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_block_write_detect.v:158]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_block_write_detect' (19#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_block_write_detect.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Rattlesnake_indirect_pointer_detect' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_indirect_pointer_detect.v:22]
+	Parameter S_1ST_LW bound to: 0 - type: integer 
+	Parameter S_2ND_LW bound to: 1 - type: integer 
+	Parameter S_3RD_LW bound to: 2 - type: integer 
+	Parameter S_SW bound to: 3 - type: integer 
+	Parameter S_DETECT bound to: 4 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_indirect_pointer_detect.v:142]
+WARNING: [Synth 8-6014] Unused sequential element rs1_in_copy_save_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_indirect_pointer_detect.v:78]
+WARNING: [Synth 8-6014] Unused sequential element s0_offset_save_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_indirect_pointer_detect.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake_indirect_pointer_detect' (20#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_indirect_pointer_detect.v:22]
+WARNING: [Synth 8-6014] Unused sequential element mem_addr_ack_d1_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/PulseRain_Rattlesnake_core.v:361]
+WARNING: [Synth 8-3848] Net decode_enable in module/entity PulseRain_Rattlesnake_core does not have driver. [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/PulseRain_Rattlesnake_core.v:139]
+INFO: [Synth 8-6155] done synthesizing module 'PulseRain_Rattlesnake_core' (21#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/PulseRain_Rattlesnake_core.v:22]
+INFO: [Synth 8-6157] synthesizing module 'mem_controller' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/mem_controller.v:24]
+	Parameter sim bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'single_port_ram' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/single_port_ram.v:23]
+	Parameter ADDR_WIDTH bound to: 14 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter EXT_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'single_port_ram_9bit' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/single_port_ram_9bit.v:20]
+	Parameter ADDR_WIDTH bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'single_port_ram_9bit' (22#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/single_port_ram_9bit.v:20]
+INFO: [Synth 8-6157] synthesizing module 'single_port_ram_9bit__parameterized0' [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/single_port_ram_9bit.v:20]
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'single_port_ram_9bit__parameterized0' (22#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/single_port_ram_9bit.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'single_port_ram' (23#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/single_port_ram.v:23]
+WARNING: [Synth 8-6014] Unused sequential element sram_read_ack_pre_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/mem_controller.v:134]
+WARNING: [Synth 8-6014] Unused sequential element dout_high_d2_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/mem_controller.v:138]
+WARNING: [Synth 8-6014] Unused sequential element dout_low_d2_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/mem_controller.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sram_write_ack_pre_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/mem_controller.v:142]
+WARNING: [Synth 8-6014] Unused sequential element mem_sram0_dram1_d1_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/mem_controller.v:144]
+WARNING: [Synth 8-6014] Unused sequential element mem_read_en_d1_reg was removed.  [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/mem_controller.v:145]
+INFO: [Synth 8-6155] done synthesizing module 'mem_controller' (24#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/memory/mem_controller.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'PulseRain_Rattlesnake_MCU' (25#1) [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v:24]
+WARNING: [Synth 8-689] width (22) of port connection 'peripheral_reg_write_addr' does not match port width (5) of module 'PulseRain_Rattlesnake_MCU' [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:182]
+INFO: [Synth 8-6157] synthesizing module 'debug_coprocessor_wrapper' [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_coprocessor_wrapper.v:26]
+	Parameter BAUD_PERIOD bound to: 1085 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'debug_UART' [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_UART.v:29]
+	Parameter BAUD_PERIOD bound to: 1085 - type: integer 
+	Parameter S_RX bound to: 0 - type: integer 
+	Parameter S_TX bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Serial_RS232' [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/Serial_RS232.v:26]
+	Parameter STABLE_TIME bound to: 50 - type: integer 
+	Parameter MAX_BAUD_PERIOD bound to: 10000 - type: integer 
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_RX_START bound to: 1 - type: integer 
+	Parameter S_TX_START bound to: 2 - type: integer 
+	Parameter S_RX_START_BIT bound to: 3 - type: integer 
+	Parameter S_RX_DATA bound to: 4 - type: integer 
+	Parameter S_TX_DATA bound to: 5 - type: integer 
+	Parameter S_RX_STOP_BIT bound to: 6 - type: integer 
+	Parameter S_TX_WAIT bound to: 7 - type: integer 
+	Parameter S_TX_WAIT2 bound to: 8 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/Serial_RS232.v:288]
+INFO: [Synth 8-6155] done synthesizing module 'Serial_RS232' (26#1) [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/Serial_RS232.v:26]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_UART.v:137]
+INFO: [Synth 8-6155] done synthesizing module 'debug_UART' (27#1) [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_UART.v:29]
+INFO: [Synth 8-6157] synthesizing module 'debug_reply' [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_reply.v:26]
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_TX_WITHOUT_CRC bound to: 1 - type: integer 
+	Parameter S_TX_WITHOUT_CRC_WAIT_DONE bound to: 2 - type: integer 
+	Parameter S_TX_CRC bound to: 3 - type: integer 
+	Parameter S_TX_CRC_DONE bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'crc16_CCITT' [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/CRC16_CCITT.v:17]
+	Parameter INIT_VALUE bound to: 16'b1111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'crc16_CCITT' (28#1) [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/CRC16_CCITT.v:17]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_reply.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'debug_reply' (29#1) [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_reply.v:26]
+INFO: [Synth 8-6157] synthesizing module 'debug_coprocessor' [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_coprocessor.v:28]
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_SYNC_1 bound to: 1 - type: integer 
+	Parameter S_SYNC_0 bound to: 2 - type: integer 
+	Parameter S_INPUT_WAIT bound to: 3 - type: integer 
+	Parameter S_FRAME_TYPE bound to: 4 - type: integer 
+	Parameter S_CRC bound to: 5 - type: integer 
+	Parameter S_WR_ACK bound to: 6 - type: integer 
+	Parameter S_PRAM_READ_WAIT bound to: 7 - type: integer 
+	Parameter S_CPU_STATUS_ACK bound to: 8 - type: integer 
+	Parameter S_WAIT_DONE bound to: 9 - type: integer 
+	Parameter S_WR_EXT bound to: 10 - type: integer 
+	Parameter S_EXT_CRC bound to: 11 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_coprocessor.v:262]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_coprocessor.v:366]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_coprocessor.v:428]
+INFO: [Synth 8-6155] done synthesizing module 'debug_coprocessor' (30#1) [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_coprocessor.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'debug_coprocessor_wrapper' (31#1) [C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_coprocessor_wrapper.v:26]
+WARNING: [Synth 8-6014] Unused sequential element init_start_reg was removed.  [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:144]
+WARNING: [Synth 8-3848] Net LD0_RED in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:61]
+WARNING: [Synth 8-3848] Net LD0_GREEN in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:62]
+WARNING: [Synth 8-3848] Net LD0_BLUE in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:63]
+WARNING: [Synth 8-3848] Net LD1_RED in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:65]
+WARNING: [Synth 8-3848] Net LD1_GREEN in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:66]
+WARNING: [Synth 8-3848] Net LD1_BLUE in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:67]
+WARNING: [Synth 8-3848] Net LD2_RED in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:69]
+WARNING: [Synth 8-3848] Net LD2_GREEN in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:70]
+WARNING: [Synth 8-3848] Net LD2_BLUE in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:71]
+WARNING: [Synth 8-3848] Net LD3_RED in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:73]
+WARNING: [Synth 8-3848] Net LD3_GREEN in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:74]
+WARNING: [Synth 8-3848] Net LD3_BLUE in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:75]
+WARNING: [Synth 8-3848] Net LD4 in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:77]
+WARNING: [Synth 8-3848] Net LD5 in module/entity Rattlesnake does not have driver. [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:78]
+INFO: [Synth 8-6155] done synthesizing module 'Rattlesnake' (32#1) [C:/GitHub/Rattlesnake/source/Xilinx/Rattlesnake.sv:26]
+WARNING: [Synth 8-3331] design debug_reply has unconnected port reply_debug_cmd[3]
+WARNING: [Synth 8-3331] design debug_reply has unconnected port reply_debug_cmd[2]
+WARNING: [Synth 8-3331] design debug_reply has unconnected port reply_debug_cmd[1]
+WARNING: [Synth 8-3331] design debug_reply has unconnected port reply_debug_cmd[0]
+WARNING: [Synth 8-3331] design Serial_RS232 has unconnected port class_8051_unit_pulse
+WARNING: [Synth 8-3331] design peripherals has unconnected port WB_WR_STB_I
+WARNING: [Synth 8-3331] design peripherals has unconnected port WB_WR_SEL_I[3]
+WARNING: [Synth 8-3331] design peripherals has unconnected port WB_WR_SEL_I[2]
+WARNING: [Synth 8-3331] design peripherals has unconnected port WB_WR_SEL_I[1]
+WARNING: [Synth 8-3331] design peripherals has unconnected port WB_WR_SEL_I[0]
+WARNING: [Synth 8-3331] design peripherals has unconnected port RXD
+WARNING: [Synth 8-3331] design mem_controller has unconnected port sync_reset
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[31]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[30]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[29]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[28]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[27]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[26]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[25]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[24]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[23]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[22]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[21]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[20]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[19]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[18]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[17]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[16]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[15]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[14]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[13]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[12]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[11]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[10]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[9]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[8]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[7]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[6]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[5]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[4]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[3]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[2]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[1]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs1_in_copy[0]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[31]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[30]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[29]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[28]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[27]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[26]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[25]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[24]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[23]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[22]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[21]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[20]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[19]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[18]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[17]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[16]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[15]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[14]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[13]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[12]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[11]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[10]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[9]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[8]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[7]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[6]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[5]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[4]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[3]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[2]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[1]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port rs2_in_copy[0]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[31]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[30]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[29]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[28]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[27]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[26]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[25]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[1]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_in[0]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[31]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[30]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[29]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[28]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[27]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[26]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[25]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[24]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[23]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[22]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[21]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[20]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[19]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[18]
+WARNING: [Synth 8-3331] design Rattlesnake_indirect_pointer_detect has unconnected port IR_original_in[17]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 803.098 ; gain = 252.863
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 812.324 ; gain = 262.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 812.324 ; gain = 262.090
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm/clk_mmcm_in_context.xdc] for cell 'clk_mmcm_i'
+Finished Parsing XDC File [c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm/clk_mmcm_in_context.xdc] for cell 'clk_mmcm_i'
+Parsing XDC File [C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc]
+WARNING: [Constraints 18-619] A clock with name 'OSC_IN' already exists, overwriting the previous clock with the same name. [C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc:8]
+Finished Parsing XDC File [C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Rattlesnake_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Rattlesnake_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 964.004 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 964.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 964.004 ; gain = 413.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 964.004 ; gain = 413.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for OSC_IN. (constraint file  c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm/clk_mmcm_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for OSC_IN. (constraint file  c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm/clk_mmcm_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for clk_mmcm_i. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 964.004 ; gain = 413.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "read_data_out_i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mtvec" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mscratch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mepc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mtval" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mcause" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exception_storage_page_fault" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exception_storage_page_fault" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mcycleh" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "minstreth" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mie_mtie" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mstatus_mpie" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_SYSTEM" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctl_load_X_from_rs1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "ctl_load_Y_from_rs2" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ctl_load_Y_from_imm_12" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_LUI" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_AUIPC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_JAL" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_JALR" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_BRANCH" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_LOAD" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_STORE" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_MISC_MEM" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_config_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_crc_sync_reset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_cpu_reset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctl_pram_write_enable" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ctl_preg_write_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_pram_read_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_uart_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 964.004 ; gain = 413.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1' (dual_port_ram) to 'PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1_copy'
+INFO: [Synth 8-223] decloning instance 'PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs2' (dual_port_ram) to 'PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs2_copy'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 10    
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 2     
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      1 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
+	   2 Input      1 Bit         XORs := 37    
+	   4 Input      1 Bit         XORs := 8     
+	   3 Input      1 Bit         XORs := 6     
++---Registers : 
+	              104 Bit    Registers := 1     
+	               88 Bit    Registers := 1     
+	               65 Bit    Registers := 1     
+	               64 Bit    Registers := 4     
+	               33 Bit    Registers := 6     
+	               32 Bit    Registers := 44    
+	               22 Bit    Registers := 2     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 2     
+	               15 Bit    Registers := 6     
+	               14 Bit    Registers := 4     
+	               13 Bit    Registers := 4     
+	               12 Bit    Registers := 6     
+	               11 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 114   
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---RAMs : 
+	              72K Bit         RAMs := 4     
+	              36K Bit         RAMs := 4     
+	               1K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     88 Bit        Muxes := 4     
+	   2 Input     65 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 13    
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 26    
+	  18 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 6     
+	   4 Input     30 Bit        Muxes := 2     
+	  13 Input     30 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 7     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     15 Bit        Muxes := 4     
+	   3 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 1     
+	   7 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 8     
+	  12 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 4     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 16    
+	   3 Input      5 Bit        Muxes := 3     
+	  13 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 10    
+	   3 Input      4 Bit        Muxes := 4     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	   3 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 12    
+	   3 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 105   
+	   4 Input      1 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 16    
+	  10 Input      1 Bit        Muxes := 19    
+	  19 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 11    
+	  12 Input      1 Bit        Muxes := 21    
+	   5 Input      1 Bit        Muxes := 8     
+	   6 Input      1 Bit        Muxes := 17    
+	   7 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 11    
+	  11 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Rattlesnake 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Rattlesnake_machine_timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module Rattlesnake_mm_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Rattlesnake_memory 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 2     
+Module dual_port_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
++---RAMs : 
+	               1K Bit         RAMs := 1     
+Module Rattlesnake_reg_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 8     
+Module Rattlesnake_CSR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 8     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	  18 Input     32 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 33    
+	  19 Input      1 Bit        Muxes := 1     
+Module Rattlesnake_instruction_decompress 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 6     
+	   4 Input     30 Bit        Muxes := 2     
+	  13 Input     30 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+Module Rattlesnake_fetch_instruction 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 3     
+Module Rattlesnake_instruction_decode 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  12 Input      1 Bit        Muxes := 21    
+Module absolute_value 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+Module long_slow_div_denom_reg 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               65 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     65 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 3     
+Module mul_div_32 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module Rattlesnake_execution_unit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               12 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 23    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module Rattlesnake_data_access 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   3 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 1     
+Module Rattlesnake_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               17 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 28    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input     17 Bit        Muxes := 3     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   3 Input     15 Bit        Muxes := 1     
+	   7 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 17    
+	  18 Input      1 Bit        Muxes := 15    
+	   7 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+Module Rattlesnake_block_write_detect 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               15 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module Rattlesnake_indirect_pointer_detect 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+Module PulseRain_Rattlesnake_core 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module single_port_ram_9bit 
+Detailed RTL Component Info : 
++---Registers : 
+	               13 Bit    Registers := 1     
++---RAMs : 
+	              72K Bit         RAMs := 1     
+Module single_port_ram_9bit__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
++---RAMs : 
+	              36K Bit         RAMs := 1     
+Module single_port_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+Module mem_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 2     
+Module UART_TX 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 5     
+Module peripherals 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 1     
+Module Serial_RS232 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 3     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 10    
+Module debug_UART 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module crc16_CCITT 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 18    
+	   4 Input      1 Bit         XORs := 4     
+	   3 Input      1 Bit         XORs := 3     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module debug_reply 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               88 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     88 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 5     
+Module debug_coprocessor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              104 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               22 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	  12 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "read_data_out_i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mtvec" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mscratch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mepc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mtval" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mstatus_mpie" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mcause" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mcycleh" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "minstreth" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mie_mtie" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exception_storage_page_fault" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:122]
+DSP Report: Generating DSP z_i0, operation Mode is: A*B.
+DSP Report: operator z_i0 is absorbed into DSP z_i0.
+DSP Report: operator z_i0 is absorbed into DSP z_i0.
+DSP Report: Generating DSP z_i0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator z_i0 is absorbed into DSP z_i0.
+DSP Report: operator z_i0 is absorbed into DSP z_i0.
+DSP Report: Generating DSP z_i0, operation Mode is: A*B.
+DSP Report: operator z_i0 is absorbed into DSP z_i0.
+DSP Report: operator z_i0 is absorbed into DSP z_i0.
+DSP Report: Generating DSP z_i0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator z_i0 is absorbed into DSP z_i0.
+DSP Report: operator z_i0 is absorbed into DSP z_i0.
+INFO: [Synth 8-5546] ROM "ctl_pram_read_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctl_pram_write_enable" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ctl_preg_write_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_cpu_reset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_config_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_uart_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctl_crc_sync_reset" won't be mapped to RAM because it is too sparse
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\mul_div_32_i/long_slow_div_denom_reg_i/L_num_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_fetch_instruction_i/\addr_step_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_fetch_instruction_i/\PC_out_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\LUI_out_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\addr_step_out_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ocd_i/debug_UART_i/UART_i/SM_d1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/int_gen_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\AUIPC_out_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i /Rattlesnake_execution_unit_i/\PC_out_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[47]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[46]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[45]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[44]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[43]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[42]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[41]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[40]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[39]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[38]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[37]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[36]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[35]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[34]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[33]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[32]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[31]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[30]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[29]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[28]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[27]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[26]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[25]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[24]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[23]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[22]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[21]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[20]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[19]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[18]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[17]) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[47]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[46]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[45]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[44]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[43]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[42]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[41]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[40]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[39]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[38]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[37]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[36]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[35]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[34]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[33]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[32]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[31]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[30]__0) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[47]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[46]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[45]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[44]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[43]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[42]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[41]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[40]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[39]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[38]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[37]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[36]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[35]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[34]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[33]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[32]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[31]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[30]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[29]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[28]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[27]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[26]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[25]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[24]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[23]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[22]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[21]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[20]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[19]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[18]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[17]__1) is unused and will be removed from module Rattlesnake_execution_unit.
+WARNING: [Synth 8-3332] Sequential element (mul_div_32_i/z_i_reg[47]__2) is unused and will be removed from module Rattlesnake_execution_unit.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 964.004 ; gain = 413.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                           | RTL Object                                                                                                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|dual_port_ram:                        | mem_reg                                                                                                      | 32 x 33(READ_FIRST)    | W |   | 32 x 33(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|dual_port_ram:                        | mem_reg                                                                                                      | 32 x 33(READ_FIRST)    | W |   | 32 x 33(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Rattlesnake                           | PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg | 8 K x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
+|single_port_ram_9bit:                 | mem_reg                                                                                                      | 8 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 2      | 
+|single_port_ram_9bit__parameterized0: | mem_reg                                                                                                      | 4 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 
+|single_port_ram_9bit__parameterized0: | mem_reg                                                                                                      | 4 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 
+|Rattlesnake                           | PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg  | 8 K x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
+|single_port_ram_9bit:                 | mem_reg                                                                                                      | 8 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 2      | 
+|single_port_ram_9bit__parameterized0: | mem_reg                                                                                                      | 4 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 
+|single_port_ram_9bit__parameterized0: | mem_reg                                                                                                      | 4 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 
++--------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mul_div_32  | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul_div_32  | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul_div_32  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul_div_32  | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/i_0/single_clk_ram_rs1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/i_1/single_clk_ram_rs2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:89]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:88]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:88]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:89]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:88]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:89]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:88]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:89]
+INFO: [Synth 8-6837] The timing for the instance i_0/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_3/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_4/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_4/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_5/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_5/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_5/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_6/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_7/PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_mmcm_i/clk_out' to pin 'clk_mmcm_i/bbstub_clk_out/O'
+WARNING: [Synth 8-565] redefining clock 'OSC_IN'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 964.004 ; gain = 413.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1062.227 ; gain = 511.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                           | RTL Object                                                                                                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|dual_port_ram:                        | mem_reg                                                                                                      | 32 x 33(READ_FIRST)    | W |   | 32 x 33(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|dual_port_ram:                        | mem_reg                                                                                                      | 32 x 33(READ_FIRST)    | W |   | 32 x 33(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Rattlesnake                           | PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg | 8 K x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
+|single_port_ram_9bit:                 | mem_reg                                                                                                      | 8 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 2      | 
+|single_port_ram_9bit__parameterized0: | mem_reg                                                                                                      | 4 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 
+|single_port_ram_9bit__parameterized0: | mem_reg                                                                                                      | 4 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 
+|Rattlesnake                           | PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg  | 8 K x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
+|single_port_ram_9bit:                 | mem_reg                                                                                                      | 8 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 2      | 
+|single_port_ram_9bit__parameterized0: | mem_reg                                                                                                      | 4 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 
+|single_port_ram_9bit__parameterized0: | mem_reg                                                                                                      | 4 K x 9(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 
++--------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:92]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:92]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:89]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:88]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:88]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:89]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:88]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:89]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:88]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v:89]
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1080.465 ; gain = 530.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1085.262 ; gain = 535.027
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1085.262 ; gain = 535.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1085.262 ; gain = 535.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1085.262 ; gain = 535.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1085.262 ; gain = 535.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1085.262 ; gain = 535.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_mmcm      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |clk_mmcm   |     1|
+|2     |CARRY4     |   266|
+|3     |DSP48E1    |     4|
+|4     |LUT1       |   204|
+|5     |LUT2       |   422|
+|6     |LUT3       |   549|
+|7     |LUT4       |   567|
+|8     |LUT5       |   718|
+|9     |LUT6       |  1048|
+|10    |MUXF7      |    35|
+|11    |RAMB18E1   |     2|
+|12    |RAMB18E1_1 |     2|
+|13    |RAMB36E1   |     8|
+|14    |RAMB36E1_1 |     4|
+|15    |FDCE       |  2303|
+|16    |FDPE       |    34|
+|17    |FDRE       |   203|
+|18    |IBUF       |     2|
+|19    |OBUF       |     3|
+|20    |OBUFT      |    14|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------+---------------------------------------+------+
+|      |Instance                                               |Module                                 |Cells |
++------+-------------------------------------------------------+---------------------------------------+------+
+|1     |top                                                    |                                       |  6390|
+|2     |  PulseRain_Rattlesnake_MCU_i                          |PulseRain_Rattlesnake_MCU              |  5240|
+|3     |    PulseRain_Rattlesnake_core_i                       |PulseRain_Rattlesnake_core             |  4800|
+|4     |      Rattlesnake_CSR_i                                |Rattlesnake_CSR                        |   540|
+|5     |      Rattlesnake_block_write_detect_i                 |Rattlesnake_block_write_detect         |    47|
+|6     |      Rattlesnake_controller_i                         |Rattlesnake_controller                 |   505|
+|7     |      Rattlesnake_data_access_i                        |Rattlesnake_data_access                |   163|
+|8     |      Rattlesnake_execution_unit_i                     |Rattlesnake_execution_unit             |  2453|
+|9     |        mul_div_32_i                                   |mul_div_32                             |  1111|
+|10    |          long_slow_div_denom_reg_i                    |long_slow_div_denom_reg                |   511|
+|11    |      Rattlesnake_fetch_instruction_i                  |Rattlesnake_fetch_instruction          |   325|
+|12    |        C_extension_i                                  |Rattlesnake_instruction_decompress     |    50|
+|13    |      Rattlesnake_indirect_pointer_detect_i            |Rattlesnake_indirect_pointer_detect    |    26|
+|14    |      Rattlesnake_instruction_decode_i                 |Rattlesnake_instruction_decode         |   240|
+|15    |      Rattlesnake_mm_reg_i                             |Rattlesnake_mm_reg                     |   366|
+|16    |        Rattlesnake_machine_timer_i                    |Rattlesnake_machine_timer              |   361|
+|17    |      Rattlesnake_reg_file_i                           |Rattlesnake_reg_file                   |    92|
+|18    |        single_clk_ram_rs1                             |dual_port_ram                          |    34|
+|19    |        single_clk_ram_rs2                             |dual_port_ram_8                        |    24|
+|20    |    \gen_peripheral[0].peripherals_i                   |peripherals                            |   186|
+|21    |      UART_TX_i                                        |UART_TX                                |    73|
+|22    |    mem_controller_i                                   |mem_controller                         |   247|
+|23    |      ram_high_i                                       |single_port_ram                        |    41|
+|24    |        \gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st  |single_port_ram_9bit_4                 |     2|
+|25    |        \gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st  |single_port_ram_9bit_5                 |     3|
+|26    |        \gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd  |single_port_ram_9bit__parameterized0_6 |    17|
+|27    |        \gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd  |single_port_ram_9bit__parameterized0_7 |    18|
+|28    |      ram_low_i                                        |single_port_ram_1                      |    41|
+|29    |        \gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st  |single_port_ram_9bit                   |     2|
+|30    |        \gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st  |single_port_ram_9bit_2                 |     3|
+|31    |        \gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd  |single_port_ram_9bit__parameterized0   |    17|
+|32    |        \gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd  |single_port_ram_9bit__parameterized0_3 |    18|
+|33    |  ocd_i                                                |debug_coprocessor_wrapper              |  1093|
+|34    |    debug_UART_i                                       |debug_UART                             |   204|
+|35    |      UART_i                                           |Serial_RS232                           |   174|
+|36    |    debug_coprocessor_i                                |debug_coprocessor                      |   711|
+|37    |      crc16_CCITT_i                                    |crc16_CCITT_0                          |    75|
+|38    |    debug_reply_i                                      |debug_reply                            |   178|
+|39    |      crc16_CCITT_i                                    |crc16_CCITT                            |    53|
++------+-------------------------------------------------------+---------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1085.262 ; gain = 535.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 359 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1085.262 ; gain = 383.348
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1085.262 ; gain = 535.027
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 321 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1085.262 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+266 Infos, 219 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1085.262 ; gain = 788.184
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1085.262 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/synth_1/Rattlesnake.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Rattlesnake_utilization_synth.rpt -pb Rattlesnake_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 27 17:15:43 2019...

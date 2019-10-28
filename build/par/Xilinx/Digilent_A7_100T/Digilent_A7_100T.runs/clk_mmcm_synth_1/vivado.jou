@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Oct 19 17:21:38 2019
+# Process ID: 6584
+# Current directory: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/clk_mmcm_synth_1
+# Command line: vivado.exe -log clk_mmcm.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_mmcm.tcl
+# Log file: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/clk_mmcm_synth_1/clk_mmcm.vds
+# Journal file: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/clk_mmcm_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clk_mmcm.tcl -notrace

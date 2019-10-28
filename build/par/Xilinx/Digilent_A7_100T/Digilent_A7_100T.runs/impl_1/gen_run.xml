@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100ticsg324-1L" LaunchTime="1572221681">
+  <File Type="BITSTR-BMM" Name="Rattlesnake_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Rattlesnake_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Rattlesnake_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="Rattlesnake_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Rattlesnake.tcl"/>
+  <File Type="OPT-TIMING" Name="Rattlesnake_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Rattlesnake_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="Rattlesnake_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Rattlesnake_reports.tcl"/>
+  <File Type="OPT-DRC" Name="Rattlesnake_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Rattlesnake.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Rattlesnake_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Rattlesnake_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Rattlesnake_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Rattlesnake_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Rattlesnake_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Rattlesnake_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Rattlesnake_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Rattlesnake_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Rattlesnake_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Rattlesnake_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Rattlesnake_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="Rattlesnake.bgn"/>
+  <File Type="PLACE-TIMING" Name="Rattlesnake_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Rattlesnake_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Rattlesnake.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Rattlesnake_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Rattlesnake_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Rattlesnake_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Rattlesnake.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Rattlesnake_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Rattlesnake_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Rattlesnake_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Rattlesnake_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Rattlesnake_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Rattlesnake_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Rattlesnake.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="Rattlesnake_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Rattlesnake.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Rattlesnake_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Rattlesnake_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="Rattlesnake.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Rattlesnake_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Rattlesnake_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Rattlesnake_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Rattlesnake_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Rattlesnake_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Rattlesnake_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Rattlesnake_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Rattlesnake_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Rattlesnake_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Rattlesnake_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Rattlesnake_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Rattlesnake_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Rattlesnake_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Rattlesnake_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Rattlesnake_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Rattlesnake_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Rattlesnake_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Rattlesnake_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Rattlesnake_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Rattlesnake.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Rattlesnake_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Rattlesnake.rbt"/>
+  <File Type="BITSTR-NKY" Name="Rattlesnake.nky"/>
+  <File Type="BG-DRC" Name="Rattlesnake.drc"/>
+  <File Type="RDI-RDI" Name="Rattlesnake.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../../submodules/HW_Loader/source/CRC16_CCITT.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/source/PulseRain_Rattlesnake_MCU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_CSR.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_data_access.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_indirect_pointer_detect.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decode.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_instruction_decompress.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_reg_file.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/absolute_value.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/HW_Loader/source/debug_coprocessor.vh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/HW_Loader/source/debug_coprocessor_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/dual_port_ram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/single_port_ram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/memory/Xilinx/Digilent_A7_100T/single_port_ram_9bit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/PulseRain_Rattlesnake_core.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_block_write_detect.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_controller.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_execution_unit.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_fetch_instruction.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_machine_timer.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_mm_reg.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/HW_Loader/source/Serial_RS232.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/peripherals/UART/UART_TX.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/HW_Loader/source/debug_UART.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/HW_Loader/source/debug_coprocessor.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/HW_Loader/source/debug_reply.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/long_slow_div_denom_reg.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/memory/mem_controller.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/peripherals/peripherals.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../source/Xilinx/Rattlesnake.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Rattlesnake"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/Rattlesnake">
+    <File Path="$PPRDIR/../../constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Performance_ExtraTimingOpt" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">8</Option>
+    </Step>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">2</Option>
+    </Step>
+    <Step Id="route_design">
+      <Option Id="Directive">8</Option>
+    </Step>
+    <Step Id="post_route_phys_opt_design">
+      <Option Id="Directive">1</Option>
+    </Step>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_mmcm"/>
+</GenRun>

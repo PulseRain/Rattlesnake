@@ -1,0 +1,804 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Oct 27 17:17:28 2019
+| Host         : think running 64-bit major release  (build 9200)
+| Command      : report_methodology -file Rattlesnake_methodology_drc_routed.rpt -pb Rattlesnake_methodology_drc_routed.pb -rpx Rattlesnake_methodology_drc_routed.rpx
+| Design       : Rattlesnake
+| Device       : xc7a100ticsg324-1L
+| Speed File   : -1L
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 152
++----------+----------+--------------------------------------------------------+------------+
+| Rule     | Severity | Description                                            | Violations |
++----------+----------+--------------------------------------------------------+------------+
+| DPIR-1   | Warning  | Asynchronous driver check                              | 128        |
+| LUTAR-1  | Warning  | LUT drives async reset alert                           | 2          |
+| SYNTH-6  | Warning  | Timing of a block RAM might be sub-optimal             | 16         |
+| SYNTH-10 | Warning  | Wide multiplier                                        | 4          |
+| XDCC-1   | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7   | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
++----------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIR-1#1 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#2 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#3 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#4 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#5 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#6 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#7 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#8 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#9 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#10 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#11 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#12 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#13 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#14 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#15 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#16 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#17 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#18 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#19 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#20 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#21 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#22 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#23 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#24 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#25 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#26 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#27 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#28 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#29 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#30 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#31 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#32 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#33 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#34 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#35 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#36 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#37 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#38 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#39 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#40 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#41 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#42 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#43 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#44 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#45 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#46 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#47 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#48 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#49 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#50 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#51 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#52 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#53 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#54 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#55 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#56 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#57 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#58 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#59 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#60 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#61 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#62 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#63 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#64 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#65 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#66 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#67 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#68 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#69 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#70 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#71 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#72 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#73 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#74 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#75 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#76 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#77 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#78 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#79 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#80 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#81 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#82 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#83 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#84 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#85 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#86 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#87 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#88 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#89 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#90 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#91 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#92 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#93 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#94 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#95 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#96 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#97 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#98 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#99 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#100 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#101 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#102 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#103 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#104 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#105 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#106 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#107 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#108 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#109 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#110 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#111 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#112 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#113 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#114 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#115 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#116 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#117 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#118 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#119 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#120 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#121 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#122 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#123 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#124 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#125 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#126 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#127 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#128 Warning
+Asynchronous driver check  
+DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 input pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell ocd_i/debug_coprocessor_i/crc16_CCITT_i/cpu_reset_sr[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) TXD_reg/CLR, actual_cpu_start_reg/CLR, actual_start_addr_reg[10]/CLR, actual_start_addr_reg[11]/CLR, actual_start_addr_reg[12]/CLR, actual_start_addr_reg[13]/CLR, actual_start_addr_reg[14]/CLR, actual_start_addr_reg[15]/CLR, actual_start_addr_reg[16]/CLR, actual_start_addr_reg[17]/CLR, actual_start_addr_reg[18]/CLR, actual_start_addr_reg[19]/CLR, actual_start_addr_reg[1]/CLR, actual_start_addr_reg[20]/CLR, actual_start_addr_reg[21]/CLR (the first 15 of 536 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell ocd_i/debug_coprocessor_i/mtimecmp[63]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) z_reg[63]_i_10/CLR, z_reg[63]_i_9/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_ACK_O_reg/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[31]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[0]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[10]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[11]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[12]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[13]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[14]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[15]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[16]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[17]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[18]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[19]/CLR (the first 15 of 1801 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs2/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#5 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#6 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#9 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#10 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#11 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#12 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#13 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#14 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#15 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#16 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__0 of size 16x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 [get_ports OSC_IN] (Source: C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc (Line: 8))
+Previous: create_clock -period 10.000 [get_ports OSC_IN] (Source: c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm.xdc (Line: 56))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 [get_ports OSC_IN] (Source: C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc (Line: 8))
+Previous: create_clock -period 10.000 [get_ports OSC_IN] (Source: c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm.xdc (Line: 56))
+Related violations: <none>
+
+
