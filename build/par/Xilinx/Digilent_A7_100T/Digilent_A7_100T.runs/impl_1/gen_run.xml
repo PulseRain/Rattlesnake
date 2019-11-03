@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100ticsg324-1L" LaunchTime="1572221681">
+<GenRun Id="impl_1" LaunchPart="xc7a100ticsg324-1L" LaunchTime="1572415716">
   <File Type="BITSTR-BMM" Name="Rattlesnake_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Rattlesnake_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Rattlesnake_timing_summary_init.rpt"/>
@@ -233,6 +233,27 @@
     </File>
     <File Path="$PPRDIR/../../../../submodules/HW_Loader/source/Serial_RS232.v">
       <FileInfo SFType="SVerilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/peripherals/UART/UART_FIFO.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/peripherals/UART/UART_RX.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../submodules/PulseRain_MCU/peripherals/UART/UART_RX_WITH_FIFO.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

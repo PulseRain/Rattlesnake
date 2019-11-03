@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Oct 27 17:15:50 2019
-# Process ID: 7412
+# Start of session at: Tue Oct 29 23:10:33 2019
+# Process ID: 17032
 # Current directory: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1
 # Command line: vivado.exe -log Rattlesnake.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Rattlesnake.tcl -notrace
 # Log file: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/Rattlesnake.vdi
@@ -15,7 +15,7 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a100ticsg324-1L
 INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm.dcp' for cell 'clk_mmcm_i'
-INFO: [Netlist 29-17] Analyzing 322 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1978 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -24,19 +24,19 @@ Finished Parsing XDC File [c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_10
 Parsing XDC File [c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm.xdc] for cell 'clk_mmcm_i/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm.xdc:57]
-get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1220.188 ; gain = 533.168
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1259.059 ; gain = 552.516
 Finished Parsing XDC File [c:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.srcs/ip/clk_mmcm/clk_mmcm.xdc] for cell 'clk_mmcm_i/inst'
 Parsing XDC File [C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc]
 WARNING: [Constraints 18-619] A clock with name 'OSC_IN' already exists, overwriting the previous clock with the same name. [C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc:8]
 Finished Parsing XDC File [C:/GitHub/Rattlesnake/build/par/constraints/Xilinx/Digilent_A7_100T/Rattlesnake.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1221.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1263.035 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 10 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1221.184 ; gain = 924.547
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1263.035 ; gain = 966.453
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100ti'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100ti'
@@ -47,55 +47,55 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.780 . Memory (MB): peak = 1221.184 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.714 . Memory (MB): peak = 1263.035 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 22ebf9e9a
+Ending Cache Timing Information Task | Checksum: 14ddcb008
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.181 . Memory (MB): peak = 1234.145 ; gain = 12.961
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.454 . Memory (MB): peak = 1265.039 ; gain = 2.004
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 299561fd4
+Phase 1 Retarget | Checksum: 1bac365a6
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.259 . Memory (MB): peak = 1357.035 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 5 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.605 . Memory (MB): peak = 1402.980 ; gain = 0.066
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 6 cells
 INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 20314aef6
+Phase 2 Constant propagation | Checksum: 1899b015e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.302 . Memory (MB): peak = 1357.035 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.710 . Memory (MB): peak = 1402.980 ; gain = 0.066
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1b583cb86
+Phase 3 Sweep | Checksum: 1ecf3b06b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.412 . Memory (MB): peak = 1357.035 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.915 . Memory (MB): peak = 1402.980 ; gain = 0.066
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1b583cb86
+Phase 4 BUFG optimization | Checksum: 1ecf3b06b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.497 . Memory (MB): peak = 1357.035 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1402.980 ; gain = 0.066
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1b583cb86
+Phase 5 Shift Register Optimization | Checksum: 1ecf3b06b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.558 . Memory (MB): peak = 1357.035 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1402.980 ; gain = 0.066
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1b583cb86
+Phase 6 Post Processing Netlist | Checksum: 1ecf3b06b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.581 . Memory (MB): peak = 1357.035 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1402.980 ; gain = 0.066
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -104,7 +104,7 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               5  |                                              1  |
+|  Retarget                     |               0  |               6  |                                              1  |
 |  Constant propagation         |               0  |               0  |                                              0  |
 |  Sweep                        |               0  |               0  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
@@ -116,10 +116,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1357.035 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1f517b410
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1402.980 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 15c1548d0
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.707 . Memory (MB): peak = 1357.035 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1402.980 ; gain = 0.066
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -133,37 +133,37 @@ Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 16 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 36 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 6 Total Ports: 32
-Ending PowerOpt Patch Enables Task | Checksum: 20aaf8c4f
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 72
+Ending PowerOpt Patch Enables Task | Checksum: 15c1548d0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 20aaf8c4f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.167 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 15c1548d0
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1568.684 ; gain = 211.648
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1630.965 ; gain = 227.984
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 20aaf8c4f
+Ending Final Cleanup Task | Checksum: 15c1548d0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 21233886d
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 15c1548d0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 34 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1568.684 ; gain = 347.500
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1568.684 ; gain = 0.000
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1630.965 ; gain = 367.930
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/Rattlesnake_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file Rattlesnake_drc_opted.rpt -pb Rattlesnake_drc_opted.pb -rpx Rattlesnake_drc_opted.rpx
 Command: report_drc -file Rattlesnake_drc_opted.rpt -pb Rattlesnake_drc_opted.pb -rpx Rattlesnake_drc_opted.rpx
@@ -181,26 +181,26 @@ Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[26]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[30]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/ctl_mem_we_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/mem_write_addr_d1_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[26]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[30]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRARDADDR[5] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/Q[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRARDADDR[6] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/Q[1]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRARDADDR[7] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/Q[2]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -217,10 +217,10 @@ WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Ratt
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRBWRADDR[9] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/ADDRBWRADDR[4]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRBWRADDR[9] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/ADDRBWRADDR[4]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/rd_addr_out_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/ctl_disable_data_access_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/fetch_active_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/first_exe_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_done_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/reg_ctl_save_to_rd_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_instruction_decode_i/enable_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 42 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
@@ -231,37 +231,37 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1a8274715
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e19febcb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e50ee28b
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13f881d2b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: fd5fe0e9
+Phase 1.3 Build Placer Netlist Model | Checksum: 170bb2dfb
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: fd5fe0e9
+Phase 1.4 Constrain Clocks/Macros | Checksum: 170bb2dfb
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: fd5fe0e9
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 170bb2dfb
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1031f0ef5
+Phase 2.1 Floorplanning | Checksum: 205c8eb2c
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
@@ -269,9 +269,10 @@ Phase 2.2.1 Physical Synthesis In Placer
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-117] Net ocd_i/debug_coprocessor_i/ADDRARDADDR[0] could not be optimized because driver ocd_i/debug_coprocessor_i/mem_reg_0_i_13 could not be replicated
-INFO: [Physopt 32-117] Net PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_block_write_detect_i/din[0] could not be optimized because driver PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_block_write_detect_i/mem_reg_2_i_1 could not be replicated
-INFO: [Physopt 32-117] Net PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/mem_we_reg[1]_1 could not be optimized because driver PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/mem_reg_0_i_5__1 could not be replicated
+INFO: [Physopt 32-117] Net ocd_i/debug_coprocessor_i/ADDRARDADDR[0] could not be optimized because driver ocd_i/debug_coprocessor_i/mem_reg_0_0_i_15 could not be replicated
+INFO: [Physopt 32-117] Net ocd_i/debug_coprocessor_i/ADDRARDADDR[13] could not be optimized because driver ocd_i/debug_coprocessor_i/mem_reg_0_0_i_2__1 could not be replicated
+INFO: [Physopt 32-117] Net ocd_i/debug_coprocessor_i/ADDRARDADDR[8] could not be optimized because driver ocd_i/debug_coprocessor_i/mem_reg_0_0_i_7 could not be replicated
+INFO: [Physopt 32-117] Net ocd_i/debug_coprocessor_i/ADDRARDADDR[3] could not be optimized because driver ocd_i/debug_coprocessor_i/mem_reg_0_0_i_12 could not be replicated
 INFO: [Physopt 32-68] No nets found for critical-cell optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -283,7 +284,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -302,65 +303,65 @@ Summary of Physical Synthesis Optimizations
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: aa020ebf
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 21085b616
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Phase 2.2 Global Placement Core | Checksum: 1014ae58f
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 1484c3ccc
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1014ae58f
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1484c3ccc
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 17526780c
+Phase 3.1 Commit Multi Column Macros | Checksum: 1a90ef254
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: c959428b
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1bad8cba7
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1560e46e3
+Phase 3.3 Area Swap Optimization | Checksum: 1face265f
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 12506aff0
+Phase 3.4 Pipeline Register Optimization | Checksum: 13db6d744
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 180e030ed
+Phase 3.5 Fast Optimization | Checksum: 1fbfd8036
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:20 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 187f41e71
+Phase 3.6 Small Shape Detail Placement | Checksum: 15e2ac410
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:25 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 1db839035
+Phase 3.7 Re-assign LUT pins | Checksum: 1a6b670d4
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:26 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 15cd7539c
+Phase 3.8 Pipeline Register Optimization | Checksum: 101c22294
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:26 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 16df457a1
+Phase 3.9 Fast Optimization | Checksum: 156096974
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 16df457a1
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:28 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 156096974
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:28 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -368,60 +369,60 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 19a618cbe
+Post Placement Optimization Initialization | Checksum: 15f2591a7
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-33] Processed net ocd_i/debug_coprocessor_i/cpu_reset_reg_0, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 19a618cbe
+Phase 4.1.1.1 BUFG Insertion | Checksum: 15f2591a7
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 1568.684 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.515. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 208383341
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:31 . Memory (MB): peak = 1630.965 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.503. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 13a041d0d
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 208383341
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:34 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 13a041d0d
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:34 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 208383341
+Phase 4.2 Post Placement Cleanup | Checksum: 13a041d0d
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:35 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 208383341
+Phase 4.3 Placer Reporting | Checksum: 13a041d0d
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:35 . Memory (MB): peak = 1630.965 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 1adb51d6a
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: e221ca69
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1adb51d6a
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:35 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: e221ca69
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Ending Placer Task | Checksum: dcece294
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:35 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Ending Placer Task | Checksum: 520c002f
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:35 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-72 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+73 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1568.684 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:36 . Memory (MB): peak = 1630.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.408 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/Rattlesnake_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file Rattlesnake_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1568.684 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file Rattlesnake_utilization_placed.rpt -pb Rattlesnake_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file Rattlesnake_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1568.684 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.306 . Memory (MB): peak = 1630.965 ; gain = 0.000
 Command: phys_opt_design -directive AggressiveExplore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100ti'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100ti'
@@ -429,15 +430,15 @@ INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplor
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-82 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+83 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.406 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 1630.965 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/Rattlesnake_physopt.dcp' has been generated.
 Command: route_design -directive AggressiveExplore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100ti'
@@ -451,41 +452,41 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Starting Routing Task
 INFO: [Route 35-270] Using Router directive 'AggressiveExplore'.
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: bed352c7 ConstDB: 0 ShapeSum: 1e198fcd RouteDB: 0
+Checksum: PlaceDB: 45cc13c7 ConstDB: 0 ShapeSum: c3fec68 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 3d3a8a72
+Phase 1 Build RT Design | Checksum: e068a37e
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1568.684 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 3474f64b NumContArr: 8c59427 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1632.230 ; gain = 1.266
+Post Restoration Checksum: NetGraph: 24ac23c2 NumContArr: bbbc7fbc Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 3d3a8a72
+Phase 2.1 Create Timer | Checksum: e068a37e
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1632.230 ; gain = 1.266
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 3d3a8a72
+Phase 2.2 Fix Topology Constraints | Checksum: e068a37e
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1637.973 ; gain = 7.008
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 3d3a8a72
+Phase 2.3 Pre Route Cleanup | Checksum: e068a37e
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1568.684 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1637.973 ; gain = 7.008
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 20a0c99d7
+Phase 2.4 Update Timing | Checksum: 1c85eaf80
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1581.379 ; gain = 12.695
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.534  | TNS=0.000  | WHS=-0.148 | THS=-42.157|
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:27 . Memory (MB): peak = 1674.152 ; gain = 43.188
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.542  | TNS=0.000  | WHS=-0.145 | THS=-55.666|
 
-Phase 2 Router Initialization | Checksum: 2077934a5
+Phase 2 Router Initialization | Checksum: 123be11df
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1602.816 ; gain = 34.133
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:28 . Memory (MB): peak = 1722.547 ; gain = 91.582
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -493,97 +494,88 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 5134
+  Number of Failed Nets               = 15334
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 5134
+  Number of Unrouted Nets             = 15334
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: cc312521
+Phase 3 Initial Routing | Checksum: 1b3ad040d
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:33 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1624
- Number of Nodes with overlaps = 623
- Number of Nodes with overlaps = 284
- Number of Nodes with overlaps = 156
- Number of Nodes with overlaps = 69
- Number of Nodes with overlaps = 37
- Number of Nodes with overlaps = 15
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 5647
+ Number of Nodes with overlaps = 3028
+ Number of Nodes with overlaps = 1596
+ Number of Nodes with overlaps = 821
+ Number of Nodes with overlaps = 429
+ Number of Nodes with overlaps = 210
+ Number of Nodes with overlaps = 90
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 22
+ Number of Nodes with overlaps = 7
  Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.020 | TNS=-0.020 | WHS=N/A    | THS=N/A    |
-
-Phase 4.1 Global Iteration 0 | Checksum: 1da0b7124
-
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:38 . Memory (MB): peak = 1611.531 ; gain = 42.848
-
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 270
- Number of Nodes with overlaps = 197
- Number of Nodes with overlaps = 91
- Number of Nodes with overlaps = 60
- Number of Nodes with overlaps = 45
- Number of Nodes with overlaps = 20
- Number of Nodes with overlaps = 10
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.009  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.188  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 19ee66fdc
+Phase 4.1 Global Iteration 0 | Checksum: bf5b06c7
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
-Phase 4 Rip-up And Reroute | Checksum: 19ee66fdc
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1741.367 ; gain = 110.402
+Phase 4 Rip-up And Reroute | Checksum: bf5b06c7
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 19ee66fdc
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: bfd21829
+
+Time (s): cpu = 00:02:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1741.367 ; gain = 110.402
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.233  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: bfd21829
+
+Time (s): cpu = 00:02:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 19ee66fdc
+Phase 5.2 Clock Skew Optimization | Checksum: bfd21829
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
-Phase 5 Delay and Skew Optimization | Checksum: 19ee66fdc
+Time (s): cpu = 00:02:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1741.367 ; gain = 110.402
+Phase 5 Delay and Skew Optimization | Checksum: bfd21829
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:02:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 11a6219e2
+Phase 6.1.1 Update Timing | Checksum: e6c2638b
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.025  | TNS=0.000  | WHS=0.044  | THS=0.000  |
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1741.367 ; gain = 110.402
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.233  | TNS=0.000  | WHS=0.044  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 18b88461d
+Phase 6.1 Hold Fix Iter | Checksum: 9d76823b
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
-Phase 6 Post Hold Fix | Checksum: 18b88461d
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1741.367 ; gain = 110.402
+Phase 6 Post Hold Fix | Checksum: 9d76823b
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.24838 %
-  Global Horizontal Routing Utilization  = 1.78005 %
+  Global Vertical Routing Utilization    = 5.03116 %
+  Global Horizontal Routing Utilization  = 6.35941 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -593,45 +585,45 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 108ca660b
+Phase 7 Route finalize | Checksum: b033dd57
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 108ca660b
+Phase 8 Verifying routed nets | Checksum: b033dd57
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:43 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: ee38cda6
+Phase 9 Depositing Routes | Checksum: 175a2605c
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:44 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:02:37 ; elapsed = 00:01:41 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Phase 10 Post Router Timing
-INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.030  | TNS=0.000  | WHS=0.045  | THS=0.000  |
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.235  | TNS=0.000  | WHS=0.046  | THS=0.000  |
 
 INFO: [Route 35-61] The design met the timing requirement.
-Phase 10 Post Router Timing | Checksum: 15dee4718
+Phase 10 Post Router Timing | Checksum: 1a3666ff2
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:45 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:44 . Memory (MB): peak = 1741.367 ; gain = 110.402
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:45 . Memory (MB): peak = 1611.531 ; gain = 42.848
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:44 . Memory (MB): peak = 1741.367 ; gain = 110.402
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-98 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+99 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:00 ; elapsed = 00:00:46 . Memory (MB): peak = 1611.531 ; gain = 42.848
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1611.531 ; gain = 0.000
+route_design: Time (s): cpu = 00:02:45 ; elapsed = 00:01:46 . Memory (MB): peak = 1741.367 ; gain = 110.402
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1741.367 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.524 . Memory (MB): peak = 1611.531 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1741.367 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/Rattlesnake_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file Rattlesnake_drc_routed.rpt -pb Rattlesnake_drc_routed.pb -rpx Rattlesnake_drc_routed.rpx
 Command: report_drc -file Rattlesnake_drc_routed.rpt -pb Rattlesnake_drc_routed.pb -rpx Rattlesnake_drc_routed.rpx
@@ -645,13 +637,14 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/Rattlesnake_methodology_drc_routed.rpt.
 report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1741.367 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file Rattlesnake_power_routed.rpt -pb Rattlesnake_power_summary_routed.pb -rpx Rattlesnake_power_routed.rpx
 Command: report_power -file Rattlesnake_power_routed.rpt -pb Rattlesnake_power_summary_routed.pb -rpx Rattlesnake_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-110 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+111 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file Rattlesnake_route_status.rpt -pb Rattlesnake_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file Rattlesnake_timing_summary_routed.rpt -pb Rattlesnake_timing_summary_routed.pb -rpx Rattlesnake_timing_summary_routed.rpx -warn_on_violation 
@@ -663,13 +656,13 @@ INFO: [runtcl-4] Executing : report_clock_utilization -file Rattlesnake_clock_ut
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Rattlesnake_bus_skew_routed.rpt -pb Rattlesnake_bus_skew_routed.pb -rpx Rattlesnake_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1L, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 27 17:17:30 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 29 23:13:52 2019...
 #-----------------------------------------------------------
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Oct 27 17:33:59 2019
-# Process ID: 6932
+# Start of session at: Tue Oct 29 23:14:12 2019
+# Process ID: 12628
 # Current directory: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1
 # Command line: vivado.exe -log Rattlesnake.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Rattlesnake.tcl -notrace
 # Log file: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/Rattlesnake.vdi
@@ -680,9 +673,9 @@ Command: open_checkpoint Rattlesnake_routed.dcp
 
 Starting open_checkpoint Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 296.871 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 296.766 ; gain = 0.000
 INFO: [Device 21-403] Loading part xc7a100ticsg324-1L
-INFO: [Netlist 29-17] Analyzing 322 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1978 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -693,15 +686,15 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.559 . Memory (MB): peak = 1205.262 ; gain = 6.957
-Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.560 . Memory (MB): peak = 1205.262 ; gain = 6.957
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1205.262 ; gain = 0.000
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1247.055 ; gain = 7.238
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1247.055 ; gain = 7.238
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1247.055 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1 (64-bit) build 2552052
-open_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.262 ; gain = 908.391
+open_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1247.055 ; gain = 950.289
 Command: write_bitstream -force Rattlesnake.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100ti'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100ti'
@@ -769,26 +762,27 @@ WARNING: [DRC DPOR-1] Asynchronous load check: DSP PulseRain_Rattlesnake_MCU_i/P
 WARNING: [DRC DPOR-1] Asynchronous load check: DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 output is connected to registers with an asynchronous reset (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i_reg[7]__1). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
 WARNING: [DRC DPOR-1] Asynchronous load check: DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 output is connected to registers with an asynchronous reset (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i_reg[8]__1). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
 WARNING: [DRC DPOR-1] Asynchronous load check: DSP PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i0__1 output is connected to registers with an asynchronous reset (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/mul_div_32_i/z_i_reg[9]__1). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/ctl_mem_we_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/mem_write_addr_d1_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[26]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[30]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/read_mem_addr_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/ADDRARDADDR[12]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/read_mem_enable_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC IOSR-1] IOB set reset sharing: IO RXD connects to flops which have these ocd_i/debug_coprocessor_i/crc16_CCITT_i/bbstub_locked, and ocd_i/debug_coprocessor_i/cpu_reset_reg_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/ctl_mem_we_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_data_access_i/mem_write_addr_d1_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[26]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[30]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/IR_out_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0 has an input control pin PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0/ADDRARDADDR[14] (net: PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/ADDRARDADDR[14]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/X_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRARDADDR[5] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/Q[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRARDADDR[6] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/Q[1]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRARDADDR[7] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/Q[2]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_fetch_instruction_i/IR_out_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -805,11 +799,11 @@ WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Ratt
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRBWRADDR[9] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/ADDRBWRADDR[4]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/ADDRBWRADDR[9] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/ADDRBWRADDR[4]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_execution_unit_i/rd_addr_out_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/ctl_disable_data_access_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/current_state_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_instruction_decode_i/enable_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_mm_reg_i/enable_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/mem_read_ack_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 91 Warnings
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg has an input control pin PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/mem_reg/WEBWE[3] (net: PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_reg_file_i/single_clk_ram_rs1/WEBWE[0]) which is driven by a register (PulseRain_Rattlesnake_MCU_i/PulseRain_Rattlesnake_core_i/Rattlesnake_controller_i/first_exe_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 92 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -821,9 +815,9 @@ Creating bitstream...
 Writing bitstream ./Rattlesnake.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sun Oct 27 17:34:31 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Oct 29 23:14:54 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-23 Infos, 91 Warnings, 0 Critical Warnings and 0 Errors encountered.
+23 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1703.980 ; gain = 498.719
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 27 17:34:31 2019...
+write_bitstream: Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 1783.438 ; gain = 536.383
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 29 23:14:54 2019...

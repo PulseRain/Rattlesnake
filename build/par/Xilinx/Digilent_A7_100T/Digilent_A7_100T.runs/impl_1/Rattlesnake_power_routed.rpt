@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Oct 27 17:17:30 2019
+| Date             : Tue Oct 29 23:13:51 2019
 | Host             : think running 64-bit major release  (build 9200)
 | Command          : report_power -file Rattlesnake_power_routed.rpt -pb Rattlesnake_power_summary_routed.pb -rpx Rattlesnake_power_routed.rpx
 | Design           : Rattlesnake
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.274        |
+| Total On-Chip Power (W)  | 0.337        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.189        |
+| Dynamic (W)              | 0.252        |
 | Device Static (W)        | 0.085        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 98.8         |
-| Junction Temperature (C) | 26.2         |
+| Max Ambient (C)          | 98.5         |
+| Junction Temperature (C) | 26.5         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.015 |        5 |       --- |             --- |
-| Slice Logic    |     0.012 |     6421 |       --- |             --- |
-|   LUT as Logic |     0.011 |     3318 |     63400 |            5.23 |
-|   CARRY4       |    <0.001 |      266 |     15850 |            1.68 |
-|   Register     |    <0.001 |     2540 |    126800 |            2.00 |
-|   F7/F8 Muxes  |    <0.001 |       35 |     63400 |            0.06 |
-|   Others       |     0.000 |       71 |       --- |             --- |
-| Signals        |     0.017 |     5134 |       --- |             --- |
-| Block RAM      |     0.035 |       14 |       135 |           10.37 |
+| Clocks         |     0.030 |        5 |       --- |             --- |
+| Slice Logic    |     0.012 |    20088 |       --- |             --- |
+|   LUT as Logic |     0.011 |     6832 |     63400 |           10.78 |
+|   CARRY4       |    <0.001 |      271 |     15850 |            1.71 |
+|   Register     |    <0.001 |    11072 |    126800 |            8.73 |
+|   F7/F8 Muxes  |    <0.001 |     1666 |     63400 |            2.63 |
+|   Others       |     0.000 |       59 |       --- |             --- |
+| Signals        |     0.022 |    15334 |       --- |             --- |
+| Block RAM      |     0.078 |       35 |       135 |           25.93 |
 | MMCM           |     0.106 |        1 |         6 |           16.67 |
-| DSPs           |     0.004 |        4 |       240 |            1.67 |
+| DSPs           |     0.003 |        4 |       240 |            1.67 |
 | I/O            |    <0.001 |       20 |       210 |            9.52 |
 | Static Power   |     0.085 |          |           |                 |
-| Total          |     0.274 |          |           |                 |
+| Total          |     0.337 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       0.950 |     0.095 |       0.085 |      0.010 |
+| Vccint    |       0.950 |     0.157 |       0.147 |      0.010 |
 | Vccaux    |       1.800 |     0.075 |       0.059 |      0.016 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -84,7 +84,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       0.950 |     0.003 |       0.003 |      0.000 |
+| Vccbram   |       0.950 |     0.007 |       0.007 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.018 |       0.000 |      0.018 |
@@ -143,27 +143,27 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------------------------+-----------+
-| Name                                  | Power (W) |
-+---------------------------------------+-----------+
-| Rattlesnake                           |     0.189 |
-|   PulseRain_Rattlesnake_MCU_i         |     0.076 |
-|     PulseRain_Rattlesnake_core_i      |     0.037 |
-|       Rattlesnake_CSR_i               |     0.003 |
-|       Rattlesnake_controller_i        |     0.002 |
-|       Rattlesnake_data_access_i       |     0.002 |
-|       Rattlesnake_execution_unit_i    |     0.021 |
-|       Rattlesnake_fetch_instruction_i |     0.002 |
-|       Rattlesnake_mm_reg_i            |     0.002 |
-|       Rattlesnake_reg_file_i          |     0.004 |
-|     mem_controller_i                  |     0.037 |
-|       ram_high_i                      |     0.017 |
-|       ram_low_i                       |     0.016 |
-|   clk_mmcm_i                          |     0.106 |
-|     inst                              |     0.106 |
-|   ocd_i                               |     0.007 |
-|     debug_UART_i                      |     0.001 |
-|     debug_coprocessor_i               |     0.005 |
-+---------------------------------------+-----------+
++-------------------------------------+-----------+
+| Name                                | Power (W) |
++-------------------------------------+-----------+
+| Rattlesnake                         |     0.252 |
+|   PulseRain_Rattlesnake_MCU_i       |     0.136 |
+|     PulseRain_Rattlesnake_core_i    |     0.032 |
+|       Rattlesnake_CSR_i             |     0.002 |
+|       Rattlesnake_controller_i      |     0.001 |
+|       Rattlesnake_data_access_i     |     0.002 |
+|       Rattlesnake_execution_unit_i  |     0.019 |
+|       Rattlesnake_mm_reg_i          |     0.001 |
+|       Rattlesnake_reg_file_i        |     0.004 |
+|     gen_peripheral[0].peripherals_i |     0.024 |
+|       UART_RX_i                     |     0.023 |
+|     mem_controller_i                |     0.080 |
+|       ram_high_i                    |     0.038 |
+|       ram_low_i                     |     0.038 |
+|   clk_mmcm_i                        |     0.106 |
+|     inst                            |     0.106 |
+|   ocd_i                             |     0.009 |
+|     debug_coprocessor_i             |     0.008 |
++-------------------------------------+-----------+
 
 

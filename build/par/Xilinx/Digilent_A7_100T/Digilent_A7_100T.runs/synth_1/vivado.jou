@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Oct 27 17:14:43 2019
-# Process ID: 6736
+# Start of session at: Tue Oct 29 23:08:39 2019
+# Process ID: 6160
 # Current directory: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/synth_1
 # Command line: vivado.exe -log Rattlesnake.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Rattlesnake.tcl
 # Log file: C:/GitHub/Rattlesnake/build/par/Xilinx/Digilent_A7_100T/Digilent_A7_100T.runs/synth_1/Rattlesnake.vds

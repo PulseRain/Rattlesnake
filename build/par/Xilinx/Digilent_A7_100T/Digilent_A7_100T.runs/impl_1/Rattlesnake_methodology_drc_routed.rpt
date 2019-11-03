@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Oct 27 17:17:28 2019
+| Date         : Tue Oct 29 23:13:47 2019
 | Host         : think running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Rattlesnake_methodology_drc_routed.rpt -pb Rattlesnake_methodology_drc_routed.pb -rpx Rattlesnake_methodology_drc_routed.rpx
 | Design       : Rattlesnake
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 152
+             Violations found: 167
 +----------+----------+--------------------------------------------------------+------------+
 | Rule     | Severity | Description                                            | Violations |
 +----------+----------+--------------------------------------------------------+------------+
 | DPIR-1   | Warning  | Asynchronous driver check                              | 128        |
 | LUTAR-1  | Warning  | LUT drives async reset alert                           | 2          |
-| SYNTH-6  | Warning  | Timing of a block RAM might be sub-optimal             | 16         |
+| SYNTH-6  | Warning  | Timing of a block RAM might be sub-optimal             | 31         |
 | SYNTH-10 | Warning  | Wide multiplier                                        | 4          |
 | XDCC-1   | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
 | XDCC-7   | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
@@ -679,12 +679,12 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell ocd_i/debug_coprocessor_i/crc16_CCITT_i/cpu_reset_sr[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) TXD_reg/CLR, actual_cpu_start_reg/CLR, actual_start_addr_reg[10]/CLR, actual_start_addr_reg[11]/CLR, actual_start_addr_reg[12]/CLR, actual_start_addr_reg[13]/CLR, actual_start_addr_reg[14]/CLR, actual_start_addr_reg[15]/CLR, actual_start_addr_reg[16]/CLR, actual_start_addr_reg[17]/CLR, actual_start_addr_reg[18]/CLR, actual_start_addr_reg[19]/CLR, actual_start_addr_reg[1]/CLR, actual_start_addr_reg[20]/CLR, actual_start_addr_reg[21]/CLR (the first 15 of 536 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell ocd_i/debug_coprocessor_i/crc16_CCITT_i/cpu_reset_sr[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) TXD_reg/CLR, actual_cpu_start_reg/CLR, actual_start_addr_reg[10]/CLR, actual_start_addr_reg[11]/CLR, actual_start_addr_reg[12]/CLR, actual_start_addr_reg[13]/CLR, actual_start_addr_reg[14]/CLR, actual_start_addr_reg[15]/CLR, actual_start_addr_reg[16]/CLR, actual_start_addr_reg[17]/CLR, actual_start_addr_reg[18]/CLR, actual_start_addr_reg[19]/CLR, actual_start_addr_reg[1]/CLR, actual_start_addr_reg[20]/CLR, actual_start_addr_reg[21]/CLR (the first 15 of 539 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell ocd_i/debug_coprocessor_i/mtimecmp[63]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) z_reg[63]_i_10/CLR, z_reg[63]_i_9/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_ACK_O_reg/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[31]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[0]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[10]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[11]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[12]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[13]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[14]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[15]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[16]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[17]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[18]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[19]/CLR (the first 15 of 1801 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell ocd_i/debug_coprocessor_i/fifo_count[9]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) z_reg[63]_i_10/CLR, z_reg[63]_i_9/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_ACK_O_reg/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[0]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[1]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[29]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[2]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[30]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[31]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[3]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[4]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[5]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[6]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/WB_RD_DAT_O_reg[7]/CLR, PulseRain_Rattlesnake_MCU_i/gen_peripheral[0].peripherals_i/exe_proetect_end_addr_reg[0]/CLR (the first 15 of 2140 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 SYNTH-6#1 Warning
@@ -699,72 +699,147 @@ Related violations: <none>
 
 SYNTH-6#3 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#4 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#5 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#6 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#7 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[0].ram_9bit/mem_reg_0_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#8 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[1].ram_9bit/mem_reg_0_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#9 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[1].ram_9bit/mem_reg_0_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#10 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[1].ram_9bit/mem_reg_0_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#11 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[0].ram_9bit_1st/mem_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[1].ram_9bit/mem_reg_0_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#12 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[1].ram_9bit/mem_reg_0_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#13 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[1].ram_9bit/mem_reg_0_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#14 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_1st[1].ram_9bit_1st/mem_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_high_i/gen_for_proc[1].ram_9bit/mem_reg_0_8, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#15 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[0].ram_9bit_2nd/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[0].ram_9bit/mem_reg_0_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#16 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_if_proc.gen_for_proc_2nd[1].ram_9bit_2nd/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[0].ram_9bit/mem_reg_0_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#17 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[0].ram_9bit/mem_reg_0_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#18 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[0].ram_9bit/mem_reg_0_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#19 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[0].ram_9bit/mem_reg_0_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#20 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[0].ram_9bit/mem_reg_0_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#21 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[0].ram_9bit/mem_reg_0_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#22 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[0].ram_9bit/mem_reg_0_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#23 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#24 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#25 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#26 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#27 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#28 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#29 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#30 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#31 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance PulseRain_Rattlesnake_MCU_i/mem_controller_i/ram_low_i/gen_for_proc[1].ram_9bit/mem_reg_0_8, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-10#1 Warning

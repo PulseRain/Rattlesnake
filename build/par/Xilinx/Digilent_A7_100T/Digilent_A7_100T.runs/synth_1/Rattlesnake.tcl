@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
 create_project -in_memory -part xc7a100ticsg324-1L
 
 set_param project.singleFileAddWarning.threshold 0
@@ -45,6 +46,9 @@ read_verilog -library xil_defaultlib -sv {
   C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_machine_timer.v
   C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Rattlesnake_mm_reg.v
   C:/GitHub/Rattlesnake/submodules/HW_Loader/source/Serial_RS232.v
+  C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_FIFO.sv
+  C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_RX.sv
+  C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_RX_WITH_FIFO.sv
   C:/GitHub/Rattlesnake/submodules/PulseRain_MCU/peripherals/UART/UART_TX.v
   C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_UART.v
   C:/GitHub/Rattlesnake/submodules/HW_Loader/source/debug_coprocessor.v

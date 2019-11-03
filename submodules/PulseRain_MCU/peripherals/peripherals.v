@@ -144,6 +144,10 @@ module peripherals (
                         WB_RD_DAT_O <= {tx_active, 31'd0};
                     end
    
+                    `UART_RX_ADDR : begin
+                        WB_RD_DAT_O <= {1'b0, uart_rx_fifo_full, uart_rx_fifo_not_empty, 1'b0, ((32 - 4 - (`UART_DEFAULT_DATA_LEN))'(0)), uart_rx_data_out};
+                    end
+   
                     default : begin
                         WB_RD_DAT_O <= 0;
                     end
@@ -171,6 +175,28 @@ module peripherals (
         assign start_TX = ((WB_WR_ADR_I == `UART_TX_ADDR) && WB_WR_WE_I) ? 1'b1 : 1'b0;
         assign tx_data = WB_WR_DAT_I [7 : 0];
 
+    //=======================================================================
+    // UART RX
+    //=======================================================================
+
+        UART_RX_WITH_FIFO #(.STABLE_TIME(`UART_STABLE_COUNT), .BAUD_PERIOD_BITS(`UART_BAUD_PERIOD_BITS), .FIFO_SIZE(`UART_RX_FIFO_SIZE)) UART_RX_i (
+                .clk        (clk),
+                .reset_n    (reset_n),
+                .sync_reset (sync_reset | uart_rx_sync_reset),
+
+                .fifo_read_req (uart_rx_fifo_read_req),
+                .enable_out    (uart_rx_enable_out),
+                .data_out      (uart_rx_data_out),
+                
+                .baud_rate_period_m1 ((`UART_BAUD_PERIOD_BITS)'(`UART_BAUD_PERIOD - 1)),
+                
+                .fifo_full      (uart_rx_fifo_full),
+                .fifo_not_empty (uart_rx_fifo_not_empty),
+                .RXD            (RXD)
+        );
+
+        assign uart_rx_fifo_read_req = ((WB_WR_ADR_I == `UART_RX_ADDR) && WB_WR_WE_I) ? WB_WR_DAT_I[`UART_RX_READ_REQ_BIT] : 1'b0;
+        assign uart_rx_sync_reset    = ((WB_WR_ADR_I == `UART_RX_ADDR) && WB_WR_WE_I) ? WB_WR_DAT_I[`UART_RX_SYNC_RESET_BIT] : 1'b0;
  
     //=======================================================================
     // EXE Protect

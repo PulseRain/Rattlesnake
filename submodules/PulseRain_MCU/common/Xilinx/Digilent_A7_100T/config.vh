@@ -29,7 +29,7 @@
 //  memory size 
 //----------------------------------------------------------------------------
 
-`define SRAM_SIZE_IN_BYTES   (48 * 1024)
+`define SRAM_SIZE_IN_BYTES   (128 * 1024)
 `define EXT_BITS             (1)
 
 `define SRAM_ADDR_BITS       ((`SRAM_SIZE_IN_BYTES == 0) ? 1 : ($clog2(`SRAM_SIZE_IN_BYTES / 4)))
